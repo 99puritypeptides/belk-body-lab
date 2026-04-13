@@ -87,7 +87,7 @@ export default function ContactSection() {
               </h2>
 
               <h3 className="text-gray-400 text-lg sm:text-xl font-light leading-relaxed mb-14">
-                Ready to elevate your physique? Connect with Atlanta's premier professional trainer. Fill out the application below, and Kyle will review your goals to engineer a highly customized roadmap for your success.
+                Ready to elevate your physique? Connect with Atlanta&apos;s premier professional trainer. Fill out the application below, and Kyle will review your goals to engineer a highly customized roadmap for your success.
               </h3>
             </motion.div>
 
