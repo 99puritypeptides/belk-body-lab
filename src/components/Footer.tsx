@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo + Brand */}
-          <Link href="/homepage" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             <AppLogo size={32} />
             <span className="font-display font-bold text-base tracking-tight text-white group-hover:text-accent-green transition-colors">
               BelkBodyLab
@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex items-center gap-8">
-            <Link href="/homepage" className="text-[11px] font-semibold uppercase tracking-[0.15em] text-text-muted hover:text-white transition-colors">
+            <Link href="/" className="text-[11px] font-semibold uppercase tracking-[0.15em] text-text-muted hover:text-white transition-colors">
               Home
             </Link>
             <Link href="/packages" className="text-[11px] font-semibold uppercase tracking-[0.15em] text-text-muted hover:text-white transition-colors">
@@ -26,7 +26,7 @@ export default function Footer() {
             <Link href="/portfolio" className="text-[11px] font-semibold uppercase tracking-[0.15em] text-text-muted hover:text-white transition-colors">
               Portfolio
             </Link>
-            <a href="/homepage#contact" className="text-[11px] font-semibold uppercase tracking-[0.15em] text-text-muted hover:text-white transition-colors">
+            <a href="/#contact" className="text-[11px] font-semibold uppercase tracking-[0.15em] text-text-muted hover:text-white transition-colors">
               Contact
             </a>
           </div>

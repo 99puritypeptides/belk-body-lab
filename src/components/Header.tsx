@@ -2,13 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import AppLogo from '@/components/ui/AppLogo';
 
 const navLinks = [
-  { label: 'Home', href: '/homepage' },
-  { label: 'Packages', href: '/packages' },
-  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/#about' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Service', href: '/#service' },
+  { label: 'Exercise', href: '/#exercise' },
 ];
 
 export default function Header() {
@@ -34,26 +37,30 @@ export default function Header() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-[500] transition-all duration-500 ${scrolled
-            ? 'py-4 bg-bg-primary/90 backdrop-blur-xl border-b border-border-subtle' : 'py-6 bg-transparent'
+        className={`fixed top-0 left-0 w-full z-[500] transition-all duration-500 flex justify-center ${scrolled
+          ? 'py-4 bg-[#0B0B0B]/90 backdrop-blur-xl border-b border-white/5' : 'py-6 bg-transparent'
           }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between">
+        <div className="w-full max-w-7xl px-6 lg:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/homepage" className="flex items-center gap-3 group">
-            <AppLogo size={36} />
-            <span className="font-display font-bold text-lg tracking-tight text-white group-hover:text-accent-green transition-colors">
-              BelkBodyLab
-            </span>
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/assets/images/belk-body-lab-logo.png"
+              alt="Belk Body Lab"
+              width={200}
+              height={180}
+              className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/5">
             {navLinks?.map((link) => (
               <Link
                 key={link?.href}
                 href={link?.href}
-                className={`nav-link text-[11px] font-bold uppercase tracking-[0.2em] transition-colors ${pathname === link?.href ? 'text-accent-green active' : 'text-text-muted hover:text-white'
+                className={`nav-link text-xs font-semibold tracking-wider transition-colors hover:text-[#AAFF00] ${pathname === link?.href ? 'text-[#AAFF00]' : 'text-gray-300'
                   }`}
               >
                 {link?.label}
@@ -64,10 +71,16 @@ export default function Header() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="/homepage#contact"
-              className="px-6 py-3 bg-accent-green text-bg-primary text-[11px] font-bold uppercase tracking-[0.15em] rounded-full hover:bg-white transition-all duration-300 hover:scale-105"
+              href="/#contact"
+              className="px-6 py-2.5 border border-white/20 text-white text-xs font-bold tracking-widest rounded-full hover:border-[#AAFF00] hover:text-[#AAFF00] transition-all duration-300 glow-subtle"
             >
-              Start Today
+              Get Started
+            </Link>
+            <Link
+              href="/#contact"
+              className="px-6 py-2.5 bg-[#AAFF00] text-black text-xs font-bold tracking-widest rounded-full hover:bg-white transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(170,255,0,0.4)]"
+            >
+              Contact Us
             </Link>
           </div>
 
@@ -84,41 +97,39 @@ export default function Header() {
         </div>
       </nav>
       {/* Mobile Menu */}
-      <div className={`mobile-menu-overlay ${menuOpen ? 'open' : ''}`}>
-        <button
-          className="absolute top-6 right-6 p-3 text-text-muted hover:text-white transition-colors"
-          onClick={() => setMenuOpen(false)}
-          aria-label="Close menu"
-        >
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-
+      <div className={`mobile-menu-overlay ${menuOpen ? 'open' : ''} !bg-[#0B0B0B]`} style={{ zIndex: 490 }}>
         {navLinks?.map((link, i) => (
           <Link
             key={link?.href}
             href={link?.href}
             onClick={() => setMenuOpen(false)}
-            className="font-display text-4xl font-bold italic text-white hover:text-accent-green transition-colors"
+            className="font-display text-4xl font-bold uppercase text-white hover:text-[#AAFF00] transition-colors"
             style={{ transitionDelay: `${i * 0.05}s` }}
           >
             {link?.label}
           </Link>
         ))}
 
-        <Link
-          href="/homepage#contact"
-          onClick={() => setMenuOpen(false)}
-          className="mt-4 px-8 py-4 bg-accent-green text-bg-primary text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all"
-        >
-          Start Today
-        </Link>
+        <div className="flex flex-col gap-4 mt-8">
+          <Link
+            href="/#contact"
+            onClick={() => setMenuOpen(false)}
+            className="text-center px-8 py-4 bg-[#AAFF00] text-black text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all"
+          >
+            Contact Us
+          </Link>
+          <Link
+            href="/#contact"
+            onClick={() => setMenuOpen(false)}
+            className="text-center px-8 py-4 border border-white/20 text-white text-sm font-bold uppercase tracking-widest rounded-full hover:border-[#AAFF00] hover:text-[#AAFF00] transition-all"
+          >
+            Get Started
+          </Link>
+        </div>
 
         <div className="absolute bottom-10 flex gap-6">
           {['Instagram', 'TikTok', 'YouTube']?.map((s) => (
-            <a key={s} href="#" className="text-[10px] font-bold uppercase tracking-[0.2em] text-text-subtle hover:text-accent-green transition-colors">
+            <a key={s} href="#" className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-[#AAFF00] transition-colors">
               {s}
             </a>
           ))}

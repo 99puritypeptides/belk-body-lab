@@ -214,7 +214,7 @@ function TransformModal({ item, onClose }: ModalProps) {
           </blockquote>
 
           <Link
-            href="/homepage#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent-green text-bg-primary font-bold text-sm uppercase tracking-[0.15em] rounded-full hover:bg-white transition-all duration-300 hover:scale-105">
 
             Get My Transformation
@@ -372,7 +372,7 @@ export default function PortfolioGallery() {
                 Every one of these clients started exactly where you are. The only difference is they took the first step.
               </p>
               <Link
-                href="/homepage#contact"
+                href="/#contact"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-accent-green text-bg-primary font-black text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white transition-all duration-300 hover:scale-105 glow-green">
 
                 Start My Transformation

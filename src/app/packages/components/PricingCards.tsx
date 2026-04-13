@@ -74,23 +74,25 @@ export default function PricingCards() {
 
   return (
     <section className="relative z-10 py-20 lg:py-28">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
 
         {/* Billing toggle */}
-        <div className="flex justify-center mb-14">
-          <div className="flex items-center gap-1 p-1 bg-bg-card border border-border-subtle rounded-full">
+        <div className="flex justify-center mb-16">
+          <div className="flex items-center gap-2 p-1.5 bg-[#0a0a0a]/50 border border-border-subtle rounded-full backdrop-blur-sm">
             {(['monthly', 'quarterly'] as const).map((b) => (
               <button
                 key={b}
                 onClick={() => setBilling(b)}
-                className={`px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-300 ${billing === b
-                    ? 'bg-accent-green text-bg-primary' : 'text-text-muted hover:text-white'
-                  }`}
+                className={`relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                  billing === b
+                    ? 'border border-accent-green text-white'
+                    : 'text-text-muted hover:text-white border border-transparent'
+                }`}
               >
-                {b}
+                <span className="capitalize">{b}</span>
                 {b === 'quarterly' && (
-                  <span className={`ml-2 text-[9px] ${billing === b ? 'text-bg-primary/70' : 'text-accent-green'}`}>
-                    Save 10%
+                  <span className={`text-xs ${billing === b ? 'text-white' : 'text-text-muted'}`}>
+                    (save 10%)
                   </span>
                 )}
               </button>
@@ -100,86 +102,74 @@ export default function PricingCards() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {packages.map((pkg, i) => (
-            <div
-              key={pkg.id}
-              className={`pricing-card relative p-8 lg:p-10 ${pkg.popular ? 'featured' : ''}`}
-              style={{ transitionDelay: `${i * 0.1}s` }}
-            >
-              {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-accent-green text-bg-primary text-[10px] font-black uppercase tracking-[0.2em] rounded-full">
-                  Most Popular
-                </div>
-              )}
-
-              {/* Package header */}
-              <div className="mb-8">
-                <div
-                  className="text-[10px] font-bold uppercase tracking-[0.3em] mb-2"
-                  style={{ color: pkg.color }}
-                >
-                  {pkg.tagline}
-                </div>
-                <h3 className="font-display font-black text-4xl text-white mb-1">{pkg.name}</h3>
-                <p className="text-text-muted text-xs">{pkg.duration}</p>
-              </div>
-
-              {/* Price */}
-              <div className="mb-8 pb-8 border-b border-border-subtle">
-                <div className="flex items-end gap-2">
-                  <span className="font-display font-black text-5xl text-white">
-                    ${billing === 'monthly' ? pkg.price.monthly : pkg.price.quarterly}
-                  </span>
-                  <span className="text-text-muted text-sm mb-2">
-                    /{billing === 'monthly' ? 'mo' : 'qtr'}
-                  </span>
-                </div>
-                {billing === 'quarterly' && (
-                  <p className="text-accent-green text-xs font-bold mt-1">
-                    Save ${(pkg.price.monthly * 3 - pkg.price.quarterly)} vs monthly
-                  </p>
-                )}
-              </div>
-
-              {/* Features */}
-              <ul className="space-y-4 mb-10">
-                {pkg.features.map((feature) => (
-                  <li key={feature.text} className="flex items-start gap-3">
-                    <div
-                      className={`mt-0.5 flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center ${feature.included ? 'bg-accent-green/20' : 'bg-bg-card-hover'
-                        }`}
-                    >
-                      {feature.included ? (
-                        <svg width="8" height="8" fill="none" stroke="#AAFF00" strokeWidth="3" viewBox="0 0 24 24">
-                          <path d="M5 13l4 4L19 7" />
-                        </svg>
-                      ) : (
-                        <svg width="8" height="8" fill="none" stroke="#555555" strokeWidth="3" viewBox="0 0 24 24">
-                          <path d="M18 6L6 18M6 6l12 12" />
-                        </svg>
-                      )}
-                    </div>
-                    <span className={`text-sm ${feature.included ? 'text-white' : 'text-text-subtle line-through'}`}>
-                      {feature.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/homepage#contact"
-                className={`block w-full text-center py-4 font-bold text-sm uppercase tracking-[0.15em] rounded-xl transition-all duration-300 hover:scale-[1.02] ${pkg.popular
-                    ? 'bg-accent-green text-bg-primary hover:bg-white' : 'border border-border-subtle text-white hover:border-accent-green hover:text-accent-green'
-                  }`}
+          {packages.map((pkg, i) => {
+            const isMiddle = pkg.popular;
+            return (
+              <div
+                key={pkg.id}
+                className="flex flex-col relative p-3 lg:p-4 rounded-3xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 bg-bg-card border border-border-subtle text-white"
               >
-                {pkg.cta}
-              </Link>
-            </div>
-          ))}
+                {/* Package header */}
+                <div className={`p-6 lg:p-8 rounded-[1.25rem] ${isMiddle ? 'bg-accent-green' : 'bg-transparent'}`}>
+                  <h3 className={`font-display text-2xl lg:text-3xl font-medium mb-4 ${isMiddle ? 'text-bg-primary' : 'text-white'}`}>
+                    {pkg.name}
+                  </h3>
+                  <div className="flex items-end gap-1 mb-2">
+                    <span className={`font-display tracking-tight text-5xl lg:text-6xl font-bold ${isMiddle ? 'text-bg-primary' : 'text-white'}`}>
+                      ${billing === 'monthly' ? pkg.price.monthly : pkg.price.quarterly}
+                    </span>
+                    <span className={`text-sm mb-2 font-medium ${isMiddle ? 'text-bg-primary/80' : 'text-text-muted'}`}>
+                      /{billing === 'monthly' ? 'Month' : 'Qtr'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="px-6 lg:px-8 pb-4 flex-grow flex flex-col">
+                  <ul className="space-y-4 my-8 flex-grow">
+                    {pkg.features.map((feature) => (
+                      <li key={feature.text} className="flex items-center gap-3">
+                        <div
+                          className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
+                            feature.included ? 'bg-accent-green' : 'bg-white/10'
+                          }`}
+                        >
+                          {feature.included ? (
+                            <svg width="10" height="10" fill="none" stroke="#000" strokeWidth="3" viewBox="0 0 24 24">
+                              <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          ) : (
+                            <svg width="10" height="10" fill="none" stroke="#555" strokeWidth="3" viewBox="0 0 24 24">
+                              <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          )}
+                        </div>
+                        <span className={`text-sm tracking-wide ${
+                          feature.included ? 'text-white/80 font-medium' : 'text-text-muted/50 line-through'
+                        }`}>
+                          {feature.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/#contact"
+                    className="mt-auto flex items-center justify-center gap-2 w-full py-4 px-6 rounded-full font-bold text-sm uppercase tracking-widest bg-accent-green text-bg-primary hover:bg-[#bfff33] transition-all duration-300 hover:scale-105"
+                  >
+                    <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {pkg.cta}
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Money back guarantee */}
-        <div className="mt-14 text-center">
+        <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-bg-card border border-border-subtle rounded-full">
             <span className="text-2xl">🛡️</span>
             <span className="text-sm text-text-muted">

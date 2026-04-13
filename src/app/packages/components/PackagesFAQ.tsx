@@ -83,7 +83,7 @@ export default function PackagesFAQ() {
         <div className="text-center mt-12">
           <p className="text-text-muted text-sm mb-4">Still have questions? Kyle answers personally.</p>
           <Link
-            href="/homepage#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-accent-green text-bg-primary font-bold text-sm uppercase tracking-[0.15em] rounded-full hover:bg-white transition-all duration-300 hover:scale-105"
           >
             Ask Kyle Directly
