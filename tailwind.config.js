@@ -20,8 +20,8 @@ module.exports = {
                 'border-accent': 'rgba(170, 255, 0, 0.2)',
             },
             fontFamily: {
-                sans: ['DM Sans', 'sans-serif'],
-                display: ['Fraunces', 'serif'],
+                sans: ['var(--font-source-sans)', 'sans-serif'],
+                display: ['var(--font-cormorant)', 'serif'],
                 jumpshot: ['Jumpshot', 'sans-serif'],
             },
             fontSize: {

@@ -38,62 +38,83 @@ export default function Header() {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-[500] transition-all duration-500 flex justify-center ${scrolled
-          ? 'py-4 bg-[#0B0B0B]/90 backdrop-blur-xl border-b border-white/5' : 'py-6 bg-transparent'
+          ? 'py-4 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5' : 'py-6 bg-transparent'
           }`}
       >
-        <div className="w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Image
-              src="/assets/images/belk-body-lab-logo.png"
-              alt="Belk Body Lab"
-              width={200}
-              height={180}
-              className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
-              priority
-            />
-          </Link>
+        <div className="w-full max-w-[1600px] px-4 md:px-8 lg:px-12 flex items-center justify-between">
+          
+          {/* LEFT SIDE: Logo & Nav */}
+          <div className="flex items-center gap-3 md:gap-4">
+            
+            {/* Logo Pill */}
+            <Link href="/" className="flex items-center justify-center bg-white rounded-full px-5 py-2.5 md:px-7 md:py-3 hover:opacity-90 transition-opacity shadow-lg">
+              <Image
+                src="/assets/images/belk-body-lab-logo.png"
+                alt="Belk Body Lab"
+                width={140}
+                height={40}
+                className="h-5 md:h-6 w-auto object-contain brightness-0"
+                priority
+              />
+            </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/5">
-            {navLinks?.map((link) => (
+            {/* Desktop Nav Pill */}
+            <div className="hidden lg:flex items-center gap-5 xl:gap-8 bg-[#2A2A2A]/80 backdrop-blur-md px-8 py-3.5 rounded-full border border-white/5 shadow-lg">
+              {navLinks?.map((link, index) => (
+                <React.Fragment key={link?.href}>
+                  <Link
+                    href={link?.href}
+                    className={`font-semibold text-[13px] tracking-wide transition-colors hover:text-white ${pathname === link?.href ? 'text-white' : 'text-white/60'
+                      }`}
+                  >
+                    {link?.label}
+                  </Link>
+                  {index < navLinks.length - 1 && (
+                    <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT SIDE: CTAs & Mobile Menu */}
+          <div className="flex items-center gap-3">
+            
+            {/* Desktop CTAs */}
+            <div className="hidden lg:flex items-center gap-3">
               <Link
-                key={link?.href}
-                href={link?.href}
-                className={`nav-link text-xs font-semibold tracking-wider transition-colors hover:text-[#AAFF00] ${pathname === link?.href ? 'text-[#AAFF00]' : 'text-gray-300'
-                  }`}
+                href="/#contact"
+                className="px-8 py-3.5 bg-[#2A2A2A]/80 backdrop-blur-md border border-white/5 text-white/90 text-[13px] font-semibold tracking-wide rounded-full hover:bg-white/10 hover:text-white transition-colors shadow-lg"
               >
-                {link?.label}
+                Contact Us
               </Link>
-            ))}
+
+              <Link
+                href="/#contact"
+                className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black text-[14px] font-bold hover:bg-gray-100 transition-colors group shadow-lg"
+              >
+                Get started
+                <div className="w-9 h-9 rounded-full bg-[#111111] flex items-center justify-center text-white group-hover:rotate-45 transition-transform duration-300">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </div>
+              </Link>
+            </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="lg:hidden flex flex-col gap-1.5 px-4 py-4 md:px-5 md:py-4 bg-white rounded-full shadow-lg ml-auto"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`block w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </button>
           </div>
 
-          {/* CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="/#contact"
-              className="px-6 py-2.5 border border-white/20 text-white text-xs font-bold tracking-widest rounded-full hover:border-[#AAFF00] hover:text-[#AAFF00] transition-all duration-300 glow-subtle"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/#contact"
-              className="px-6 py-2.5 bg-[#AAFF00] text-black text-xs font-bold tracking-widest rounded-full hover:bg-white transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(170,255,0,0.4)]"
-            >
-              Contact Us
-            </Link>
-          </div>
-
-          {/* Mobile Hamburger */}
-          <button
-            className="lg:hidden flex flex-col gap-1.5 p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-          </button>
         </div>
       </nav>
       {/* Mobile Menu */}

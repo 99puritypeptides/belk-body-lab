@@ -13,7 +13,7 @@ export default function PackagesHero() {
         speed={2.5}
         hueShift={100} // Shift to green hues
         warpAmount={0.8}
-        noiseIntensity={0.6}
+        noiseIntensity={0.3}
       />
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10 text-center">
         <div className="flex justify-center items-center gap-4 mb-8">
