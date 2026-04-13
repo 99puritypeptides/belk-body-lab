@@ -51,7 +51,7 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="relative z-10 py-24 lg:py-36 bg-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
 
         {/* Header */}
         <div className="mb-16 scroll-reveal-init">
@@ -59,8 +59,8 @@ export default function AboutSection() {
             <div className="w-0.5 h-5 bg-accent-green" />
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500">Your Coach</span>
           </div>
-          <h2 className="racing-sans-one-regular font-regular font-black leading-none tracking-tight text-black" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>
-            Meet <span className="italic racing-sans-one-regular text-black">Kyle.</span>
+          <h2 className="font-jumpshot font-regular font-black leading-none tracking-tight text-black" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>
+            Meet <span className="racing-sans-one-regular text-black">Kyle.</span>
           </h2>
         </div>
 

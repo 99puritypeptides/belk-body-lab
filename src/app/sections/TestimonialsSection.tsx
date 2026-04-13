@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
         aria-hidden="true" />
 
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
 
         {/* Header */}
         <div className="text-center mb-16">

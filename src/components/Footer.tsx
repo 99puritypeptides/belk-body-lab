@@ -5,7 +5,7 @@ import AppLogo from '@/components/ui/AppLogo';
 export default function Footer() {
   return (
     <footer className="relative z-10 border-t border-border-subtle">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 py-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo + Brand */}
           <Link href="/" className="flex items-center gap-3 group">

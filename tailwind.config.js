@@ -22,6 +22,7 @@ module.exports = {
             fontFamily: {
                 sans: ['DM Sans', 'sans-serif'],
                 display: ['Fraunces', 'serif'],
+                jumpshot: ['Jumpshot', 'sans-serif'],
             },
             fontSize: {
                 'hero': 'clamp(3.5rem, 10vw, 9rem)',

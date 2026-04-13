@@ -51,7 +51,7 @@ export default function HeroSection() {
 
       {/* Layer 1: Background Heading (Behind Subject) */}
       <div className="absolute top-[20%] w-full flex flex-col items-center justify-center z-0 px-4 text-center select-none">
-        <h1 className="racing-sans-one-regular uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#D6FF7F] to-[#A3FF3F]" style={{ fontSize: 'clamp(2rem, 6vw, 6.5rem)', lineHeight: 0.85, letterSpacing: '-0.02em' }}>
+        <h1 className="font-jumpshot uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#D6FF7F] to-[#A3FF3F]" style={{ fontSize: 'clamp(2rem, 6vw, 6.5rem)', lineHeight: 0.85, letterSpacing: '-0.02em' }}>
           Sculpt <span className='text-white'>Your</span> Body<br />
           <span className="text-white bg-none opacity-90">Elevate <span className='text-[#AAFF00]'>Your</span> Spirit</span>
         </h1>
@@ -72,7 +72,7 @@ export default function HeroSection() {
       </div>
 
       {/* Layer 3: Floating Elements (Z-20) */}
-      <div className="absolute inset-0 z-20 pointer-events-none max-w-7xl mx-auto w-full h-full">
+      <div className="absolute inset-0 z-20 pointer-events-none max-w-[1600px] mx-auto w-full h-full">
         {/* Floating Cards */}
         {floatingCards.map((card, idx) => (
           <div
@@ -99,7 +99,7 @@ export default function HeroSection() {
       </div>
 
       {/* Layer 4: Bottom Content */}
-      <div className="absolute bottom-4 md:bottom-8 w-full max-w-7xl mx-auto px-4 lg:px-12 flex flex-row items-end flex-wrap md:flex-nowrap md:items-center justify-between z-30 pointer-events-auto gap-4 md:gap-6 mt-8 md:mt-0">
+      <div className="absolute bottom-4 md:bottom-8 w-full max-w-[1600px] mx-auto px-4 lg:px-12 flex flex-row items-end flex-wrap md:flex-nowrap md:items-center justify-between z-30 pointer-events-auto gap-4 md:gap-6 mt-8 md:mt-0">
 
         {/* Left Widget: Happy Spirits */}
         <div className="flex flex-col items-start gap-1 md:gap-2">

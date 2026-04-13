@@ -74,7 +74,7 @@ export default function PricingCards() {
 
   return (
     <section className="relative z-10 py-20 lg:py-28">
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
 
         {/* Billing toggle */}
         <div className="flex justify-center mb-16">

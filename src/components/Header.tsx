@@ -41,7 +41,7 @@ export default function Header() {
           ? 'py-4 bg-[#0B0B0B]/90 backdrop-blur-xl border-b border-white/5' : 'py-6 bg-transparent'
           }`}
       >
-        <div className="w-full max-w-7xl px-6 lg:px-12 flex items-center justify-between">
+        <div className="w-full max-w-[1600px] px-6 lg:px-12 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image

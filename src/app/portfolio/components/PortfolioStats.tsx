@@ -53,7 +53,7 @@ export default function PortfolioStats() {
 
   return (
     <section ref={ref} className="relative z-10 py-16 border-y border-border-subtle">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">

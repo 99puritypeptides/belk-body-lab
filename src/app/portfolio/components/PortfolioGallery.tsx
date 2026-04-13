@@ -239,7 +239,7 @@ export default function PortfolioGallery() {
 
   return (
     <section className="relative z-10 py-16 lg:py-24">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
 
         {/* Filters */}
         <div className="flex flex-wrap gap-3 justify-center mb-14">

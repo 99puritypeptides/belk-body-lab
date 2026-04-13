@@ -9,7 +9,7 @@ export default function PortfolioHero() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-0.5 h-5 bg-accent-green" />
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-text-muted">Real Results</span>
@@ -17,8 +17,8 @@ export default function PortfolioHero() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
-            <h1 className="font-display font-black leading-tight tracking-tight text-white" style={{ fontSize: 'clamp(2.5rem, 7vw, 7.5rem)' }}>
-              Client <span className="italic gradient-text">Transformations.</span>
+            <h1 className="font-jumpshot font-black leading-tight tracking-tight text-white" style={{ fontSize: 'clamp(2.5rem, 7vw, 7.5rem)' }}>
+              Client <span className="gradient-text">Transformations.</span>
             </h1>
           </div>
           <div className="lg:col-span-5 lg:pb-4">

@@ -72,7 +72,7 @@ export default function BMICalculator() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
           {/* Left: Info */}

@@ -54,7 +54,7 @@ export default function ContactSection() {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-card/20 to-transparent" aria-hidden="true" />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
           {/* Left: Info */}
