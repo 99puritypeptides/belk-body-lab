@@ -8,7 +8,7 @@ import BlogCTA from '@/features/blog/BlogCTA';
 import { Link } from '@/i18n/navigation';
 
 interface Props {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateStaticParams() {
@@ -18,10 +18,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const { slug, locale } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
 
-  const content = post[params.locale as 'en' | 'es'] || post.en;
+  const content = post[locale as 'en' | 'es'] || post.en;
 
   return {
     title: content.metaTitle,
@@ -36,11 +37,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const { slug, locale } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const content = post[params.locale as 'en' | 'es'] || post.en;
+  const content = post[locale as 'en' | 'es'] || post.en;
 
   return (
     <main className="min-h-screen bg-[#050505] pt-32">
