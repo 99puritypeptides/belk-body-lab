@@ -20,10 +20,9 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once : true }}
       transition={{ duration: 0.5 }}
-      group="true"
-      className={`relative rounded-[32px] overflow-hidden bg-[#111] border border-white/5 hover:border-accent-green/30 transition-all duration-500 luxury-card ${featured ? 'lg:flex lg:items-center' : ''}`}
+      className={`group relative rounded-[32px] overflow-hidden bg-[#111] border border-white/5 hover:border-accent-green/30 transition-all duration-500 luxury-card ${featured ? 'lg:flex lg:items-center' : ''}`}
     >
       {/* Image Container */}
       <div className={`relative overflow-hidden ${featured ? 'lg:w-1/2 h-[300px] lg:h-[450px]' : 'h-[240px]'}`}>
