@@ -4,6 +4,7 @@ module.exports = {
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/features/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
         extend: {
@@ -20,8 +21,9 @@ module.exports = {
                 'border-accent': 'rgba(170, 255, 0, 0.2)',
             },
             fontFamily: {
-                sans: ['var(--font-source-sans)', 'sans-serif'],
-                display: ['var(--font-cormorant)', 'serif'],
+                sans: ['var(--font-inter)', 'sans-serif'],
+                display: ['Satoshi', 'sans-serif'],
+                heading: ['Satoshi', 'sans-serif'],
                 jumpshot: ['Jumpshot', 'sans-serif'],
             },
             fontSize: {
