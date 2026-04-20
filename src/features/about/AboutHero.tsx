@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import CTAButton from '@/components/ui/CTAButton';
 
 export default function AboutHero() {
   const t = useTranslations('aboutPage.hero');
@@ -12,7 +13,7 @@ export default function AboutHero() {
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-bg-primary">
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#AAFF00] rounded-full blur-[150px] opacity-20" />
+        <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#FFFFFF] rounded-full blur-[150px] opacity-[0.05]" />
       </div>
 
       <div className="container-custom relative z-10 px-6 lg:px-10">
@@ -27,7 +28,7 @@ export default function AboutHero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8"
             >
               <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-accent-green">{t('trust')}</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('trust')}</span>
             </motion.div>
 
             <motion.h1
@@ -37,7 +38,7 @@ export default function AboutHero() {
               className="font-jumpshot text-white text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.85] uppercase mb-8"
             >
               {t('title')}<br />
-              <span className="text-accent-green drop-shadow-[0_0_30px_rgba(170,255,0,0.4)]">{t('titleHighlight')}</span>
+              <span className="gradient-text filter drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">{t('titleHighlight')}</span>
             </motion.h1>
 
             <motion.p
@@ -55,15 +56,9 @@ export default function AboutHero() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center gap-6"
             >
-              <button className="group relative flex items-center gap-5 bg-white pl-8 pr-2 py-2 rounded-full text-black hover:bg-accent-green transition-all duration-500 shadow-2xl shadow-accent-green/5">
-                <span className="text-sm font-black uppercase tracking-widest">{t('cta')}</span>
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white transform group-hover:rotate-45 transition-transform duration-500">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M7 17L17 7" />
-                    <path d="M7 7h10v10" />
-                  </svg>
-                </div>
-              </button>
+              <CTAButton href="/#contact">
+                {t('cta')}
+              </CTAButton>
             </motion.div>
           </div>
 
@@ -86,8 +81,8 @@ export default function AboutHero() {
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg-primary to-transparent" />
             
             <div className="absolute bottom-10 left-10 p-8 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 max-w-[280px]">
-              <p className="text-accent-green font-display text-4xl font-black mb-2 leading-none">500+</p>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('trust')}</p>
+              <p className="font-display text-4xl font-black mb-2 leading-none text-white">500+</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">{t('trust')}</p>
             </div>
           </motion.div>
 

@@ -5,15 +5,18 @@
     "features": "Features",
     "service": "Service",
     "exercise": "Exercise",
-    "packages": "Packages",
+    "packages": "Services",
     "portfolio": "Portfolio",
     "blog": "Blog",
     "contact": "Contact Us",
-    "getStarted": "Get started"
+    "getStarted": "Get started",
+    "menuTitle": "Navigation",
+    "followUs": "Social Connect",
+    "language": "Language"
   },
   "hero": {
-    "title": "Transform Your Body",
-    "titleHighlight": "Without Guesswork",
+    "title": "Professional Coaching",
+    "titleHighlight": "Body Transformations",
     "subtitle": "Expert-led coaching for men and women. Whether you're a beginner or elite, we engineer custom protocols for sustainable fat loss and muscle hypertrophy.",
     "ctaPrimary": "Apply for Coaching",
     "ctaSecondary": "Start Your Transformation",
@@ -292,7 +295,8 @@
   "footer": {
     "brand": "BelkBodyLab",
     "home": "Home",
-    "packages": "Packages",
+    "about": "About",
+    "packages": "Services",
     "portfolio": "Portfolio",
     "contact": "Contact",
     "privacy": "Privacy",

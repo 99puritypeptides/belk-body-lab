@@ -91,7 +91,7 @@ export default function AboutCredentials() {
               className="text-5xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[0.9] mb-8"
             >
               {t('title')}<br />
-              <span className="italic text-accent-green drop-shadow-[0_0_30px_rgba(170,255,0,0.2)] lowercase">
+              <span className="text-accent-green drop-shadow-[0_0_30px_rgba(170,255,0,0.2)] lowercase">
                 {t('titleItalic')}
               </span>
             </motion.h2>

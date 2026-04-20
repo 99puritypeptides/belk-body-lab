@@ -10,14 +10,13 @@ export default function Footer() {
   const t = useTranslations('footer');
 
   const navLinks = [
-    { label: t('home'), href: '/' as const },
-    { label: t('about') || 'About', href: '/about' as const },
-    { label: t('packages'), href: '/packages' as const },
+    { label: t('home'),      href: '/'          as const },
+    { label: t('about'),     href: '/about'     as const },
+    { label: t('packages'),  href: '/packages'  as const },
     { label: t('portfolio'), href: '/portfolio' as const },
-    { label: t('blog'), href: '/blog' as const },
-    { label: t('contact'), href: '/#contact' as const },
-    { label: t('privacy'), href: '#' as const },
-    { label: t('terms'), href: '#' as const },
+    { label: t('blog'),      href: '/blog'      as const },
+    { label: t('privacy'),   href: '#'          as const },
+    { label: t('terms'),     href: '#'          as const },
   ];
 
   return (
@@ -73,10 +72,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pt-10 border-t border-white/5 relative z-10">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-[11px] font-bold uppercase tracking-widest text-text-muted">
             <span className="text-white/40">{t('copyright') || '© 2026 Belk Digital. All rights reserved.'}</span>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 rounded-full border border-white/20 flex items-center justify-center text-[8px]">✓</div>
-              <span>NASM Certified Professional</span>
-            </div>
+
           </div>
 
           <div className="flex items-center gap-10">

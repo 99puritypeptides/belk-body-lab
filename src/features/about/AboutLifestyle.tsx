@@ -92,7 +92,7 @@ export default function AboutLifestyle() {
                 className="col-span-2 aspect-[16/7] bg-white/[0.02] border border-white/5 rounded-3xl flex items-center justify-center group-hover:bg-white/[0.04] transition-colors"
               >
                  <div className="p-8 text-center">
-                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-accent-green mb-2 italic">Standard of Excellence</p>
+                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-accent-green mb-2">Standard of Excellence</p>
                     <p className="text-white/40 text-xs font-bold uppercase tracking-widest">Always Researching. Always Evolving.</p>
                  </div>
               </motion.div>

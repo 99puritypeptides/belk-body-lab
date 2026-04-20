@@ -9,14 +9,14 @@ export default function PortfolioHero() {
   return (
     <section className="relative pt-36 pb-16 overflow-hidden animated-gradient">
       <div
-        className="absolute top-0 left-0 w-[500px] h-[500px] opacity-[0.04] blob-shape rounded-full"
-        style={{ background: 'radial-gradient(circle, #AAFF00 0%, transparent 70%)' }}
+        className="absolute top-0 left-0 w-[500px] h-[500px] opacity-[0.03] blob-shape rounded-full"
+        style={{ background: 'radial-gradient(circle, #FFFFFF 0%, transparent 70%)' }}
         aria-hidden="true"
       />
 
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
         <div className="flex items-center gap-4 mb-8">
-          <div className="w-0.5 h-5 bg-accent-green" />
+          <div className="w-0.5 h-5 bg-white/20" />
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-text-muted">{t('label')}</span>
         </div>
 

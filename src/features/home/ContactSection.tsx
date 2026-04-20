@@ -76,7 +76,7 @@ export default function ContactSection() {
               </div>
               <h2 className="font-display font-black leading-[1.05] tracking-tighter text-white mb-8" style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)' }}>
                 {t('title')} <br />
-                <span className="italic text-accent-green pr-2">{t('titleHighlight')}</span>
+                <span className="text-accent-green pr-2">{t('titleHighlight')}</span>
               </h2>
               <h3 className="text-gray-400 text-lg sm:text-xl font-light leading-relaxed mb-14">{t('description')}</h3>
             </motion.div>
@@ -116,7 +116,7 @@ export default function ContactSection() {
                       <svg className="w-10 h-10 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </div>
                     <h3 className="font-display font-black text-4xl sm:text-5xl text-white mb-6 tracking-tight">
-                      {t('successTitle')} <span className="italic text-accent-green">{t('successHighlight')}</span>
+                      {t('successTitle')} <span className="text-accent-green">{t('successHighlight')}</span>
                     </h3>
                     <p className="text-gray-400 text-lg leading-relaxed mb-12 max-w-md mx-auto">{t('successDesc')}</p>
                     <button onClick={() => setSubmitted(false)} className="group flex flex-row items-center gap-4 px-8 py-4 border border-white/20 text-gray-300 text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:border-white hover:text-white hover:bg-white/5 transition-all duration-300 mx-auto">

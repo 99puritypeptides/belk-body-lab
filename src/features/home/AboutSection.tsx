@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ShieldCheckIcon, FireIcon, DevicePhoneMobileIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import { Link } from '@/i18n/navigation';
+import CTAButton from '@/components/ui/CTAButton';
 
 export default function AboutSection() {
   const t = useTranslations('about');
@@ -113,7 +114,7 @@ export default function AboutSection() {
                 <div className="mb-14">
                   <h3 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#111] leading-[1.1] mb-8 tracking-tight">
                     {t('heading')} <br />
-                    <span className="font-serif italic text-gray-400">{t('headingItalic')}</span>
+                    <span className="text-gray-400">{t('headingItalic')}</span>
                   </h3>
                   <p className="text-gray-600 text-lg sm:text-xl leading-relaxed font-light mb-6">
                     {t('bio1')}
@@ -154,24 +155,17 @@ export default function AboutSection() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex flex-wrap gap-4">
-                    <Link
-                      href="/#contact"
-                      className="group relative overflow-hidden inline-flex items-center justify-center min-w-[200px] h-14 bg-[#111] text-white text-[11px] font-bold tracking-widest uppercase rounded-full shadow-lg"
-                    >
-                      <span className="relative z-10 transition-transform duration-500 group-hover:-translate-y-12">{t('ctaWork')}</span>
-                      <span className="absolute inset-0 flex items-center justify-center z-10 translate-y-12 transition-transform duration-500 group-hover:translate-y-0 text-accent-green">{t('ctaWork')}</span>
-                      <div className="absolute inset-0 bg-gray-900 translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
-                    </Link>
-                    <Link
-                      href="/packages"
-                      className="inline-flex items-center justify-center min-w-[200px] h-14 bg-transparent border border-gray-300 text-[#111] font-bold text-[11px] uppercase tracking-widest rounded-full hover:border-[#111] hover:bg-gray-50 transition-all duration-300"
-                    >
-                      {t('ctaPackages')}
-                    </Link>
-                  </div>
-                  <Link 
-                    href="/about" 
+                  <CTAButton href="/#contact">
+                    {t('ctaWork')}
+                  </CTAButton>
+                  <Link
+                    href="/packages"
+                    className="inline-flex items-center justify-center min-w-[200px] h-14 bg-transparent border border-gray-300 text-[#111] font-bold text-[11px] uppercase tracking-widest rounded-full hover:border-[#111] hover:bg-gray-50 transition-all duration-300"
+                  >
+                    {t('ctaPackages')}
+                  </Link>
+                  <Link
+                    href="/about"
                     className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-accent-green transition-colors flex items-center gap-2 group"
                   >
                     Read Full Bio

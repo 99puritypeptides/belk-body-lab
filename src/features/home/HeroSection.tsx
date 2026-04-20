@@ -1,103 +1,220 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { motion, useScroll, useTransform, useMotionValue } from 'framer-motion';
+import { ShieldCheckIcon, MapPinIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import CTAButton from '@/components/ui/CTAButton';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
-  const [mounted, setMounted] = useState(false);
+  const containerRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // Parallax effects for scroll
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
 
-  if (!mounted) return <div className="h-dvh bg-[#0B0B0B]" />;
+  const yText = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const yImage = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const opacityImage = useTransform(scrollYProgress, [0, 0.5], [1, 0.5]);
+
+  // Mouse hover glow effect
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const handleMouseMove = ({ clientX, clientY, currentTarget }: React.MouseEvent) => {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  };
 
   return (
-    <section className="relative h-screen w-full bg-[#0B0B0B] flex items-center justify-center overflow-hidden">
-      {/* Background grid lines */}
-      <div className="bg-grid">
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-        <div className="bg-grid-line" />
-      </div>
+    <section 
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      className="relative h-screen w-full bg-[#050505] flex items-center justify-center overflow-hidden"
+    >
+      {/* Background radial glow */}
+      <motion.div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-30"
+        style={{
+          background: useTransform(
+            [mouseX, mouseY],
+            ([x, y]) => `radial-gradient(600px circle at ${x}px ${y}px, rgba(170, 255, 0, 0.08), transparent 80%)`
+          )
+        }}
+      />
 
-      {/* MAIN CONTENT CONTAINER */}
-      <div className="max-w-[1700px] w-full h-full px-6 md:px-12 lg:px-20 z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-20 relative">
+      {/* Grid Overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
+        style={{ 
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', 
+          backgroundSize: '60px 60px' 
+        }} 
+      />
+
+      <div className="max-w-[1700px] mx-auto h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-24 px-6 lg:px-12 relative z-20">
         
-        {/* LEFT COLUMN: Text Content (Layered above image on mobile) */}
-        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left h-full justify-center relative z-20">
-          <div className="relative z-10 py-10 lg:py-0">
-            {/* Main Headline */}
-            <div className="mb-6 reveal-clip visible">
-              <h1 className="font-jumpshot uppercase text-white tracking-tighter leading-[0.85] drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]" style={{ fontSize: 'clamp(2.5rem, 8vw, 7.5rem)' }}>
-                {t('title')}<br />
-                <span className="text-[#AAFF00] drop-shadow-[0_0_30px_rgba(170,255,0,0.6)]">{t('titleHighlight')}</span>
-              </h1>
-            </div>
+        {/* Left Column: Typography & CTAs */}
+        <motion.div 
+          style={{ y: yText }}
+          className="flex-1 text-center lg:text-left z-30"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
+          >
+            <div className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
+            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/50">Engineered for Performance</span>
+          </motion.div>
 
-            {/* Subtext */}
-            <div className="max-w-[600px] mb-10 stagger-1 reveal-clip visible">
-              <p className="text-gray-200 text-sm md:text-lg font-semibold leading-relaxed tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-                {t('subtitle')}
-              </p>
-            </div>
+          <h1 className="font-jumpshot text-white text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] uppercase tracking-tighter mb-8">
+            <motion.span 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="block"
+            >
+              {t('title')}
+            </motion.span>
+            <motion.span 
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="block gradient-text filter drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+            >
+              {t('titleHighlight')}
+            </motion.span>
+          </h1>
 
-            {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 stagger-2 reveal-clip visible">
-              <button className="group relative flex items-center gap-4 bg-[#AAFF00] rounded-full p-2 pr-8 shadow-[0_0_30px_rgba(170,255,0,0.15)] transition-all duration-300">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black transform group-hover:rotate-45 transition-transform duration-300">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                </div>
-                <span className="text-black font-black uppercase tracking-widest text-sm">{t('ctaPrimary')}</span>
-              </button>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="max-w-[500px] text-gray-400 text-base md:text-lg font-medium leading-relaxed mb-10 mx-auto lg:mx-0"
+          >
+            {t('subtitle')}
+          </motion.p>
 
-              <button className="px-10 py-5 rounded-full border border-white/30 bg-black/60 backdrop-blur-md text-white font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all">
-                {t('ctaSecondary')}
-              </button>
-            </div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6"
+          >
+            <CTAButton href="/#contact">
+              {t('ctaPrimary')}
+            </CTAButton>
+            
+            <motion.button 
+              whileHover={{ x: 5 }}
+              className="group text-white/40 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-3"
+            >
+              Browse Results
+              <div className="w-8 h-[1px] bg-white/20 group-hover:w-12 group-hover:bg-accent-green transition-all" />
+            </motion.button>
+          </motion.div>
+        </motion.div>
 
-          {/* Social Proof Widget (Fixed position for better visibility) */}
-          <div className="absolute bottom-16 md:bottom-20 lg:bottom-12 flex flex-col items-center lg:items-start gap-3 stagger-3 reveal-clip visible z-40">
-            <div className="flex -space-x-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-[#0B0B0B] overflow-hidden bg-gray-800 shadow-xl">
-                  <Image src={`https://i.pravatar.cc/100?img=${i + 15}`} alt={`User ${i}`} width={48} height={48} className="object-cover" />
-                </div>
-              ))}
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-4 border-[#0B0B0B] bg-[#AAFF00] flex items-center justify-center text-black shadow-xl">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 4v16m8-8H4" /></svg>
-              </div>
-            </div>
-            <p className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase italic bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm lg:bg-transparent lg:px-0">
-              500+ <span className="text-[#AAFF00]">{t('happySpirits')}</span>
-            </p>
-          </div>
-        </div>
-
-        {/* RIGHT COLUMN: Spotlight Image (Absolute on mobile, Relative on desktop) */}
-        <div className="absolute lg:relative bottom-0 right-0 w-full lg:flex-1 h-[60vh] md:h-[70vh] lg:h-[95vh] z-10 lg:z-10 flex flex-col items-center lg:items-end justify-end pointer-events-none opacity-40 lg:opacity-100 transition-all duration-1000">
-          <div className="relative w-full h-full lg:scale-110 lg:translate-x-10">
+        {/* Right Column: Visual Centerpiece */}
+        <div className="flex-1 lg:flex-[1.2] relative w-full h-full flex items-end justify-center lg:justify-end">
+          {/* Main Hero Image with Parallax */}
+          <motion.div 
+            style={{ y: yImage, opacity: opacityImage }}
+            className="relative w-full h-[90%] lg:h-[110%] z-10 origin-bottom scale-100 lg:scale-110"
+          >
             <Image
               src="/images/hero/model-image.png"
-              alt="Muscular Bodybuilder"
+              alt="Elite Transformation"
               fill
               className="object-contain object-bottom"
-              sizes="(max-width: 1024px) 100vw, 800px"
               priority
             />
-          </div>
-          {/* Enhanced Black Gradient Overlay */}
-          <div className="absolute bottom-0 left-0 w-full h-[20vh] bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/80 to-transparent z-10" />
+          </motion.div>
+
+          {/* Floating Glass Cards */}
+          <FloatingCard 
+            icon={<ShieldCheckIcon className="w-5 h-5 text-accent-green" />}
+            title="90-Day Results"
+            subtitle="Guaranteed Protocol"
+            className="top-[5%] left-0 lg:left-0"
+            delay={1.2}
+          />
+          
+          <FloatingCard 
+            icon={<MapPinIcon className="w-5 h-5 text-accent-green" />}
+            title="Atlanta & Remote"
+            subtitle="Global Coaching"
+            className="bottom-[15%] right-0 lg:right-0"
+            delay={1.4}
+          />
+
+          <FloatingCard 
+            icon={<TrophyIcon className="w-5 h-5 text-accent-green" />}
+            title="500+ Clients"
+            subtitle="Physics Mastered"
+            className="top-[35%] -right-2 lg:right-10"
+            delay={1.6}
+          />
+
+          {/* Background Ambient Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-accent-green/5 blur-[120px] rounded-full pointer-events-none z-0" />
         </div>
+
       </div>
+
+      {/* Social Proof Footer - Integrated */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-6 py-4 px-8 rounded-full bg-white/[0.02] border border-white/5 backdrop-blur-md z-40 hidden md:flex"
+      >
+        <div className="flex -space-x-3">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="w-8 h-8 rounded-full border-2 border-black overflow-hidden bg-gray-800">
+               <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="user" width={32} height={32} />
+            </div>
+          ))}
+        </div>
+        <div className="h-4 w-px bg-white/10" />
+        <p className="text-[10px] font-black uppercase tracking-widest text-white/40">
+           Trusted by <span className="text-white">500+ Elite Performers</span>
+        </p>
+      </motion.div>
     </section>
+  );
+}
+
+interface FloatingCardProps {
+  icon: React.ReactNode;
+  title: string;
+  subtitle: string;
+  className: string;
+  delay: number;
+}
+
+function FloatingCard({ icon, title, subtitle, className, delay }: FloatingCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+      className={`absolute z-30 p-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-4 min-w-[200px] group hover:border-accent-green/50 transition-colors ${className}`}
+    >
+      <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-accent-green/10 transition-colors">
+        {icon}
+      </div>
+      <div>
+        <p className="text-white font-black text-sm uppercase tracking-tight">{title}</p>
+        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">{subtitle}</p>
+      </div>
+    </motion.div>
   );
 }

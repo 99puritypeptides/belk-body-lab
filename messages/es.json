@@ -5,11 +5,14 @@
     "features": "Características",
     "service": "Servicios",
     "exercise": "Ejercicios",
-    "packages": "Paquetes",
+    "packages": "Servicios",
     "portfolio": "Portafolio",
     "blog": "Blog",
     "contact": "Contáctanos",
-    "getStarted": "Comenzar"
+    "getStarted": "Comenzar",
+    "menuTitle": "Navegación",
+    "followUs": "Redes Sociales",
+    "language": "Idioma"
   },
   "hero": {
     "title": "Transforma Tu Cuerpo",
@@ -292,7 +295,8 @@
   "footer": {
     "brand": "BelkBodyLab",
     "home": "Inicio",
-    "packages": "Paquetes",
+    "about": "Sobre Nosotros",
+    "packages": "Servicios",
     "portfolio": "Portafolio",
     "contact": "Contacto",
     "privacy": "Privacidad",

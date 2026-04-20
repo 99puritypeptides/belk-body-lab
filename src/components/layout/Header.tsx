@@ -14,12 +14,11 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { label: t('home'), href: '/' as const },
-    { label: t('about'), href: '/about' as const },
+    { label: t('home'),      href: '/'          as const },
+    { label: t('about'),     href: '/about'     as const },
+    { label: t('packages'),  href: '/packages'  as const },
     { label: t('portfolio'), href: '/portfolio' as const },
-    { label: t('blog'), href: '/blog' as const },
-    { label: t('packages'), href: '/packages' as const },
-    { label: t('contact'), href: '/#contact' as const },
+    { label: t('blog'),      href: '/blog'      as const },
   ];
 
   useEffect(() => {
@@ -90,17 +89,17 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/#contact"
-                className="px-8 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 text-[13px] font-semibold tracking-wide rounded-full hover:bg-accent-green hover:text-black transition-all shadow-lg"
+                className="px-8 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 text-[13px] font-semibold tracking-wide rounded-full hover:bg-white hover:text-black transition-all shadow-lg"
               >
                 {t('contact')}
               </Link>
 
               <Link
                 href="/#contact"
-                className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black text-[14px] font-bold hover:bg-accent-green transition-all group shadow-lg"
+                className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black text-[14px] font-bold hover:bg-gray-100 transition-all group shadow-lg"
               >
                 {t('getStarted')}
-                <div className="w-9 h-9 rounded-full bg-[#111111] group-hover:bg-white flex items-center justify-center text-white group-hover:text-black group-hover:rotate-45 transition-all duration-300">
+                <div className="w-9 h-9 rounded-full bg-[#111111] group-hover:bg-accent-green flex items-center justify-center text-white group-hover:text-black group-hover:rotate-45 transition-all duration-300">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M7 17L17 7" />
                     <path d="M7 7h10v10" />
@@ -164,8 +163,8 @@ export default function Header() {
                 transform: menuOpen ? 'translateY(0)' : 'translateY(20px)'
               }}
             >
-              <span className="text-[10px] sm:text-xs font-black text-accent-green opacity-40 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
-              <span className="font-display text-4xl sm:text-5xl font-bold uppercase text-white group-hover:text-accent-green transition-colors leading-none">
+              <span className="text-[10px] sm:text-xs font-black text-accent-green opacity-60 transition-opacity">0{i + 1}</span>
+              <span className="font-display text-4xl sm:text-5xl font-bold uppercase text-white group-hover:text-white transition-colors leading-none">
                 {link?.label}
               </span>
             </Link>
@@ -188,7 +187,7 @@ export default function Header() {
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-4">{t('followUs') || 'Social Connect'}</p>
               <div className="flex gap-5">
                 {['Instagram', 'TikTok', 'YouTube']?.map((s) => (
-                  <a key={s} href="#" className="text-[11px] font-black uppercase tracking-widest text-white hover:text-accent-green transition-colors">
+                  <a key={s} href="#" className="text-[11px] font-black uppercase tracking-widest text-white hover:text-white/60 transition-colors">
                     {s.substring(0, 2)}
                   </a>
                 ))}
@@ -205,14 +204,14 @@ export default function Header() {
             <Link
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center px-8 py-5 bg-accent-green text-black text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-white transition-all shadow-xl"
+              className="flex items-center justify-center px-8 py-5 bg-white text-black text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-gray-100 transition-all shadow-xl"
             >
               {t('getStarted')}
             </Link>
             <Link
               href="/#contact"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center px-8 py-5 border border-white/10 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:border-accent-green hover:text-accent-green transition-all"
+              className="flex items-center justify-center px-8 py-5 border border-white/10 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:border-white transition-all"
             >
               {t('contact')}
             </Link>

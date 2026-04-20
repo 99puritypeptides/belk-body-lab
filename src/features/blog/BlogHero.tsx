@@ -41,7 +41,7 @@ export default function BlogHero() {
             className="font-heading font-black text-white text-5xl md:text-7xl lg:text-8xl xl:text-9xl uppercase leading-[0.85] mb-10 tracking-tighter"
           >
             {t('title')}<br />
-            <span className="text-accent-green italic drop-shadow-[0_0_50px_rgba(170,255,0,0.3)]">{t('titleHighlight')}</span>
+            <span className="text-accent-green drop-shadow-[0_0_50px_rgba(170,255,0,0.3)]">{t('titleHighlight')}</span>
           </motion.h1>
 
           <motion.p

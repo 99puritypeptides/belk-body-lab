@@ -74,7 +74,7 @@ export default function AboutStory() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="italic text-2xl md:text-3xl text-accent-green font-display font-black leading-tight"
+              className="text-2xl md:text-3xl text-accent-green font-display font-black leading-tight"
             >
               "{t('mission')}"
             </motion.div>

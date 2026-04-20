@@ -201,7 +201,7 @@ export default function PortfolioGallery() {
           <div className="inline-block p-px rounded-2xl bg-gradient-to-r from-accent-green/30 via-accent-green to-accent-green/30">
             <div className="bg-bg-card rounded-2xl px-10 py-10">
               <h3 className="font-display font-black text-3xl lg:text-4xl text-white mb-4">
-                {t('ctaTitle')} <span className="italic gradient-text">{t('ctaTitleItalic')}</span>
+                {t('ctaTitle')} <span className="gradient-text">{t('ctaTitleItalic')}</span>
               </h3>
               <p className="text-text-muted text-base mb-8 max-w-md mx-auto">{t('ctaDesc')}</p>
               <Link href="/#contact" className="inline-flex items-center gap-3 px-10 py-5 bg-accent-green text-bg-primary font-black text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white transition-all duration-300 hover:scale-105 glow-green">

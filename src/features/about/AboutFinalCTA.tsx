@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import CTAButton from '@/components/ui/CTAButton';
 
 export default function AboutFinalCTA() {
   const t = useTranslations('aboutPage.finalCta');
@@ -54,15 +55,9 @@ export default function AboutFinalCTA() {
             transition={{ delay: 0.4 }}
             className="flex flex-col items-center gap-8"
           >
-            <Link href="/#contact" className="group relative flex items-center gap-6 bg-white pl-10 pr-3 py-3 rounded-full text-black hover:bg-accent-green transition-all duration-500 shadow-[0_0_50px_rgba(170,255,0,0.15)]">
-              <span className="text-base font-black uppercase tracking-[0.2em]">{t('cta')}</span>
-              <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center text-white transform group-hover:rotate-45 transition-transform duration-500">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7" />
-                  <path d="M7 7h10v10" />
-                </svg>
-              </div>
-            </Link>
+            <CTAButton href="/#contact" size="lg">
+              {t('cta')}
+            </CTAButton>
             
             <Link 
               href="/portfolio" 

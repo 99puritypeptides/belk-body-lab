@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
+import CTAButton from '@/components/ui/CTAButton';
 
 export default function BlogCTA() {
   return (
@@ -51,7 +52,7 @@ export default function BlogCTA() {
                 </div>
                 <h2 className="font-heading font-black text-white text-4xl md:text-5xl lg:text-7xl uppercase leading-[0.9] mb-6 tracking-tighter">
                   Stop Guessing. <br />
-                  <span className="text-accent-green italic">Engineer Your Results.</span>
+                  <span className="text-accent-green">Engineer Your Results.</span>
                 </h2>
                 <p className="text-text-muted text-base lg:text-xl font-medium max-w-[500px] leading-relaxed">
                   I bridge the gap between biological theory and physical output. Your custom protocol starts with a single click.
@@ -60,18 +61,9 @@ export default function BlogCTA() {
 
               {/* CTA Action Side */}
               <div className="relative z-10 flex flex-col items-center gap-8 min-w-[320px]">
-                <Link
-                  href="/#contact"
-                  className="group/cta relative flex items-center justify-between gap-6 bg-white pl-8 pr-2 py-2 rounded-full text-black hover:bg-accent-green transition-all duration-500 shadow-xl w-full"
-                >
-                  <span className="text-[14px] font-bold uppercase tracking-[0.2em] ml-2">Apply for Coaching</span>
-                  <div className="w-11 h-11 rounded-full bg-[#111111] group-hover/cta:bg-white flex items-center justify-center text-white group-hover/cta:text-black group-hover/cta:rotate-45 transition-all duration-500">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M7 17L17 7" />
-                      <path d="M7 7h10v10" />
-                    </svg>
-                  </div>
-                </Link>
+                <CTAButton href="/#contact" className="w-full justify-start">
+                  Apply for Coaching
+                </CTAButton>
                 <Link
                   href="/portfolio"
                   className="group/sub inline-flex items-center gap-3 text-white/40 text-[11px] font-black uppercase tracking-[0.25em] hover:text-white transition-all underline-offset-8 hover:underline"
