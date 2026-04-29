@@ -55,7 +55,7 @@ export default function TransformationsSection() {
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}
             >
               {t('title')}{' '}
-              <span className="gradient-text filter drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+              <span className="text-white">
                 {t('titleItalic')}
               </span>
             </h2>

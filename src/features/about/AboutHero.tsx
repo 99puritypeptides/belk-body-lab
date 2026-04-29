@@ -38,7 +38,7 @@ export default function AboutHero() {
               className="font-jumpshot text-white text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.85] uppercase mb-8"
             >
               {t('title')}<br />
-              <span className="gradient-text filter drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">{t('titleHighlight')}</span>
+              <span className="text-white">{t('titleHighlight')}</span>
             </motion.h1>
 
             <motion.p

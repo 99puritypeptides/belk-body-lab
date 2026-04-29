@@ -4,6 +4,7 @@ import AboutSection from '@/features/home/AboutSection';
 import BMICalculator from '@/features/home/BMICalculator';
 import TransformationsSection from '@/features/home/TransformationSection';
 import TestimonialsSection from '@/features/home/TestimonialsSection';
+import FAQSection from '@/features/home/FAQSection';
 import ContactSection from '@/features/home/ContactSection';
 import { getTranslations } from 'next-intl/server';
 
@@ -35,6 +36,7 @@ export default function HomePage() {
       <BMICalculator />
       <TransformationsSection />
       <TestimonialsSection />
+      <FAQSection />
       <ContactSection />
     </main>
   );

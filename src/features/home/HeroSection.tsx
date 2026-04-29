@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { motion, useScroll, useTransform, useMotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
 import { ShieldCheckIcon, MapPinIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import CTAButton from '@/components/ui/CTAButton';
 
@@ -19,162 +19,175 @@ export default function HeroSection() {
 
   const yText = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const yImage = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const opacityImage = useTransform(scrollYProgress, [0, 0.5], [1, 0.5]);
+  
+  // More aggressive scroll fade to reveal text naturally on mobile
+  const opacityImage = useTransform(scrollYProgress, [0, 0.25], [1, 0.1]);
 
-  // Mouse hover glow effect
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+  const peekValue = useMotionValue(0); // Start at 0 (revealed text) for mount animation
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    // Initial mount reveal
+    animate(peekValue, 1, { duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] });
+  }, []);
 
   const handleMouseMove = ({ clientX, clientY, currentTarget }: React.MouseEvent) => {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
+    animate(peekValue, 0, { duration: 0.3, ease: "easeOut" });
+
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      animate(peekValue, 1, { duration: 1.2, ease: [0.16, 1, 0.3, 1] });
+    }, 500); 
   };
 
   return (
-    <section 
+    <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative h-screen w-full bg-[#050505] flex items-center justify-center overflow-hidden"
+      onTouchStart={() => animate(peekValue, 0, { duration: 0.3 })}
+      onTouchEnd={() => animate(peekValue, 1, { duration: 1.2 })}
+      className="relative h-[100svh] w-full bg-[#050505] flex items-center justify-center overflow-hidden"
     >
-      {/* Background radial glow */}
-      <motion.div 
-        className="absolute inset-0 z-0 pointer-events-none opacity-30"
-        style={{
-          background: useTransform(
-            [mouseX, mouseY],
-            ([x, y]) => `radial-gradient(600px circle at ${x}px ${y}px, rgba(170, 255, 0, 0.08), transparent 80%)`
-          )
-        }}
-      />
-
-      {/* Grid Overlay */}
-      <div 
-        className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
-        style={{ 
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)', 
-          backgroundSize: '60px 60px' 
-        }} 
-      />
-
-      <div className="max-w-[1700px] mx-auto h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-24 px-6 lg:px-12 relative z-20">
-        
-        {/* Left Column: Typography & CTAs */}
-        <motion.div 
-          style={{ y: yText }}
-          className="flex-1 text-center lg:text-left z-30"
+      {/* 1. Background Layer: Typography behind the image (Constrained to top half, below header) */}
+      <div className="absolute inset-x-0 top-0 h-1/2 z-0 flex flex-col items-center justify-start pt-[15vh] md:pt-[18vh] pointer-events-none select-none">
+        <motion.div
+          style={{ 
+            y: yText,
+            scale: useTransform(peekValue, [0, 1], [1.05, 1]),
+            filter: useTransform(peekValue, [0, 1], ['blur(0px)', 'blur(2px)']),
+            willChange: "transform, filter"
+          }}
+          className="w-full text-center px-4"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
-          >
-            <div className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
-            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/50">Engineered for Performance</span>
-          </motion.div>
-
-          <h1 className="font-jumpshot text-white text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] uppercase tracking-tighter mb-8">
+          <h1 className="font-jumpshot text-white text-[9vw] md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] opacity-100">
             <motion.span 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="block"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-white/90"
             >
               {t('title')}
             </motion.span>
             <motion.span 
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="block gradient-text filter drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-accent-green drop-shadow-[0_0_30px_rgba(170,255,0,0.3)]"
             >
               {t('titleHighlight')}
             </motion.span>
           </h1>
-
+          
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-w-[500px] text-gray-400 text-base md:text-lg font-medium leading-relaxed mb-10 mx-auto lg:mx-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="max-w-[550px] text-white/40 text-[10px] md:text-[12px] font-bold uppercase tracking-[0.25em] leading-relaxed mx-auto mt-6"
           >
             {t('subtitle')}
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6"
-          >
-            <CTAButton href="/#contact">
-              {t('ctaPrimary')}
-            </CTAButton>
-            
-            <motion.button 
-              whileHover={{ x: 5 }}
-              className="group text-white/40 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-3"
-            >
-              Browse Results
-              <div className="w-8 h-[1px] bg-white/20 group-hover:w-12 group-hover:bg-accent-green transition-all" />
-            </motion.button>
-          </motion.div>
         </motion.div>
+      </div>
 
-        {/* Right Column: Visual Centerpiece */}
-        <div className="flex-1 lg:flex-[1.2] relative w-full h-full flex items-end justify-center lg:justify-end">
-          {/* Main Hero Image with Parallax */}
-          <motion.div 
+      {/* 2. Middle Layer: The Hero Image (Enlarged, Animates away on movement) */}
+      <div className="absolute inset-0 z-10 pointer-events-none flex items-end justify-center">
+        <motion.div
+          style={{ 
+            opacity: useTransform(peekValue, [0, 1], [0.15, 1]),
+            scale: useTransform(peekValue, [0, 1], [0.96, 1]),
+            filter: useTransform(peekValue, [0, 1], ['blur(15px)', 'blur(0px)']),
+            willChange: "transform, opacity, filter"
+          }}
+          className="relative w-full h-full flex items-end justify-center"
+        >
+          <motion.div
             style={{ y: yImage, opacity: opacityImage }}
-            className="relative w-full h-[90%] lg:h-[110%] z-10 origin-bottom scale-100 lg:scale-110"
+            className="relative w-full h-[85vh] md:h-[95vh] lg:h-[100vh] max-w-[1400px]"
           >
             <Image
               src="/images/hero/model-image.png"
               alt="Elite Transformation"
               fill
-              className="object-contain object-bottom"
+              className="object-contain object-bottom brightness-[1.1] contrast-[1.1]"
               priority
             />
           </motion.div>
-
-          {/* Floating Glass Cards */}
-          <FloatingCard 
-            icon={<ShieldCheckIcon className="w-5 h-5 text-accent-green" />}
-            title="90-Day Results"
-            subtitle="Guaranteed Protocol"
-            className="top-[5%] left-0 lg:left-0"
-            delay={1.2}
-          />
-          
-          <FloatingCard 
-            icon={<MapPinIcon className="w-5 h-5 text-accent-green" />}
-            title="Atlanta & Remote"
-            subtitle="Global Coaching"
-            className="bottom-[15%] right-0 lg:right-0"
-            delay={1.4}
-          />
-
-          <FloatingCard 
-            icon={<TrophyIcon className="w-5 h-5 text-accent-green" />}
-            title="500+ Clients"
-            subtitle="Physics Mastered"
-            className="top-[35%] -right-2 lg:right-10"
-            delay={1.6}
-          />
-
-          {/* Background Ambient Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-accent-green/5 blur-[120px] rounded-full pointer-events-none z-0" />
-        </div>
-
+        </motion.div>
       </div>
 
-      {/* Social Proof Footer - Integrated */}
+      {/* 2.5 Bottom Gradient Overlay for Button Visibility */}
+      <div className="absolute inset-x-0 bottom-0 h-[35vh] bg-gradient-to-t from-black via-black/80 to-transparent z-20 pointer-events-none" />
+
+      {/* 3. Foreground Layer: UI Elements & CTAs */}
+
+      <div className="relative z-50 w-full h-full flex flex-col items-center justify-between py-12 px-6">
+        {/* Top Spacer */}
+        <div className="h-20" />
+
+        {/* Removed Performance Lab Pill */}
+
+        {/* CTA Section - Fixed at the bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-10 mt-auto mb-12"
+        >
+          <CTAButton href="/#contact">
+            {t('ctaPrimary')}
+          </CTAButton>
+
+          <motion.button
+            whileHover={{ x: 5 }}
+            className="group text-white/50 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-3"
+          >
+            {t('ctaSecondary')}
+            <div className="w-8 h-[1px] bg-white/20 group-hover:w-12 group-hover:bg-accent-green transition-all" />
+          </motion.button>
+        </motion.div>
+      </div>
+
+      {/* Floating Stat Cards - Strategically Positioned */}
       <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        style={{ 
+          opacity: useTransform(peekValue, [0, 1], [0, 1]),
+          x: useTransform(peekValue, [0, 1], [-20, 0]),
+          filter: useTransform(peekValue, [0, 1], ['blur(10px)', 'blur(0px)']),
+          willChange: "transform, opacity, filter"
+        }}
+        className="absolute inset-0 pointer-events-none z-40"
+      >
+        <FloatingCard 
+          icon={<ShieldCheckIcon className="w-5 h-5 text-accent-green" />}
+          title="90-Day Results"
+          subtitle="Guaranteed Protocol"
+          className="top-[25%] md:top-[45%] left-[4%] lg:left-[8%]"
+          delay={1.2}
+        />
+        
+        <FloatingCard 
+          icon={<MapPinIcon className="w-5 h-5 text-accent-green" />}
+          title="Atlanta & Remote"
+          subtitle="Global Coaching"
+          className="top-[40%] md:top-[70%] left-[2%] lg:left-[6%]"
+          delay={1.4}
+        />
+
+        <FloatingCard 
+          icon={<TrophyIcon className="w-5 h-5 text-accent-green" />}
+          title="500+ Clients"
+          subtitle="Physics Mastered"
+          className="top-[15%] md:top-[35%] right-[4%] lg:right-[8%]"
+          delay={1.6}
+        />
+      </motion.div>
+
+      {/* Social Proof Footer */}
+      <motion.div 
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-6 py-4 px-8 rounded-full bg-white/[0.02] border border-white/5 backdrop-blur-md z-40 hidden md:flex"
+        className="absolute bottom-10 right-10 flex items-center gap-6 py-4 px-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-xl z-50 hidden xl:flex"
       >
         <div className="flex -space-x-3">
           {[1, 2, 3, 4].map((i) => (
@@ -185,9 +198,10 @@ export default function HeroSection() {
         </div>
         <div className="h-4 w-px bg-white/10" />
         <p className="text-[10px] font-black uppercase tracking-widest text-white/40">
-           Trusted by <span className="text-white">500+ Elite Performers</span>
+           Trusted by <span className="text-white">500+ Elite</span>
         </p>
       </motion.div>
+
     </section>
   );
 }
@@ -206,14 +220,14 @@ function FloatingCard({ icon, title, subtitle, className, delay }: FloatingCardP
       initial={{ opacity: 0, scale: 0.8, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
-      className={`absolute z-30 p-5 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-4 min-w-[200px] group hover:border-accent-green/50 transition-colors ${className}`}
+      className={`absolute z-30 p-3 md:p-5 rounded-2xl md:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-3 md:gap-4 min-w-[160px] md:min-w-[200px] group hover:border-accent-green/50 transition-colors ${className}`}
     >
-      <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-accent-green/10 transition-colors">
+      <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-accent-green/10 transition-colors">
         {icon}
       </div>
       <div>
-        <p className="text-white font-black text-sm uppercase tracking-tight">{title}</p>
-        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">{subtitle}</p>
+        <p className="text-white font-black text-[11px] md:text-sm uppercase tracking-tight">{title}</p>
+        <p className="text-white/40 text-[8px] md:text-[10px] font-bold uppercase tracking-widest">{subtitle}</p>
       </div>
     </motion.div>
   );

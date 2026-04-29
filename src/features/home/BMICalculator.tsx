@@ -265,7 +265,7 @@ export default function BMICalculator() {
             style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)' }}
           >
             {t('title')}{' '}
-            <em className="not-italic gradient-text">{t('titleHighlight')}</em>
+            <span className="not-italic text-accent-green">{t('titleHighlight')}</span>
           </h2>
         </motion.div>
 
