@@ -5,7 +5,7 @@ import BMICalculator from '@/features/home/BMICalculator';
 import TransformationsSection from '@/features/home/TransformationSection';
 import TestimonialsSection from '@/features/home/TestimonialsSection';
 import FAQSection from '@/features/home/FAQSection';
-import ContactSection from '@/features/home/ContactSection';
+import HomeContactCTA from '@/features/home/HomeContactCTA';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -37,7 +37,7 @@ export default function HomePage() {
       <TransformationsSection />
       <TestimonialsSection />
       <FAQSection />
-      <ContactSection />
+      <HomeContactCTA />
     </main>
   );
 }

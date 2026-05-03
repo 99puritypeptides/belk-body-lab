@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
 <p>What happens when you miss a session? For most, it triggers the "all or nothing" mentality. A professional plan includes a pivot strategy—a way to adjust and maintain momentum even when life gets in the way.</p>
 
 <h2>3. Lack of Feedback Loops</h2>
-<p>Without data, you're just guessing. You need to track your weight, your photos, and your performance. If a plan doesn't adjust based on YOUR data, it is a template, not a <a href="/packages" class="text-accent-green hover:underline">coaching program</a>.</p>
+<p>Without data, you're just guessing. You need to track your weight, your photos, and your performance. If a plan doesn't adjust based on YOUR data, it is a template, not a <a href="/services" class="text-accent-green hover:underline">coaching protocol</a>.</p>
  
  <p>Ready for a plan that accounts for your real life? <a href="/#contact" class="text-accent-green hover:underline">Connect with me today</a>.</p>
       `
@@ -180,7 +180,7 @@ export const blogPosts: BlogPost[] = [
 <h2>3. Fats: The Hormonal Regulator</h2>
 <p>Fats are essential for hormone production. Dropping fats too low will tank your testosterone and your energy levels. Focus on monounsaturated and omega-3 sources like avocado and salmon. If you're building muscle, ensure your <a href="/blog/beginner-muscle-building-plan" class="text-accent-green hover:underline">surplus nutrition</a> is optimized.</p>
  
- <p>Check out our <a href="/packages" class="text-accent-green hover:underline">coaching packages</a> to get a nutrition blueprint tailored to your biology.</p>
+ <p>Check out our <a href="/services" class="text-accent-green hover:underline">coaching protocols</a> to get a nutrition blueprint tailored to your biology.</p>
       `
     },
     es: {

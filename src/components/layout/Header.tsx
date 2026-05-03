@@ -16,7 +16,7 @@ export default function Header() {
   const navLinks = [
     { label: t('home'),      href: '/'          as const },
     { label: t('about'),     href: '/about'     as const },
-    { label: t('packages'),  href: '/packages'  as const },
+    { label: t('packages'),  href: '/services'  as const },
     { label: t('portfolio'), href: '/portfolio' as const },
     { label: t('blog'),      href: '/blog'      as const },
   ];
@@ -88,14 +88,14 @@ export default function Header() {
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="px-8 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 text-[13px] font-semibold tracking-wide rounded-full hover:bg-white hover:text-black transition-all shadow-lg"
               >
                 {t('contact')}
               </Link>
 
               <Link
-                href="/#contact"
+                href="/contact"
                 className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black text-[14px] font-bold hover:bg-gray-100 transition-all group shadow-lg"
               >
                 {t('getStarted')}
@@ -202,14 +202,14 @@ export default function Header() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center px-8 py-5 bg-white text-black text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-gray-100 transition-all shadow-xl"
             >
               {t('getStarted')}
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center px-8 py-5 border border-white/10 text-white text-[11px] font-black uppercase tracking-[0.2em] rounded-2xl hover:border-white transition-all"
             >

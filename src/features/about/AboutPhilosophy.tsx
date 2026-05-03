@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import PremiumIcon from '@/components/ui/PremiumIcon';
 
 export default function AboutPhilosophy() {
   const t = useTranslations('aboutPage.philosophy');
@@ -11,99 +12,109 @@ export default function AboutPhilosophy() {
     {
       title: t('p1Title'),
       desc: t('p1Desc'),
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 3h12" /><path d="M8 7h8" /><path d="M10 11h4" /><path d="M12 15v6" />
-        </svg>
-      )
+      icon: "science",
+      size: "lg:col-span-2"
     },
     {
       title: t('p2Title'),
       desc: t('p2Desc'),
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" /><path d="M12 8v8" /><path d="M8 12h8" />
-        </svg>
-      )
+      icon: "target",
+      size: "lg:col-span-1"
     },
     {
       title: t('p3Title'),
       desc: t('p3Desc'),
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><circle cx="12" cy="12" r="3" />
-        </svg>
-      )
-    }
+      icon: "shield",
+      size: "lg:col-span-3"
+    },
   ];
 
   return (
-    <section className="relative py-24 lg:py-40 bg-bg-card/30 overflow-hidden">
-      <div className="container-custom px-6 lg:px-10 max-w-[1700px] mx-auto relative z-10">
-        
-        {/* Header */}
-        <div className="flex flex-col items-center text-center mb-20 lg:mb-32">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="px-4 py-1.5 rounded-full border border-accent-green/20 bg-accent-green/5 text-accent-green text-[10px] font-black uppercase tracking-[0.2em] mb-6"
-          >
-            {t('label')}
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white tracking-tight leading-tight max-w-[900px]"
-          >
-            {t('title')}
-          </motion.h2>
+    <section className="relative py-32 lg:py-48 bg-[#0c0c0c] overflow-hidden">
+      {/* Decorative horizontal noise texture / line */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      <div className="max-w-[1800px] mx-auto px-6 lg:px-20">
+        <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-24">
+          <div className="max-w-3xl space-y-8">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-accent-green/30 bg-accent-green/5">
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-accent-green">
+                {t('label')}
+              </span>
+            </div>
+            <h2 className="text-white text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-[0.85]">
+              {t('title')}
+            </h2>
+          </div>
+          <div className="lg:max-w-xs text-right">
+            <p className="text-white/30 text-sm font-medium uppercase tracking-[0.2em] leading-relaxed">
+              Every protocol is a proprietary blend of physiological science and human resilience.
+            </p>
+          </div>
         </div>
 
-        {/* Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {pillars.map((pillar, idx) => (
+        {/* Bento Grid Design */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {pillars.map((pillar, i) => (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={pillar.title}
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              whileHover={{ y: -10 }}
-              className="group p-8 lg:p-12 rounded-[32px] bg-bg-card border border-white/5 hover:border-accent-green/20 transition-all duration-500 relative overflow-hidden"
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+              className={`
+                relative group p-10 lg:p-16 rounded-[2rem] bg-white/[0.02] border border-white/5 
+                hover:border-accent-green/20 hover:bg-white/[0.04] transition-all duration-700
+                overflow-hidden ${pillar.size}
+              `}
             >
-              {/* Card Accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-green/5 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Glass Reflection Effect */}
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-green mb-10 group-hover:scale-110 group-hover:bg-accent-green group-hover:text-black transition-all duration-500">
-                {pillar.icon}
+              <div className="relative z-10 space-y-12">
+                <div className="w-16 h-16 rounded-2xl bg-black flex items-center justify-center border border-white/5 group-hover:scale-110 transition-transform duration-500">
+                  <PremiumIcon 
+                    name={pillar.icon as any} 
+                    size={40} 
+                    color="#AAFF00" 
+                  />
+                </div>
+                
+                <div className="space-y-6">
+                  <h3 className="text-white text-3xl font-black uppercase tracking-tight">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-white/40 text-lg leading-relaxed font-light max-w-xl">
+                    {pillar.desc}
+                  </p>
+                </div>
               </div>
 
-              <h3 className="text-2xl lg:text-3xl font-black uppercase text-white mb-6 tracking-tight">
-                {pillar.title}
-              </h3>
-              
-              <p className="text-text-muted text-lg leading-relaxed font-medium">
-                {pillar.desc}
-              </p>
+              {/* Decorative Corner Number */}
+              <span className="absolute top-10 right-10 text-[10px] font-black text-white/5 uppercase tracking-[0.5em]">
+                Standard 0{i + 1}
+              </span>
             </motion.div>
-          ))}
-        </div>
-
-        {/* SEO Tags Layer */}
-        <div className="mt-24 md:mt-32 flex flex-wrap justify-center gap-4 lg:gap-8 opacity-40 hover:opacity-100 transition-opacity duration-700">
-          {[t('tag1'), t('tag2'), t('tag3')].map((tag, i) => (
-            <span key={i} className="text-[11px] font-black uppercase tracking-[0.3em] text-white">
-              {tag}
-            </span>
           ))}
         </div>
       </div>
 
-      {/* Decorative Blur */}
-      <div className="absolute bottom-[-20%] left-[-10%] w-[40%] h-[40%] bg-accent-green/5 rounded-full blur-[150px] opacity-30 pointer-events-none" />
+      {/* Marquee effect at bottom */}
+      <div className="mt-32 border-y border-white/5 py-8 overflow-hidden whitespace-nowrap bg-white/[0.01]">
+        <motion.div 
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          className="inline-flex gap-20"
+        >
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="flex gap-20">
+              <span className="text-[11px] font-black uppercase tracking-[0.6em] text-white/20">{t('tag1')}</span>
+              <span className="text-[11px] font-black uppercase tracking-[0.6em] text-white/20">{t('tag2')}</span>
+              <span className="text-[11px] font-black uppercase tracking-[0.6em] text-white/20">{t('tag3')}</span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,93 +1,135 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import CTAButton from '@/components/ui/CTAButton';
+import { Link } from '@/i18n/navigation';
+import PremiumIcon from '@/components/ui/PremiumIcon';
 
 export default function AboutHero() {
   const t = useTranslations('aboutPage.hero');
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+  const isInView = useInView(videoRef);
+
+  React.useEffect(() => {
+    if (isInView) {
+      videoRef.current?.play();
+    } else {
+      videoRef.current?.pause();
+    }
+  }, [isInView]);
+
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, 150]);
+  const scale = useTransform(scrollY, [0, 1000], [1, 1.1]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-bg-primary">
-      {/* Background Decorative Element */}
-      <div className="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#FFFFFF] rounded-full blur-[150px] opacity-[0.05]" />
-      </div>
+    <section className="relative h-screen flex flex-col pt-32 pb-12 overflow-hidden bg-[#050505]">
+      {/* Background Media with Cinematic Parallax */}
+      <motion.div 
+        style={{ y, scale }}
+        className="absolute inset-0 z-0"
+      >
+        <video
+          ref={videoRef}
+          src="/BBL Media/chest-day.mp4"
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover grayscale opacity-40 brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
+      </motion.div>
 
-      <div className="container-custom relative z-10 px-6 lg:px-10">
-        <div className="max-w-[1700px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      {/* Decorative vertical line */}
+      <div className="absolute left-1/2 top-0 w-px h-screen bg-gradient-to-b from-transparent via-white/10 to-transparent hidden lg:block" />
+
+      <div className="max-w-[1800px] mx-auto px-6 lg:px-20 relative z-10 w-full flex-1 flex flex-col justify-center py-12">
+        <div className="space-y-16 lg:space-y-24">
           
-          {/* Text Content */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <div className="space-y-6 lg:space-y-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="inline-flex items-center gap-6"
             >
-              <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('trust')}</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.6em] text-accent-green">
+                The Body Architect
+              </span>
+              <div className="w-16 h-px bg-white/20" />
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-jumpshot text-white text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.85] uppercase mb-8"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-white font-display font-black leading-[0.8] tracking-tight uppercase"
+              style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)' }}
             >
-              {t('title')}<br />
-              <span className="text-white">{t('titleHighlight')}</span>
+              {t('title')} <br />
+              <span className="italic font-light text-white/10 block mt-2">{t('titleHighlight')}</span>
             </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="max-w-[600px] text-lg md:text-xl text-text-muted font-medium leading-relaxed mb-12"
-            >
-              {t('subtitle')}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center gap-6"
-            >
-              <CTAButton href="/#contact">
-                {t('cta')}
-              </CTAButton>
-            </motion.div>
           </div>
 
-          {/* Image/Visual Element */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative aspect-square lg:aspect-auto h-full min-h-[400px] lg:min-h-[600px] rounded-3xl overflow-hidden border border-white/5"
-          >
-            <Image
-              src="/images/hero/model-image.png"
-              alt="Engineered Transformation"
-              fill
-              className="object-cover object-center brightness-75 grayscale-[0.2]"
-              priority
-            />
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent opacity-60" />
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg-primary to-transparent" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+            <div className="lg:col-span-1 hidden lg:block" />
             
-            <div className="absolute bottom-10 left-10 p-8 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 max-w-[280px]">
-              <p className="font-display text-4xl font-black mb-2 leading-none text-white">500+</p>
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">{t('trust')}</p>
+            <div className="lg:col-span-5 space-y-10">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-white/40 text-lg md:text-xl font-light leading-relaxed border-l border-white/10 pl-10"
+              >
+                {t('subtitle')}
+              </motion.p>
             </div>
-          </motion.div>
+
+            <div className="lg:col-span-5 lg:col-start-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                <Link 
+                  href="/contact"
+                  className="group inline-flex items-center gap-8 text-white"
+                >
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] overflow-hidden">
+                    <PremiumIcon 
+                      name="arrow"
+                      size={32}
+                      className="group-hover:text-black transition-colors"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40 group-hover:text-accent-green transition-colors mb-1">
+                      Start Your Protocol
+                    </span>
+                    <span className="text-sm font-black uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform duration-500">
+                      {t('cta')}
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            </div>
+          </div>
 
         </div>
       </div>
+
+      {/* Floating Meta Text */}
+      <motion.div 
+        style={{ opacity }}
+        className="absolute right-0 top-1/2 -translate-y-1/2 vertical-text hidden xl:block"
+      >
+        <span className="text-[10px] font-black uppercase tracking-[1em] text-white/5 whitespace-nowrap">
+          ESTABLISHED IN TWO THOUSAND NINETEEN — CHARLESTON SOUTH CAROLINA
+        </span>
+      </motion.div>
     </section>
   );
 }

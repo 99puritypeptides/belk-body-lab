@@ -12,7 +12,7 @@ export default function Footer() {
   const navLinks = [
     { label: t('home'),      href: '/'          as const },
     { label: t('about'),     href: '/about'     as const },
-    { label: t('packages'),  href: '/packages'  as const },
+    { label: t('packages'),  href: '/services'  as const },
     { label: t('portfolio'), href: '/portfolio' as const },
     { label: t('blog'),      href: '/blog'      as const },
     { label: t('privacy'),   href: '#'          as const },

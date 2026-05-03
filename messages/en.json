@@ -31,10 +31,10 @@
     "name": "Kyle Belk",
     "heading": "Transforming bodies,",
     "headingItalic": "rewriting limits.",
-    "bio1": "I'm Kyle Belk — a certified personal trainer from Atlanta, GA with 7 years of coaching experience. I've helped over 500 clients shed fat, build muscle, and completely rewrite their relationship with their body.",
+    "bio1": "I'm Kyle Belk - a certified personal trainer from Atlanta, GA with 7 years of coaching experience. I've helped over 500 clients shed fat, build muscle, and completely rewrite their relationship with their body.",
     "bio2": "My approach is simple: no cookie-cutter plans. Every program I build is rooted in your unique metabolism, schedule, and goals.",
     "quote": "Your body is capable of more than your mind believes.",
-    "quoteAuthor": "— Kyle Belk",
+    "quoteAuthor": "- Kyle Belk",
     "cred1": "NASM Certified Personal Trainer",
     "cred2": "Precision Nutrition Level 1",
     "cred3": "Online & In-Person Coaching",
@@ -44,7 +44,7 @@
     "skill3": "Nutrition Strategy",
     "skill4": "Mindset Coaching",
     "ctaWork": "Work With Kyle",
-    "ctaPackages": "View Packages"
+    "ctaServices": "View Services"
   },
   "bmi": {
     "label": "Free Fitness Tool",
@@ -83,13 +83,18 @@
     "rangeUnder": "Under",
     "rangeNormal": "Normal",
     "rangeOver": "Over",
-    "rangeObese": "Obese"
+    "rangeObese": "Obese",
+    "weightToLose": "Weight to lose for Normal BMI",
+    "weightToGain": "Weight to gain for Normal BMI",
+    "idealRange": "Ideal Weight Range",
+    "maintainWeight": "Maintain your current weight!",
+    "targetMetrics": "Target Metrics"
   },
   "transformations": {
     "label": "Real Results",
     "title": "Client",
     "titleItalic": "Transformations.",
-    "description": "Every result is real. No filters, no tricks — just dedicated clients and a proven system.",
+    "description": "Every result is real. No filters, no tricks - just dedicated clients and a proven system.",
     "viewAll": "View All Transformations",
     "before": "Before",
     "after": "After",
@@ -104,10 +109,10 @@
     "titleItalic": "Real Results.",
     "subtitle": "Trusted by 500+ clients across the US.",
     "program": "program",
-    "t1": "Kyle completely changed how I think about fitness. I'd tried everything before — keto, fasting, random YouTube programs. None of it stuck. In 16 weeks with Kyle, I lost 42 pounds and actually understand WHY it worked.",
+    "t1": "Kyle completely changed how I think about fitness. I'd tried everything before - keto, fasting, random YouTube programs. None of it stuck. In 16 weeks with Kyle, I lost 42 pounds and actually understand WHY it worked.",
     "t2": "As a mom of two with zero time, I needed something that actually fit my life. Kyle built around my schedule, my stress levels, even my meal preferences. Down 28 lbs and I feel stronger than I did in my 20s.",
-    "t3": "I came to Kyle as a skinny guy who'd been lifting for 2 years with no results. He identified the exact issues with my training and nutrition. 20 weeks later — 18 pounds of muscle and a completely different physique.",
-    "t4": "The check-ins, the adjustments, the accountability — Kyle is always there. I never felt like just another client. He genuinely cares about your progress. Best investment I've ever made.",
+    "t3": "I came to Kyle as a skinny guy who'd been lifting for 2 years with no results. He identified the exact issues with my training and nutrition. 20 weeks later - 18 pounds of muscle and a completely different physique.",
+    "t4": "The check-ins, the adjustments, the accountability - Kyle is always there. I never felt like just another client. He genuinely cares about your progress. Best investment I've ever made.",
     "t5": "Kyle prepped me for my first NPC show. The man knows competition prep better than anyone I've worked with. Walked on stage at 4.8% body fat and placed first in my class. Unreal.",
     "r1": "-42 lbs",
     "r2": "-28 lbs",
@@ -164,99 +169,209 @@
     "goal5": "General Fitness",
     "goal6": "Other"
   },
-  "packagesHero": {
-    "label": "Coaching Programs",
-    "title": "Choose Your",
-    "titleHighlight": "Program.",
-    "description": "Every package includes a personalized plan built specifically for your body, goals, and schedule. No cookie-cutter templates. No excuses.",
-    "clientsStat": "Clients Coached",
-    "satisfactionStat": "Satisfaction Rate",
-    "guaranteeStat": "Day Guarantee"
-  },
-  "pricingCards": {
-    "monthly": "monthly",
-    "quarterly": "quarterly",
-    "saveText": "(save 10%)",
-    "perMonth": "Month",
-    "perQtr": "Qtr",
-    "guaranteeBadge": "90-Day Results Guarantee",
-    "guaranteeDesc": "— if you follow the plan and don't see results, Kyle will refund you.",
-    "starterName": "Starter",
-    "starterTagline": "Build the foundation",
-    "starterDuration": "8 weeks minimum",
-    "starterCta": "Get Started",
-    "starterF1": "Custom 8-week training program",
-    "starterF2": "Basic nutrition guidelines",
-    "starterF3": "Weekly check-in (text)",
-    "starterF4": "Exercise video library access",
-    "starterF5": "Program adjustments (monthly)",
-    "starterF6": "1-on-1 video calls",
-    "starterF7": "Meal plan customization",
-    "starterF8": "Competition prep",
-    "starterF9": "Priority response (24hr)",
-    "transformName": "Transform",
-    "transformTagline": "The full system",
-    "transformDuration": "12 weeks minimum",
-    "transformCta": "Start Transforming",
-    "transformF1": "Custom 12-week training program",
-    "transformF2": "Full macro + meal planning",
-    "transformF3": "Weekly check-ins (video call)",
-    "transformF4": "Exercise video library access",
-    "transformF5": "Program adjustments (bi-weekly)",
-    "transformF6": "2x monthly 1-on-1 video calls",
-    "transformF7": "Meal plan customization",
-    "transformF8": "Competition prep",
-    "transformF9": "Priority response (12hr)",
-    "eliteName": "Elite",
-    "eliteTagline": "Maximum results",
-    "eliteDuration": "16 weeks minimum",
-    "eliteCta": "Go Elite",
-    "eliteF1": "Custom 16-week training program",
-    "eliteF2": "Full macro + meal planning",
-    "eliteF3": "Daily check-ins available",
-    "eliteF4": "Exercise video library access",
-    "eliteF5": "Program adjustments (weekly)",
-    "eliteF6": "Unlimited 1-on-1 video calls",
-    "eliteF7": "Full meal plan customization",
-    "eliteF8": "Competition prep included",
-    "eliteF9": "Priority response (4hr)"
-  },
-  "packagesProcess": {
-    "label": "How It Works",
-    "title": "The",
-    "titleHighlight": "Process.",
-    "s1Title": "Free Consultation Call",
-    "s1Desc": "A 20-minute strategy call with Kyle to discuss your goals, current fitness level, and lifestyle. No sales pitch — just real conversation.",
-    "s1Tag": "Discovery",
-    "s2Title": "Custom Plan Built",
-    "s2Desc": "Within 48 hours, Kyle delivers your fully personalized training and nutrition program — built specifically for your body and goals.",
-    "s2Tag": "Strategy",
-    "s3Title": "Training Begins",
-    "s3Desc": "You start your program with full access to exercise video demonstrations, tracking tools, and Kyle's direct support.",
-    "s3Tag": "Execution",
-    "s4Title": "Weekly Monitoring",
-    "s4Desc": "Regular check-ins, progress tracking, and plan adjustments ensure you're always moving forward — never plateauing.",
-    "s4Tag": "Optimization",
-    "s5Title": "Final Transformation",
-    "s5Desc": "Reach your goal, document your results, and decide on your next phase. Many clients continue — the transformation never has to stop.",
-    "s5Tag": "Results"
-  },
-  "packagesFAQ": {
-    "title": "Questions &",
-    "titleBold": "Answers",
-    "subtitle": "Have more questions? Don't hesitate to email us:",
-    "q1": "Do I need gym access to work with Kyle?",
-    "a1": "No — Kyle builds programs for home, gym, or hybrid setups. During the consultation call, he'll ask about your equipment and build your plan accordingly.",
-    "q2": "How fast will I see results?",
-    "a2": "Most clients notice visible changes within 3-4 weeks. Significant transformations typically occur at the 8-12 week mark. Results depend on your consistency and adherence to the plan.",
-    "q3": "What if I travel or have an irregular schedule?",
-    "a3": "Kyle specializes in building flexible programs for busy people. Your plan will account for travel, work schedules, and life's unpredictability with workout alternatives.",
-    "q4": "Is online coaching as effective as in-person?",
-    "a4": "For most goals, yes — and often more convenient. Kyle's online clients average the same results as in-person clients because the programming, accountability, and communication are identical.",
-    "q5": "Can I switch packages after I start?",
-    "a5": "Absolutely. Many clients start with Starter and upgrade to Transform once they see results. Kyle will always recommend the right package for your current phase.",
-    "q6": "What does the 90-day guarantee actually mean?",
-    "a6": "If you complete all check-ins, follow your nutrition plan, and train as prescribed for 90 days without seeing measurable progress, Kyle will refund your investment — no questions asked."
+  "servicesPage": {
+    "hero": {
+      "title": "Online Fitness Coaching & Personal Training Charleston SC",
+      "subtitle": "Coaching That Actually Gets You Results",
+      "description": "Custom fat loss and muscle-building programs built for your body, your schedule, and your life — not copied from a template. Work with an online fitness coach serving Charleston SC or train in person in Atlanta. Every plan is built for real, measurable transformation.",
+      "ctaPrimary": "Apply for Coaching",
+      "ctaSecondary": "See How It Works",
+      "stat1": "500+ Clients Transformed",
+      "stat2": "98% Client Satisfaction",
+      "stat3": "90-Day Results Guarantee"
+    },
+    "grid": {
+      "title": "Services Built Around Your Goals",
+      "subtitle": "Every program is structured, personalized, and built to deliver results — not guesswork.",
+      "online": {
+        "title": "Online Coaching",
+        "popular": "Most Popular",
+        "subtitle": "Work 1-on-1 with a virtual personal trainer in Charleston SC from anywhere.",
+        "description": "This is fully customized coaching designed for real life — whether you train at home, in a gym, or on the go.",
+        "features": [
+          "Custom training program (12+ weeks)",
+          "Full nutrition & macro plan",
+          "Weekly video check-ins",
+          "WhatsApp support between sessions",
+          "Real-time plan adjustments",
+          "Progress tracking & analytics"
+        ],
+        "footer": "Perfect for clients looking for an online fitness coach in Charleston who want flexibility without sacrificing results.",
+        "cta": "Apply for Online Coaching"
+      },
+      "oneOnOne": {
+        "title": "1-on-1 Personal Training",
+        "location": "Atlanta",
+        "subtitle": "Train directly with Kyle in Atlanta with structured, hands-on coaching.",
+        "description": "Ideal if you want in-person guidance combined with expert programming and accountability.",
+        "features": [
+          "3–5 sessions per week",
+          "Real-time form correction",
+          "Progressive strength protocols",
+          "Weekly body composition tracking",
+          "Post-session nutrition guidance"
+        ],
+        "footer": "Also supported with online tracking for consistent progress outside sessions.",
+        "cta": "Apply for 1-on-1 Training"
+      },
+      "customPlan": {
+        "title": "Custom Workout Plan",
+        "subtitle": "A fully personalized training program built for your goals — without ongoing coaching.",
+        "description": "Perfect if you want a custom workout plan in Charleston SC but prefer to train independently.",
+        "features": [
+          "8–12 week program",
+          "Exercise video demonstrations",
+          "Sets, reps, and progression plan",
+          "Deload week included",
+          "Delivered within 48 hours"
+        ],
+        "cta": "Apply for Custom Plan"
+      },
+      "nutrition": {
+        "title": "Nutrition Coaching",
+        "subtitle": "Training is only part of the equation. Your results depend on how you fuel your body.",
+        "description": "This standalone service is ideal for clients looking for nutrition coaching in Charleston SC or to pair with training.",
+        "features": [
+          "Full metabolic rate assessment",
+          "Custom macros & calorie targets",
+          "Flexible meal structure",
+          "Monthly adjustments",
+          "Grocery & meal prep guidance"
+        ],
+        "footer": "Designed for sustainable fat loss and long-term results.",
+        "cta": "Apply for Nutrition Coaching"
+      }
+    },
+    "whoItsFor": {
+      "title": "Built for Where You Are Right Now",
+      "subtitle": "There’s no one-size-fits-all plan. Coaching is built around your starting point and your goals.",
+      "items": [
+        {
+          "title": "Starting From Zero",
+          "description": "If you’re new and unsure where to begin, you get structure, clarity, and a plan that builds confidence from day one."
+        },
+        {
+          "title": "Fat Loss Focus",
+          "description": "Lose fat without extreme dieting. Structured programs designed for sustainable fat loss — not quick fixes."
+        },
+        {
+          "title": "Build Muscle & Strength",
+          "description": "Progressive training focused on real strength and muscle growth, without wasted effort."
+        },
+        {
+          "title": "Busy Lifestyle",
+          "description": "Short on time? Programs are built to fit your schedule so you can still get results without disrupting your routine."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Investment in Your Results",
+      "subtitle": "Every package includes a fully customized coaching system — built for your body and your goals.",
+      "guarantee": "90-Day Results Guarantee",
+      "guaranteeDesc": "Follow the plan — see results, or we make it right.",
+      "starter": {
+        "name": "Starter",
+        "price": "149",
+        "description": "Best for building consistency and getting started.",
+        "features": [
+          "Custom 8-week training plan",
+          "Basic nutrition guidelines",
+          "Weekly check-ins",
+          "Exercise video library",
+          "Monthly plan updates"
+        ]
+      },
+      "transform": {
+        "name": "Transform",
+        "price": "249",
+        "description": "Best for serious fat loss or muscle-building results.",
+        "highlight": "Most popular for clients seeking a body transformation program in Charleston SC",
+        "features": [
+          "Custom 12-week training program",
+          "Full macro + meal planning",
+          "Weekly video check-ins",
+          "Exercise video library",
+          "Bi-weekly plan adjustments",
+          "2 coaching calls per month",
+          "Priority response (12hr)"
+        ]
+      },
+      "elite": {
+        "name": "Elite",
+        "price": "399",
+        "description": "Maximum results with full coaching support.",
+        "highlight": "Designed for clients who want the highest level of coaching and fastest results.",
+        "features": [
+          "Custom 16-week training program",
+          "Full macro + meal planning",
+          "Daily check-ins",
+          "Unlimited coaching calls",
+          "Weekly plan adjustments",
+          "Full lifestyle customization",
+          "Competition prep support",
+          "Priority response (4hr)"
+        ]
+      }
+    },
+    "process": {
+      "title": "From Application to Transformation",
+      "steps": [
+        {
+          "title": "Apply",
+          "description": "Submit your application so we understand your goals and starting point."
+        },
+        {
+          "title": "Strategy Call",
+          "description": "We map out your personalized approach based on your lifestyle and challenges."
+        },
+        {
+          "title": "Custom Plan",
+          "description": "You receive a structured training and nutrition system built specifically for your body."
+        },
+        {
+          "title": "Coaching & Adjustments",
+          "description": "Weekly check-ins and real-time adjustments keep you progressing consistently."
+        },
+        {
+          "title": "Results",
+          "description": "You build strength, lose fat, and develop a system you can sustain long-term."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Questions & Answers",
+      "items": [
+        {
+          "q": "How much does a personal trainer cost in Charleston SC?",
+          "a": "Most personal trainers charge per session, typically between $50–$150. Our coaching packages provide a complete system — training, nutrition, and accountability — delivering better long-term value."
+        },
+        {
+          "q": "Is online fitness coaching worth it for Charleston clients?",
+          "a": "Yes. Many clients in Charleston prefer online coaching because it offers flexibility, structure, and ongoing support without needing to rely on a gym schedule."
+        },
+        {
+          "q": "What does a fitness coaching package include?",
+          "a": "Each package includes a personalized training plan, nutrition guidance, progress tracking, and ongoing support — everything needed to achieve sustainable results."
+        },
+        {
+          "q": "Can beginners join these programs?",
+          "a": "Absolutely. Programs are designed around your starting point, whether you’re new or experienced."
+        },
+        {
+          "q": "Is nutrition coaching included?",
+          "a": "Yes, depending on your package. You can also choose it as a standalone service."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Stop Guessing.",
+      "titleHighlight": "Start Seeing Results.",
+      "description": "Every week you wait is another week without a plan. If you’re serious about fat loss, muscle building, or a complete transformation, now is the time to start.",
+      "location": "Now accepting clients in Charleston SC and online.",
+      "limited": "Limited spots available — serious clients only.",
+      "cta": "Apply for Coaching",
+      "consult": "Book Free Consultation"
+    }
   },
   "portfolioHero": {
     "label": "Real Results",
@@ -270,7 +385,7 @@
     "stat3Label": "Client Satisfaction",
     "stat4Label": "Years of Coaching",
     "stat2Suffix": " lbs",
-    "stat4Suffix": " yrs"
+    "stat4Suffix": " years"
   },
   "portfolioGallery": {
     "filterAll": "All Results",
@@ -306,20 +421,20 @@
   },
   "metadata": {
     "homeTitle": "BelkBodyLab — Transform Your Body with Kyle",
-    "homeDesc": "BelkBodyLab offers personalized fitness coaching by Kyle — custom training plans, nutrition guidance, and proven transformations for real results.",
+    "homeDesc": "BelkBodyLab offers personalized fitness training by Kyle Belk — custom workout plans, nutrition guidance, and proven transformations.",
     "packagesTitle": "Coaching Packages — BelkBodyLab",
-    "packagesDesc": "Choose the coaching package that fits your goals. From starter to elite programs, Kyle Belk builds custom plans for fat loss, muscle gain, and competition prep.",
+    "packagesDesc": "Choose the coaching package that fits your goals. From starter programs to elite protocols, Kyle Belk engineers custom plans for your success.",
     "portfolioTitle": "Client Transformations — BelkBodyLab",
-    "portfolioDesc": "Browse real before and after transformation results from BelkBodyLab clients. Real people, real results, zero filters.",
+    "portfolioDesc": "Explore real before and after results from BelkBodyLab clients. Real people, real results, zero filters.",
     "aboutTitle": "About Kyle Belk — Elite Fitness Coach & Body Architect",
-    "aboutDesc": "Discover the story behind BelkBodyLab. Learn how Kyle Belk uses science-based training and nutrition to engineer radical transformations for serious clients.",
-    "blogTitle": "Fitness Insights & Guides | Belk Body Lab Blog",
-    "blogDesc": "Expert fat loss guides, muscle building protocols, and nutrition science from Kyle Belk. Engineering transformations with data-driven coaching."
+    "aboutDesc": "Discover the story behind BelkBodyLab. Learn how Kyle Belk uses science-based training and nutrition to engineer radical transformations.",
+    "blogTitle": "Fitness Guides & Tips | Belk Body Lab Blog",
+    "blogDesc": "Expert fat loss guides, muscle building protocols, and nutrition science by Kyle Belk. Engineering transformations with data."
   },
   "aboutPage": {
     "hero": {
-      "title": "THE BLUEPRINT FOR TOTAL",
-      "titleHighlight": "BODY TRANSFORMATION.",
+      "title": "THE MASTERPLAN FOR TOTAL",
+      "titleHighlight": "TRANSFORMATION.",
       "subtitle": "Most trainers give you a template. I give you a science-based protocol engineered for your specific physiology. No fluff. Just results.",
       "cta": "Apply for Coaching",
       "trust": "500+ Clients Transformed"
@@ -327,42 +442,42 @@
     "story": {
       "label": "The Narrative",
       "title": "Results aren't born. They're engineered.",
-      "content1": "I didn't start as an elite trainer. I started as a guy frustrated with the lack of clarity in the fitness industry. I spent years navigating fad diets, high-volume nonsense, and programs with zero accountability. I had to break the system to build one that actually works.",
-      "content2": "Belk Body Lab was born from a simple realization: your body is a biological machine. If you give it the right inputs—scientific training, metabolic nutrition, and ironclad accountability—the output is guaranteed. 7 years later, I've helped over 500 people rewrite their limits.",
-      "mission": "My mission is simple: to stop the guesswork and start the transformation."
+      "content1": "I didn't start as an elite coach. I started as someone frustrated by the lack of clarity in the fitness industry. I spent years navigating fad diets and unaccountable programs. I had to break the system to build one that actually works.",
+      "content2": "Belk Body Lab was born from a simple idea: your body is a biological machine. If you give it the right inputs—scientific training, metabolic nutrition, and unwavering accountability—the output is guaranteed.",
+      "mission": "My mission is simple: stop the guesswork and start the transformation."
     },
     "philosophy": {
       "label": "The Standards",
       "title": "The Belk Body Lab Philosophy",
-      "p1Title": "Science-First Training",
-      "p1Desc": "No 'feeling the burn' for the sake of it. Every rep is calculated to trigger maximum muscle hypertrophy or metabolic stress. We train with intent.",
+      "p1Title": "Scientific Training",
+      "p1Desc": "No 'feeling the burn' just for the sake of it. Every rep is calculated to trigger maximum muscle hypertrophy or metabolic stress.",
       "p2Title": "Data-Driven Nutrition",
-      "p2Desc": "Flexible dieting isn't an excuse to eat trash. It's a method to ensure sustainability while hitting the exact macros your body needs to thrive and shed fat.",
-      "p3Title": "Ironclad Accountability",
-      "p3Desc": "You aren't a number in a spreadsheet. I provide weekly check-ins, real-time adjustments, and zero-bullshit feedback to keep you on the path.",
-      "tag1": "Muscle Building Coach",
+      "p2Desc": "Flexible dieting isn't an excuse to eat junk. It's a method to ensure sustainability while hitting the exact macros your body needs.",
+      "p3Title": "Unwavering Accountability",
+      "p3Desc": "You aren't a number on a spreadsheet. I provide weekly check-ins, real-time adjustments, and direct feedback.",
+      "tag1": "Hypertrophy Coach",
       "tag2": "Fat Loss Specialist",
-      "tag3": "Body Architect"
+      "tag3": "Physique Architect"
     },
     "credentials": {
       "label": "Authority",
       "title": "Certified Expertise.",
-      "titleItalic": "Proven Outcomes.",
+      "titleItalic": "Proven Results.",
       "c1": "NASM Certified Personal Trainer",
       "c2": "Precision Nutrition Level 1",
       "c3": "NPC Physique Competitor",
-      "c4": "7+ Years Professional Coaching",
+      "c4": "7+ Years of Professional Coaching",
       "stat1": "500+",
       "stat1Label": "Clients Coached",
       "stat2": "10k+",
-      "stat2Label": "Lbs Fat Lost",
+      "stat2Label": "Lbs Lost",
       "stat3": "100%",
-      "stat3Label": "Custom Protocols"
+      "stat3Label": "Bespoke Protocols"
     },
     "lifestyle": {
       "label": "Inside the Lab",
       "title": "More Than Just Lifting.",
-      "content": "Progress happens when discipline becomes a routine. When I'm not coaching, I'm researching the latest in muscle physiology, training for my next show, or helping the next generation of athletes find their edge. The lab never stops.",
+      "content": "Progress happens when discipline becomes routine. When I'm not coaching, I'm researching the latest in muscle physiology or helping the next generation of athletes.",
       "value1": "Discipline",
       "value2": "Precision",
       "value3": "Resilience"
@@ -370,11 +485,31 @@
     "finalCta": {
       "title": "READY TO STOP THE",
       "titleHighlight": "GUESSWORK?",
-      "description": "I only take on a limited number of clients who are serious about their transformation. If you're ready to put in the work, I'll provide the blueprint.",
-      "limited": "Limited Slots Available",
-      "cta": "Apply for Elite Coaching"
+      "description": "I only accept a limited number of clients who are serious about their transformation. If you're ready to put in the work, I'll give you the plan.",
+      "limited": "Limited Spots Available",
+      "cta": "Apply for Elite Coaching",
+      "location": "Atlanta, GA & Online"
     }
   },
+  "contactPage": {
+    "hero": {
+      "title": "INITIATE YOUR",
+      "titleHighlight": "TRANSFORMATION.",
+      "subtitle": "Expert-led body engineering begins with a single connection. Contact us for elite coaching applications, business inquiries, or general protocol questions."
+    },
+    "faq": {
+      "label": "Intelligence",
+      "title": "Application",
+      "titleHighlight": "Questions",
+      "q1": "How long is the onboarding process?",
+      "a1": "Once you submit your application, Kyle personally reviews it within 24 hours. If you're a fit, we'll schedule a strategy call within 2-3 business days.",
+      "q2": "Do I need to be in Atlanta to work with Kyle?",
+      "a2": "No. While Kyle is based in Atlanta, over 80% of our clients are remote. We use advanced tracking tools and video calls to ensure elite results globally.",
+      "q3": "What if I've never trained before?",
+      "a3": "The Lab works with all levels. We specialize in engineering protocols for absolute beginners as much as competition athletes. The only requirement is discipline."
+    }
+  },
+
   "blog": {
     "hero": {
       "title": "FITNESS INSIGHTS &",

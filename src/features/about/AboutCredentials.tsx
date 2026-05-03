@@ -7,102 +7,97 @@ import { useTranslations } from 'next-intl';
 export default function AboutCredentials() {
   const t = useTranslations('aboutPage.credentials');
 
-  const credentials = [
-    t('c1'),
-    t('c2'),
-    t('c3'),
-    t('c4')
-  ];
-
-  const stats = [
-    { value: t('stat1'), label: t('stat1Label') },
-    { value: t('stat2'), label: t('stat2Label') },
-    { value: t('stat3'), label: t('stat3Label') }
+  const certs = [
+    { label: "01", text: t('c1'), icon: "CPT" },
+    { label: "02", text: t('c2'), icon: "PN1" },
+    { label: "03", text: t('c3'), icon: "NPC" },
+    { label: "04", text: t('c4'), icon: "7YR" },
   ];
 
   return (
-    <section className="relative py-24 lg:py-40 bg-bg-primary overflow-hidden">
-      <div className="container-custom px-6 lg:px-10 max-w-[1700px] mx-auto relative z-10">
+    <section className="relative py-32 lg:py-60 bg-[#080808]">
+      <div className="max-w-[1800px] mx-auto px-6 lg:px-20">
         
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-32">
-          
-          {/* Left: Stats & Authority */}
-          <div className="flex-1 w-full order-2 lg:order-1">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 lg:mb-24">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex flex-col items-center lg:items-start"
-                >
-                  <p className="font-heading text-white text-6xl md:text-7xl lg:text-8xl leading-none mb-4 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                    {stat.value}
-                  </p>
-                  <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.25em] text-accent-green pl-1">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="p-8 lg:p-12 rounded-[32px] bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-500"
-            >
-              <h3 className="text-2xl lg:text-3xl font-black uppercase text-white mb-10 tracking-[0.05em]">
-                Professional <span className="text-text-muted">Certifications</span>
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
-                {credentials.map((cred, i) => (
-                  <div key={i} className="flex items-center gap-4 group">
-                    <div className="w-2 h-2 rounded-full bg-accent-green shadow-[0_0_10px_rgba(170,255,0,0.5)] group-hover:scale-125 transition-transform" />
-                    <span className="text-sm md:text-base font-bold text-white uppercase tracking-wider group-hover:text-accent-green transition-colors">
-                      {cred}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Right: Authority Title */}
-          <div className="flex-1 lg:max-w-[500px] order-1 lg:order-2 text-center lg:text-right">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-4 mb-8"
-            >
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-accent-green">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-end mb-32">
+          <div className="lg:col-span-7 space-y-10">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-[1px] bg-accent-green" />
+              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent-green">
                 {t('label')}
               </span>
-              <div className="w-12 h-[1px] bg-accent-green" />
-            </motion.div>
-            
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-5xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[0.9] mb-8"
-            >
-              {t('title')}<br />
-              <span className="text-accent-green drop-shadow-[0_0_30px_rgba(170,255,0,0.2)] lowercase">
-                {t('titleItalic')}
-              </span>
-            </motion.h2>
+            </div>
+            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.8]">
+              {t('title')} <br />
+              <span className="italic font-light text-white/10">{t('titleItalic')}</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-4 lg:col-start-9">
+            <p className="text-white/40 text-lg leading-relaxed font-light italic border-l border-white/5 pl-10">
+              {t('footer')}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 xl:gap-40 items-start">
+          
+          {/* Stats Column */}
+          <div className="grid grid-cols-1 gap-12">
+            {[
+              { label: t('stat1Label'), val: t('stat1') },
+              { label: t('stat2Label'), val: t('stat2') },
+              { label: t('stat3Label'), val: t('stat3') },
+            ].map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group flex items-end justify-between border-b border-white/5 pb-12 hover:border-accent-green/30 transition-colors duration-500"
+              >
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-4">{stat.label}</p>
+                  <span className="text-white text-7xl md:text-9xl font-display font-black tracking-tighter group-hover:text-accent-green transition-colors duration-500">
+                    {stat.val}
+                  </span>
+                </div>
+                <div className="w-20 h-20 rounded-full border border-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 17L17 7" /><path d="M7 7h10v10" />
+                  </svg>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Certs Column */}
+          <div className="space-y-8">
+            <p className="text-[10px] font-black uppercase tracking-[0.5em] text-white/20 mb-12">Authorized Body Transformation Specialists</p>
+            {certs.map((cert, i) => (
+              <motion.div
+                key={cert.text}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group flex items-center gap-10 p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-500"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-black flex items-center justify-center text-white/20 font-black text-xs border border-white/5 group-hover:text-accent-green transition-colors">
+                  {cert.icon}
+                </div>
+                <div className="flex-1">
+                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-2">Certification {cert.label}</p>
+                  <p className="text-white font-bold text-lg tracking-wide uppercase group-hover:translate-x-2 transition-transform duration-500">
+                    {cert.text}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
         </div>
-      </div>
 
-      {/* Background Graphic */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border-[1px] border-white/[0.02] rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] border-[1px] border-white/[0.03] rounded-full pointer-events-none" />
+      </div>
     </section>
   );
 }

@@ -8,6 +8,7 @@ import { locales } from '@/i18n/config';
 import TransitionWrapper from '@/components/layout/TransitionWrapper';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Script from 'next/script';
 import '../../styles/tailwind.css';
 
 const inter = Inter({
@@ -57,8 +58,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable}`}>
+    <html lang={locale} className={`${inter.variable}`} suppressHydrationWarning>
       <body className="font-sans" suppressHydrationWarning>
+        <Script src="https://cdn.lordicon.com/lordicon.js" strategy="afterInteractive" />
         <NextIntlClientProvider messages={messages}>
           <TransitionWrapper>
             <Header />
@@ -67,12 +69,16 @@ export default async function LocaleLayout({
           </TransitionWrapper>
         </NextIntlClientProvider>
 
-        <script
-          type="module"
-          async
+        <Script
+          id="rocket-web"
           src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbelkbodyla3935back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.17"
+          strategy="lazyOnload"
         />
-        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" />
+        <Script 
+          id="rocket-shot"
+          src="https://static.rocket.new/rocket-shot.js?v=0.0.2" 
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

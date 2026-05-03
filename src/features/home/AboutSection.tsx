@@ -159,10 +159,10 @@ export default function AboutSection() {
                     {t('ctaWork')}
                   </CTAButton>
                   <Link
-                    href="/packages"
+                    href="/services"
                     className="inline-flex items-center justify-center min-w-[200px] h-14 bg-transparent border border-gray-300 text-[#111] font-bold text-[11px] uppercase tracking-widest rounded-full hover:border-[#111] hover:bg-gray-50 transition-all duration-300"
                   >
-                    {t('ctaPackages')}
+                    {t('ctaServices')}
                   </Link>
                   <Link
                     href="/about"

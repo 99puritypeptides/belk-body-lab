@@ -211,10 +211,10 @@ export default function PortfolioGallery() {
               
               <div className="mt-8">
                 <Link 
-                  href="/packages" 
+                  href="/services" 
                   className="text-[11px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors flex items-center justify-center gap-3 group/link"
                 >
-                  Not sure which one to pick? Browse Packages
+                  Not sure which one to pick? Browse Services
                   <div className="w-1 h-1 rounded-full bg-accent-green group-hover/link:scale-[2.5] transition-transform" />
                 </Link>
               </div>

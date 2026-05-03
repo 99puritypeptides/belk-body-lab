@@ -11,6 +11,7 @@
 
 import React from 'react';
 import { Link } from '@/i18n/navigation';
+import PremiumIcon from './PremiumIcon';
 
 const ArrowIcon = () => (
   <svg
@@ -58,9 +59,13 @@ export default function CTAButton({
     <>
       {/* Green rotating circle icon — LEFT side like the hero button */}
       <div
-        className={`${iconSize} bg-accent-green rounded-full flex items-center justify-center text-black shrink-0 group-hover:rotate-45 transition-transform duration-400`}
+        className={`${iconSize} bg-accent-green rounded-full flex items-center justify-center shrink-0 group-hover:rotate-45 transition-transform duration-400 overflow-hidden`}
       >
-        <ArrowIcon />
+        <PremiumIcon 
+          name="arrow" 
+          size={size === 'lg' ? 28 : 22}
+          color="#000000"
+        />
       </div>
       <span className={`${textSize} font-black uppercase tracking-widest text-white`}>
         {children}

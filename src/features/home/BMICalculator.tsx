@@ -21,9 +21,12 @@ interface BMIResult {
   color: string;
   label: string;
   position: number;
+  weightDifference?: number;
+  idealMin: number;
+  idealMax: number;
 }
 
-function getBMIData(bmi: number): BMIResult {
+function getBMIData(bmi: number): Omit<BMIResult, 'weightDifference' | 'idealMin' | 'idealMax'> {
   const value = Math.round(bmi * 10) / 10;
   if (bmi < 18.5) return { value, key: 'underweight', color: '#60A5FA', label: 'Underweight', position: Math.min((bmi / 18.5) * 20, 20) };
   if (bmi < 25)   return { value, key: 'normal',      color: '#A3E635', label: 'Normal',      position: 20 + ((bmi - 18.5) / 6.5) * 30 };
@@ -116,9 +119,10 @@ function ArcGauge({ position, color }: { position: number; color: string }) {
 }
 
 /* ── Input field ────────────────────────────────────────────────── */
-function InputField({ label, unit, placeholder, value, onChange }: {
+function InputField({ label, unit, placeholder, value, onChange, onUnitToggle }: {
   label: string; unit: string; placeholder: string;
   value: string; onChange: (v: string) => void;
+  onUnitToggle?: () => void;
 }) {
   return (
     <div className="relative group">
@@ -139,7 +143,16 @@ function InputField({ label, unit, placeholder, value, onChange }: {
             [-moz-appearance:textfield]
           "
         />
-        <span className="text-white/20 text-xs font-bold uppercase tracking-widest shrink-0">{unit}</span>
+        {onUnitToggle ? (
+          <button
+            onClick={onUnitToggle}
+            className="text-accent-green text-[10px] font-black uppercase tracking-widest shrink-0 px-2 py-1 rounded border border-accent-green/20 hover:bg-accent-green hover:text-black transition-all duration-200"
+          >
+            {unit}
+          </button>
+        ) : (
+          <span className="text-white/20 text-[10px] font-bold uppercase tracking-widest shrink-0">{unit}</span>
+        )}
       </div>
     </div>
   );
@@ -170,27 +183,73 @@ export default function BMICalculator() {
   const [isMetric,   setIsMetric]   = useState(false);
   const [heightFt,   setHeightFt]   = useState('');
   const [heightIn,   setHeightIn]   = useState('');
-  const [weightLbs,  setWeightLbs]  = useState('');
   const [heightCm,   setHeightCm]   = useState('');
-  const [weightKg,   setWeightKg]   = useState('');
+  const [weightInput, setWeightInput] = useState('');
+  const [weightUnit,  setWeightUnit]  = useState<'kg' | 'lbs'>('lbs');
   const [result,     setResult]     = useState<BMIResult | null>(null);
   const [shake,      setShake]      = useState(false);
 
+  // Sync weight unit with global metric toggle, but allow independent overrides
+  useEffect(() => {
+    setWeightUnit(isMetric ? 'kg' : 'lbs');
+  }, [isMetric]);
+
+  const toggleWeightUnit = () => {
+    const val = parseFloat(weightInput);
+    if (!isNaN(val)) {
+      if (weightUnit === 'lbs') {
+        setWeightInput((val / 2.20462).toFixed(1));
+        setWeightUnit('kg');
+      } else {
+        setWeightInput((val * 2.20462).toFixed(1));
+        setWeightUnit('lbs');
+      }
+    } else {
+      setWeightUnit(weightUnit === 'lbs' ? 'kg' : 'lbs');
+    }
+  };
+
   const handleCalculate = () => {
     let bmiScore = 0;
+    let weightDiff = 0;
+    let idealMin = 0;
+    let idealMax = 0;
+
+    const weightVal = parseFloat(weightInput) || 0;
+
     if (isMetric) {
       const cm = parseFloat(heightCm) || 0;
-      const kg = parseFloat(weightKg) || 0;
-      if (cm > 0 && kg > 0) { const m = cm / 100; bmiScore = kg / (m * m); }
+      if (cm > 0 && weightVal > 0) {
+        const m = cm / 100;
+        const kg = weightUnit === 'kg' ? weightVal : weightVal / 2.20462;
+        bmiScore = kg / (m * m);
+        idealMin = 18.5 * (m * m);
+        idealMax = 24.9 * (m * m);
+        if (bmiScore > 24.9) weightDiff = kg - idealMax;
+        else if (bmiScore < 18.5) weightDiff = idealMin - kg;
+      }
     } else {
       const ft = parseFloat(heightFt) || 0;
       const inches = parseFloat(heightIn) || 0;
-      const lbs = parseFloat(weightLbs) || 0;
       const totalIn = ft * 12 + inches;
-      if (totalIn > 0 && lbs > 0) bmiScore = (lbs / (totalIn * totalIn)) * 703;
+      if (totalIn > 0 && weightVal > 0) {
+        const lbs = weightUnit === 'lbs' ? weightVal : weightVal * 2.20462;
+        bmiScore = (lbs / (totalIn * totalIn)) * 703;
+        idealMin = (18.5 * (totalIn * totalIn)) / 703;
+        idealMax = (24.9 * (totalIn * totalIn)) / 703;
+        if (bmiScore > 24.9) weightDiff = lbs - idealMax;
+        else if (bmiScore < 18.5) weightDiff = idealMin - lbs;
+      }
     }
+
     if (bmiScore > 0) {
-      setResult(getBMIData(bmiScore));
+      const data = getBMIData(bmiScore);
+      setResult({
+        ...data,
+        weightDifference: weightDiff > 0 ? Math.round(weightDiff * 10) / 10 : 0,
+        idealMin: Math.round(idealMin * 10) / 10,
+        idealMax: Math.round(idealMax * 10) / 10,
+      });
     } else {
       setShake(true);
       setTimeout(() => setShake(false), 600);
@@ -415,13 +474,27 @@ export default function BMICalculator() {
                       <InputField label={t('heightFt')} unit="ft"  placeholder="5"   value={heightFt}  onChange={setHeightFt} />
                       <InputField label={t('heightIn')} unit="in"  placeholder="10"  value={heightIn}  onChange={setHeightIn} />
                       <div className="col-span-2">
-                        <InputField label={t('weightLbs')} unit="lbs" placeholder="175" value={weightLbs} onChange={setWeightLbs} />
+                        <InputField
+                          label={weightUnit === 'lbs' ? t('weightLbs') : t('weightKg')}
+                          unit={weightUnit}
+                          placeholder={weightUnit === 'lbs' ? "175" : "80"}
+                          value={weightInput}
+                          onChange={setWeightInput}
+                          onUnitToggle={toggleWeightUnit}
+                        />
                       </div>
                     </div>
                   ) : (
                     <div className="flex flex-col gap-8 mb-10">
                       <InputField label={t('heightCm')} unit="cm" placeholder="180" value={heightCm} onChange={setHeightCm} />
-                      <InputField label={t('weightKg')} unit="kg" placeholder="80"  value={weightKg} onChange={setWeightKg} />
+                      <InputField
+                        label={weightUnit === 'kg' ? t('weightKg') : t('weightLbs')}
+                        unit={weightUnit}
+                        placeholder={weightUnit === 'kg' ? "80" : "175"}
+                        value={weightInput}
+                        onChange={setWeightInput}
+                        onUnitToggle={toggleWeightUnit}
+                      />
                     </div>
                   )}
                 </motion.div>
@@ -488,15 +561,53 @@ export default function BMICalculator() {
                       </div>
 
                       {/* Scale bar */}
-                      <div className="mb-8">
-                        <div className="h-2 w-full rounded-full overflow-hidden flex">
+                      <div className="mb-8 relative">
+                        {/* Interactive Pointer */}
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0, x: '-50%' }}
+                          animate={{ opacity: 1, scale: 1, left: `${result.position}%` }}
+                          transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                          className="absolute -top-4 w-4 h-8 flex flex-col items-center pointer-events-none z-20"
+                        >
+                          <div className="w-1.5 h-1.5 rounded-full mb-1" style={{ background: result.color, boxShadow: `0 0 10px ${result.color}` }} />
+                          <div className="w-0.5 flex-1 bg-gradient-to-b from-white/80 to-transparent" />
+                        </motion.div>
+
+                        <div className="h-2 w-full rounded-full overflow-hidden flex relative">
                           <div className="h-full bg-blue-400/70"    style={{ width: '20%' }} />
                           <div className="h-full bg-white/20"        style={{ width: '30%' }} />
                           <div className="h-full bg-yellow-400/70"  style={{ width: '25%' }} />
                           <div className="h-full bg-red-400/70"     style={{ width: '25%' }} />
                         </div>
                         <div className="flex justify-between text-[9px] font-bold uppercase tracking-wider text-white/20 mt-2">
-                          <span>Under</span><span>Normal</span><span>Over</span><span>Obese</span>
+                          <span>{t('rangeUnder')}</span><span>{t('rangeNormal')}</span><span>{t('rangeOver')}</span><span>{t('rangeObese')}</span>
+                        </div>
+                      </div>
+
+                      {/* Target Metrics Section */}
+                      <div className="mb-8 p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
+                        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-white/30 mb-4">{t('targetMetrics')}</p>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="flex flex-col gap-1">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-white/40">{t('idealRange')}</span>
+                            <span className="text-sm font-black text-white">
+                              {result.idealMin} – {result.idealMax} <span className="text-[10px] text-white/30">{isMetric ? 'kg' : 'lbs'}</span>
+                            </span>
+                          </div>
+                          <div className="flex flex-col gap-1">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-white/40">
+                              {result.key === 'underweight' ? t('weightToGain') : result.key === 'normal' ? 'Status' : t('weightToLose')}
+                            </span>
+                            <span className="text-sm font-black text-accent-green">
+                              {result.weightDifference && result.weightDifference > 0 ? (
+                                <>
+                                  {result.weightDifference} <span className="text-[10px] text-white/30">{isMetric ? 'kg' : 'lbs'}</span>
+                                </>
+                              ) : (
+                                t('maintainWeight')
+                              )}
+                            </span>
+                          </div>
                         </div>
                       </div>
 
