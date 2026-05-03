@@ -5,7 +5,8 @@ import ContactHero from '@/features/contact/ContactHero';
 import ContactFormPage from '@/features/contact/ContactFormPage';
 import ContactFAQ from '@/features/contact/ContactFAQ';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
   return {
     title: `Contact | Belk Body Lab`,

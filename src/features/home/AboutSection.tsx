@@ -88,7 +88,7 @@ export default function AboutSection() {
                   ref={videoRef}
                   src="/images/videos/kyle-intro.webm"
                   poster="/images/brand/thumbnail.jpg"
-                  className="absolute inset-0 w-full h-[100%] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                  className="absolute inset-0 w-full h-[100%] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-premium"
                   playsInline
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />

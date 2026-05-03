@@ -179,7 +179,7 @@ export default function ServicesGrid() {
                     <img 
                       src={svc.image} 
                       alt={svc.title}
-                      className="w-full h-full object-cover grayscale brightness-75 transition-transform duration-[3s] group-hover:scale-110"
+                      className="w-full h-full object-cover grayscale brightness-75 transition-transform duration-[3000ms] group-hover:scale-110"
                     />
                     {/* Technical Overlay */}
                     <div className="absolute bottom-10 left-10 z-20">

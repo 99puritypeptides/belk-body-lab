@@ -46,7 +46,7 @@ export default function AboutStory() {
               <img 
                 src="/BBL Media/lifestyle-1.jpg" 
                 alt="Kyle Belk"
-                className="w-full h-full object-cover grayscale brightness-90 transition-transform duration-[3s] hover:scale-110"
+                className="w-full h-full object-cover grayscale brightness-90 transition-transform duration-[3000ms] hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-10 left-10">

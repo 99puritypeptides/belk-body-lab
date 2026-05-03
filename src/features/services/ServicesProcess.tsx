@@ -102,7 +102,7 @@ export default function ServicesProcess() {
                     src={step.image}
                     alt={step.title}
                     fill
-                    className="object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[3s]"
+                    className="object-cover grayscale brightness-50 group-hover:scale-110 transition-transform duration-[3000ms]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                   
