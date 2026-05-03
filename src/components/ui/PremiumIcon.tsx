@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { 
   ArrowRight, 
   Beaker, 
@@ -40,7 +40,7 @@ export default function PremiumIcon({
 }: PremiumIconProps) {
   const Icon = icons[name];
 
-  const variants = {
+  const variants: Variants = {
     initial: { scale: 1, rotate: 0 },
     animate: trigger === 'always' ? {
       scale: [1, 1.1, 1],
@@ -49,7 +49,7 @@ export default function PremiumIcon({
     hover: {
       scale: 1.2,
       rotate: name === 'arrow' ? 45 : 0,
-      transition: { type: 'spring', stiffness: 300 }
+      transition: { type: 'spring' as const, stiffness: 300 }
     }
   };
 
