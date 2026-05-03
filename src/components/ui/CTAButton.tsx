@@ -10,24 +10,9 @@
  */
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import PremiumIcon from './PremiumIcon';
-
-const ArrowIcon = () => (
-  <svg
-    width="18"
-    height="18"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M7 17L17 7" />
-    <path d="M7 7h10v10" />
-  </svg>
-);
 
 interface CTAButtonProps {
   /** Link destination. When provided renders a <Link>; otherwise renders a <button>. */
@@ -59,7 +44,7 @@ export default function CTAButton({
     <>
       {/* Green rotating circle icon — LEFT side like the hero button */}
       <div
-        className={`${iconSize} bg-accent-green rounded-full flex items-center justify-center shrink-0 group-hover:rotate-45 transition-transform duration-400 overflow-hidden`}
+        className={`${iconSize} bg-accent-green rounded-full flex items-center justify-center shrink-0 transition-all duration-400 overflow-hidden`}
       >
         <PremiumIcon 
           name="arrow" 
@@ -77,15 +62,23 @@ export default function CTAButton({
 
   if (href) {
     return (
-      <Link id={id} href={href as any} className={base} onClick={onClick}>
-        {inner}
-      </Link>
+      <motion.div whileHover="hover" className="inline-block">
+        <Link id={id} href={href as any} className={base} onClick={onClick}>
+          {inner}
+        </Link>
+      </motion.div>
     );
   }
 
   return (
-    <button id={id} type={type} className={base} onClick={onClick}>
+    <motion.button 
+      id={id} 
+      type={type} 
+      className={base} 
+      onClick={onClick}
+      whileHover="hover"
+    >
       {inner}
-    </button>
+    </motion.button>
   );
 }

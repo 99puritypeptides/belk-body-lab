@@ -9,7 +9,9 @@ import {
   ShieldCheck, 
   Zap,
   Activity,
-  Award
+  Award,
+  Users,
+  Star
 } from 'lucide-react';
 
 const icons = {
@@ -20,7 +22,9 @@ const icons = {
   zap: Zap,
   activity: Activity,
   pulse: Activity, // Alias for pulse
-  award: Award
+  award: Award,
+  users: Users,
+  star: Star
 };
 
 interface PremiumIconProps {
@@ -49,16 +53,13 @@ export default function PremiumIcon({
     hover: {
       scale: 1.2,
       rotate: name === 'arrow' ? 45 : 0,
-      transition: { type: 'spring' as const, stiffness: 300 }
+      transition: { type: 'spring' as const, stiffness: 300, damping: 15 }
     }
   };
 
   return (
     <motion.div
-      className={`inline-flex items-center justify-center ${className}`}
-      initial="initial"
-      whileHover="hover"
-      animate="animate"
+      className={`inline-flex items-center justify-center relative ${className}`}
       variants={variants}
     >
       <Icon size={size} color={color} strokeWidth={1.5} />

@@ -89,9 +89,9 @@ export default function ServicesPricing() {
             </span>
             <div className="w-12 h-px bg-accent-green" />
           </div>
-          <h2 className="text-5xl md:text-8xl font-display font-black text-white uppercase tracking-tighter leading-[0.8] mb-12">
+          <h2 className="text-[2.5rem] sm:text-6xl md:text-8xl font-display font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
             Choose Your <br />
-            <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>Transformation</span>
+            <span className="text-transparent block mt-2" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>Transformation</span>
           </h2>
           <p className="text-white/40 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
             Professional grade coaching designed for those who refuse to settle for average results.
@@ -148,21 +148,23 @@ export default function ServicesPricing() {
                 </div>
 
                 {/* Action */}
-                <Link
-                  href="/contact"
-                  className={`flex items-center justify-between group/btn p-2 pl-8 rounded-full transition-all duration-500 ${
-                    pkg.popular 
-                      ? 'bg-accent-green text-black hover:scale-[1.02]' 
-                      : 'bg-white/5 text-white border border-white/10 hover:bg-white hover:text-black'
-                  }`}
-                >
-                  <span className="font-black text-[10px] uppercase tracking-[0.3em]">Select Protocol</span>
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 ${
-                    pkg.popular ? 'bg-black text-white' : 'bg-white/10 text-white group-hover/btn:bg-black group-hover/btn:text-white'
-                  }`}>
-                    <PremiumIcon name="arrow" size={20} />
-                  </div>
-                </Link>
+                <motion.div whileHover="hover">
+                  <Link
+                    href="/contact"
+                    className={`flex items-center justify-between group/btn p-2 pl-8 rounded-full transition-all duration-500 ${
+                      pkg.popular 
+                        ? 'bg-accent-green text-black hover:scale-[1.02]' 
+                        : 'bg-white/5 text-white border border-white/10 hover:bg-white hover:text-black'
+                    }`}
+                  >
+                    <span className="font-black text-[10px] uppercase tracking-[0.3em]">Select Protocol</span>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 flex-shrink-0 ${
+                      pkg.popular ? 'bg-black text-white' : 'bg-white/10 text-white group-hover/btn:bg-black group-hover/btn:text-white'
+                    }`}>
+                      <PremiumIcon name="arrow" size={20} />
+                    </div>
+                  </Link>
+                </motion.div>
               </div>
 
               {/* Decorative Step Number */}

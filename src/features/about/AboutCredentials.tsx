@@ -26,9 +26,9 @@ export default function AboutCredentials() {
                 {t('label')}
               </span>
             </div>
-            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.8]">
+            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.9]">
               {t('title')} <br />
-              <span className="italic font-light text-white/10">{t('titleItalic')}</span>
+              <span className="italic font-light text-white/20">{t('titleItalic')}</span>
             </h2>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">

@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import CTAButton from '@/components/ui/CTAButton';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 const STEPS = [
   {
@@ -144,17 +147,16 @@ export default function ServicesProcess() {
                       {step.description}
                     </p>
                     
-                    <Link 
+                    <MotionLink 
                       href="/contact"
+                      whileHover="hover"
                       className="group inline-flex items-center gap-6"
                     >
                       <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500">
-                        <svg className="w-5 h-5 text-white group-hover:text-black transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                        <PremiumIcon name="arrow" size={18} className="group-hover:text-black transition-colors" />
                       </div>
                       <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40 group-hover:text-white transition-colors">Initiate Step</span>
-                    </Link>
+                    </MotionLink>
                   </div>
                 </div>
               </motion.div>

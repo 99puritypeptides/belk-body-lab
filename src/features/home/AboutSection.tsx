@@ -6,6 +6,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ShieldCheckIcon, FireIcon, DevicePhoneMobileIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import { Link } from '@/i18n/navigation';
 import CTAButton from '@/components/ui/CTAButton';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 export default function AboutSection() {
   const t = useTranslations('about');
@@ -164,13 +167,14 @@ export default function AboutSection() {
                   >
                     {t('ctaServices')}
                   </Link>
-                  <Link
+                  <MotionLink
                     href="/about"
-                    className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-accent-green transition-colors flex items-center gap-2 group"
+                    whileHover="hover"
+                    className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-accent-green transition-colors flex items-center gap-3 group"
                   >
                     Read Full Bio
-                    <div className="w-1 h-1 rounded-full bg-accent-green group-hover:scale-[2] transition-transform" />
-                  </Link>
+                    <PremiumIcon name="arrow" size={10} />
+                  </MotionLink>
                 </div>
               </div>
             </div>

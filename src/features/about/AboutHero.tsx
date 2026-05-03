@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import PremiumIcon from '@/components/ui/PremiumIcon';
 
+const MotionLink = motion(Link);
+
 export default function AboutHero() {
   const t = useTranslations('aboutPage.hero');
   const videoRef = React.useRef<HTMLVideoElement>(null);
@@ -57,7 +59,7 @@ export default function AboutHero() {
               className="inline-flex items-center gap-6"
             >
               <span className="text-[10px] font-black uppercase tracking-[0.6em] text-accent-green">
-                The Body Architect
+                {t('label')}
               </span>
               <div className="w-16 h-px bg-white/20" />
             </motion.div>
@@ -66,11 +68,11 @@ export default function AboutHero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-white font-display font-black leading-[0.8] tracking-tight uppercase"
+              className="text-white font-display font-black leading-[0.9] tracking-tight uppercase"
               style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)' }}
             >
               {t('title')} <br />
-              <span className="italic font-light text-white/10 block mt-2">{t('titleHighlight')}</span>
+              <span className="italic font-light text-white/20 block mt-2">{t('titleHighlight')}</span>
             </motion.h1>
           </div>
 
@@ -94,11 +96,12 @@ export default function AboutHero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                <Link 
+                <MotionLink 
                   href="/contact"
+                  whileHover="hover"
                   className="group inline-flex items-center gap-8 text-white"
                 >
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] overflow-hidden">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] overflow-hidden flex-shrink-0">
                     <PremiumIcon 
                       name="arrow"
                       size={32}
@@ -107,13 +110,13 @@ export default function AboutHero() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40 group-hover:text-accent-green transition-colors mb-1">
-                      Start Your Protocol
+                      {t('ctaLabel')}
                     </span>
                     <span className="text-sm font-black uppercase tracking-[0.2em] group-hover:translate-x-2 transition-transform duration-500">
                       {t('cta')}
                     </span>
                   </div>
-                </Link>
+                </MotionLink>
               </motion.div>
             </div>
           </div>
@@ -127,7 +130,7 @@ export default function AboutHero() {
         className="absolute right-0 top-1/2 -translate-y-1/2 vertical-text hidden xl:block"
       >
         <span className="text-[10px] font-black uppercase tracking-[1em] text-white/5 whitespace-nowrap">
-          ESTABLISHED IN TWO THOUSAND NINETEEN — CHARLESTON SOUTH CAROLINA
+          {t('meta')}
         </span>
       </motion.div>
     </section>

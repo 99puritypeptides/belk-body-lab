@@ -1,7 +1,10 @@
 import React from 'react';
+// Force rebuild to resolve ChunkLoadError
 import PortfolioHero from '@/features/portfolio/PortfolioHero';
 import PortfolioStats from '@/features/portfolio/PortfolioStats';
 import PortfolioGallery from '@/features/portfolio/PortfolioGallery';
+import FAQSection from '@/features/home/FAQSection';
+import AboutFinalCTA from '@/features/about/AboutFinalCTA';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -30,6 +33,8 @@ export default function PortfolioPage() {
       <PortfolioHero />
       <PortfolioStats />
       <PortfolioGallery />
+      <FAQSection namespace="portfolioFaq" />
+      <AboutFinalCTA namespace="portfolioGallery" />
     </main>
   );
 }

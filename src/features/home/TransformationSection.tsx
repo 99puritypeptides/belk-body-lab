@@ -3,7 +3,11 @@
 import React, { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { ZoomParallax } from '@/components/ui/zoom-parallax';
+import { ParallaxScroll } from '@/components/ui/parallax-scroll';
+import { motion } from 'framer-motion';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 /**
  * TransformationsSection — Site-wide client results showcase.
@@ -20,6 +24,8 @@ const TRANSFORMATION_IMAGES = [
   { src: '/images/client-transformation/client-5.jpeg', alt: 'Functional Strength Gain' },
   { src: '/images/client-transformation/client-6.jpeg', alt: 'Lifestyle Habit Transformation' },
   { src: '/images/client-transformation/client-7.jpeg', alt: 'Complete Body Recomposition' },
+  { src: '/images/client-transformation/client-1.jpeg', alt: 'Elite Physique Transformation' },
+  { src: '/images/client-transformation/client-2.jpeg', alt: 'Sustainable Fat Loss Result' },
 ];
 
 export default function TransformationsSection() {
@@ -68,7 +74,7 @@ export default function TransformationsSection() {
 
       {/* ── Immersive Parallax Effect ── */}
       <div className="w-full">
-        <ZoomParallax images={TRANSFORMATION_IMAGES} />
+        <ParallaxScroll images={TRANSFORMATION_IMAGES} />
       </div>
 
       {/* ── Section Outro ── */}
@@ -77,25 +83,16 @@ export default function TransformationsSection() {
           <p className="text-white/20 text-xs font-black uppercase tracking-[0.3em] mb-10">
             Real Science. Raw Results.
           </p>
-          <Link
+          <MotionLink
             href="/portfolio"
+            whileHover="hover"
             className="group inline-flex items-center gap-5 px-12 py-5 border border-white/10 text-white font-black text-[13px] uppercase tracking-[0.25em] rounded-full hover:bg-white hover:text-black hover:border-white transition-all duration-500 shadow-xl"
           >
             {t('viewAll')}
-            <div className="w-6 h-6 rounded-full bg-white/10 group-hover:bg-black flex items-center justify-center transition-colors">
-              <svg
-                width="14"
-                height="14"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                viewBox="0 0 24 24"
-                className="group-hover:translate-x-0.5 transition-transform"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+            <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-black flex items-center justify-center transition-colors text-white">
+              <PremiumIcon name="arrow" size={18} />
             </div>
-          </Link>
+          </MotionLink>
         </div>
       </div>
     </section>

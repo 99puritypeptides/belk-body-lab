@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import CTAButton from '@/components/ui/CTAButton';
+import PremiumIcon from '@/components/ui/PremiumIcon';
 
 const FAQS = [
   // ── Preserved from PackagesFAQ ──
@@ -147,8 +148,9 @@ export default function ServicesFAQ() {
                 itemScope
                 itemType="https://schema.org/Question"
               >
-                <button
+                <motion.button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  whileHover="hover"
                   className="w-full flex items-start justify-between px-6 py-5 text-left gap-4 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-green/50"
                   aria-expanded={openIndex === i}
                 >
@@ -163,12 +165,10 @@ export default function ServicesFAQ() {
                       {faq.q}
                     </span>
                   </div>
-                  <div className={`mt-0.5 shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-180 text-accent-green' : 'text-white/25'}`}>
-                    <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
+                  <div className={`mt-0.5 shrink-0 transition-all duration-300 ${openIndex === i ? 'rotate-180 text-accent-green' : 'text-white/25'}`}>
+                    <PremiumIcon name="arrow" size={18} />
                   </div>
-                </button>
+                </motion.button>
 
                 {/* CSS-only accordion — uses existing .faq-answer / .open classes from tailwind.css */}
                 <div

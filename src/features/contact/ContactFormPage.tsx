@@ -210,7 +210,7 @@ export default function ContactFormPage() {
                     <motion.button 
                       type="submit" 
                       disabled={isSubmitting}
-                      whileHover={{ scale: 1.01 }}
+                      whileHover="hover"
                       whileTap={{ scale: 0.98 }}
                       className="group relative w-full h-24 rounded-3xl overflow-hidden bg-black border border-white/10 transition-all duration-500"
                     >
@@ -227,8 +227,8 @@ export default function ContactFormPage() {
                             {isSubmitting ? 'Processing...' : 'Activate My Protocol'}
                           </span>
                         </div>
-
-                        <div className="w-16 h-16 rounded-2xl bg-accent-green flex items-center justify-center text-black group-hover:rotate-45 transition-all duration-500 shadow-[0_0_30px_rgba(170,255,0,0.3)]">
+ 
+                        <div className="w-16 h-16 rounded-2xl bg-accent-green flex items-center justify-center text-black transition-all duration-500 shadow-[0_0_30px_rgba(170,255,0,0.3)]">
                           {isSubmitting ? (
                             <motion.div 
                               animate={{ rotate: 360 }}

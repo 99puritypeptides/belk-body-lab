@@ -5,7 +5,11 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
 import { ShieldCheckIcon, MapPinIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import { Link } from '@/i18n/navigation';
 import CTAButton from '@/components/ui/CTAButton';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 export default function HeroSection() {
   const t = useTranslations('hero');
@@ -137,13 +141,14 @@ export default function HeroSection() {
             {t('ctaPrimary')}
           </CTAButton>
 
-          <motion.button
-            whileHover={{ x: 5 }}
-            className="group text-white/50 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-3"
+          <MotionLink
+            href="/#process"
+            whileHover="hover"
+            className="group text-white/50 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-4"
           >
             {t('ctaSecondary')}
-            <div className="w-8 h-[1px] bg-white/20 group-hover:w-12 group-hover:bg-accent-green transition-all" />
-          </motion.button>
+            <PremiumIcon name="arrow" size={14} />
+          </MotionLink>
         </motion.div>
       </div>
 

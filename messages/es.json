@@ -172,16 +172,16 @@
   "portfolioHero": {
     "label": "Resultados Reales",
     "title": "Transformaciones",
-    "titleHighlight": "de Clientes.",
-    "description": "Cada foto representa a una persona real que se comprometió con el proceso. Sin filtros. Sin trucos. Solo trabajo duro, el plan correcto y el coaching de Kyle."
+    "titleHighlight": "de Clientes",
+    "description": "Personas reales. Resultados reales. Estos son resultados de transformación corporal de clientes en Charleston SC y a través de nuestros programas de coaching online — construidos mediante entrenamiento estructurado, nutrición y responsabilidad constante. Sin atajos. Sin soluciones rápidas. Solo sistemas probados que cumplen."
   },
   "portfolioStats": {
-    "stat1Label": "Transformaciones Totales",
-    "stat2Label": "Pérdida Promedio de Grasa (12 sem)",
+    "stat1Label": "Transformaciones de Clientes",
+    "stat2Label": "Pérdida de Grasa Promedio",
     "stat3Label": "Satisfacción del Cliente",
-    "stat4Label": "Años de Coaching",
-    "stat2Suffix": " lbs",
-    "stat4Suffix": " años"
+    "stat4Label": "Años de Experiencia en Coaching",
+    "stat2Suffix": " lbs (12 Semanas)",
+    "stat4Suffix": "+ Años"
   },
   "portfolioGallery": {
     "filterAll": "Todos los Resultados",
@@ -193,15 +193,89 @@
     "clickToView": "Haz clic para ver la historia completa",
     "yearsOld": "años",
     "program": "programa",
+    "introTitle": "Resultados Probados Mediante la Ciencia",
+    "introText": "Estas transformaciones de fitness antes y después muestran lo que sucede cuando el plan correcto se encuentra con la constancia. Desde la pérdida de grasa hasta la ganancia de músculo y la recomposición corporal completa, estos resultados provienen de clientes en Charleston SC, Mount Pleasant, North Charleston, Summerville y clientes de coaching online en todo EE. UU.",
     "ctaTitle": "¿Listo para ser la",
     "ctaTitleItalic": "próxima transformación?",
-    "ctaDesc": "Cada uno de estos clientes empezó exactamente donde estás tú. La única diferencia es que dieron el primer paso.",
+    "ctaDesc": "Cada resultado que ves aquí comenzó desde cero. La diferencia es simple: siguieron un plan estructurado y se mantuvieron constantes. Si estás listo para perder grasa, ganar músculo y lograr resultados reales, ahora es tu momento de empezar.",
     "ctaBtn": "Iniciar Mi Transformación",
     "modalCta": "Obtener Mi Transformación",
     "emptyState": "Aún no hay transformaciones en esta categoría.",
     "catFatLoss": "Pérdida de Grasa",
     "catMuscleGain": "Ganancia Muscular",
-    "catTotal": "Transformación Total"
+    "catTotal": "Transformación Total",
+    "acceptance": "Ahora aceptando clientes en Charleston SC y online.",
+    "limited": "Cupos de coaching limitados disponibles.",
+    "items": [
+      {
+        "name": "Transformación de Pérdida de Grasa",
+        "age": "34",
+        "location": "Charleston SC",
+        "result": "-42 lbs",
+        "duration": "90 Días",
+        "caption": "Cliente de Charleston SC — transformación de pérdida de grasa de 90 días (-42 lbs) mediante coaching de fitness online personalizado.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Protocolo de Ganancia Muscular",
+        "age": "27",
+        "location": "Mount Pleasant",
+        "result": "+12 lbs",
+        "duration": "12 Semanas",
+        "caption": "Transformación de ganancia muscular de 12 semanas — +12 lbs de músculo magro usando entrenamiento estructurado y coaching nutricional.",
+        "category": "muscle-gain"
+      },
+      {
+        "name": "Recomposición Corporal",
+        "age": "31",
+        "location": "North Charleston",
+        "result": "Definido",
+        "duration": "16 Semanas",
+        "caption": "Recomposición corporal antes y después — perdió grasa y ganó músculo en 16 semanas con coaching online.",
+        "category": "total"
+      },
+      {
+        "name": "Progreso de Principiante",
+        "age": "24",
+        "location": "Summerville",
+        "result": "-25 lbs",
+        "duration": "12 Semanas",
+        "caption": "Cliente principiante de North Charleston — pérdida de peso sostenible y progreso de fuerza en 12 semanas.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Profesional Ocupado",
+        "age": "42",
+        "location": "Cliente Online",
+        "result": "-28 lbs",
+        "duration": "14 Semanas",
+        "caption": "Profesional ocupado — transformación de pérdida de grasa (-28 lbs) con un plan de coaching online flexible.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Transformación Femenina",
+        "age": "29",
+        "location": "Cliente Online",
+        "result": "Tonificada",
+        "duration": "12 Semanas",
+        "caption": "Transformación corporal femenina — pérdida de grasa y tonificación en 12 semanas mediante nutrición y entrenamiento personalizados.",
+        "category": "total"
+      }
+    ]
+  },
+  "portfolioFaq": {
+    "title": "Preguntas y",
+    "titleHighlight": "Respuestas",
+    "q1": "¿Realmente funcionan los programas de transformación corporal?",
+    "a1": "Sí, cuando se construyen correctamente. Estos resultados provienen de un entrenamiento estructurado, nutrición personalizada y coaching constante, no de entrenamientos aleatorios.",
+    "q2": "¿Qué resultados puedo esperar en 90 días?",
+    "a2": "La mayoría de los clientes ven una pérdida de grasa notable, ganancias de fuerza y una mejor composición corporal dentro de los 90 días cuando siguen el programa de manera constante.",
+    "q3": "¿Son reales los resultados del coaching de fitness online?",
+    "a3": "Absolutamente. Muchas de estas transformaciones se lograron a través del coaching online, lo que permitió a los clientes en Charleston y más allá seguir planes estructurados sin depender de la ubicación de un gimnasio.",
+    "q4": "¿Cuánto tiempo toma una transformación completa?",
+    "a4": "Depende de tu punto de partida, pero la mayoría de los clientes comienzan a ver resultados medibles dentro de las primeras 8 a 12 semanas.",
+    "q5": "¿Pueden los principiantes lograr resultados como estos?",
+    "a5": "Sí. Muchos clientes comienzan sin experiencia y logran resultados sólidos a través de una guía estructurada y responsabilidad."
   },
   "footer": {
     "brand": "BelkBodyLab",
@@ -220,8 +294,8 @@
     "homeDesc": "Obtén resultados reales con un entrenador personal en Charleston SC. Coaching fitness online personalizado para pérdida de grasa y musculación.",
     "packagesTitle": "Paquetes de Coaching — BelkBodyLab",
     "packagesDesc": "Elige el paquete de coaching que se ajuste a tus metas. Desde programas iniciales hasta programas de élite, Kyle Belk diseña planes personalizados.",
-    "portfolioTitle": "Transformaciones de Clientes — BelkBodyLab",
-    "portfolioDesc": "Explora resultados reales de antes y después de clientes de BelkBodyLab. Personas reales, resultados reales, cero filtros.",
+    "portfolioTitle": "Resultados de Transformación Corporal Charleston SC | Antes y Después",
+    "portfolioDesc": "Vea resultados reales de transformación corporal de clientes de Charleston SC. Pérdida de grasa, ganancia de músculo y transformaciones de 90 días antes y después con coaching online.",
     "aboutTitle": "Sobre Kyle Belk — Coach Fitness de Élite y Arquitecto Corporal",
     "aboutDesc": "Descubre la historia detrás de BelkBodyLab. Aprende cómo Kyle Belk utiliza entrenamiento y nutrición basados en ciencia para diseñar transformaciones radicales.",
     "blogTitle": "Guías y Consejos de Fitness | Blog de Belk Body Lab",
@@ -433,11 +507,14 @@
   },
   "aboutPage": {
     "hero": {
+      "label": "El Arquitecto Corporal",
       "title": "EL PLAN MAESTRO PARA UNA",
       "titleHighlight": "TRANSFORMACIÓN TOTAL.",
       "subtitle": "La mayoría de los entrenadores te dan una plantilla. Yo te doy un protocolo basado en ciencia diseñado para tu fisiología específica. Sin rellenos. Solo resultados.",
       "cta": "Aplica al Coaching",
-      "trust": "500+ Clientes Transformados"
+      "ctaLabel": "Inicia Tu Protocolo",
+      "trust": "500+ Clientes Transformados",
+      "meta": "ESTABLECIDO EN DOS MIL DIECINUEVE — CHARLESTON SOUTH CAROLINA"
     },
     "story": {
       "label": "La Narrativa",
@@ -449,6 +526,7 @@
     "philosophy": {
       "label": "Los Estándares",
       "title": "La Filosofía de Belk Body Lab",
+      "subtitle": "Cada protocolo es una mezcla patentada de ciencia fisiológica y resiliencia humana.",
       "p1Title": "Entrenamiento Científico",
       "p1Desc": "Nada de 'sentir el ardor' solo por hacerlo. Cada repetición está calculada para activar la máxima hipertrofia muscular o estrés metabólico.",
       "p2Title": "Nutrición Basada en Datos",
@@ -472,7 +550,8 @@
       "stat2": "10k+",
       "stat2Label": "Lbs Perdidas",
       "stat3": "100%",
-      "stat3Label": "Protocolos a Medida"
+      "stat3Label": "Protocolos a Medida",
+      "footer": "No solo enseño la ciencia, la vivo. Cada protocolo que construyo está respaldado por conocimientos certificados y resultados probados."
     },
     "lifestyle": {
       "label": "Dentro del Lab",
@@ -487,7 +566,8 @@
       "titleHighlight": "ADIVINANZAS?",
       "description": "Solo acepto un número limitado de clientes que se toman en serio su transformación. Si estás listo para trabajar, yo te daré el plan.",
       "limited": "Cupos Limitados Disponibles",
-      "cta": "Aplica al Coaching de Élite"
+      "cta": "Aplica al Coaching de Élite",
+      "location": "Atlanta, GA y Online"
     }
   },
   "contactPage": {

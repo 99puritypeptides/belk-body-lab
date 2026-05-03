@@ -160,15 +160,17 @@ export default function ServicesGrid() {
                 )}
                 
                 <div className="pt-10">
-                  <Link
-                    href="/contact"
-                    className="group inline-flex items-center gap-10 px-10 py-6 bg-white/5 border border-white/10 rounded-2xl transition-all hover:bg-white hover:text-black"
-                  >
-                    <span className="font-black text-[10px] uppercase tracking-[0.4em]">{svc.cta}</span>
-                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-black/20 group-hover:bg-black/10 group-hover:text-black transition-all">
-                       <PremiumIcon name="arrow" size={20} />
-                    </div>
-                  </Link>
+                   <motion.div whileHover="hover">
+                     <Link
+                       href="/contact"
+                       className="group inline-flex items-center gap-10 px-10 py-6 bg-white/5 border border-white/10 rounded-2xl transition-all hover:bg-white hover:text-black"
+                     >
+                       <span className="font-black text-[10px] uppercase tracking-[0.4em]">{svc.cta}</span>
+                       <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-black/20 group-hover:bg-black/10 group-hover:text-black transition-all flex-shrink-0">
+                          <PremiumIcon name="arrow" size={20} />
+                       </div>
+                     </Link>
+                   </motion.div>
                 </div>
               </div>
 

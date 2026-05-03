@@ -11,7 +11,9 @@ import {
   animate,
 } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 type BMIKey = 'underweight' | 'normal' | 'overweight' | 'obese';
 
@@ -612,25 +614,27 @@ export default function BMICalculator() {
                       </div>
 
                       {/* Blog link */}
-                      <Link
+                      <MotionLink
                         href={blogLinks[result.key].href}
+                        whileHover="hover"
                         className="flex items-center justify-between w-full p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-white/10 transition-colors duration-250 group mb-4"
                       >
                         <div>
                           <p className="text-[9px] font-black uppercase tracking-[0.25em] text-accent-green mb-0.5">Recommended Read</p>
                           <p className="text-sm font-bold text-white/80 group-hover:text-white transition-colors">{blogLinks[result.key].text}</p>
                         </div>
-                        <ArrowRightIcon className="w-4 h-4 text-white/30 group-hover:text-white/80 group-hover:translate-x-1 transition-all shrink-0 ml-4" />
-                      </Link>
+                        <PremiumIcon name="arrow" size={16} />
+                      </MotionLink>
 
                       {/* CTA */}
-                      <Link
+                      <MotionLink
                         href="/#contact"
+                        whileHover="hover"
                         className="group flex items-center justify-between w-full px-7 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white hover:border-white text-white/70 hover:text-black font-black text-xs uppercase tracking-[0.2em] transition-all duration-300"
                       >
                         {t('requestPlan')}
-                        <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                        <PremiumIcon name="arrow" size={16} />
+                      </MotionLink>
                     </div>
                   </motion.div>
                 )}

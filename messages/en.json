@@ -169,6 +169,22 @@
     "goal5": "General Fitness",
     "goal6": "Other"
   },
+  "faq": {
+    "title": "Questions &",
+    "titleHighlight": "Answers",
+    "q1": "Do I need gym access to work with Kyle?",
+    "a1": "No — Kyle builds programs for home, gym, or hybrid setups. During the consultation call, he'll ask about your equipment and design your plan around what you actually have access to.",
+    "q2": "How fast will I see results?",
+    "a2": "Most clients notice visible changes within 3–4 weeks. Significant transformations typically occur at the 8–12 week mark. Results depend on your consistency and adherence to the plan — which is why Kyle emphasizes accountability over promises.",
+    "q3": "Is online coaching as effective as in-person?",
+    "a3": "For most goals, yes — and often more convenient. Kyle's online clients average the same transformation results as in-person clients because the programming, accountability, and communication are identical.",
+    "q4": "What makes Belk Body Lab different from a regular gym trainer?",
+    "a4": "Most gym personal trainers run the same generic circuit for every client. Kyle builds every program from scratch based on your physiology, goals, schedule, and training history. He also provides ongoing nutrition coaching and accountability check-ins.",
+    "q5": "How much time do I need to commit each week?",
+    "a5": "Most programs are designed around 3–5 training sessions per week, averaging 45–60 minutes each. Kyle builds the schedule around your availability — not the other way around.",
+    "q6": "What does the 90-day guarantee actually mean?",
+    "a6": "If you complete all check-ins, follow your nutrition plan, and train as prescribed for 90 days without seeing measurable progress, Kyle will refund your investment — no questions asked."
+  },
   "servicesPage": {
     "hero": {
       "title": "Online Fitness Coaching & Personal Training Charleston SC",
@@ -376,16 +392,16 @@
   "portfolioHero": {
     "label": "Real Results",
     "title": "Client",
-    "titleHighlight": "Transformations.",
-    "description": "Every photo represents a real person who committed to the process. No filters. No tricks. Just hard work, the right plan, and Kyle's coaching."
+    "titleHighlight": "Transformations",
+    "description": "Real people. Real results. These are body transformation results from clients in Charleston SC and across our online coaching programs — built through structured training, nutrition, and consistent accountability. No shortcuts. No quick fixes. Just proven systems that deliver."
   },
   "portfolioStats": {
-    "stat1Label": "Total Transformations",
-    "stat2Label": "Avg Fat Loss (12 weeks)",
+    "stat1Label": "Client Transformations",
+    "stat2Label": "Average Fat Loss",
     "stat3Label": "Client Satisfaction",
-    "stat4Label": "Years of Coaching",
-    "stat2Suffix": " lbs",
-    "stat4Suffix": " years"
+    "stat4Label": "Years Coaching Experience",
+    "stat2Suffix": " lbs (12 Weeks)",
+    "stat4Suffix": "+ Years"
   },
   "portfolioGallery": {
     "filterAll": "All Results",
@@ -397,15 +413,89 @@
     "clickToView": "Click to view full story",
     "yearsOld": "years old",
     "program": "program",
-    "ctaTitle": "Ready to be the",
-    "ctaTitleItalic": "next transformation?",
-    "ctaDesc": "Every one of these clients started exactly where you are. The only difference is they took the first step.",
+    "introTitle": "Proven Results Through Science",
+    "introText": "These before and after fitness transformations show what happens when the right plan meets consistency. From fat loss to muscle gain and full body recomposition, these results come from clients in Charleston SC, Mount Pleasant, North Charleston, Summerville, and online coaching clients across the US.",
+    "ctaTitle": "Ready to Be the",
+    "ctaTitleHighlight": "Next Transformation?",
+    "ctaDescription": "Every result you see here started from zero. The difference is simple — they followed a structured plan and stayed consistent. If you’re ready to lose fat, build muscle, and achieve real results, now is your time to start.",
     "ctaBtn": "Start My Transformation",
+    "ctaLocation": "Now accepting clients in Charleston SC and online.",
+    "ctaLimited": "Limited coaching spots available.",
     "modalCta": "Get My Transformation",
     "emptyState": "No transformations in this category yet.",
     "catFatLoss": "Fat Loss",
     "catMuscleGain": "Muscle Gain",
-    "catTotal": "Total Transformation"
+    "catTotal": "Total Transformation",
+    "items": [
+      {
+        "name": "Fat Loss Transformation",
+        "age": "34",
+        "location": "Charleston SC",
+        "result": "-42 lbs",
+        "duration": "90 Days",
+        "caption": "Charleston SC client — 90-day fat loss transformation (-42 lbs) through personalized online fitness coaching.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Muscle Gain Protocol",
+        "age": "27",
+        "location": "Mount Pleasant",
+        "result": "+12 lbs",
+        "duration": "12 Weeks",
+        "caption": "12-week muscle gain transformation — +12 lbs lean muscle using structured training and nutrition coaching.",
+        "category": "muscle-gain"
+      },
+      {
+        "name": "Body Recomposition",
+        "age": "31",
+        "location": "North Charleston",
+        "result": "Shredded",
+        "duration": "16 Weeks",
+        "caption": "Body recomposition before and after — lost fat and built muscle in 16 weeks with online coaching.",
+        "category": "total"
+      },
+      {
+        "name": "Beginner Progress",
+        "age": "24",
+        "location": "Summerville",
+        "result": "-25 lbs",
+        "duration": "12 Weeks",
+        "caption": "Beginner client from North Charleston — sustainable weight loss and strength progress over 12 weeks.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Busy Professional",
+        "age": "42",
+        "location": "Online Client",
+        "result": "-28 lbs",
+        "duration": "14 Weeks",
+        "caption": "Busy professional — fat loss transformation (-28 lbs) with a flexible online coaching plan.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Female Transformation",
+        "age": "29",
+        "location": "Online Client",
+        "result": "Toned",
+        "duration": "12 Weeks",
+        "caption": "Female body transformation — 12-week fat loss and toning through custom nutrition and training.",
+        "category": "total"
+      }
+    ]
+  },
+  "portfolioFaq": {
+    "title": "Questions &",
+    "titleHighlight": "Answers",
+    "q1": "Do body transformation programs really work?",
+    "a1": "Yes — when built correctly. These results come from structured training, personalized nutrition, and consistent coaching, not random workouts.",
+    "q2": "What results can I expect in 90 days?",
+    "a2": "Most clients see noticeable fat loss, strength gains, and improved body composition within 90 days when following the program consistently.",
+    "q3": "Are online fitness coaching results real?",
+    "a3": "Absolutely. Many of these transformations were achieved through online coaching, allowing clients in Charleston and beyond to follow structured plans without relying on a gym location.",
+    "q4": "How long does a full transformation take?",
+    "a4": "It depends on your starting point, but most clients begin seeing measurable results within the first 8–12 weeks.",
+    "q5": "Can beginners achieve results like this?",
+    "a5": "Yes. Many clients start with no experience and achieve strong results through structured guidance and accountability."
   },
   "footer": {
     "brand": "BelkBodyLab",
@@ -424,20 +514,44 @@
     "homeDesc": "Get real results with a personal trainer in Charleston SC. Custom online fitness coaching for fat loss, muscle building & body transformations.",
     "packagesTitle": "Coaching Packages — BelkBodyLab",
     "packagesDesc": "Choose the coaching package that fits your goals. From starter programs to elite protocols, Kyle Belk engineers custom plans for your success.",
-    "portfolioTitle": "Client Transformations — BelkBodyLab",
-    "portfolioDesc": "Explore real before and after results from BelkBodyLab clients. Real people, real results, zero filters.",
+    "portfolioTitle": "Body Transformation Results Charleston SC | Before After",
+    "portfolioDesc": "See real body transformation results from Charleston SC clients. Fat loss, muscle gain, and 90-day before & after transformations with online coaching.",
     "aboutTitle": "About Kyle Belk — Elite Fitness Coach & Body Architect",
     "aboutDesc": "Discover the story behind BelkBodyLab. Learn how Kyle Belk uses science-based training and nutrition to engineer radical transformations.",
     "blogTitle": "Fitness Guides & Tips | Belk Body Lab Blog",
     "blogDesc": "Expert fat loss guides, muscle building protocols, and nutrition science by Kyle Belk. Engineering transformations with data."
   },
+  "blog": {
+    "hero": {
+      "label": "Insights & Guides",
+      "title": "Protocol",
+      "titleHighlight": "Library",
+      "subtitle": "Expert fat loss guides, muscle building protocols, and nutrition science from Kyle Belk. Engineering transformations with data-driven coaching.",
+      "cta": "Explore Articles"
+    },
+    "cta": {
+      "label": "Blueprint to Elite",
+      "title": "Stop Guessing.",
+      "titleHighlight": "Engineer Your Results.",
+      "description": "I bridge the gap between biological theory and physical output. Your custom protocol starts with a single click.",
+      "ctaPrimary": "Apply for Coaching",
+      "ctaSecondary": "Browse Success Stories"
+    },
+    "grid": {
+      "readMore": "Read Protocol",
+      "featured": "Featured Analysis"
+    }
+  },
   "aboutPage": {
     "hero": {
+      "label": "The Body Architect",
       "title": "THE MASTERPLAN FOR TOTAL",
       "titleHighlight": "TRANSFORMATION.",
       "subtitle": "Most trainers give you a template. I give you a science-based protocol engineered for your specific physiology. No fluff. Just results.",
       "cta": "Apply for Coaching",
-      "trust": "500+ Clients Transformed"
+      "ctaLabel": "Start Your Protocol",
+      "trust": "500+ Clients Transformed",
+      "meta": "ESTABLISHED IN TWO THOUSAND NINETEEN — CHARLESTON SOUTH CAROLINA"
     },
     "story": {
       "label": "The Narrative",
@@ -449,6 +563,7 @@
     "philosophy": {
       "label": "The Standards",
       "title": "The Belk Body Lab Philosophy",
+      "subtitle": "Every protocol is a proprietary blend of physiological science and human resilience.",
       "p1Title": "Scientific Training",
       "p1Desc": "No 'feeling the burn' just for the sake of it. Every rep is calculated to trigger maximum muscle hypertrophy or metabolic stress.",
       "p2Title": "Data-Driven Nutrition",
@@ -472,7 +587,8 @@
       "stat2": "10k+",
       "stat2Label": "Lbs Lost",
       "stat3": "100%",
-      "stat3Label": "Bespoke Protocols"
+      "stat3Label": "Bespoke Protocols",
+      "footer": "I don't just teach the science, I live it. Every protocol I build is backed by certified knowledge and proven results."
     },
     "lifestyle": {
       "label": "Inside the Lab",
@@ -507,14 +623,6 @@
       "a2": "No. While Kyle is based in Atlanta, over 80% of our clients are remote. We use advanced tracking tools and video calls to ensure elite results globally.",
       "q3": "What if I've never trained before?",
       "a3": "The Lab works with all levels. We specialize in engineering protocols for absolute beginners as much as competition athletes. The only requirement is discipline."
-    }
-  },
-
-  "blog": {
-    "hero": {
-      "title": "FITNESS INSIGHTS &",
-      "titleHighlight": "TRANSFORMATION GUIDES.",
-      "subtitle": "Stop guessing. Start understanding the science behind your physique. Expert guides on hypertrophy, fat loss, and metabolic health."
     }
   }
 }

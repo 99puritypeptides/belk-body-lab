@@ -8,6 +8,8 @@ import AnimatedNumber from '@/components/effects/AnimatedNumber';
 import CTAButton from '@/components/ui/CTAButton';
 import PremiumIcon from '@/components/ui/PremiumIcon';
 
+const MotionLink = motion(Link);
+
 export default function ServicesHero() {
   const t = useTranslations('servicesPage.hero');
   const { scrollY } = useScroll();
@@ -32,22 +34,19 @@ export default function ServicesHero() {
   ];
 
   return (
-    <section className="relative h-screen flex flex-col pt-32 pb-24 overflow-hidden bg-black">
-      {/* Background Media with Cinematic Parallax */}
-      <motion.div 
-        style={{ y, scale }}
-        className="absolute inset-0 z-0 will-change-transform"
-      >
-        <video
+    <section className="relative min-h-screen flex flex-col pt-32 pb-24 overflow-hidden bg-black lg:h-screen">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.video
           ref={videoRef}
-          src="/BBL Media/chest-day.mp4"
+          src="/BBL Media/leg-day.mp4"
           loop
           muted
           playsInline
-          className="w-full h-full object-cover grayscale opacity-20 brightness-[0.6]"
+          style={{ y, scale }}
+          className="w-full h-full object-cover object-center grayscale opacity-30 brightness-[0.6] will-change-transform"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
-      </motion.div>
+      </div>
 
       <div className="max-w-[1800px] mx-auto px-6 lg:px-16 relative z-10 w-full flex-1 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
@@ -69,10 +68,10 @@ export default function ServicesHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              className="text-white text-5xl md:text-7xl lg:text-[5vw] font-display font-black uppercase tracking-tighter leading-[0.85] mb-12"
+              className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-[5vw] font-display font-black uppercase tracking-tighter leading-[0.9] mb-12"
             >
               {t('title').split(' ').slice(0, 3).join(' ')} <br />
-              <span className="text-transparent" style={{ WebkitTextStroke: '1.5px rgba(255,255,255,0.4)' }}>
+              <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.4)' }}>
                 {t('title').split(' ').slice(3, 6).join(' ')}
               </span> <br />
               <span className="text-accent-green">
@@ -96,11 +95,12 @@ export default function ServicesHero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                <Link 
+                <MotionLink 
                   href="/contact"
+                  whileHover="hover"
                   className="group inline-flex items-center gap-8 text-white"
                 >
-                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] overflow-hidden">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0)] group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] overflow-hidden flex-shrink-0">
                     <PremiumIcon 
                       name="arrow"
                       size={32}
@@ -115,16 +115,17 @@ export default function ServicesHero() {
                       {t('ctaPrimary')}
                     </span>
                   </div>
-                </Link>
+                </MotionLink>
               </motion.div>
 
-              <Link 
+              <MotionLink 
                 href="#process"
+                whileHover="hover"
                 className="group flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors"
               >
                 {t('ctaSecondary')}
-                <PremiumIcon name="arrow" size={14} className="group-hover:translate-x-2 transition-transform" />
-              </Link>
+                <PremiumIcon name="arrow" size={14} />
+              </MotionLink>
             </div>
             </div>
           </div>
@@ -162,16 +163,6 @@ export default function ServicesHero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-4"
-      >
-        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/20">Scroll to Explore</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-accent-green to-transparent" />
-      </motion.div>
     </section>
   );
 }

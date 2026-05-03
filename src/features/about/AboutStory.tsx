@@ -23,7 +23,7 @@ export default function AboutStory() {
                 {t('label')}
               </span>
             </div>
-            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.8]">
+            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.9]">
               {t('title')}
             </h2>
           </div>

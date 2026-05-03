@@ -42,13 +42,13 @@ export default function AboutPhilosophy() {
                 {t('label')}
               </span>
             </div>
-            <h2 className="text-white text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-[0.85]">
+            <h2 className="text-white text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-[0.9]">
               {t('title')}
             </h2>
           </div>
           <div className="lg:max-w-xs text-right">
             <p className="text-white/30 text-sm font-medium uppercase tracking-[0.2em] leading-relaxed">
-              Every protocol is a proprietary blend of physiological science and human resilience.
+              {t('subtitle')}
             </p>
           </div>
         </div>

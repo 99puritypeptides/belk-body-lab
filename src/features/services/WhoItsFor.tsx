@@ -4,6 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 export default function WhoItsFor() {
   const t = useTranslations('servicesPage.whoItsFor');
@@ -113,17 +116,16 @@ export default function WhoItsFor() {
                   {seg.description}
                 </p>
                 
-                <Link 
+                <MotionLink 
                   href="#pricing"
+                  whileHover="hover"
                   className="mt-8 flex items-center gap-4 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
                 >
                   <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    <PremiumIcon name="arrow" size={16} />
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-widest text-white">Learn More</span>
-                </Link>
+                </MotionLink>
               </div>
 
               {/* Decorative Corner Element */}

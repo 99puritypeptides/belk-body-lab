@@ -4,7 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
+import PremiumIcon from '@/components/ui/PremiumIcon';
+
+const MotionLink = motion(Link);
 
 export default function ServicesCTA() {
   const t = useTranslations('servicesPage.finalCta');
@@ -30,22 +32,22 @@ export default function ServicesCTA() {
             <div className="w-2 h-2 rounded-full bg-black animate-pulse" />
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black/60">{t('limited')}</span>
           </motion.div>
-
+ 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-12"
           >
-            <h2 className="text-black text-6xl md:text-[10vw] font-display font-black uppercase tracking-tighter leading-[0.8] mix-blend-multiply">
+            <h2 className="text-black text-6xl md:text-[9vw] font-display font-black uppercase tracking-tighter leading-[0.8]">
               {t('title')} <br />
-              <span className="text-black/10">{t('titleHighlight')}</span>
+              <span className="text-black/10 block leading-[0.8]">{t('titleHighlight')}</span>
             </h2>
-            <p className="text-black/40 text-xl md:text-3xl font-light leading-snug max-w-2xl mx-auto tracking-tight">
+            <p className="text-black/40 text-xl md:text-3xl font-light leading-snug max-w-3xl mx-auto tracking-tight">
               {t('description')}
             </p>
           </motion.div>
-
+ 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,16 +55,17 @@ export default function ServicesCTA() {
             transition={{ delay: 0.3 }}
             className="space-y-12"
           >
-            <Link 
+            <MotionLink 
               href="/contact"
-              className="group relative inline-flex items-center gap-10 px-16 py-10 bg-black text-white rounded-full font-black text-sm uppercase tracking-[0.4em] overflow-hidden transition-all hover:scale-[1.05] active:scale-[0.98] shadow-2xl shadow-black/20"
+              whileHover="hover"
+              className="group relative inline-flex items-center gap-12 px-14 py-8 bg-black text-white rounded-full font-black text-sm uppercase tracking-[0.4em] overflow-hidden transition-all hover:scale-[1.05] active:scale-[0.98] shadow-2xl shadow-black/20"
             >
               <span className="relative z-10">{t('cta')}</span>
-              <div className="relative z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center text-black group-hover:rotate-45 transition-transform duration-500">
-                <ArrowLongRightIcon className="w-6 h-6" />
+              <div className="relative z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center text-black transition-transform duration-500 shadow-lg flex-shrink-0">
+                <PremiumIcon name="arrow" size={24} />
               </div>
               <div className="absolute inset-0 bg-[#AAFF00] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-            </Link>
+            </MotionLink>
 
             <div className="flex flex-col items-center gap-6 opacity-30">
               <p className="text-[10px] font-black uppercase tracking-[0.5em] text-black">
