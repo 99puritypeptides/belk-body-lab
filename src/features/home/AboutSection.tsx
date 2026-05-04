@@ -60,10 +60,41 @@ export default function AboutSection() {
             className="w-full h-[120vh] object-cover object-center opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/40" />
+
+          {/* Scroll Indicator */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="absolute top-24 md:top-32 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-50 pointer-events-none"
+          >
+            <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-[0.4em] text-white/50">
+              Scroll to Explore
+            </span>
+          </motion.div>
         </div>
 
-        {/* Initial Buffer */}
-        <div className="h-[20vh] sm:h-[30vh] w-full" />
+        {/* Initial Buffer & Marquee */}
+        <div className="h-[20vh] sm:h-[30vh] w-full flex flex-col justify-end overflow-hidden pb-4 sm:pb-8">
+          <div className="relative z-10 w-full overflow-hidden flex items-center pointer-events-none">
+            <motion.div
+              className="flex whitespace-nowrap"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+            >
+              {[...Array(2)].map((_, idx) => (
+                <div key={idx} className="flex items-center">
+                  {[...Array(3)].map((_, i) => (
+                    <span key={i} className="text-[clamp(3rem,6vw,5rem)] font-heading font-black uppercase tracking-tighter px-4 text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>
+                      ELEVATE YOUR PHYSIQUE <span className="text-accent-green mx-4" style={{ WebkitTextStroke: '0px' }}>•</span> NO GUESSWORK <span className="text-accent-green mx-4" style={{ WebkitTextStroke: '0px' }}>•</span> REAL RESULTS <span className="text-accent-green mx-4" style={{ WebkitTextStroke: '0px' }}>•</span>
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
 
         {/* Header Plaque */}
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -115,6 +146,9 @@ export default function AboutSection() {
               {/* Right: Content */}
               <div className="lg:col-span-7 flex flex-col justify-center lg:py-10">
                 <div className="mb-14">
+                  <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#111] opacity-50 mb-6">
+                    {t('location')}
+                  </div>
                   <h3 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#111] leading-[1.1] mb-8 tracking-tight">
                     {t('heading')} <br />
                     <span className="text-gray-400">{t('headingItalic')}</span>
