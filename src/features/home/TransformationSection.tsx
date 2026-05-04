@@ -80,8 +80,8 @@ export default function TransformationsSection() {
       {/* ── Section Outro ── */}
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-16 pb-24 lg:pb-32 text-center">
         <div className="scroll-reveal-init">
-          <p className="text-white/20 text-xs font-black uppercase tracking-[0.3em] mb-10">
-            Real Science. Raw Results.
+          <p className="text-white/40 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-10 max-w-2xl mx-auto leading-relaxed">
+            {t('outro')}
           </p>
           <MotionLink
             href="/portfolio"

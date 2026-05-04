@@ -158,7 +158,7 @@ export default function AboutSection() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap items-center gap-6">
-                  <CTAButton href="/#contact">
+                  <CTAButton href="/contact">
                     {t('ctaWork')}
                   </CTAButton>
                   <Link

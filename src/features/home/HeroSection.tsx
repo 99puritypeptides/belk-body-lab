@@ -137,12 +137,12 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-10 mt-auto mb-12"
         >
-          <CTAButton href="/#contact">
+          <CTAButton href="/contact">
             {t('ctaPrimary')}
           </CTAButton>
 
           <MotionLink
-            href="/#process"
+            href="/services"
             whileHover="hover"
             className="group text-white/50 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-4"
           >

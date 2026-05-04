@@ -15,9 +15,9 @@
     "language": "Language"
   },
   "hero": {
-    "title": "Professional Coaching",
+    "title": "Personal Trainer Charleston SC for",
     "titleHighlight": "Body Transformations",
-    "subtitle": "Expert-led coaching for men and women. Whether you're a beginner or elite, we engineer custom protocols for sustainable fat loss and muscle hypertrophy.",
+    "subtitle": "Professional coaching for real results. Custom online and in-person fitness coaching designed to help you lose fat, build muscle, and stay consistent — without guesswork. Serving Charleston SC and beyond through personalized coaching that fits your lifestyle.",
     "ctaPrimary": "Apply for Coaching",
     "ctaSecondary": "Start Your Transformation",
     "happySpirits": "Happy Spirits",
@@ -27,12 +27,12 @@
     "sets": "Sets"
   },
   "about": {
-    "label": "Meet Kyle",
+    "label": "Meet Your Personal Trainer (Serving Charleston SC & Online Clients)",
     "name": "Kyle Belk",
     "heading": "Transforming bodies,",
     "headingItalic": "rewriting limits.",
-    "bio1": "I'm Kyle Belk - a certified personal trainer from Atlanta, GA with 7 years of coaching experience. I've helped over 500 clients shed fat, build muscle, and completely rewrite their relationship with their body.",
-    "bio2": "My approach is simple: no cookie-cutter plans. Every program I build is rooted in your unique metabolism, schedule, and goals.",
+    "bio1": "I’m Kyle Belk — a certified personal trainer with 7+ years of experience helping clients lose fat, build muscle, and completely change how they feel in their bodies.",
+    "bio2": "I don’t believe in cookie-cutter plans. Every program is built around your metabolism, schedule, and goals — whether you're training in a gym, at home, or anywhere in Charleston. Coaching clients across Charleston, South Carolina and worldwide through personalized online fitness programs that deliver real, sustainable results.",
     "quote": "Your body is capable of more than your mind believes.",
     "quoteAuthor": "- Kyle Belk",
     "cred1": "NASM Certified Personal Trainer",
@@ -48,9 +48,9 @@
   },
   "bmi": {
     "label": "Free Fitness Tool",
-    "title": "Calculate Your",
-    "titleHighlight": "Body Mass Index",
-    "description": "Knowing your BMI is the foundational step toward effective weight management. Use our advanced BMI calculator to accurately assess your current metrics, then let Kyle Belk engineer a custom fitness plan to transform your physique.",
+    "title": "Check Your Starting Point for",
+    "titleHighlight": "Fat Loss or Muscle Gain",
+    "description": "Knowing where you stand is the first step toward real progress. Use this tool to understand your current body metrics — and build a smarter plan moving forward. Many clients in Charleston start here before moving into a fully customized transformation program.",
     "cat1": "Underweight",
     "cat2": "Normal Weight",
     "cat3": "Overweight",
@@ -91,23 +91,24 @@
     "targetMetrics": "Target Metrics"
   },
   "transformations": {
-    "label": "Real Results",
-    "title": "Client",
-    "titleItalic": "Transformations.",
-    "description": "Every result is real. No filters, no tricks - just dedicated clients and a proven system.",
+    "label": "Real Client Transformations",
+    "title": "Real people.",
+    "titleItalic": "Real results.",
+    "description": "These transformations come from personalized fitness coaching — not generic programs. Clients across Charleston SC and beyond have used this approach to lose fat, build muscle, and completely change their bodies. No shortcuts. Just proven systems, consistency, and the right guidance.",
     "viewAll": "View All Transformations",
     "before": "Before",
     "after": "After",
     "drag": "Drag the slider to compare",
     "fatLoss": "Fat Loss",
     "muscleGain": "Muscle Gain",
-    "total": "Total Transformation"
+    "total": "Total Transformation",
+    "outro": "Helping clients in Charleston SC achieve sustainable fat loss, strength, and confidence through structured coaching."
   },
   "testimonials": {
-    "label": "Client Stories",
-    "title": "Real People.",
-    "titleItalic": "Real Results.",
-    "subtitle": "Trusted by 500+ clients across the US.",
+    "label": "Client Results",
+    "title": "Client Results from Our",
+    "titleItalic": "Fitness Coaching Programs",
+    "subtitle": "People don’t just train here — they transform. From fat loss to muscle gain, our clients see real changes because every plan is built specifically for them.",
     "program": "program",
     "t1": "Kyle completely changed how I think about fitness. I'd tried everything before - keto, fasting, random YouTube programs. None of it stuck. In 16 weeks with Kyle, I lost 42 pounds and actually understand WHY it worked.",
     "t2": "As a mom of two with zero time, I needed something that actually fit my life. Kyle built around my schedule, my stress levels, even my meal preferences. Down 28 lbs and I feel stronger than I did in my 20s.",
@@ -126,10 +127,10 @@
     "d5": "24 weeks"
   },
   "contact": {
-    "label": "Apply For Coaching",
-    "title": "Begin Your",
-    "titleHighlight": "Transformation.",
-    "description": "Ready to elevate your physique? Connect with Atlanta's premier professional trainer. Fill out the application below, and Kyle will review your goals to engineer a highly customized roadmap for your success.",
+    "label": "Begin Your Transformation",
+    "title": "Ready to stop guessing and start",
+    "titleHighlight": "seeing real progress?",
+    "description": "Apply for personalized fitness coaching designed to help you lose fat, build muscle, and stay consistent long-term. Now accepting clients in Charleston SC and online worldwide.",
     "processTitle": "Onboarding Process",
     "step1Title": "Comprehensive Review",
     "step1Desc": "Kyle personally analyzes your intake form within 24 hours.",
@@ -172,18 +173,14 @@
   "faq": {
     "title": "Questions &",
     "titleHighlight": "Answers",
-    "q1": "Do I need gym access to work with Kyle?",
-    "a1": "No — Kyle builds programs for home, gym, or hybrid setups. During the consultation call, he'll ask about your equipment and design your plan around what you actually have access to.",
+    "q1": "Do I need gym access to work with you?",
+    "a1": "No — as an online fitness coach working with Charleston clients, programs are built for home, gym, or hybrid setups based on what you have access to.",
     "q2": "How fast will I see results?",
-    "a2": "Most clients notice visible changes within 3–4 weeks. Significant transformations typically occur at the 8–12 week mark. Results depend on your consistency and adherence to the plan — which is why Kyle emphasizes accountability over promises.",
-    "q3": "Is online coaching as effective as in-person?",
-    "a3": "For most goals, yes — and often more convenient. Kyle's online clients average the same transformation results as in-person clients because the programming, accountability, and communication are identical.",
-    "q4": "What makes Belk Body Lab different from a regular gym trainer?",
-    "a4": "Most gym personal trainers run the same generic circuit for every client. Kyle builds every program from scratch based on your physiology, goals, schedule, and training history. He also provides ongoing nutrition coaching and accountability check-ins.",
-    "q5": "How much time do I need to commit each week?",
-    "a5": "Most programs are designed around 3–5 training sessions per week, averaging 45–60 minutes each. Kyle builds the schedule around your availability — not the other way around.",
-    "q6": "What does the 90-day guarantee actually mean?",
-    "a6": "If you complete all check-ins, follow your nutrition plan, and train as prescribed for 90 days without seeing measurable progress, Kyle will refund your investment — no questions asked."
+    "a2": "Most clients begin seeing noticeable changes within the first few weeks, with significant transformation over 90 days when following the plan consistently.",
+    "q3": "Is online coaching as effective as in-person training?",
+    "a3": "Yes — for many clients in Charleston, online coaching is more effective because it provides flexibility, structure, and ongoing support without relying on a fixed gym schedule.",
+    "q4": "How much does a personal trainer cost in Charleston SC?",
+    "a4": "Traditional trainers typically charge per session, often ranging from $50–$150. Our coaching focuses on long-term results with structured programming, nutrition guidance, and ongoing support — delivering more value over time."
   },
   "servicesPage": {
     "hero": {
@@ -507,7 +504,8 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "blog": "Blog",
-    "copyright": "© 2026 BelkBodyLab. All Rights Reserved."
+    "copyright": "© 2026 BelkBodyLab. All Rights Reserved.",
+    "tagline": "Belk Body Lab — Personalized fitness coaching that delivers. Serving Charleston SC and beyond."
   },
   "metadata": {
     "homeTitle": "Personal Trainer Charleston SC | Online Fitness Coach",
