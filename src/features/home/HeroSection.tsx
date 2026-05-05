@@ -110,10 +110,12 @@ export default function HeroSection() {
           >
             <Image
               src="/images/hero/model-image.png"
-              alt="Elite Transformation"
+              alt="Elite Body Transformation Coaching by Kyle Belk - Charleston SC"
               fill
               className="object-contain object-bottom brightness-[1.1] contrast-[1.1]"
               priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1400px"
+              quality={90}
             />
           </motion.div>
         </motion.div>
@@ -172,7 +174,7 @@ export default function HeroSection() {
         
         <FloatingCard 
           icon={<MapPinIcon className="w-5 h-5 text-accent-green" />}
-          title="Atlanta & Remote"
+          title="Charleston & Online"
           subtitle="Global Coaching"
           className="top-[40%] md:top-[70%] left-[2%] lg:left-[6%]"
           delay={1.4}
@@ -197,7 +199,7 @@ export default function HeroSection() {
         <div className="flex -space-x-3">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="w-8 h-8 rounded-full border-2 border-black overflow-hidden bg-gray-800">
-               <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="user" width={32} height={32} />
+               <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Satisfied Coaching Client Profile" width={32} height={32} />
             </div>
           ))}
         </div>

@@ -63,6 +63,14 @@ export default function ContactSection() {
     },
     { 
       icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+        </svg>
+      ), 
+      label: t('emailLabel'), value: t('emailValue'), href: `mailto:${t('emailValue')}` 
+    },
+    { 
+      icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.43a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.14 7.53 6.34 6.34 0 0 0 10.73 2.19V8.79a9.6 9.6 0 0 0 5.7 1.83V7.17a4.83 4.83 0 0 1-1.01-.48z"/>
         </svg>

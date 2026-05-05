@@ -24,7 +24,7 @@ export default function BlogCTA() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/blog_cta_redesign_bg_1776324593741.png"
-              alt="Coach Kyle Belk Cinematic"
+              alt="Elite Coach Kyle Belk - Cinematic Training Perspective in Charleston SC"
               fill
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
               priority

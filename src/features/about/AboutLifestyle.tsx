@@ -75,6 +75,7 @@ export default function AboutLifestyle() {
                   ref={videoRef}
                   src="/BBL Media/leg-day.mp4" 
                   loop muted playsInline
+                  title="Elite Fitness Lifestyle Training Video - Belk Body Lab"
                   className="w-full h-full object-cover grayscale brightness-90 contrast-[1.1] scale-105 group-hover:scale-100 transition-transform duration-[2000ms]"
                 />
               </div>
@@ -82,10 +83,10 @@ export default function AboutLifestyle() {
               {/* Secondary Images Staggered */}
               <div className="col-span-5 lg:col-span-4 space-y-4 lg:space-y-8 pt-8 lg:pt-16">
                 <div className="aspect-square rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]">
-                  <img src="/BBL Media/lifestyle-2.jpg" alt="Kyle Lifestyle" className="w-full h-full object-cover" />
+                  <img src="/BBL Media/lifestyle-2.jpg" alt="Kyle Belk Fitness Lifestyle - Consistency and Resilience" className="w-full h-full object-cover" />
                 </div>
                 <div className="aspect-[4/5] rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]">
-                  <img src="/BBL Media/lifestyle-3.jpg" alt="Kyle Lifestyle" className="w-full h-full object-cover" />
+                  <img src="/BBL Media/lifestyle-3.jpg" alt="Kyle Belk Fitness Training - Discipline and Precision" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>

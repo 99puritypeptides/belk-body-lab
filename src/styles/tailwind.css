@@ -516,21 +516,7 @@ h1, h2, h3, h4, h5, h6 {
   text-orientation: mixed;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-green);
-  border-radius: 2px;
-}
-
-/* Selection */
+/* Custom Selection */
 ::-selection {
   background: rgba(170, 255, 0, 0.2);
   color: var(--accent-green);

@@ -6,6 +6,8 @@ import { blogPosts } from '@/data/blog/posts';
 import BlogPostContent from '@/features/blog/BlogPostContent';
 import BlogCTA from '@/features/blog/BlogCTA';
 import { Link } from '@/i18n/navigation';
+import Script from 'next/script';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -23,13 +25,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const content = post[locale as 'en' | 'es'] || post.en;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
   return {
     title: content.metaTitle,
     description: content.metaDescription,
+    alternates: {
+      canonical: `${siteUrl}/${locale}/blog/${slug}`,
+      languages: {
+        en: `${siteUrl}/en/blog/${slug}`,
+        es: `${siteUrl}/es/blog/${slug}`,
+      },
+    },
     openGraph: {
       title: content.metaTitle,
       description: content.metaDescription,
+      url: `${siteUrl}/${locale}/blog/${slug}`,
       images: [post.image],
       type: 'article',
       publishedTime: post.date,
@@ -43,9 +54,45 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const content = post[locale as 'en' | 'es'] || post.en;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+
+  // Get related posts (same category, excluding current post)
+  const relatedPosts = blogPosts
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .slice(0, 2);
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": content.title,
+    "description": content.metaDescription,
+    "image": [`${siteUrl}${post.image}`],
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": [{
+      "@type": "Person",
+      "name": "Kyle Belk",
+      "url": `${siteUrl}/${locale}/about`
+    }],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Belk Body Lab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/brand/belk-body-lab-logo.png`
+      }
+    }
+  };
 
   return (
-    <main className="min-h-screen bg-[#050505] pt-32">
+    <>
+      <Script
+        id={`article-schema-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      {content.faqs && <FAQSchema id={`blog-faq-${slug}`} items={content.faqs} />}
+      <main className="min-h-screen bg-[#050505] pt-32">
       <article>
         {/* Post Header */}
         <header className="container-custom px-6 lg:px-10 mb-16 lg:mb-24">
@@ -58,6 +105,15 @@ export default async function BlogPostPage({ params }: Props) {
             </svg>
             Back to Articles
           </Link>
+
+          {/* Breadcrumb UI */}
+          <nav className="flex items-center gap-2 mb-12 text-[10px] font-bold uppercase tracking-widest text-white/20" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-accent-green transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/blog" className="hover:text-accent-green transition-colors">Blog</Link>
+            <span>/</span>
+            <span className="text-white/40 truncate max-w-[200px]">{content.title}</span>
+          </nav>
 
           <div className="max-w-[1000px]">
             <div className="flex items-center gap-4 text-text-muted text-xs font-bold uppercase tracking-widest mb-6">
@@ -91,7 +147,47 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       </article>
 
+      {/* Related Articles */}
+      {relatedPosts.length > 0 && (
+        <section className="container-custom px-6 lg:px-10 pb-24 lg:pb-40">
+          <div className="w-full h-px bg-white/5 mb-24" />
+          <h2 className="font-heading font-black text-white text-3xl md:text-5xl uppercase tracking-tighter mb-16">
+            Continue <span className="text-accent-green">Reading</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {relatedPosts.map((related) => {
+              const rContent = related[locale as 'en' | 'es'] || related.en;
+              return (
+                <Link 
+                  key={related.id} 
+                  href={`/blog/${related.slug}`}
+                  className="group relative bg-white/[0.02] border border-white/5 rounded-[2rem] overflow-hidden hover:bg-white/[0.04] transition-all duration-500"
+                >
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image 
+                      src={related.image} 
+                      alt={rContent.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <span className="text-accent-green text-[10px] font-black uppercase tracking-widest mb-4 block">
+                      {related.category}
+                    </span>
+                    <h3 className="text-white text-xl font-bold uppercase tracking-tight leading-snug group-hover:text-accent-green transition-colors">
+                      {rContent.title}
+                    </h3>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
       <BlogCTA />
     </main>
+    </>
   );
 }

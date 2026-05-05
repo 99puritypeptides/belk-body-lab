@@ -47,7 +47,12 @@ export const blogPosts: BlogPost[] = [
   <p class="text-text-muted mb-6">Stop following generic internet advice. Get a fat loss protocol built specifically for your metabolism.</p>
   <a href="/#contact" class="font-black uppercase tracking-widest text-accent-green hover:text-white transition-colors">Apply for Elite Coaching →</a>
 </div>
-      `
+      `,
+      faqs: [
+        { q: 'Is cardio necessary for fat loss?', a: 'No, cardio is not strictly necessary for fat loss; a caloric deficit is the primary driver. However, cardio can help increase your caloric expenditure and improve cardiovascular health.' },
+        { q: 'How much protein do I need while dieting?', a: 'For optimal muscle preservation during fat loss, aim for 0.8 to 1.2 grams of protein per pound of bodyweight.' },
+        { q: 'Can I lose fat and build muscle at the same time?', a: 'Yes, this is known as body recomposition. It is most effective for beginners or those returning after a long break, provided protein intake is high and training is intense.' }
+      ]
     },
     es: {
       title: 'Cómo Perder Grasa Sin Pasar Hambre: Guía Basada en la Ciencia',

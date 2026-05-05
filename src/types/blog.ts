@@ -6,6 +6,7 @@ export interface BlogPostContent {
   content: string; // HTML or MDX string
   metaTitle: string;
   metaDescription: string;
+  faqs?: { q: string; a: string }[];
 }
 
 export interface BlogPost {

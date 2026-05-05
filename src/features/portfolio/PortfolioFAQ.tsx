@@ -66,7 +66,7 @@ export default function PortfolioFAQ() {
                   <div className="flex flex-col">
                     <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/20 mb-1">Direct Support</span>
                     <span className="text-sm font-bold text-white/60 tracking-widest uppercase group-hover:text-white transition-colors">
-                      support@belkbodylab.com
+                      trainwithbelk@gmail.com
                     </span>
                   </div>
                 </div>

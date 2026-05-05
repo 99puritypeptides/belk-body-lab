@@ -180,7 +180,7 @@ export default function ServicesGrid() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
                     <img 
                       src={svc.image} 
-                      alt={svc.title}
+                      alt={`${svc.title} - Belk Body Lab Fitness Coaching`}
                       className="w-full h-full object-cover grayscale brightness-75 transition-transform duration-[3000ms] group-hover:scale-110"
                     />
                     {/* Technical Overlay */}

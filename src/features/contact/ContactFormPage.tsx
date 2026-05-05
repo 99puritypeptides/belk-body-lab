@@ -91,9 +91,18 @@ export default function ContactFormPage() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/5 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/50">Transmission Channel Open</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/5 backdrop-blur-md">
+                <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/50">Transmission Channel Open</span>
+              </div>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent-green/10 border border-accent-green/20 backdrop-blur-md">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-accent-green">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-accent-green">Serving Charleston & Surrounding Areas</span>
+              </div>
             </div>
             <h2 className="text-white text-5xl md:text-7xl font-display font-black uppercase tracking-tighter leading-none">
               Submit Your <br />
@@ -258,6 +267,57 @@ export default function ContactFormPage() {
             )}
           </AnimatePresence>
         </motion.div>
+
+        {/* HQ Signal Block */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32 pt-20 border-t border-white/5"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent-green/10 border border-accent-green/20">
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-accent-green">Operational Headquarters</span>
+              </div>
+              <h3 className="text-white text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+                Charleston <br />
+                <span className="text-white/20">South Carolina</span>
+              </h3>
+              <p className="text-white/40 text-lg font-light leading-relaxed max-w-md">
+                Belk Body Lab operates out of Charleston, SC, serving high-performance individuals locally and globally through elite digital protocols.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <span className="block text-[10px] font-black uppercase tracking-widest text-white/20 mb-2">Coordinates</span>
+                  <span className="text-white font-mono text-sm tracking-widest">32.7765° N, 79.9311° W</span>
+                </div>
+                <div>
+                  <span className="block text-[10px] font-black uppercase tracking-widest text-white/20 mb-2">Service Area</span>
+                  <span className="text-white text-sm font-bold uppercase tracking-widest">Greater Charleston Area</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative aspect-video lg:aspect-square rounded-[3rem] overflow-hidden bg-white/5 border border-white/10 group">
+              <div className="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-1000">
+                 {/* Stylized Map Placeholder - In production, this would be a dark-themed Google Map */}
+                 <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center" />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-accent-green flex items-center justify-center shadow-[0_0_50px_rgba(170,255,0,0.3)] animate-bounce">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

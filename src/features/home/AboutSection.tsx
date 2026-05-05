@@ -56,7 +56,7 @@ export default function AboutSection() {
           <motion.img
             style={{ y: yParallax }}
             src="/images/about/kyle-ocean-rock.png"
-            alt="Coach Kyle Belk"
+            alt="Coach Kyle Belk - Standing on Rocks near Ocean - Elite Fitness Authority"
             className="w-full h-[120vh] object-cover object-center opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/40" />
@@ -122,6 +122,7 @@ export default function AboutSection() {
                   ref={videoRef}
                   src="/images/videos/kyle-intro.webm"
                   poster="/images/brand/thumbnail.jpg"
+                  title="Kyle Belk - Personal Training Philosophy and Introduction Video"
                   className="absolute inset-0 w-full h-[100%] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-premium"
                   playsInline
                 />

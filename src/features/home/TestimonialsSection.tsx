@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
+import Script from 'next/script';
 
 interface Testimonial {
   id: string;
@@ -81,8 +82,39 @@ export default function TestimonialsSection() {
 
   const activeTestimonial = testimonials[activeIndex];
 
+  const testimonialsSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Belk Body Lab",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": testimonials.length.toString()
+    },
+    "review": testimonials.map((t) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": t.name
+      },
+      "datePublished": "2024-01-15", // Placeholder date
+      "reviewBody": t.text,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": t.rating.toString(),
+        "bestRating": "5"
+      }
+    }))
+  };
+
   return (
-    <section id="testimonials" className="relative py-20 lg:py-32 bg-[#050505] overflow-hidden">
+    <>
+      <Script
+        id="testimonials-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
+      />
+      <section id="testimonials" className="relative py-20 lg:py-32 bg-[#050505] overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-accent-green/5 rounded-full blur-[100px] lg:blur-[120px] pointer-events-none" />
 
@@ -150,7 +182,7 @@ export default function TestimonialsSection() {
                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-900 border-2 border-black relative">
                               <Image 
                                 src={item.image} 
-                                alt={item.name} 
+                                alt={`Client Testimonial Avatar - ${item.name} - Belk Body Lab Transformation`} 
                                 fill 
                                 className={`object-cover transition-all duration-500 ${offset === 0 ? 'grayscale-0' : 'grayscale'}`}
                               />
@@ -272,6 +304,7 @@ export default function TestimonialsSection() {
           -webkit-mask-image: radial-gradient(circle at top, black 35%, transparent 65%);
         }
       `}</style>
-    </section>
+      </section>
+    </>
   );
 }

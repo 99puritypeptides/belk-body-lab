@@ -24,6 +24,7 @@ export default function BlogHero() {
           loop
           muted
           playsInline
+          title="High Intensity Leg Day Training - Belk Body Lab Blog"
           className="w-full h-full object-cover grayscale opacity-70 brightness-[0.5] contrast-[1.2]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />

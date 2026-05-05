@@ -17,7 +17,7 @@
   "hero": {
     "title": "Personal Trainer Charleston SC for",
     "titleHighlight": "Body Transformations",
-    "subtitle": "Professional coaching for real results. Custom online and in-person fitness coaching designed to help you lose fat, build muscle, and stay consistent - without guesswork. Serving Charleston SC and beyond through personalized coaching that fits your lifestyle.",
+    "subtitle": "Professional coaching for real results. Custom online and in-person fitness coaching designed to help you lose fat, build muscle, and stay consistent - without guesswork. Serving the Greater Charleston area, including Mount Pleasant, West Ashley, and beyond through personalized coaching that fits your lifestyle.",
     "ctaPrimary": "Apply for Coaching",
     "ctaSecondary": "Start Your Transformation",
     "happySpirits": "Happy Spirits",
@@ -140,13 +140,15 @@
     "step3Title": "Plan Blueprint",
     "step3Desc": "Receive a custom structural overview of your potential program.",
     "locLabel": "Location",
-    "locValue": "Atlanta, GA (Remote)",
+    "locValue": "Charleston, SC & Online",
     "igLabel": "Instagram",
     "igValue": "@kylebelk",
     "ttLabel": "TikTok",
     "ttValue": "@belkbodylab",
     "ytLabel": "YouTube",
     "ytValue": "BelkBodyLab",
+    "emailLabel": "Email",
+    "emailValue": "trainwithbelk@gmail.com",
     "formTitle": "Intake",
     "formTitleBold": "Application",
     "formSubtitle": "Secure your spot for a transformative coaching experience.",
@@ -412,7 +414,7 @@
     "yearsOld": "years old",
     "program": "program",
     "introTitle": "Proven Results Through Science",
-    "introText": "These before and after fitness transformations show what happens when the right plan meets consistency. From fat loss to muscle gain and full body recomposition, these results come from clients in Charleston SC, Mount Pleasant, North Charleston, Summerville, and online coaching clients across the US.",
+    "introText": "These before and after fitness transformations show what happens when the right plan meets consistency. From fat loss to muscle gain and full body recomposition, these results come from clients in Charleston SC, Mount Pleasant, North Charleston, Summerville, West Ashley, James Island, Hanahan, and online coaching clients across the US.",
     "ctaTitle": "Ready to Be the",
     "ctaTitleHighlight": "Next Transformation?",
     "ctaDescription": "Every result you see here started from zero. The difference is simple - they followed a structured plan and stayed consistent. If you’re ready to lose fat, build muscle, and achieve real results, now is your time to start.",
@@ -506,11 +508,11 @@
     "terms": "Terms",
     "blog": "Blog",
     "copyright": "© 2026 BelkBodyLab. All Rights Reserved.",
-    "tagline": "Belk Body Lab - Personalized fitness coaching that delivers. Serving Charleston SC and beyond."
+    "tagline": "Belk Body Lab - The best personal trainer in Charleston SC. Expert fitness coaching in Mount Pleasant, West Ashley, and online."
   },
   "metadata": {
-    "homeTitle": "Personal Trainer Charleston SC | Online Fitness Coach",
-    "homeDesc": "Get real results with a personal trainer in Charleston SC. Custom online fitness coaching for fat loss, muscle building & body transformations.",
+    "homeTitle": "Best Personal Trainer Charleston SC | Online Fitness Coach",
+    "homeDesc": "Transform your body with the best personal trainer in Charleston SC. Expert online fitness coaching for fat loss, muscle building & body transformations in Mount Pleasant, West Ashley & Summerville.",
     "packagesTitle": "Coaching Packages - BelkBodyLab",
     "packagesDesc": "Choose the coaching package that fits your goals. From starter programs to elite protocols, Kyle Belk engineers custom plans for your success.",
     "portfolioTitle": "Body Transformation Results Charleston SC | Before After",
@@ -519,8 +521,8 @@
     "aboutDesc": "Discover the story behind BelkBodyLab. Learn how Kyle Belk uses science-based training and nutrition to engineer radical transformations.",
     "blogTitle": "Fitness Guides & Tips | Belk Body Lab Blog",
     "blogDesc": "Expert fat loss guides, muscle building protocols, and nutrition science by Kyle Belk. Engineering transformations with data.",
-    "contactTitle": "Contact Kyle Belk | Apply for Online Fitness Coaching",
-    "contactDesc": "Apply for personalized fitness coaching with Kyle Belk. Serving Charleston SC and online clients worldwide. Start your body transformation today."
+    "contactTitle": "Contact Kyle Belk | Fitness Coach Charleston SC",
+    "contactDesc": "Apply for personalized fitness coaching with Kyle Belk. Serving Charleston SC, Mount Pleasant, and online clients worldwide. Start your body transformation today."
   },
   "blog": {
     "hero": {
@@ -605,7 +607,7 @@
       "description": "I only accept a limited number of clients who are serious about their transformation. If you're ready to put in the work, I'll give you the plan.",
       "limited": "Limited Spots Available",
       "cta": "Apply for Elite Coaching",
-      "location": "Atlanta, GA & Online"
+      "location": "Charleston, SC & Online"
     }
   },
   "contactPage": {
@@ -621,7 +623,7 @@
       "q1": "How long is the onboarding process?",
       "a1": "Once you submit your application, Kyle personally reviews it within 24 hours. If you're a fit, we'll schedule a strategy call within 2-3 business days.",
       "q2": "Do I need to be in Atlanta to work with Kyle?",
-      "a2": "No. While Kyle is based in Atlanta, over 80% of our clients are remote. We use advanced tracking tools and video calls to ensure elite results globally.",
+      "a2": "No. While Kyle is based in Charleston, over 80% of our clients are remote. We use advanced tracking tools and video calls to ensure elite results globally.",
       "q3": "What if I've never trained before?",
       "a3": "The Lab works with all levels. We specialize in engineering protocols for absolute beginners as much as competition athletes. The only requirement is discipline."
     }

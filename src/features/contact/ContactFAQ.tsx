@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import CTAButton from '@/components/ui/CTAButton';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export default function ContactFAQ() {
   const t = useTranslations('contactPage.faq');
@@ -16,7 +17,9 @@ export default function ContactFAQ() {
   ];
 
   return (
-    <section className="py-24 lg:py-40 bg-[#080808]">
+    <>
+      <FAQSchema id="contact-faq" items={faqs} />
+      <section className="py-24 lg:py-40 bg-[#080808]">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="relative w-full bg-[#0a0a0a] rounded-[2.5rem] lg:rounded-[3rem] px-6 py-12 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12 lg:gap-24 border border-white/[0.03] shadow-2xl overflow-hidden">
           
@@ -45,14 +48,14 @@ export default function ContactFAQ() {
               </p>
 
               <div className="flex flex-col gap-5">
-                <a href="mailto:support@belkbodylab.com" className="flex items-center gap-4 group">
+                <a href="mailto:trainwithbelk@gmail.com" className="flex items-center gap-4 group">
                   <div className="w-11 h-11 rounded-full bg-white/5 border border-white/[0.06] flex items-center justify-center text-white/40 transition-all group-hover:border-accent-green group-hover:text-accent-green">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
                       <path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM224,192H32V74.83l90.59,83.1A16,16,0,0,0,133.41,158L224,74.83Z" />
                     </svg>
                   </div>
                   <span className="text-white/60 text-sm font-bold tracking-widest uppercase group-hover:text-white transition-colors">
-                    support@belkbodylab.com
+                    trainwithbelk@gmail.com
                   </span>
                 </a>
 
@@ -106,5 +109,6 @@ export default function ContactFAQ() {
         </div>
       </div>
     </section>
+    </>
   );
 }

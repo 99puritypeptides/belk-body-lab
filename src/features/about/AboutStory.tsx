@@ -27,11 +27,7 @@ export default function AboutStory() {
               {t('title')}
             </h2>
           </div>
-          <div className="lg:col-span-3 lg:col-start-10 hidden lg:block">
-            <span className="text-[10px] font-black text-white/10 uppercase tracking-[1em] vertical-text origin-bottom-right rotate-180">
-              ESTABLISHED PROTOCOL 001
-            </span>
-          </div>
+          <div className="lg:col-span-3 lg:col-start-10 hidden lg:block" />
         </div>
 
         {/* Row 2: Narrative & Sticky Image */}
@@ -45,7 +41,7 @@ export default function AboutStory() {
             >
               <img 
                 src="/BBL Media/lifestyle-1.jpg" 
-                alt="Kyle Belk"
+                alt="Kyle Belk - Founder of Belk Body Lab and Elite Fitness Coach"
                 className="w-full h-full object-cover grayscale brightness-90 transition-transform duration-[3000ms] hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />

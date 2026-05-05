@@ -5,59 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import CTAButton from '@/components/ui/CTAButton';
 import PremiumIcon from '@/components/ui/PremiumIcon';
-
-const FAQS = [
-  // ── Preserved from PackagesFAQ ──
-  {
-    q: 'Do I need gym access to work with Kyle?',
-    a: 'No — Kyle builds programs for home, gym, or hybrid setups. During the consultation call, he\'ll ask about your equipment and design your plan around what you actually have access to.',
-  },
-  {
-    q: 'How fast will I see results?',
-    a: 'Most clients notice visible changes within 3–4 weeks. Significant transformations typically occur at the 8–12 week mark. Results depend on your consistency and adherence to the plan — which is why Kyle emphasizes accountability over promises.',
-  },
-  {
-    q: 'What if I travel or have an irregular schedule?',
-    a: 'Kyle specializes in flexible programs for busy people. Your plan will account for travel, work schedules, and life\'s unpredictability — including alternative workouts for hotels, small spaces, or limited equipment.',
-  },
-  {
-    q: 'Is online coaching as effective as in-person?',
-    a: 'For most goals, yes — and often more convenient. Kyle\'s online clients average the same transformation results as in-person clients because the programming, accountability, and communication are identical.',
-  },
-  {
-    q: 'Can I switch packages after I start?',
-    a: 'Absolutely. Many clients start with Starter and upgrade to Transform once they see momentum building. Kyle will always recommend the right tier for your current phase and budget.',
-  },
-  {
-    q: 'What does the 90-day guarantee actually mean?',
-    a: 'If you complete all check-ins, follow your nutrition plan, and train as prescribed for 90 days without seeing measurable progress, Kyle will refund your investment — no questions asked. This guarantee exists because the system works when you do.',
-  },
-  // ── Additional FAQs ──
-  {
-    q: 'What makes Belk Body Lab different from a regular gym trainer?',
-    a: 'Most gym personal trainers run the same generic circuit for every client. Kyle builds every program from scratch based on your physiology, goals, schedule, and training history. He also provides ongoing nutrition coaching, accountability check-ins, and real-time plan adjustments — not just 1-hour sessions with no follow-through.',
-  },
-  {
-    q: 'I\'ve tried other coaches and diets before. Why would this be different?',
-    a: 'The problem usually isn\'t your discipline — it\'s the plan. Cookie-cutter programs don\'t account for your metabolism, lifestyle, or plateau triggers. Kyle\'s individualized approach identifies exactly why previous attempts failed and corrects for them before you start.',
-  },
-  {
-    q: 'How much time do I need to commit each week?',
-    a: 'Most programs are designed around 3–5 training sessions per week, averaging 45–60 minutes each. Kyle builds the schedule around your availability — not the other way around. If you have 3 days, he\'ll engineer a 3-day protocol that produces the same outcomes.',
-  },
-  {
-    q: 'Does Kyle also cover supplements?',
-    a: 'Yes — supplement guidance is included across all tiers. Kyle provides evidence-based recommendations (not paid promotions) based on your budget and goals. He won\'t suggest anything you don\'t actually need.',
-  },
-  {
-    q: 'What happens if I plateau during the program?',
-    a: 'Plateaus are an expected variable — Kyle accounts for them in advance. When they happen, he adjusts your training volume, nutrition targets, or cardio prescription based on real data from your check-ins. Plateaus don\'t last long in a data-driven program.',
-  },
-  {
-    q: 'Is nutrition coaching available as a standalone service?',
-    a: 'Yes. If you already have a solid training routine but your nutrition is holding you back, Kyle offers a standalone nutrition coaching service. It includes a full metabolic assessment, custom macro targets, and monthly recalibration.',
-  },
-];
+import { SERVICES_FAQS } from '@/data/faqs/services';
 
 export default function ServicesFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -118,7 +66,7 @@ export default function ServicesFAQ() {
                 </a>
 
                 <a
-                  href="mailto:support@belkbodylab.com"
+                  href="mailto:trainwithbelk@gmail.com"
                   className="flex items-center gap-4 group"
                   aria-label="Email Kyle"
                 >
@@ -128,7 +76,7 @@ export default function ServicesFAQ() {
                     </svg>
                   </div>
                   <span className="text-white/60 text-sm font-medium transition-colors group-hover:text-white">
-                    support@belkbodylab.com
+                    trainwithbelk@gmail.com
                   </span>
                 </a>
 
@@ -141,7 +89,7 @@ export default function ServicesFAQ() {
 
           {/* Right column: accordion — pure CSS max-height, no layout thrashing */}
           <div className="flex-1 flex flex-col gap-3 z-10">
-            {FAQS.map((faq, i) => (
+            {SERVICES_FAQS.map((faq, i) => (
               <div
                 key={i}
                 className="bg-[#161616] rounded-2xl border border-white/[0.04] overflow-hidden"

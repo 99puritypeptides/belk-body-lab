@@ -38,7 +38,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
       <div className={`relative overflow-hidden ${featured ? 'lg:w-[55%] h-[300px] lg:h-auto' : 'h-[280px]'}`}>
         <Image
           src={post.image}
-          alt={content.title}
+          alt={`Blog Post: ${content.title} - Fitness Training & Science Insights`}
           fill
           className="object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-[1.5s] ease-out"
         />

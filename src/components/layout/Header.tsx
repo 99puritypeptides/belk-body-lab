@@ -52,7 +52,7 @@ export default function Header() {
             <Link href="/" className="flex items-center justify-center bg-white rounded-full px-5 py-2.5 md:px-7 md:py-3 hover:opacity-90 transition-all shadow-lg shadow-white/10">
               <Image
                 src="/images/brand/belk-body-lab-logo.png"
-                alt="Belk Body Lab"
+                alt="Belk Body Lab Logo - Elite Fitness Coaching Charleston SC"
                 width={140}
                 height={40}
                 className="h-5 md:h-6 w-auto object-contain brightness-0"
@@ -129,7 +129,7 @@ export default function Header() {
           <Link href="/" onClick={() => setMenuOpen(false)} className="group">
             <Image
               src="/images/brand/belk-body-lab-logo.png"
-              alt="Logo"
+              alt="Belk Body Lab Mobile Logo"
               width={100}
               height={30}
               className="h-5 w-auto object-contain brightness-0 invert"

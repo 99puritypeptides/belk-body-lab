@@ -7,6 +7,8 @@ import ServicesPricing from '@/features/services/ServicesPricing';
 import ServicesProcess from '@/features/services/ServicesProcess';
 import ServicesFAQ     from '@/features/services/ServicesFAQ';
 import ServicesCTA     from '@/features/services/ServicesCTA';
+import FAQSchema       from '@/components/seo/FAQSchema';
+import { SERVICES_FAQS } from '@/data/faqs/services';
 
 // ── SEO Metadata ─────────────────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -73,6 +75,7 @@ export default function ServicesPage() {
       <WhoItsFor />
       <ServicesPricing />
       <ServicesProcess />
+      <FAQSchema id="services-faq" items={SERVICES_FAQS} />
       <ServicesFAQ />
       <ServicesCTA />
     </main>

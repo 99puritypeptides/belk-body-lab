@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import PremiumIcon from '@/components/ui/PremiumIcon';
+import Script from 'next/script';
 
 const MotionLink = motion(Link);
 
@@ -27,8 +28,38 @@ export default function AboutHero() {
   const scale = useTransform(scrollY, [0, 1000], [1, 1.1]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Elite Fitness Training Protocol - Belk Body Lab",
+    "description": "Experience the science-based training methodology of Kyle Belk and Belk Body Lab.",
+    "thumbnailUrl": [
+      `${siteUrl}/images/hero/model-image.png`
+    ],
+    "uploadDate": "2024-01-01T08:00:00+08:00",
+    "duration": "PT0M30S",
+    "contentUrl": `${siteUrl}/BBL Media/chest-day.mp4`,
+    "embedUrl": `${siteUrl}/about`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Belk Body Lab",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/brand/belk-body-lab-logo.png`
+      }
+    }
+  };
+
   return (
-    <section className="relative h-screen flex flex-col pt-32 pb-12 overflow-hidden bg-[#050505]">
+    <>
+      <Script
+        id="about-video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
+      <section className="relative h-screen flex flex-col pt-32 pb-12 overflow-hidden bg-[#050505]">
       {/* Background Media with Cinematic Parallax */}
       <motion.div 
         style={{ y, scale }}
@@ -40,6 +71,7 @@ export default function AboutHero() {
           loop
           muted
           playsInline
+          title="Elite Fitness Training Protocol Video - Belk Body Lab"
           className="w-full h-full object-cover grayscale opacity-40 brightness-75"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
@@ -134,5 +166,6 @@ export default function AboutHero() {
         </span>
       </motion.div>
     </section>
+    </>
   );
 }

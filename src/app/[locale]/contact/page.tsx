@@ -8,9 +8,14 @@ import ContactFAQ from '@/features/contact/ContactFAQ';
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
   return {
-    title: `Contact | Belk Body Lab`,
+    title: t('contactTitle') || `Contact | Belk Body Lab`,
     description: t('contactDesc') || 'Get in touch with Kyle Belk for elite coaching applications and business inquiries.',
+    alternates: {
+      canonical: `${siteUrl}/${locale}/contact`,
+      languages: { en: `${siteUrl}/en/contact`, es: `${siteUrl}/es/contact` },
+    },
   };
 }
 

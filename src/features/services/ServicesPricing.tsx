@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import PremiumIcon from '@/components/ui/PremiumIcon';
+import Script from 'next/script';
 
 export default function ServicesPricing() {
   const t = useTranslations('servicesPage.pricing');
@@ -64,11 +65,38 @@ export default function ServicesPricing() {
     },
   ];
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Belk Body Lab Online Coaching",
+    "description": "Elite online fitness and body transformation coaching protocols.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Belk Body Lab"
+    },
+    "offers": PACKAGES.map(pkg => ({
+      "@type": "Offer",
+      "name": pkg.name,
+      "price": pkg.price.replace(/[^0-9.]/g, ''),
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": `${siteUrl}/services#pricing`
+    }))
+  };
+
   return (
-    <section
-      id="pricing"
-      className="relative z-10 py-32 lg:py-60 bg-[#050505] overflow-hidden"
-    >
+    <>
+      <Script
+        id="pricing-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+      <section
+        id="pricing"
+        className="relative z-10 py-32 lg:py-60 bg-[#050505] overflow-hidden"
+      >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-1/4 w-[1px] h-full bg-white/[0.03] hidden lg:block" />
       <div className="absolute top-0 right-1/4 w-[1px] h-full bg-white/[0.03] hidden lg:block" />
@@ -209,6 +237,7 @@ export default function ServicesPricing() {
 
       </div>
     </section>
+    </>
   );
 }
 
