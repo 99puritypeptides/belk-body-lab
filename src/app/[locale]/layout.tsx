@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       images: [
         {
-          url: '/images/brand/og-image.jpg',
+          url: '/og-home.png',
           width: 1200,
           height: 630,
           alt: 'Belk Body Lab - Elite Fitness Coaching Charleston SC',
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('homeTitle'),
       description: t('homeDesc'),
-      images: ['/images/brand/og-image.jpg'],
+      images: ['/og-home.png'],
     },
   };
 }

@@ -43,10 +43,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       images: [
         {
-          url: '/images/brand/og-image.jpg',
+          url: '/og-home.png',
           width: 1200,
           height: 630,
-          alt: 'Belk Body Lab Services',
+          alt: 'Belk Body Lab - Elite Fitness Coaching & Transformation Packages',
         },
       ],
     },

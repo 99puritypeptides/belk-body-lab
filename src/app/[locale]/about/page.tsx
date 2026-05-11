@@ -13,6 +13,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       canonical: `${siteUrl}/${locale}/about`,
       languages: { en: `${siteUrl}/en/about`, es: `${siteUrl}/es/about` },
     },
+    openGraph: {
+      title: t('aboutTitle'),
+      description: t('aboutDesc'),
+      url: `${siteUrl}/${locale}/about`,
+      type: 'website',
+      images: [
+        {
+          url: '/og-home.png',
+          width: 1200,
+          height: 630,
+          alt: 'About Kyle Belk - Belk Body Lab Elite Fitness Coaching',
+        },
+      ],
+    },
   };
 }
 

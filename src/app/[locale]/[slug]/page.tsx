@@ -42,10 +42,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: 'Belk Body Lab',
       images: [
         {
-          url: data.image,
+          url: '/og-communities.png',
           width: 1200,
           height: 630,
-          alt: data.seoTitle,
+          alt: `Belk Body Lab - Elite Fitness Coaching in ${data.name} SC`,
         },
       ],
       locale: resolvedParams.locale,
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title: data.seoTitle,
       description: data.metaDesc,
-      images: [data.image],
+      images: ['/og-communities.png'],
     },
     robots: {
       index: true,
