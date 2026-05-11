@@ -25,9 +25,9 @@ export default function BlogHero() {
           muted
           playsInline
           title="High Intensity Leg Day Training - Belk Body Lab Blog"
-          className="w-full h-full object-cover grayscale opacity-70 brightness-[0.5] contrast-[1.2]"
+          className="w-full h-full object-cover grayscale opacity-80 brightness-[1.1] will-change-transform"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent" />
       </motion.div>
 
       {/* Decorative Grid Lines */}
@@ -54,16 +54,11 @@ export default function BlogHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "circOut" }}
-            className="text-white text-5xl md:text-8xl lg:text-[10vw] font-display font-black uppercase tracking-tighter leading-[0.8] mb-12"
+            className="text-white font-display font-black leading-[0.9] tracking-tighter uppercase mb-12"
+            style={{ fontSize: 'clamp(2rem, 9vw, 7.5rem)' }}
           >
             {t('title')} <br />
-            <span
-              className="text-transparent mt-4 block"
-              style={{
-                WebkitTextStroke: '1.5px rgba(255,255,255,0.8)',
-                filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.5))'
-              }}
-            >
+            <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.4)' }}>
               {t('titleHighlight')}
             </span>
           </motion.h1>

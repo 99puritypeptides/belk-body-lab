@@ -13,8 +13,8 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
     title: t('contactTitle') || `Contact | Belk Body Lab`,
     description: t('contactDesc') || 'Get in touch with Kyle Belk for elite coaching applications and business inquiries.',
     alternates: {
-      canonical: `${siteUrl}/${locale}/contact`,
-      languages: { en: `${siteUrl}/en/contact`, es: `${siteUrl}/es/contact` },
+      canonical: locale === 'en' ? `${siteUrl}/contact` : `${siteUrl}/${locale}/contact`,
+      languages: { en: `${siteUrl}/contact`, es: `${siteUrl}/es/contact` },
     },
   };
 }

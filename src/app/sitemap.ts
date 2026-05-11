@@ -11,10 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {
+    const isDefault = locale === 'en';
+    const prefix = isDefault ? '' : `/${locale}`;
+
     // Main routes
     mainRoutes.forEach((route) => {
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
+        url: `${baseUrl}${prefix}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: route === '' ? 1.0 : 0.8,
@@ -24,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Community routes
     Object.keys(communitiesData).forEach((slug) => {
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}/${slug}`,
+        url: `${baseUrl}${prefix}/${slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.7,
@@ -34,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog post routes
     blogPosts.forEach((post) => {
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        url: `${baseUrl}${prefix}/blog/${post.slug}`,
         lastModified: new Date(post.date),
         changeFrequency: 'monthly',
         priority: 0.6,

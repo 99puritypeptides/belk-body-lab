@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('blogTitle') || 'Fitness Insights & Guides | Belk Body Lab',
     description: t('blogDesc') || 'Expert fat loss guides, muscle building protocols, and nutrition science from Kyle Belk. Engineering transformations with data-driven coaching.',
     alternates: {
-      canonical: `${siteUrl}/${locale}/blog`,
-      languages: { en: `${siteUrl}/en/blog`, es: `${siteUrl}/es/blog` },
+      canonical: locale === 'en' ? `${siteUrl}/blog` : `${siteUrl}/${locale}/blog`,
+      languages: { en: `${siteUrl}/blog`, es: `${siteUrl}/es/blog` },
     },
   };
 }

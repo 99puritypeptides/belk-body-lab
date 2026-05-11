@@ -8,10 +8,18 @@ import TestimonialsSection from '@/features/home/TestimonialsSection';
 
 import { locales } from '@/i18n/config';
 
-export const metadata: Metadata = {
-  title: 'Charleston Fitness Communities | Belk Body Lab',
-  description: 'Explore the communities we serve across Greater Charleston. Elite personal training and body transformation coaching in Mount Pleasant, Daniel Island, Summerville, and beyond.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+  return {
+    title: 'Charleston Fitness Communities | Belk Body Lab',
+    description: 'Explore the communities we serve across Greater Charleston. Elite personal training and body transformation coaching in Mount Pleasant, Daniel Island, Summerville, and beyond.',
+    alternates: {
+      canonical: locale === 'en' ? `${siteUrl}/communities` : `${siteUrl}/${locale}/communities`,
+      languages: { en: `${siteUrl}/communities`, es: `${siteUrl}/es/communities` },
+    },
+  };
+}
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

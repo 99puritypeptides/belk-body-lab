@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       'Belk Body Lab',
     ],
     alternates: {
-      canonical: `${siteUrl}/${locale}/services`,
+      canonical: locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`,
       languages: {
-        en: `${siteUrl}/en/services`,
+        en: `${siteUrl}/services`,
         es: `${siteUrl}/es/services`,
       },
     },

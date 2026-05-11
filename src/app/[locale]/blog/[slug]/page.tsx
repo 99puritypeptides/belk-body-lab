@@ -31,16 +31,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: content.metaTitle,
     description: content.metaDescription,
     alternates: {
-      canonical: `${siteUrl}/${locale}/blog/${slug}`,
+      canonical: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
       languages: {
-        en: `${siteUrl}/en/blog/${slug}`,
+        en: `${siteUrl}/blog/${slug}`,
         es: `${siteUrl}/es/blog/${slug}`,
       },
     },
     openGraph: {
       title: content.metaTitle,
       description: content.metaDescription,
-      url: `${siteUrl}/${locale}/blog/${slug}`,
+      url: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
       images: [post.image],
       type: 'article',
       publishedTime: post.date,
@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: Props) {
     "author": [{
       "@type": "Person",
       "name": "Kyle Belk",
-      "url": `${siteUrl}/${locale}/about`
+      "url": locale === 'en' ? `${siteUrl}/about` : `${siteUrl}/${locale}/about`
     }],
     "publisher": {
       "@type": "Organization",

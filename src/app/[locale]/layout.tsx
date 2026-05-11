@@ -52,10 +52,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ],
     },
     alternates: {
-      canonical: `${siteUrl}/${locale}`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${siteUrl}/${l}`])
-      ),
+      canonical: locale === 'en' ? siteUrl : `${siteUrl}/${locale}`,
+      languages: {
+        en: siteUrl,
+        es: `${siteUrl}/es`,
+        'x-default': siteUrl,
+      },
     },
     openGraph: {
       title: t('homeTitle'),

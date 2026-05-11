@@ -27,7 +27,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {};
 
   const baseUrl = 'https://www.belkbodylab.com';
-  const url = `${baseUrl}/${resolvedParams.locale}/${data.slug}`;
+  const prefix = resolvedParams.locale === 'en' ? '' : `/${resolvedParams.locale}`;
+  const url = `${baseUrl}${prefix}/${data.slug}`;
 
   return {
     title: data.seoTitle,
@@ -91,7 +92,8 @@ export default async function CommunityPage({ params }: PageProps) {
   }
 
   const baseUrl = 'https://www.belkbodylab.com';
-  const pageUrl = `${baseUrl}/${resolvedParams.locale}/${data.slug}`;
+  const prefix = resolvedParams.locale === 'en' ? '' : `/${resolvedParams.locale}`;
+  const pageUrl = `${baseUrl}${prefix}/${data.slug}`;
 
   // Structured Data Objects
   const localBusinessSchema = {
@@ -146,13 +148,13 @@ export default async function CommunityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": `${baseUrl}/${resolvedParams.locale}`
+        "item": `${baseUrl}${prefix}`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Communities",
-        "item": `${baseUrl}/${resolvedParams.locale}/communities`
+        "item": `${baseUrl}${prefix}/communities`
       },
       {
         "@type": "ListItem",
