@@ -32,7 +32,7 @@ export default function HomeContactCTA() {
             </span>
           </div>
 
-          <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(3rem, 12vw, 10rem)' }}>
+          <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(2rem, 10vw, 9.5rem)' }}>
             Elevate Your <br />
             <span className="text-accent-green">Potential.</span>
           </h2>

@@ -38,7 +38,7 @@ export default function ContactHero() {
               </span>
             </div>
 
-            <h1 className="text-white font-display font-black leading-[0.9] tracking-tighter mb-12" style={{ fontSize: 'clamp(3.5rem, 10vw, 9rem)' }}>
+            <h1 className="text-white font-display font-black leading-[0.9] tracking-tighter mb-12" style={{ fontSize: 'clamp(2rem, 9vw, 9rem)' }}>
               {t('title')} <br />
               <span className="text-accent-green">{t('titleHighlight')}</span>
             </h1>

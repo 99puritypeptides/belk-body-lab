@@ -70,7 +70,8 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
               transition={{ duration: 0.8 }}
             >
               <div className="w-12 h-1 bg-accent-green mb-8" />
-              <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight leading-[0.9] mb-8 break-words">
+              <h2 className="text-white font-black uppercase tracking-tight leading-[0.9] mb-8 break-words"
+                  style={{ fontSize: 'clamp(2.2rem, 9vw, 4rem)' }}>
                 {t('title') || 'Questions &'} <br />
                 <span className="text-accent-green">{t('titleHighlight') || 'Answers'}</span>
               </h2>

@@ -190,7 +190,7 @@ export default function PortfolioGallery() {
       <div className="max-w-[1800px] mx-auto px-6 lg:px-20">
 
         {/* Filters */}
-        <div className="flex flex-wrap gap-6 justify-start mb-24">
+        <div className="flex flex-wrap gap-6 justify-center mb-24">
           {filters.map((f) => (
             <button 
               key={f.value} 
@@ -209,15 +209,16 @@ export default function PortfolioGallery() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mb-32 lg:mb-48 space-y-10"
+          className="max-w-4xl mx-auto mb-32 lg:mb-48 space-y-10 flex flex-col items-center text-center"
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-[1px] bg-accent-green" />
             <span className="text-[10px] font-black uppercase tracking-[0.5em] text-accent-green">
               {t('introTitle')}
             </span>
+            <div className="w-12 h-[1px] bg-accent-green" />
           </div>
-          <h2 className="text-white/80 text-xl md:text-3xl font-light leading-relaxed tracking-tight border-l border-white/10 pl-10">
+          <h2 className="text-white/80 text-xl md:text-3xl font-light leading-relaxed tracking-tight text-center">
             {t('introText')}
           </h2>
         </motion.div>

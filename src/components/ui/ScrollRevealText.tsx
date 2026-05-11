@@ -6,9 +6,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 interface ScrollRevealTextProps {
   text: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export default function ScrollRevealText({ text, className = '' }: ScrollRevealTextProps) {
+export default function ScrollRevealText({ text, className = '', style }: ScrollRevealTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const words = text.split(' ');
 
@@ -18,7 +19,7 @@ export default function ScrollRevealText({ text, className = '' }: ScrollRevealT
   });
 
   return (
-    <div ref={containerRef} className={className}>
+    <div ref={containerRef} className={className} style={style}>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = (i + 1) / words.length;

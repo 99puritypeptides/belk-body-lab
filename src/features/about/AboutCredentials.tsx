@@ -26,7 +26,8 @@ export default function AboutCredentials() {
                 {t('label')}
               </span>
             </div>
-            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.9]">
+            <h2 className="text-white font-display font-black uppercase tracking-tighter leading-[0.9]"
+                style={{ fontSize: 'clamp(2.5rem, 12vw, 8rem)' }}>
               {t('title')} <br />
               <span className="italic font-light text-white/20">{t('titleItalic')}</span>
             </h2>
@@ -57,7 +58,8 @@ export default function AboutCredentials() {
               >
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30 mb-4">{stat.label}</p>
-                  <span className="text-white text-7xl md:text-9xl font-display font-black tracking-tighter group-hover:text-accent-green transition-colors duration-500">
+                  <span className="text-white font-display font-black tracking-tighter group-hover:text-accent-green transition-colors duration-500"
+                        style={{ fontSize: 'clamp(4rem, 15vw, 8rem)' }}>
                     {stat.val}
                   </span>
                 </div>

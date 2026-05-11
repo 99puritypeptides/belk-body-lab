@@ -321,10 +321,8 @@ export default function BMICalculator() {
               {t('label')}
             </span>
           </div>
-          <h2
-            className="font-display font-black leading-[1.0] tracking-tight text-white max-w-2xl"
-            style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)' }}
-          >
+          <h2 className="text-white font-black uppercase tracking-tight leading-[0.9] mb-8 break-words"
+              style={{ fontSize: 'clamp(2.5rem, 9vw, 6rem)' }}>
             {t('title')}{' '}
             <span className="not-italic text-accent-green">{t('titleHighlight')}</span>
           </h2>

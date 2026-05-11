@@ -39,7 +39,8 @@ export default function AboutLifestyle() {
                   {t('label')}
                 </span>
               </div>
-              <h2 className="text-white text-5xl md:text-8xl font-display font-black uppercase tracking-tighter leading-[0.85]">
+              <h2 className="text-white font-display font-black uppercase tracking-tighter leading-[0.85]"
+                  style={{ fontSize: 'clamp(2.2rem, 10vw, 6rem)' }}>
                 {t('title')}
               </h2>
             </div>

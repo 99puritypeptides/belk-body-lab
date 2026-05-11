@@ -23,7 +23,8 @@ export default function AboutStory() {
                 {t('label')}
               </span>
             </div>
-            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.9]">
+            <h2 className="text-white font-display font-black uppercase tracking-tighter leading-[0.9]"
+                style={{ fontSize: 'clamp(2.5rem, 12vw, 8rem)' }}>
               {t('title')}
             </h2>
           </div>
@@ -113,7 +114,8 @@ export default function AboutStory() {
 
                   <ScrollRevealText 
                     text={t('mission')}
-                    className="text-white font-display text-4xl md:text-7xl font-black tracking-tighter leading-[0.95] uppercase"
+                    className="text-white font-display font-black tracking-tighter leading-[0.95] uppercase"
+                    style={{ fontSize: 'clamp(2rem, 8vw, 4.5rem)' }}
                   />
                   
                   <div className="flex flex-wrap gap-12 pt-12">

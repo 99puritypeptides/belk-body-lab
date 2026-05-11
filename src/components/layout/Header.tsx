@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { usePathname } from '@/i18n/navigation';
 import { Link } from '@/i18n/navigation';
 import LocaleSwitcher from './LocaleSwitcher';
+import CommunitiesDropdown from './CommunitiesDropdown';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -19,6 +20,7 @@ export default function Header() {
     { label: t('packages'),  href: '/services'  as const },
     { label: t('portfolio'), href: '/portfolio' as const },
     { label: t('blog'),      href: '/blog'      as const },
+    { label: t('communities'), href: '/communities' as const },
   ];
 
   useEffect(() => {
@@ -62,7 +64,7 @@ export default function Header() {
 
             {/* Desktop Nav Pill */}
             <div className="hidden lg:flex items-center gap-5 xl:gap-8 bg-[#2A2A2A] px-8 py-3.5 rounded-full border border-white/5 shadow-lg">
-              {navLinks?.map((link, index) => (
+              {navLinks?.filter(link => link.href !== '/communities').map((link, index) => (
                 <React.Fragment key={link?.href}>
                   <Link
                     href={link?.href}
@@ -71,7 +73,13 @@ export default function Header() {
                   >
                     {link?.label}
                   </Link>
-                  {index < navLinks.length - 1 && (
+                  {index === 1 && (
+                    <>
+                      <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                      <CommunitiesDropdown pathname={pathname} />
+                    </>
+                  )}
+                  {index < navLinks.filter(l => l.href !== '/communities').length - 1 && (
                     <span className="w-1 h-1 rounded-full bg-white/20"></span>
                   )}
                 </React.Fragment>

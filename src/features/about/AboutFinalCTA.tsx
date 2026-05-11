@@ -43,15 +43,16 @@ export default function AboutFinalCTA({ namespace = 'aboutPage.finalCta' }: Abou
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="space-y-12 text-center"
           >
-            <h2 className="text-black text-[2.5rem] sm:text-6xl md:text-[8vw] font-display font-black uppercase tracking-tighter leading-[0.8] flex flex-col items-center">
-              <span>{t.has('ctaTitle') ? t('ctaTitle') : t('title')}</span>
+            <h2 className="text-black font-display font-black uppercase tracking-tighter leading-[0.8] flex flex-col items-center mx-auto"
+                style={{ fontSize: 'clamp(1.75rem, 10vw, 6.5rem)' }}>
+              <span className="block text-center w-full">{t.has('ctaTitle') ? t('ctaTitle') : t('title')}</span>
               <span className="text-black/10 block mt-2 sm:mt-4 leading-none text-center w-full">
                 {t.has('ctaTitleHighlight') ? t('ctaTitleHighlight') : t('titleHighlight')}
               </span>
             </h2>
-            <p className="text-black/40 text-lg md:text-2xl font-light leading-snug max-w-3xl mx-auto tracking-tight">
+            <p className="text-black/40 text-lg md:text-2xl font-light leading-snug max-w-3xl mx-auto tracking-tight text-center">
               {t.has('ctaDescription') ? t('ctaDescription') : t('description')}
             </p>
           </motion.div>

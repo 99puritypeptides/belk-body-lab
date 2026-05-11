@@ -99,7 +99,7 @@ export default function AboutSection() {
         {/* Header Plaque */}
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="bg-[#FAF9F6] w-full rounded-3xl sm:rounded-[4rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] px-8 sm:px-16 py-12 sm:py-20 flex flex-col sm:flex-row justify-between items-start sm:items-end mx-auto transition-transform duration-700 pointer-events-none">
-            <h2 className="font-heading font-black leading-none tracking-tight text-[#111]" style={{ fontSize: 'clamp(5rem, 12vw, 10rem)' }}>
+            <h2 className="font-heading font-black leading-none tracking-tight text-[#111]" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}>
               {t('label')}
             </h2>
             <span className="font-heading text-sm md:text-lg lg:text-3xl font-bold uppercase tracking-[0.25em] text-[#111] pb-2 sm:pb-3 mt-4 sm:mt-0 opacity-80">

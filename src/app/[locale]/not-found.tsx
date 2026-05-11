@@ -13,7 +13,7 @@ export default async function NotFound() {
       
       <div className="relative z-10 space-y-12 max-w-2xl">
         <div className="space-y-4">
-          <span className="text-accent-green font-mono text-sm tracking-[0.5em] uppercase">Status: 404 — Protocol Not Found</span>
+          <span className="text-accent-green font-mono text-sm tracking-[0.5em] uppercase">Status: 404 — Path Not Found</span>
           <h1 className="text-white font-display font-black text-6xl md:text-8xl lg:text-9xl uppercase tracking-tighter leading-none">
             Lost in the <br />
             <span className="text-white/20">Void</span>
@@ -21,7 +21,7 @@ export default async function NotFound() {
         </div>
 
         <p className="text-white/40 text-lg md:text-xl font-light leading-relaxed max-w-lg mx-auto">
-          The coordinates you followed seem to be offline. Re-calibrate your path using the protocols below.
+          The coordinates you followed seem to be offline. Re-calibrate your path using the navigation below.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">

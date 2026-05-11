@@ -8,6 +8,7 @@
     "packages": "Servicios",
     "portfolio": "Portafolio",
     "blog": "Blog",
+    "communities": "Comunidades",
     "contact": "Contáctanos",
     "getStarted": "Comenzar",
     "menuTitle": "Navegación",
@@ -17,7 +18,7 @@
   "hero": {
     "title": "Entrenador Personal Charleston SC para",
     "titleHighlight": "Transformaciones Corporales",
-    "subtitle": "Coaching profesional para resultados reales. Coaching de fitness personalizado online y presencial diseñado para ayudarte a perder grasa, construir músculo y mantener la constancia - sin adivinanzas. Sirviendo al área metropolitana de Charleston, incluyendo Mount Pleasant, West Ashley y más allá a través de coaching personalizado que se adapta a tu estilo de vida.",
+    "subtitle": "Coaching profesional para resultados reales. Como especialista en transformación corporal en Charleston, ofrecemos coaching de fitness personalizado online y presencial diseñado para ayudarte a perder grasa, construir músculo y mantener la constancia - sin adivinanzas. Sirviendo al área metropolitana de Charleston, incluyendo Mount Pleasant, West Ashley y más allá con planes de alto rendimiento.",
     "ctaPrimary": "Aplica al Coaching",
     "ctaSecondary": "Inicia Tu Transformación",
     "happySpirits": "Clientes Felices",
@@ -33,7 +34,7 @@
     "heading": "Transformando cuerpos,",
     "headingItalic": "redefiniendo límites.",
     "bio1": "Soy Kyle Belk - un entrenador personal certificado con más de 7 años de experiencia ayudando a clientes a perder grasa, desarrollar músculo y cambiar por completo cómo se sienten con sus cuerpos.",
-    "bio2": "No creo en planes genéricos. Cada programa se construye en torno a tu metabolismo, horario y objetivos - ya sea que entrenes en un gimnasio, en casa o en cualquier lugar de Charleston. Entrenando a clientes en Charleston, Carolina del Sur y en todo el mundo a través de programas de fitness online personalizados que ofrecen resultados reales y sostenibles.",
+    "bio2": "No creo en planes genéricos. Cada programa se construye en torno a tu metabolismo, horario y objetivos - ya sea que entrenes en un gimnasio, en casa o en cualquier lugar de Charleston. Como tu entrenador personal en Charleston SC dedicado, guío a mis clientes a través de coaching de pérdida de peso, entrenamiento de fuerza y programas de fitness online que ofrecen resultados reales y sostenibles.",
     "quote": "Tu cuerpo es capaz de mucho más de lo que tu mente cree.",
     "quoteAuthor": "- Kyle Belk",
     "cred1": "Entrenador Personal Certificado NASM",
@@ -58,13 +59,13 @@
     "cat4": "Obesidad",
     "catDesc1": "Enfócate en la hipertrofia muscular.",
     "catDesc2": "Optimiza la composición corporal.",
-    "catDesc3": "Protocolo estructurado de pérdida de grasa.",
+    "catDesc3": "Estrategia estructurada de pérdida de grasa.",
     "catDesc4": "Transformación corporal sostenible.",
     "range1": "< 18.5",
     "range2": "18.5 – 24.9",
     "range3": "25.0 – 29.9",
     "range4": "≥ 30.0",
-    "descUnderweight": "Tu IMC indica que estás bajo de peso. Enfócate en un protocolo de construcción muscular y un superávit calórico estructurado. Kyle puede diseñar un plan de ganancia de masa adaptado a tu metabolismo.",
+    "descUnderweight": "Tu IMC indica que estás bajo de peso. Enfócate en un programa de construcción muscular y un superávit calórico estructurado. Kyle puede diseñar un plan de ganancia de masa adaptado a tu metabolismo.",
     "descNormal": "Métricas fundamentales excelentes. Con un peso normal, es momento de optimizar la composición corporal aumentando estratégicamente la masa muscular magra.",
     "descOverweight": "Tu IMC cae en la categoría de sobrepeso. Un programa estructurado de pérdida de grasa enfocado en macros y entrenamiento de fuerza te llevará a niveles óptimos eficientemente.",
     "descObese": "La pérdida de grasa sostenible comienza con un plan definitivo y escalable. Kyle se especializa en transformaciones corporales profundas, proporcionando el plan exacto para tu éxito.",
@@ -164,7 +165,7 @@
     "disclaimer": "Consulta Gratis · Sin Compromiso",
     "successTitle": "Solicitud",
     "successHighlight": "Recibida",
-    "successDesc": "Kyle revisará tu solicitud y se pondrá en contacto en 24 horas. Tu protocolo de transformación ha iniciado.",
+    "successDesc": "Kyle revisará tu solicitud y se pondrá en contacto en 24 horas. Tu plan de transformación ha iniciado.",
     "submitAnother": "Enviar Otra Solicitud",
     "goal1": "Pérdida de Grasa",
     "goal2": "Hipertrofia Muscular",
@@ -221,7 +222,7 @@
         "category": "fat-loss"
       },
       {
-        "name": "Protocolo de Ganancia Muscular",
+        "name": "Plan de Ganancia Muscular",
         "age": "27",
         "location": "Mount Pleasant",
         "result": "+12 lbs",
@@ -291,6 +292,7 @@
     "privacy": "Privacidad",
     "terms": "Términos",
     "blog": "Blog",
+    "communities": "Comunidades",
     "copyright": "© 2026 BelkBodyLab. Todos los Derechos Reservados.",
     "tagline": "Belk Body Lab - Coaching de fitness personalizado que da resultados. Sirviendo a Charleston SC y más allá."
   },
@@ -304,7 +306,7 @@
     "aboutTitle": "Sobre Kyle Belk - Coach Fitness de Élite y Arquitecto Corporal",
     "aboutDesc": "Descubre la historia detrás de BelkBodyLab. Aprende cómo Kyle Belk utiliza entrenamiento y nutrición basados en ciencia para diseñar transformaciones radicales.",
     "blogTitle": "Guías y Consejos de Fitness | Blog de Belk Body Lab",
-    "blogDesc": "Guías expertas de pérdida de grasa, protocolos de construcción muscular y ciencia de la nutrición por Kyle Belk. Ingeniería de transformaciones con datos.",
+    "blogDesc": "Guías expertas de pérdida de grasa, sistemas de construcción muscular y ciencia de la nutrición por Kyle Belk. Ingeniería de transformaciones con datos.",
     "contactTitle": "Contacto Kyle Belk | Entrenador Personal Charleston SC",
     "contactDesc": "Aplica para coaching de fitness personalizado con Kyle Belk. Sirviendo a Charleston SC, Mount Pleasant y clientes online en todo el mundo. Inicia tu transformación corporal hoy."
   },
@@ -312,7 +314,7 @@
     "hero": {
       "title": "Coaching Fitness Online y Entrenamiento Personal Charleston SC",
       "subtitle": "Coaching que realmente te da resultados",
-      "description": "Programas personalizados de pérdida de grasa y construcción muscular creados para tu cuerpo, tu horario y tu vida, no copiados de una plantilla. Trabaja con un coach de fitness online en Charleston SC o entrena en persona. Cada plan está diseñado para una transformación real y medible.",
+      "description": "Programas personalizados de pérdida de grasa y construcción muscular creados para tu cuerpo, tu horario y tu vida. Trabaja con un coach de fitness online experto en Charleston SC o entrena en persona. Cada plan está diseñado por un especialista en transformación corporal para obtener resultados reales y medibles.",
       "ctaPrimary": "Aplica al Coaching",
       "ctaSecondary": "Mira Cómo Funciona",
       "stat1": "500+ Clientes Transformados",
@@ -346,7 +348,7 @@
         "features": [
           "3–5 sesiones por semana",
           "Corrección de forma en tiempo real",
-          "Protocolos de fuerza progresivos",
+          "Sistemas de fuerza progresivos",
           "Seguimiento semanal de composición corporal",
           "Guía nutricional post-sesión"
         ],
@@ -503,8 +505,8 @@
       ]
     },
     "finalCta": {
-      "title": "Deja de Adivinar.",
-      "titleHighlight": "Empieza a Ver Resultados.",
+      "title": "Deja de Adivinar",
+      "titleHighlight": "Empieza a Ver Resultados",
       "description": "Cada semana que esperas es otra semana sin un plan. Si te tomas en serio la pérdida de grasa, la construcción muscular o una transformación completa, ahora es el momento de empezar.",
       "location": "Ahora aceptando clientes en Charleston SC y online.",
       "limited": "Cupos limitados disponibles: solo clientes serios.",
@@ -517,9 +519,9 @@
       "label": "El Arquitecto Corporal",
       "title": "EL PLAN MAESTRO PARA UNA",
       "titleHighlight": "TRANSFORMACIÓN TOTAL.",
-      "subtitle": "La mayoría de los entrenadores te dan una plantilla. Yo te doy un protocolo basado en ciencia diseñado para tu fisiología específica. Sin rellenos. Solo resultados.",
+      "subtitle": "La mayoría de los entrenadores te dan una plantilla. Yo te doy un plan basado en ciencia diseñado para tu fisiología específica. Sin rellenos. Solo resultados.",
       "cta": "Aplica al Coaching",
-      "ctaLabel": "Inicia Tu Protocolo",
+      "ctaLabel": "Inicia Tu Transformación",
       "trust": "500+ Clientes Transformados",
       "meta": "ESTABLECIDO EN DOS MIL DIECINUEVE - CHARLESTON SOUTH CAROLINA"
     },
@@ -533,7 +535,7 @@
     "philosophy": {
       "label": "Los Estándares",
       "title": "La Filosofía de Belk Body Lab",
-      "subtitle": "Cada protocolo es una mezcla patentada de ciencia fisiológica y resiliencia humana.",
+      "subtitle": "Cada plan es una mezcla patentada de ciencia fisiológica y resiliencia humana.",
       "p1Title": "Entrenamiento Científico",
       "p1Desc": "Nada de 'sentir el ardor' solo por hacerlo. Cada repetición está calculada para activar la máxima hipertrofia muscular o estrés metabólico.",
       "p2Title": "Nutrición Basada en Datos",
@@ -557,8 +559,8 @@
       "stat2": "10k+",
       "stat2Label": "Lbs Perdidas",
       "stat3": "100%",
-      "stat3Label": "Protocolos a Medida",
-      "footer": "No solo enseño la ciencia, la vivo. Cada protocolo que construyo está respaldado por conocimientos certificados y resultados probados."
+      "stat3Label": "Sistemas a Medida",
+      "footer": "No solo enseño la ciencia, la vivo. Cada sistema que construyo está respaldado por conocimientos certificados y resultados probados."
     },
     "lifestyle": {
       "label": "Dentro del Lab",
@@ -581,7 +583,7 @@
     "hero": {
       "title": "INICIA TU",
       "titleHighlight": "TRANSFORMACIÓN.",
-      "subtitle": "La ingeniería corporal liderada por expertos comienza con una sola conexión. Contáctanos para aplicaciones de coaching de élite, consultas comerciales o preguntas generales sobre protocolos."
+      "subtitle": "La ingeniería corporal liderada por expertos comienza con una sola conexión. Contáctanos para aplicaciones de coaching de élite, consultas comerciales o preguntas generales sobre nuestros planes."
     },
     "faq": {
       "label": "Inteligencia",
@@ -592,7 +594,7 @@
       "q2": "¿Necesito estar en Atlanta para trabajar con Kyle?",
       "a2": "No. Aunque Kyle tiene su base en Charleston, más del 80% de nuestros clientes son remotos. Utilizamos herramientas de seguimiento avanzadas y videollamadas para asegurar resultados de élite a nivel global.",
       "q3": "¿Qué pasa si nunca he entrenado antes?",
-      "a3": "El Laboratorio funciona con todos los niveles. Nos especializamos en diseñar protocolos para principiantes absolutos tanto como para atletas de competición. El único requisito es la disciplina."
+      "a3": "El Laboratorio funciona con todos los niveles. Nos especializamos en diseñar sistemas para principiantes absolutos tanto como para atletas de competición. El único requisito es la disciplina."
     }
   },
   "blog": {
@@ -613,5 +615,70 @@
     "a3": "Sí - para muchos clientes en Charleston, el coaching online es más efectivo porque proporciona flexibilidad, estructura y apoyo continuo sin depender de un horario fijo de gimnasio.",
     "q4": "¿Cuánto cuesta un entrenador personal en Charleston SC?",
     "a4": "Los entrenadores tradicionales suelen cobrar por sesión, a menudo entre $50 y $150. Nuestro coaching se centra en resultados a largo plazo con programación estructurada, orientación nutricional y apoyo continuo - ofreciendo más valor con el tiempo."
+  },
+  "communities": {
+    "navTitle": "Comunidades",
+    "viewAll": "Ver Todas las Comunidades →",
+    "hero": {
+      "title": "Comunidades de Fitness en Charleston",
+      "subtitle": "Entrenamiento Personal de Élite en Lowcountry",
+      "description": "Cerramos la brecha entre la teoría biológica y el rendimiento físico para clientes en toda el área metropolitana de Charleston. Desde las históricas calles del centro hasta las comunidades costeras de Mount Pleasant y Daniel Island, nuestra misión sigue siendo la misma: detener las adivinanzas y comenzar la transformación."
+    },
+    "intro": {
+      "title": "Dónde Entrenamos",
+      "content": "Belk Body Lab no es solo un gimnasio; es un sistema de coaching de alto rendimiento que te encuentra donde estés. Aunque nuestra base está en Charleston, servimos a clientes dedicados en todas las comunidades circundantes. Ya seas un profesional en Mount Pleasant, un padre ocupado en Summerville o un atleta en Johns Island, obtendrás los mismos sistemas de nivel élite y una responsabilidad inquebrantable."
+    },
+    "grid": {
+      "charleston": {
+        "name": "Charleston",
+        "intent": "Entrenamiento Personal de Élite",
+        "slug": "/personal-trainer-charleston-sc"
+      },
+      "mountPleasant": {
+        "name": "Mount Pleasant",
+        "intent": "Fitness para Profesionales Ocupados",
+        "slug": "/personal-training-mount-pleasant-sc"
+      },
+      "danielIsland": {
+        "name": "Daniel Island",
+        "intent": "Coaching Privado de Alta Gama",
+        "slug": "/fitness-coach-daniel-island-sc"
+      },
+      "westAshley": {
+        "name": "West Ashley",
+        "intent": "Entrenamiento de Fuerza para Principiantes",
+        "slug": "/strength-training-west-ashley-sc"
+      },
+      "summerville": {
+        "name": "Summerville",
+        "intent": "Pérdida de Peso Sostenible",
+        "slug": "/weight-loss-coaching-summerville-sc"
+      },
+      "johnsIsland": {
+        "name": "Johns Island",
+        "intent": "Vida Costera Activa",
+        "slug": "/private-fitness-coach-johns-island-sc"
+      },
+      "isleOfPalms": {
+        "name": "Isle of Palms",
+        "intent": "Excelencia Atlética",
+        "slug": "/athletic-performance-training-isle-of-palms-sc"
+      },
+      "northCharleston": {
+        "name": "North Charleston",
+        "intent": "Transformaciones Corporales",
+        "slug": "/body-transformation-north-charleston-sc"
+      },
+      "jamesIsland": {
+        "name": "James Island",
+        "intent": "Coaching de Estilo de Vida Localizado",
+        "slug": "/fitness-trainer-james-island-sc"
+      },
+      "gooseCreek": {
+        "name": "Goose Creek",
+        "intent": "Fundamentación y Constancia",
+        "slug": "/personal-coaching-goose-creek-sc"
+      }
+    }
   }
 }

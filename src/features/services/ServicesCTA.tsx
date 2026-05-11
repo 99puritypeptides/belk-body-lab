@@ -23,15 +23,17 @@ export default function ServicesCTA() {
       <div className="max-w-[1800px] mx-auto px-6 lg:px-20 relative z-10 text-center">
         <div className="max-w-5xl mx-auto space-y-20">
           
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-4 px-6 py-2 rounded-full border border-black/10 bg-black/5"
-          >
-            <div className="w-2 h-2 rounded-full bg-black animate-pulse" />
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black/60">{t('limited')}</span>
-          </motion.div>
+          <div className="flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-4 px-6 py-2 rounded-full border border-black/10 bg-black/5"
+            >
+              <div className="w-2 h-2 rounded-full bg-black animate-pulse" />
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black/60">{t('limited')}</span>
+            </motion.div>
+          </div>
  
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -39,9 +41,9 @@ export default function ServicesCTA() {
             viewport={{ once: true }}
             className="space-y-12"
           >
-            <h2 className="text-black text-6xl md:text-[9vw] font-display font-black uppercase tracking-tighter leading-[0.8]">
-              {t('title')} <br />
-              <span className="text-black/10 block leading-[0.8]">{t('titleHighlight')}</span>
+            <h2 className="text-black text-4xl md:text-[8vw] font-display font-black uppercase tracking-tighter leading-[0.95] md:leading-[0.8] text-center flex flex-col items-center w-full">
+              <span className="block w-full">{t('title')}</span>
+              <span className="text-black/10 block w-full">{t('titleHighlight')}</span>
             </h2>
             <p className="text-black/40 text-xl md:text-3xl font-light leading-snug max-w-3xl mx-auto tracking-tight">
               {t('description')}

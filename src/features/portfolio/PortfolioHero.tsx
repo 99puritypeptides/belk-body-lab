@@ -48,11 +48,11 @@ export default function PortfolioHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
           {/* Main Content Column */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-12 text-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-4 mb-10"
+              className="flex items-center justify-center gap-4 mb-10"
             >
               <div className="w-12 h-[1px] bg-accent-green/50" />
               <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/40">
@@ -64,9 +64,10 @@ export default function PortfolioHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              className="text-white text-4xl md:text-7xl lg:text-[7vw] font-display font-black uppercase tracking-tighter leading-[0.9] mb-12"
+              className="text-white font-display font-black uppercase tracking-tighter leading-[0.9] mb-12 text-center"
+              style={{ fontSize: 'clamp(1.75rem, 10vw, 7.5rem)' }}
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center">
                 <span>{t('title')}</span>
                 <span className="text-transparent mt-2 sm:mt-0" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.4)' }}>
                   {t('titleHighlight')}
@@ -74,12 +75,12 @@ export default function PortfolioHero() {
               </div>
             </motion.h1>
 
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-12 pt-6">
+            <div className="flex flex-col items-center gap-12 pt-6">
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-white/40 text-lg md:text-xl font-light leading-snug tracking-tight max-w-xl border-l border-white/10 pl-10"
+                className="text-white/40 text-lg md:text-xl font-light leading-snug tracking-tight max-w-2xl mx-auto text-center border-white/10"
               >
                 {t('description')}
               </motion.p>

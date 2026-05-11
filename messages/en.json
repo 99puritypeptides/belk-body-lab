@@ -8,6 +8,7 @@
     "packages": "Services",
     "portfolio": "Portfolio",
     "blog": "Blog",
+    "communities": "Communities",
     "contact": "Contact Us",
     "getStarted": "Get started",
     "menuTitle": "Navigation",
@@ -17,7 +18,7 @@
   "hero": {
     "title": "Personal Trainer Charleston SC for",
     "titleHighlight": "Body Transformations",
-    "subtitle": "Professional coaching for real results. Custom online and in-person fitness coaching designed to help you lose fat, build muscle, and stay consistent - without guesswork. Serving the Greater Charleston area, including Mount Pleasant, West Ashley, and beyond through personalized coaching that fits your lifestyle.",
+    "subtitle": "Professional coaching for real results. As a premier body transformation specialist in Charleston, we provide custom online and in-person fitness coaching designed to help you lose fat, build muscle, and stay consistent - without guesswork. Serving the Greater Charleston area, including Mount Pleasant, West Ashley, and beyond through personalized coaching that fits your high-performance lifestyle.",
     "ctaPrimary": "Apply for Coaching",
     "ctaSecondary": "Start Your Transformation",
     "happySpirits": "Happy Spirits",
@@ -33,7 +34,7 @@
     "heading": "Transforming bodies,",
     "headingItalic": "rewriting limits.",
     "bio1": "I’m Kyle Belk - a certified personal trainer with 7+ years of experience helping clients lose fat, build muscle, and completely change how they feel in their bodies.",
-    "bio2": "I don’t believe in cookie-cutter plans. Every program is built around your metabolism, schedule, and goals - whether you're training in a gym, at home, or anywhere in Charleston. Coaching clients across Charleston, South Carolina and worldwide through personalized online fitness programs that deliver real, sustainable results.",
+    "bio2": "I don’t believe in cookie-cutter plans. Every program is built around your metabolism, schedule, and goals - whether you're training in a gym, at home, or anywhere in Charleston. As your dedicated Charleston SC personal trainer, I coach clients through weight loss coaching, strength training, and personalized online fitness programs that deliver real, sustainable results.",
     "quote": "Your body is capable of more than your mind believes.",
     "quoteAuthor": "- Kyle Belk",
     "cred1": "NASM Certified Personal Trainer",
@@ -58,13 +59,13 @@
     "cat4": "Obese",
     "catDesc1": "Focus on muscle hypertrophy.",
     "catDesc2": "Optimize body composition.",
-    "catDesc3": "Structured fat loss protocol.",
+    "catDesc3": "Structured fat loss blueprint.",
     "catDesc4": "Sustainable body transformation.",
     "range1": "< 18.5",
     "range2": "18.5 – 24.9",
     "range3": "25.0 – 29.9",
     "range4": "≥ 30.0",
-    "descUnderweight": "Your BMI indicates you are underweight. Focus on a muscle-building protocol and a structured caloric surplus. Kyle can engineer a mass gain plan tailored specifically for your metabolism.",
+    "descUnderweight": "Your BMI indicates you are underweight. Focus on a muscle-building program and a structured caloric surplus. Kyle can engineer a mass gain plan tailored specifically for your metabolism.",
     "descNormal": "Great foundational metrics. At a normal weight, it is time to optimize body composition by strategically increasing lean muscle mass while torching stubborn fat.",
     "descOverweight": "Your BMI falls into the overweight category. A structured fat loss program focusing on macros and strength training will get you back to optimal levels efficiently.",
     "descObese": "Sustainable fat loss starts with a definitive, scalable plan. Kyle specializes in profound body transformations, providing the exact blueprint needed for your success.",
@@ -164,7 +165,7 @@
     "disclaimer": "Free Consultation · No Obligation",
     "successTitle": "Application",
     "successHighlight": "Received",
-    "successDesc": "Kyle will review your application and reach out within 24 hours. Your transformation protocol is initiating.",
+    "successDesc": "Kyle will review your application and reach out within 24 hours. Your transformation blueprint is initiating.",
     "submitAnother": "Submit Another Application",
     "goal1": "Fat Loss & Shredding",
     "goal2": "Muscle Hypertrophy",
@@ -189,7 +190,7 @@
     "hero": {
       "title": "Online Fitness Coaching & Personal Training Charleston SC",
       "subtitle": "Coaching That Actually Gets You Results",
-      "description": "Custom fat loss and muscle-building programs built for your body, your schedule, and your life - not copied from a template. Work with an online fitness coach serving Charleston SC or train in person in Atlanta. Every plan is built for real, measurable transformation.",
+      "description": "Custom fat loss and muscle-building programs built for your body, your schedule, and your life - not copied from a template. Work with a premier online fitness coach in Charleston SC or train in-person. Every plan is engineered by a body transformation specialist for real, measurable results.",
       "ctaPrimary": "Apply for Coaching",
       "ctaSecondary": "See How It Works",
       "stat1": "500+ Clients Transformed",
@@ -223,7 +224,7 @@
         "features": [
           "3–5 sessions per week",
           "Real-time form correction",
-          "Progressive strength protocols",
+          "Progressive strength systems",
           "Weekly body composition tracking",
           "Post-session nutrition guidance"
         ],
@@ -437,7 +438,7 @@
         "category": "fat-loss"
       },
       {
-        "name": "Muscle Gain Protocol",
+        "name": "Muscle Gain Blueprint",
         "age": "27",
         "location": "Mount Pleasant",
         "result": "+12 lbs",
@@ -507,20 +508,21 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "blog": "Blog",
+    "communities": "Communities",
     "copyright": "© 2026 BelkBodyLab. All Rights Reserved.",
     "tagline": "Belk Body Lab - The best personal trainer in Charleston SC. Expert fitness coaching in Mount Pleasant, West Ashley, and online."
   },
   "metadata": {
-    "homeTitle": "Best Personal Trainer Charleston SC | Online Fitness Coach",
+    "homeTitle": "Belk Body Lab | Best Personal Trainer Charleston SC",
     "homeDesc": "Transform your body with the best personal trainer in Charleston SC. Expert online fitness coaching for fat loss, muscle building & body transformations in Mount Pleasant, West Ashley & Summerville.",
     "packagesTitle": "Coaching Packages - BelkBodyLab",
-    "packagesDesc": "Choose the coaching package that fits your goals. From starter programs to elite protocols, Kyle Belk engineers custom plans for your success.",
+    "packagesDesc": "Choose the coaching package that fits your goals. From starter programs to elite blueprints, Kyle Belk engineers custom plans for your success.",
     "portfolioTitle": "Body Transformation Results Charleston SC | Before After",
     "portfolioDesc": "See real body transformation results from Charleston SC clients. Fat loss, muscle gain, and 90-day before & after transformations with online coaching.",
     "aboutTitle": "About Kyle Belk - Elite Fitness Coach & Body Architect",
     "aboutDesc": "Discover the story behind BelkBodyLab. Learn how Kyle Belk uses science-based training and nutrition to engineer radical transformations.",
     "blogTitle": "Fitness Guides & Tips | Belk Body Lab Blog",
-    "blogDesc": "Expert fat loss guides, muscle building protocols, and nutrition science by Kyle Belk. Engineering transformations with data.",
+    "blogDesc": "Expert fat loss guides, muscle building systems, and nutrition science by Kyle Belk. Engineering transformations with data.",
     "contactTitle": "Contact Kyle Belk | Fitness Coach Charleston SC",
     "contactDesc": "Apply for personalized fitness coaching with Kyle Belk. Serving Charleston SC, Mount Pleasant, and online clients worldwide. Start your body transformation today."
   },
@@ -529,14 +531,14 @@
       "label": "Insights & Guides",
       "title": "Protocol",
       "titleHighlight": "Library",
-      "subtitle": "Expert fat loss guides, muscle building protocols, and nutrition science from Kyle Belk. Engineering transformations with data-driven coaching.",
+      "subtitle": "Expert fat loss guides, muscle building systems, and nutrition science from Kyle Belk. Engineering transformations with data-driven coaching.",
       "cta": "Explore Articles"
     },
     "cta": {
       "label": "Blueprint to Elite",
       "title": "Stop Guessing.",
       "titleHighlight": "Engineer Your Results.",
-      "description": "I bridge the gap between biological theory and physical output. Your custom protocol starts with a single click.",
+      "description": "I bridge the gap between biological theory and physical output. Your custom blueprint starts with a single click.",
       "ctaPrimary": "Apply for Coaching",
       "ctaSecondary": "Browse Success Stories"
     },
@@ -550,9 +552,9 @@
       "label": "The Body Architect",
       "title": "THE MASTERPLAN FOR TOTAL",
       "titleHighlight": "TRANSFORMATION.",
-      "subtitle": "Most trainers give you a template. I give you a science-based protocol engineered for your specific physiology. No fluff. Just results.",
+      "subtitle": "Most trainers give you a template. I give you a science-based blueprint engineered for your specific physiology. No fluff. Just results.",
       "cta": "Apply for Coaching",
-      "ctaLabel": "Start Your Protocol",
+      "ctaLabel": "Start Your Transformation",
       "trust": "500+ Clients Transformed",
       "meta": "ESTABLISHED IN TWO THOUSAND NINETEEN - CHARLESTON SOUTH CAROLINA"
     },
@@ -566,7 +568,7 @@
     "philosophy": {
       "label": "The Standards",
       "title": "The Belk Body Lab Philosophy",
-      "subtitle": "Every protocol is a proprietary blend of physiological science and human resilience.",
+      "subtitle": "Every blueprint is a proprietary blend of physiological science and human resilience.",
       "p1Title": "Scientific Training",
       "p1Desc": "No 'feeling the burn' just for the sake of it. Every rep is calculated to trigger maximum muscle hypertrophy or metabolic stress.",
       "p2Title": "Data-Driven Nutrition",
@@ -590,8 +592,8 @@
       "stat2": "10k+",
       "stat2Label": "Lbs Lost",
       "stat3": "100%",
-      "stat3Label": "Bespoke Protocols",
-      "footer": "I don't just teach the science, I live it. Every protocol I build is backed by certified knowledge and proven results."
+      "stat3Label": "Bespoke Systems",
+      "footer": "I don't just teach the science, I live it. Every blueprint I build is backed by certified knowledge and proven results."
     },
     "lifestyle": {
       "label": "Inside the Lab",
@@ -614,7 +616,7 @@
     "hero": {
       "title": "INITIATE YOUR",
       "titleHighlight": "TRANSFORMATION.",
-      "subtitle": "Expert-led body engineering begins with a single connection. Contact us for elite coaching applications, business inquiries, or general protocol questions."
+      "subtitle": "Expert-led body engineering begins with a single connection. Contact us for elite coaching applications, business inquiries, or general blueprint questions."
     },
     "faq": {
       "label": "Intelligence",
@@ -625,7 +627,72 @@
       "q2": "Do I need to be in Atlanta to work with Kyle?",
       "a2": "No. While Kyle is based in Charleston, over 80% of our clients are remote. We use advanced tracking tools and video calls to ensure elite results globally.",
       "q3": "What if I've never trained before?",
-      "a3": "The Lab works with all levels. We specialize in engineering protocols for absolute beginners as much as competition athletes. The only requirement is discipline."
+      "a3": "The Lab works with all levels. We specialize in engineering blueprints for absolute beginners as much as competition athletes. The only requirement is discipline."
+    }
+  },
+  "communities": {
+    "navTitle": "Communities",
+    "viewAll": "View All Communities →",
+    "hero": {
+      "title": "Charleston Fitness Communities",
+      "subtitle": "Elite Personal Training Across the Lowcountry",
+      "description": "We bridge the gap between biological theory and physical output for clients across the Greater Charleston area. From the historic streets of downtown to the coastal communities of Mount Pleasant and Daniel Island, our mission remains the same: stop the guesswork and start the transformation."
+    },
+    "intro": {
+      "title": "Where We Train",
+      "content": "Belk Body Lab isn't just a gym; it's a high-performance coaching system that meets you where you are. While our home base is in Charleston, we serve dedicated clients throughout all surrounding communities. Whether you're a professional in Mount Pleasant, a busy parent in Summerville, or an athlete on Johns Island, you get the same elite-level systems and unwavering accountability."
+    },
+    "grid": {
+      "charleston": {
+        "name": "Charleston",
+        "intent": "Elite Personal Training",
+        "slug": "/personal-trainer-charleston-sc"
+      },
+      "mountPleasant": {
+        "name": "Mount Pleasant",
+        "intent": "Busy Professional Fitness",
+        "slug": "/personal-training-mount-pleasant-sc"
+      },
+      "danielIsland": {
+        "name": "Daniel Island",
+        "intent": "High-End Private Coaching",
+        "slug": "/fitness-coach-daniel-island-sc"
+      },
+      "westAshley": {
+        "name": "West Ashley",
+        "intent": "Strength Training for Beginners",
+        "slug": "/strength-training-west-ashley-sc"
+      },
+      "summerville": {
+        "name": "Summerville",
+        "intent": "Sustainable Weight Loss",
+        "slug": "/weight-loss-coaching-summerville-sc"
+      },
+      "johnsIsland": {
+        "name": "Johns Island",
+        "intent": "Active Coastal Living",
+        "slug": "/private-fitness-coach-johns-island-sc"
+      },
+      "isleOfPalms": {
+        "name": "Isle of Palms",
+        "intent": "Athletic Excellence",
+        "slug": "/athletic-performance-training-isle-of-palms-sc"
+      },
+      "northCharleston": {
+        "name": "North Charleston",
+        "intent": "Body Transformations",
+        "slug": "/body-transformation-north-charleston-sc"
+      },
+      "jamesIsland": {
+        "name": "James Island",
+        "intent": "Localized Lifestyle Coaching",
+        "slug": "/fitness-trainer-james-island-sc"
+      },
+      "gooseCreek": {
+        "name": "Goose Creek",
+        "intent": "Foundation & Consistency",
+        "slug": "/personal-coaching-goose-creek-sc"
+      }
     }
   }
 }

@@ -34,11 +34,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return {
     metadataBase: new URL(siteUrl),
-    title: t('homeTitle'),
+    title: {
+      default: t('homeTitle'),
+      template: `%s | Belk Body Lab`,
+    },
     description: t('homeDesc'),
     manifest: '/manifest.json',
-    icons: { icon: [{ url: '/favicon.ico', type: 'image/x-icon' }] },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+        { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+        { url: '/images/brand/logo-192.png', type: 'image/png', sizes: '192x192' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+    },
     alternates: {
+      canonical: `${siteUrl}/${locale}`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `${siteUrl}/${l}`])
       ),
@@ -52,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       images: [
         {
-          url: '/images/brand/og-image.jpg', // Default OG image
+          url: '/images/brand/og-image.jpg',
           width: 1200,
           height: 630,
           alt: 'Belk Body Lab - Elite Fitness Coaching Charleston SC',
@@ -91,27 +105,38 @@ export default async function LocaleLayout({
             __html: JSON.stringify([
               {
                 "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Belk Body Lab",
+                "alternateName": ["BBL", "BelkBodyLab", "Belk Body Lab Charleston"],
+                "url": "https://www.belkbodylab.com",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.belkbodylab.com/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "Belk Body Lab",
-                "description": "Elite fitness coaching and body transformations in Charleston, SC. Science-based personal training, nutrition protocols, and online coaching.",
-                "image": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com'}/images/brand/belk-body-lab-logo.png`,
-                "@id": "https://www.belkbodylab.com",
+                "description": "Belk Body Lab is the premier personal trainer in Charleston SC, specializing in elite body transformations, online fitness coaching, weight loss, and strength training in Mount Pleasant, West Ashley, and globally.",
+                "image": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
+                "logo": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
+                "@id": "https://www.belkbodylab.com/#organization",
                 "url": "https://www.belkbodylab.com",
-                "telephone": "",
+                "telephone": "+18430000000",
                 "priceRange": "$$$",
-                "foundingDate": "2020-01-01",
+                "foundingDate": "2019-01-01",
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "email": "trainwithbelk@gmail.com",
                   "contactType": "customer support"
                 },
-                "areaServed": ["Charleston, SC", "Global"],
+                "areaServed": ["Charleston, SC", "Mount Pleasant, SC", "West Ashley, SC", "Daniel Island, SC", "Summerville, SC", "Global"],
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "",
                   "addressLocality": "Charleston",
                   "addressRegion": "SC",
-                  "postalCode": "",
                   "addressCountry": "US"
                 },
                 "geo": {
@@ -121,16 +146,9 @@ export default async function LocaleLayout({
                 },
                 "openingHoursSpecification": {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
-                  ],
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                   "opens": "06:00",
-                  "closes": "20:00"
+                  "closes": "21:00"
                 },
                 "sameAs": [
                   "https://www.instagram.com/kylebelk/",
@@ -150,20 +168,20 @@ export default async function LocaleLayout({
                   {
                     "@type": "ListItem",
                     "position": 2,
+                    "name": "About",
+                    "item": "https://www.belkbodylab.com/about"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
                     "name": "Services",
                     "item": "https://www.belkbodylab.com/services"
                   },
                   {
                     "@type": "ListItem",
-                    "position": 3,
+                    "position": 4,
                     "name": "Portfolio",
                     "item": "https://www.belkbodylab.com/portfolio"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 4,
-                    "name": "Blog",
-                    "item": "https://www.belkbodylab.com/blog"
                   }
                 ]
               }

@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/i18n/config';
 import { blogPosts } from '@/data/blog/posts';
+import { communitiesData } from '@/data/communities/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
-  const mainRoutes = ['', '/about', '/services', '/portfolio', '/blog', '/contact'];
+  const mainRoutes = ['', '/about', '/services', '/portfolio', '/blog', '/contact', '/communities'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
@@ -17,6 +18,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: route === '' ? 1.0 : 0.8,
+      });
+    });
+
+    // Community routes
+    Object.keys(communitiesData).forEach((slug) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
       });
     });
 

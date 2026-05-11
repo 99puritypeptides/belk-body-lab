@@ -99,7 +99,8 @@ export default function ServicesGrid() {
                 {t('subtitle')}
               </span>
             </div>
-            <h2 className="text-white text-5xl md:text-9xl font-display font-black uppercase tracking-tighter leading-[0.8]">
+            <h2 className="text-white font-display font-black uppercase tracking-tighter leading-[0.8]"
+                style={{ fontSize: 'clamp(2.5rem, 12vw, 8rem)' }}>
               {t('title').split(' ')[0]} <br />
               <span className="text-accent-green">{t('title').split(' ').slice(1).join(' ')}</span>
             </h2>
@@ -128,7 +129,8 @@ export default function ServicesGrid() {
                       {svc.popular && (
                         <span className="text-[10px] font-black text-accent-green uppercase tracking-[0.4em] mb-1 block">Most Popular</span>
                       )}
-                      <h3 className="text-white text-4xl md:text-6xl font-display font-black uppercase tracking-tighter">
+                      <h3 className="text-white font-display font-black uppercase tracking-tighter"
+                          style={{ fontSize: 'clamp(1.5rem, 8vw, 3.5rem)' }}>
                         {svc.title}
                       </h3>
                    </div>

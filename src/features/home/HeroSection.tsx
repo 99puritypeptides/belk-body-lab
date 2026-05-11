@@ -63,7 +63,7 @@ export default function HeroSection() {
           }}
           className="w-full text-center px-4"
         >
-          <h1 className="font-jumpshot text-white text-[9vw] md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] opacity-100">
+          <h1 className="font-jumpshot text-white text-[8vw] md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] opacity-100 text-balance px-2">
             <motion.span 
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -187,7 +187,7 @@ export default function HeroSection() {
           className="top-[15%] md:top-[35%] right-[4%] lg:right-[8%]"
           delay={1.6}
         />
-      </motion.div>
+       </motion.div>
 
       {/* Social Proof Footer */}
       <motion.div 

@@ -56,10 +56,7 @@ export default function TransformationsSection() {
                 {t('label')}
               </span>
             </div>
-            <h2
-              className="font-display font-black leading-tight tracking-tight text-white"
-              style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}
-            >
+            <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(2rem, 8vw, 4.5rem)' }}>
               {t('title')}{' '}
               <span className="text-white">
                 {t('titleItalic')}

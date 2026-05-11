@@ -68,7 +68,8 @@ export default function ServicesHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-[5vw] font-display font-black uppercase tracking-tighter leading-[0.9] mb-12"
+              className="text-white font-display font-black uppercase tracking-tighter leading-[0.9] mb-12"
+              style={{ fontSize: 'clamp(2rem, 8vw, 6rem)' }}
             >
               {t('title').split(' ').slice(0, 3).join(' ')} <br />
               <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.4)' }}>

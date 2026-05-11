@@ -13,13 +13,12 @@ import { SERVICES_FAQS } from '@/data/faqs/services';
 // ── SEO Metadata ─────────────────────────────────────────────────
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  await getTranslations({ locale, namespace: 'metadata' });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
   return {
-    title: 'Fitness Coaching Packages Charleston SC | Online Trainer',
-    description:
-      'Explore personalized fitness coaching packages in Charleston SC. Online coaching for fat loss, muscle building, and 90-day body transformations.',
+    title: `Fitness Coaching Packages | Belk Body Lab`,
+    description: t('packagesDesc'),
     keywords: [
       'online fitness coach Charleston SC',
       'personal trainer Charleston SC',
@@ -38,10 +37,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     openGraph: {
-      title: 'Fitness Coaching Packages Charleston SC | Belk Body Lab',
-      description: 'Explore personalized fitness coaching packages in Charleston SC. Online coaching for fat loss, muscle building, and 90-day transformations.',
+      title: 'Fitness Coaching Packages | Belk Body Lab',
+      description: t('packagesDesc'),
       url: `${siteUrl}/${locale}/services`,
       type: 'website',
+      images: [
+        {
+          url: '/images/brand/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Belk Body Lab Services',
+        },
+      ],
     },
   };
 }
@@ -78,6 +85,31 @@ export default function ServicesPage() {
       <FAQSchema id="services-faq" items={SERVICES_FAQS} />
       <ServicesFAQ />
       <ServicesCTA />
+
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.belkbodylab.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.belkbodylab.com/services"
+              }
+            ]
+          })
+        }}
+      />
     </main>
   );
 }

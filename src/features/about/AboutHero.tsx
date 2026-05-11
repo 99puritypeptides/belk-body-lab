@@ -101,10 +101,10 @@ export default function AboutHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-white font-display font-black leading-[0.9] tracking-tight uppercase"
-              style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)' }}
+              style={{ fontSize: 'clamp(1.75rem, 8.5vw, 8rem)' }}
             >
               {t('title')} <br />
-              <span className="italic font-light text-white/20 block mt-2">{t('titleHighlight')}</span>
+              <span className="italic font-light text-white/20 block mt-1 sm:mt-2">{t('titleHighlight')}</span>
             </motion.h1>
           </div>
 
