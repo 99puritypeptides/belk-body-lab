@@ -10,6 +10,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CustomScrollbar from '@/components/ui/CustomScrollbar';
 import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import '../../styles/tailwind.css';
 
 const inter = Inter({
@@ -210,6 +211,7 @@ export default async function LocaleLayout({
           src="https://static.rocket.new/rocket-shot.js?v=0.0.2" 
           strategy="lazyOnload"
         />
+        {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
       </body>
     </html>
   );
