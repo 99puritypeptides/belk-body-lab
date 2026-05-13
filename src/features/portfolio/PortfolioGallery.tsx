@@ -90,7 +90,7 @@ function TransformModal({ item, onClose, t }: ModalProps) {
                 <div className="absolute top-6 left-6 px-4 py-1.5 bg-black/60 backdrop-blur-md rounded-full text-[9px] font-black uppercase tracking-[0.4em] text-white/40 border border-white/5">Before</div>
               </div>
               <div className="flex-1 relative overflow-hidden group">
-                <AppImage src={item.after} alt={item.afterAlt} fill className="object-cover group-hover:scale-105 transition-transform duration-[2s]" />
+                <AppImage src={item.after} alt={item.afterAlt} fill className="object-cover group-hover:scale-105 transition-transform [transition-duration:]" />
                 <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[9px] font-black uppercase tracking-[0.4em] text-black shadow-lg shadow-white/10">After</div>
               </div>
             </div>
@@ -238,10 +238,10 @@ export default function PortfolioGallery() {
               >
                 {/* Image States */}
                 <div className="absolute inset-0">
-                  <AppImage src={item.before} alt={item.beforeAlt} fill className="object-cover grayscale opacity-40 group-hover:opacity-0 transition-opacity duration-[1.5s] ease-in-out" />
+                  <AppImage src={item.before} alt={item.beforeAlt} fill className="object-cover grayscale opacity-40 group-hover:opacity-0 transition-opacity [transition-duration:] ease-in-out" />
                 </div>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-[1.5s] ease-in-out">
-                  <AppImage src={item.after} alt={item.afterAlt} fill className="object-cover group-hover:scale-105 transition-transform duration-[3s] ease-out" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity [transition-duration:] ease-in-out">
+                  <AppImage src={item.after} alt={item.afterAlt} fill className="object-cover group-hover:scale-105 transition-transform [transition-duration:] ease-out" />
                 </div>
 
                 {/* Dark Gradient Overlay for Text */}

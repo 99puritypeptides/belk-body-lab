@@ -54,7 +54,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 // ── Page ─────────────────────────────────────────────────────────
-export default function ServicesPage() {
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+
   return (
     <main
       className="relative bg-bg-primary min-h-screen"

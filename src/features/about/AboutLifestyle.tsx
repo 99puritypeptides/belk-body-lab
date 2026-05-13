@@ -77,7 +77,7 @@ export default function AboutLifestyle() {
                   src="/BBL Media/leg-day.mp4" 
                   loop muted playsInline
                   title="Elite Fitness Lifestyle Training Video - Belk Body Lab"
-                  className="w-full h-full object-cover grayscale brightness-90 contrast-[1.1] scale-105 group-hover:scale-100 transition-transform duration-[2000ms]"
+                  className="w-full h-full object-cover grayscale brightness-90 contrast-[1.1] scale-105 group-hover:scale-100 transition-transform [transition-duration:]"
                 />
               </div>
 

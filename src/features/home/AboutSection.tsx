@@ -216,6 +216,27 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Kyle Belk - Personal Training Philosophy and Introduction",
+            "description": "Elite fitness coach Kyle Belk discusses his personal training philosophy, the importance of mindset, and his approach to body transformations in Charleston, SC.",
+            "thumbnailUrl": "https://www.belkbodylab.com/images/brand/thumbnail.jpg",
+            "uploadDate": "2024-01-01T08:00:00+08:00",
+            "duration": "PT2M30S",
+            "contentUrl": "https://www.belkbodylab.com/images/videos/kyle-intro.webm",
+            "embedUrl": "https://www.belkbodylab.com",
+            "interactionStatistic": {
+              "@type": "InteractionCounter",
+              "interactionType": { "@type": "WatchAction" },
+              "userInteractionCount": 1500
+            }
+          })
+        }}
+      />
     </section>
   );
 }

@@ -40,7 +40,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           src={post.image}
           alt={`Blog Post: ${content.title} - Fitness Training & Science Insights`}
           fill
-          className="object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-[1.5s] ease-out"
+          className="object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all [transition-duration:] ease-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80" />
         

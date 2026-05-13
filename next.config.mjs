@@ -12,6 +12,16 @@ const nextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*\\.mp4)',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex' },
+        ],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
