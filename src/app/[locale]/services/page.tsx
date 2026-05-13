@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
   return {
-    title: `Fitness Coaching Packages | Belk Body Lab`,
+    title: t('packagesTitle'),
     description: t('packagesDesc'),
     keywords: [
       'online fitness coach Charleston SC',
@@ -37,9 +37,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     openGraph: {
-      title: 'Fitness Coaching Packages | Belk Body Lab',
+      title: t('packagesTitle'),
       description: t('packagesDesc'),
-      url: `${siteUrl}/${locale}/services`,
+      url: locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`,
       type: 'website',
       images: [
         {
@@ -104,7 +104,7 @@ export default function ServicesPage() {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://www.belkbodylab.com/services"
+                "item": locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`
               }
             ]
           })
