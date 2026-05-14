@@ -10,7 +10,7 @@ export default function TransitionWrapper({ children }: { children: ReactNode })
   return (
     <motion.div
       key={pathname}
-      initial={{ opacity: 0 }}
+      initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       suppressHydrationWarning

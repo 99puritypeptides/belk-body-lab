@@ -65,17 +65,17 @@ export default function HeroSection() {
         >
           <h1 className="font-jumpshot text-white text-[8vw] md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] opacity-100 text-balance px-2">
             <motion.span 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.1 }}
               className="block text-white/90"
             >
               {t('title')}
             </motion.span>
             <motion.span 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0.01 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.1 }}
               className="block text-accent-green drop-shadow-[0_0_30px_rgba(170,255,0,0.3)]"
             >
               {t('titleHighlight')}
@@ -115,8 +115,8 @@ export default function HeroSection() {
               className="object-contain object-bottom brightness-[1.1] contrast-[1.1]"
               priority
               fetchPriority="high"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1400px"
-              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
+              quality={85}
             />
           </motion.div>
         </motion.div>

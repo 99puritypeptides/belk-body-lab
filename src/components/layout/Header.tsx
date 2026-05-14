@@ -157,7 +157,7 @@ export default function Header() {
 
         {/* MAIN NAV */}
         <nav className="flex flex-col gap-6 mb-auto">
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2">{t('menuTitle') || 'Navigation'}</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 mb-2">{t('menuTitle') || 'Navigation'}</p>
           {navLinks?.map((link, i) => (
             <Link
               key={link?.href}
@@ -193,13 +193,13 @@ export default function Header() {
         >
           <div className="flex flex-wrap items-center justify-between gap-8 mb-10">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-4">{t('followUs') || 'Social Connect'}</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 mb-4">{t('followUs') || 'Social Connect'}</p>
               <div className="flex gap-5">
                 {[
                   { label: 'Instagram', href: 'https://www.instagram.com/kylebelk/' },
                   { label: 'TikTok', href: 'https://www.tiktok.com/@kyle.belk/' },
                   { label: 'Threads', href: 'https://www.threads.net/@kylebelk' },
-                  { label: 'YouTube', href: '#' }
+                  { label: 'Mail', href: 'mailto:trainwithbelk@gmail.com' }
                 ]?.map((s) => (
                   <a 
                     key={s.label} 
@@ -216,7 +216,7 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col items-end">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-4 text-right">{t('language') || 'Language'}</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 mb-4 text-right">{t('language') || 'Language'}</p>
               <LocaleSwitcher />
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function Header() {
               href="https://www.belkdigital.com/en" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/20 hover:text-accent-green transition-colors"
+              className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/50 hover:text-accent-green transition-colors"
             >
               Designed & Developed by Belk Digital
             </a>

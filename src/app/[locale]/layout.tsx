@@ -12,6 +12,7 @@ import Footer from '@/components/layout/Footer';
 import CustomScrollbar from '@/components/ui/CustomScrollbar';
 import Script from 'next/script';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import PerformanceScripts from '@/components/performance/PerformanceScripts';
 import '../../styles/tailwind.css';
 
 const inter = Inter({
@@ -154,8 +155,8 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${inter.variable} ${jumpshot.variable} ${clashDisplay.variable}`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://cdn.lordicon.com" />
-        <link rel="preconnect" href="https://static.rocket.new" />
+        <link rel="preconnect" href="https://cdn.lordicon.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://static.rocket.new" crossOrigin="anonymous" />
       </head>
       <body className="font-sans" suppressHydrationWarning>
         <Script
@@ -249,7 +250,6 @@ export default async function LocaleLayout({
             ])
           }}
         />
-        <Script src="https://cdn.lordicon.com/lordicon.js" strategy="lazyOnload" />
         <NextIntlClientProvider messages={messages}>
           <TransitionWrapper>
             <Header />
@@ -259,16 +259,7 @@ export default async function LocaleLayout({
           </TransitionWrapper>
         </NextIntlClientProvider>
 
-        <Script
-          id="rocket-web"
-          src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbelkbodyla3935back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.17"
-          strategy="lazyOnload"
-        />
-        <Script 
-          id="rocket-shot"
-          src="https://static.rocket.new/rocket-shot.js?v=0.0.2" 
-          strategy="lazyOnload"
-        />
+        <PerformanceScripts />
         {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
       </body>
     </html>

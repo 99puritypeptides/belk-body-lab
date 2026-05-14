@@ -49,6 +49,7 @@
         "type-check": "tsc --noEmit"
     },
     "dependencies": {
+        "@builder.io/partytown": "^0.10.3",
         "@dhiwise/component-tagger": "^1.0.15",
         "@heroicons/react": "^2.2.0",
         "@next/third-parties": "^16.2.6",
