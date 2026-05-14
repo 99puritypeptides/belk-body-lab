@@ -165,17 +165,17 @@ export default function AboutSection() {
               {/* Right: Content */}
               <div className="lg:col-span-7 flex flex-col justify-center lg:py-10">
                 <div className="mb-14">
-                  <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#111] opacity-70 mb-6">
+                  <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#111] opacity-90 mb-6">
                     {t('location')}
                   </div>
                   <h3 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#111] leading-[1.1] mb-8 tracking-tight">
                     {t('heading')} <br />
-                    <span className="text-gray-500">{t('headingItalic')}</span>
+                    <span className="text-gray-600">{t('headingItalic')}</span>
                   </h3>
-                  <p className="text-gray-600 text-lg sm:text-xl leading-relaxed font-light mb-6">
+                  <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-light mb-6">
                     {t('bio1')}
                   </p>
-                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-light">
+                  <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-light">
                     {t('bio2')}
                   </p>
                 </div>
@@ -187,7 +187,7 @@ export default function AboutSection() {
                       <div className="w-12 h-12 rounded-full bg-gray-100 text-[#111] flex items-center justify-center group-hover:bg-[#111] group-hover:text-white transition-colors duration-500 shadow-sm">
                         <span className="group-hover:scale-110 transition-transform duration-500">{point.icon}</span>
                       </div>
-                      <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.15em] text-gray-700 group-hover:text-[#111] uppercase transition-colors duration-500 leading-snug">
+                      <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.15em] text-gray-800 group-hover:text-[#111] uppercase transition-colors duration-500 leading-snug">
                         {point.label}
                       </span>
                     </div>

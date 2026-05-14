@@ -23,32 +23,30 @@ export default function HeroSection() {
 
   const yText = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const yImage = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  
+
   // More aggressive scroll fade to reveal text naturally on mobile
   const opacityImage = useTransform(scrollYProgress, [0, 0.25], [1, 0.1]);
 
-  const [isInteracting, setIsInteracting] = React.useState(true);
-  const peekValue = useSpring(0, { stiffness: 80, damping: 20 });
+  const [isInteracting, setIsInteracting] = React.useState(false);
+  const peekValue = useSpring(1, { stiffness: 120, damping: 24 });
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     peekValue.set(isInteracting ? 0 : 1);
   }, [isInteracting, peekValue]);
 
+  // Removed mount delay to prioritize LCP image rendering
   useEffect(() => {
-    // Initial mount reveal: Show text for a moment then reveal image
-    const timer = setTimeout(() => {
-      setIsInteracting(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    // Ensuring the image is ready for LCP immediately
+    peekValue.set(1);
+  }, [peekValue]);
 
   const handleInteraction = () => {
     if (!isInteracting) setIsInteracting(true);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setIsInteracting(false);
-    }, 2000); 
+    }, 700);
   };
 
   return (
@@ -61,7 +59,7 @@ export default function HeroSection() {
       {/* 1. Background Layer: Typography behind the image (Constrained to top half, below header) */}
       <div className="absolute inset-x-0 top-0 h-1/2 z-0 flex flex-col items-center justify-start pt-[15vh] md:pt-[18vh] pointer-events-none select-none">
         <motion.div
-          style={{ 
+          style={{
             y: yText,
             scale: useTransform(peekValue, [0, 1], [1.02, 1]),
             opacity: useTransform(peekValue, [0, 1], [1, 0.3]),
@@ -70,7 +68,7 @@ export default function HeroSection() {
           className="w-full text-center px-4"
         >
           <h1 className="font-jumpshot text-white text-[8vw] md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] opacity-100 text-balance px-2">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0.01 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.1 }}
@@ -78,7 +76,7 @@ export default function HeroSection() {
             >
               {t('title')}
             </motion.span>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0.01 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.1 }}
@@ -87,7 +85,7 @@ export default function HeroSection() {
               {t('titleHighlight')}
             </motion.span>
           </h1>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -102,7 +100,7 @@ export default function HeroSection() {
       {/* 2. Middle Layer: The Hero Image (Enlarged, Animates away on movement) */}
       <div className="absolute inset-0 z-10 pointer-events-none flex items-end justify-center">
         <motion.div
-          style={{ 
+          style={{
             opacity: useTransform(peekValue, [0, 1], [0.2, 1]),
             scale: useTransform(peekValue, [0, 1], [0.98, 1]),
             willChange: "transform, opacity"
@@ -113,15 +111,13 @@ export default function HeroSection() {
             style={{ y: yImage, opacity: opacityImage }}
             className="relative w-full h-[85vh] md:h-[95vh] lg:h-[100vh] max-w-[1400px]"
           >
-            <Image
+            <img
               src="/images/hero/model-image.png"
               alt="Elite Body Transformation Coaching by Kyle Belk - Charleston SC"
-              fill
-              className="object-contain object-bottom brightness-[1.1] contrast-[1.1]"
-              priority
+              className="absolute inset-0 w-full h-full object-contain object-bottom brightness-[1.1] contrast-[1.1]"
               fetchPriority="high"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 800px"
-              quality={85}
+              loading="eager"
+              decoding="async"
             />
           </motion.div>
         </motion.div>
@@ -161,23 +157,23 @@ export default function HeroSection() {
       </div>
 
       {/* Floating Stat Cards - Strategically Positioned */}
-      <motion.div 
-        style={{ 
+      <motion.div
+        style={{
           opacity: useTransform(peekValue, [0, 1], [0, 1]),
           x: useTransform(peekValue, [0, 1], [-10, 0]),
           willChange: "transform, opacity"
         }}
         className="absolute inset-0 pointer-events-none z-40"
       >
-        <FloatingCard 
+        <FloatingCard
           icon={<ShieldCheckIcon className="w-5 h-5 text-accent-green" />}
           title="90-Day Results"
           subtitle="Guaranteed Protocol"
           className="top-[25%] md:top-[45%] left-[4%] lg:left-[8%]"
           delay={1.2}
         />
-        
-        <FloatingCard 
+
+        <FloatingCard
           icon={<MapPinIcon className="w-5 h-5 text-accent-green" />}
           title="Charleston & Online"
           subtitle="Global Coaching"
@@ -185,17 +181,17 @@ export default function HeroSection() {
           delay={1.4}
         />
 
-        <FloatingCard 
+        <FloatingCard
           icon={<TrophyIcon className="w-5 h-5 text-accent-green" />}
           title="500+ Clients"
           subtitle="Physics Mastered"
           className="top-[15%] md:top-[35%] right-[4%] lg:right-[8%]"
           delay={1.6}
         />
-       </motion.div>
+      </motion.div>
 
       {/* Social Proof Footer */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2 }}
@@ -204,13 +200,13 @@ export default function HeroSection() {
         <div className="flex -space-x-3">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="w-8 h-8 rounded-full border-2 border-black overflow-hidden bg-gray-800">
-               <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Satisfied Coaching Client Profile" width={32} height={32} />
+              <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Satisfied Coaching Client Profile" width={32} height={32} />
             </div>
           ))}
         </div>
         <div className="h-4 w-px bg-white/10" />
         <p className="text-[10px] font-black uppercase tracking-widest text-white/60">
-           Trusted by <span className="text-white">500+ Elite</span>
+          Trusted by <span className="text-white">500+ Elite</span>
         </p>
       </motion.div>
 

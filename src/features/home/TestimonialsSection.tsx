@@ -201,7 +201,7 @@ export default function TestimonialsSection() {
                               <h3 className="text-white font-black text-xl uppercase leading-none mb-1">{item.name}</h3>
                               <div className="flex items-center gap-2">
                                 <StarIcon className="w-3 h-3 text-accent-green" />
-                                <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest">
+                                <span className="text-white/60 text-[9px] font-bold uppercase tracking-widest">
                                   {item.rating} • {item.date}
                                 </span>
                               </div>
@@ -237,7 +237,7 @@ export default function TestimonialsSection() {
                   transition={{ duration: 0.4, ease: 'easeOut' }}
                   className="relative z-10"
                 >
-                  <p className="text-white/90 text-lg md:text-xl lg:text-3xl font-medium italic leading-relaxed mb-10 font-serif">
+                  <p className="text-white text-lg md:text-xl lg:text-3xl font-medium italic leading-relaxed mb-10 font-serif">
                     <span className="text-accent-green text-3xl lg:text-5xl mr-1 leading-none inline-block align-middle">&ldquo;</span>
                     {activeTestimonial.text}
                   </p>
@@ -254,7 +254,7 @@ export default function TestimonialsSection() {
                           />
                         ))}
                       </div>
-                      <span className="text-accent-green/60 text-[10px] font-bold uppercase tracking-[0.2em]">{activeTestimonial.role}</span>
+                      <span className="text-accent-green/80 text-[10px] font-bold uppercase tracking-[0.2em]">{activeTestimonial.role}</span>
                     </div>
                   </div>
 
@@ -268,7 +268,7 @@ export default function TestimonialsSection() {
                       ))}
                     </div>
                     <div className="h-4 w-px bg-white/10" />
-                    <span className="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em]">
+                    <span className="text-white/80 text-[10px] font-bold uppercase tracking-[0.3em]">
                       Verified Client Result
                     </span>
                   </div>

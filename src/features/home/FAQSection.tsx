@@ -114,7 +114,7 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
                     <span className="text-accent-green font-black text-xs pt-1 shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className={`text-white font-bold text-base lg:text-lg uppercase tracking-wide leading-tight transition-colors duration-300 ${openIndex === i ? 'text-white' : 'text-white/60 group-hover:text-white/80'}`}>
+                    <span className={`text-white font-bold text-base lg:text-lg uppercase tracking-wide leading-tight transition-colors duration-300 ${openIndex === i ? 'text-white' : 'text-white/80 group-hover:text-white'}`}>
                       {faq.q}
                     </span>
                   </div>
@@ -128,7 +128,7 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
                     <span className="text-transparent text-xs select-none shrink-0" aria-hidden="true">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <p className="text-white/60 text-sm md:text-base leading-relaxed font-medium">
+                    <p className="text-white/80 text-sm md:text-base leading-relaxed font-medium">
                       {faq.a}
                     </p>
                   </div>

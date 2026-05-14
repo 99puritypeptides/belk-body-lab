@@ -157,6 +157,7 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://cdn.lordicon.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://static.rocket.new" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/images/hero/model-image.png" fetchPriority="high" />
       </head>
       <body className="font-sans" suppressHydrationWarning>
         <Script
