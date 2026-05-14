@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { motion, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionValue, animate, useSpring } from 'framer-motion';
 import { ShieldCheckIcon, MapPinIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import { Link } from '@/i18n/navigation';
 import CTAButton from '@/components/ui/CTAButton';
@@ -27,29 +27,35 @@ export default function HeroSection() {
   // More aggressive scroll fade to reveal text naturally on mobile
   const opacityImage = useTransform(scrollYProgress, [0, 0.25], [1, 0.1]);
 
-  const peekValue = useMotionValue(0); // Start at 0 (revealed text) for mount animation
+  const [isInteracting, setIsInteracting] = React.useState(true);
+  const peekValue = useSpring(0, { stiffness: 80, damping: 20 });
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Initial mount reveal
-    animate(peekValue, 1, { duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] });
+    peekValue.set(isInteracting ? 0 : 1);
+  }, [isInteracting, peekValue]);
+
+  useEffect(() => {
+    // Initial mount reveal: Show text for a moment then reveal image
+    const timer = setTimeout(() => {
+      setIsInteracting(false);
+    }, 1500);
+    return () => clearTimeout(timer);
   }, []);
 
-  const handleMouseMove = ({ clientX, clientY, currentTarget }: React.MouseEvent) => {
-    animate(peekValue, 0, { duration: 0.3, ease: "easeOut" });
-
+  const handleInteraction = () => {
+    if (!isInteracting) setIsInteracting(true);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
-      animate(peekValue, 1, { duration: 1.2, ease: [0.16, 1, 0.3, 1] });
-    }, 500); 
+      setIsInteracting(false);
+    }, 2000); 
   };
 
   return (
     <section
       ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onTouchStart={() => animate(peekValue, 0, { duration: 0.3 })}
-      onTouchEnd={() => animate(peekValue, 1, { duration: 1.2 })}
+      onMouseMove={handleInteraction}
+      onTouchStart={handleInteraction}
       className="relative h-[100svh] w-full bg-[#050505] flex items-center justify-center overflow-hidden"
     >
       {/* 1. Background Layer: Typography behind the image (Constrained to top half, below header) */}
@@ -57,9 +63,9 @@ export default function HeroSection() {
         <motion.div
           style={{ 
             y: yText,
-            scale: useTransform(peekValue, [0, 1], [1.05, 1]),
-            filter: useTransform(peekValue, [0, 1], ['blur(0px)', 'blur(2px)']),
-            willChange: "transform, filter"
+            scale: useTransform(peekValue, [0, 1], [1.02, 1]),
+            opacity: useTransform(peekValue, [0, 1], [1, 0.3]),
+            willChange: "transform, opacity"
           }}
           className="w-full text-center px-4"
         >
@@ -97,10 +103,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-10 pointer-events-none flex items-end justify-center">
         <motion.div
           style={{ 
-            opacity: useTransform(peekValue, [0, 1], [0.15, 1]),
-            scale: useTransform(peekValue, [0, 1], [0.96, 1]),
-            filter: useTransform(peekValue, [0, 1], ['blur(15px)', 'blur(0px)']),
-            willChange: "transform, opacity, filter"
+            opacity: useTransform(peekValue, [0, 1], [0.2, 1]),
+            scale: useTransform(peekValue, [0, 1], [0.98, 1]),
+            willChange: "transform, opacity"
           }}
           className="relative w-full h-full flex items-end justify-center"
         >
@@ -159,9 +164,8 @@ export default function HeroSection() {
       <motion.div 
         style={{ 
           opacity: useTransform(peekValue, [0, 1], [0, 1]),
-          x: useTransform(peekValue, [0, 1], [-20, 0]),
-          filter: useTransform(peekValue, [0, 1], ['blur(10px)', 'blur(0px)']),
-          willChange: "transform, opacity, filter"
+          x: useTransform(peekValue, [0, 1], [-10, 0]),
+          willChange: "transform, opacity"
         }}
         className="absolute inset-0 pointer-events-none z-40"
       >
