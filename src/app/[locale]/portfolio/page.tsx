@@ -14,9 +14,37 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t('portfolioTitle'),
     description: t('portfolioDesc'),
+    keywords: [
+      'body transformation results South Carolina',
+      'before and after fitness SC',
+      'weight loss results South Carolina',
+      'fat loss transformation Charleston SC',
+      'muscle gain before after SC',
+      'client transformations South Carolina',
+      'personal trainer results SC',
+      'body recomposition South Carolina',
+      'fitness transformation photos SC',
+      'Kyle Belk client results',
+      'Belk Body Lab transformations',
+      'personal trainer before after South Carolina',
+    ],
     alternates: {
       canonical: locale === 'en' ? `${siteUrl}/portfolio` : `${siteUrl}/${locale}/portfolio`,
       languages: { en: `${siteUrl}/portfolio`, es: `${siteUrl}/es/portfolio` },
+    },
+    openGraph: {
+      title: t('portfolioTitle'),
+      description: t('portfolioDesc'),
+      url: locale === 'en' ? `${siteUrl}/portfolio` : `${siteUrl}/${locale}/portfolio`,
+      type: 'website',
+      images: [
+        {
+          url: '/og-home.png',
+          width: 1200,
+          height: 630,
+          alt: 'Body Transformation Results - Personal Trainer South Carolina',
+        },
+      ],
     },
   };
 }

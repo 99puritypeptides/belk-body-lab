@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -83,11 +84,23 @@ export default function AboutLifestyle() {
 
               {/* Secondary Images Staggered */}
               <div className="col-span-5 lg:col-span-4 space-y-4 lg:space-y-8 pt-8 lg:pt-16">
-                <div className="aspect-square rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]">
-                  <img src="/BBL Media/lifestyle-2.jpg" alt="Kyle Belk Fitness Lifestyle - Consistency and Resilience" className="w-full h-full object-cover" />
+                <div className="relative aspect-square rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]">
+                  <Image
+                    src="/BBL Media/lifestyle-2.jpg"
+                    alt="Kyle Belk Fitness Lifestyle - Consistency and Resilience"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 40vw, 300px"
+                  />
                 </div>
-                <div className="aspect-[4/5] rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]">
-                  <img src="/BBL Media/lifestyle-3.jpg" alt="Kyle Belk Fitness Training - Discipline and Precision" className="w-full h-full object-cover" />
+                <div className="relative aspect-[4/5] rounded-[1.5rem] lg:rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]">
+                  <Image
+                    src="/BBL Media/lifestyle-3.jpg"
+                    alt="Kyle Belk Fitness Training - Discipline and Precision"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 40vw, 300px"
+                  />
                 </div>
               </div>
             </div>

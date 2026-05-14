@@ -52,7 +52,7 @@ export default function TransformationsSection() {
           <div className="scroll-reveal-init">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-0.5 h-5 bg-white/20" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">
                 {t('label')}
               </span>
             </div>
@@ -63,7 +63,7 @@ export default function TransformationsSection() {
               </span>
             </h2>
           </div>
-          <p className="text-white/40 text-base md:text-lg font-light max-w-sm scroll-reveal-init stagger-2 leading-relaxed">
+          <p className="text-white/60 text-base md:text-lg font-light max-w-sm scroll-reveal-init stagger-2 leading-relaxed">
             {t('description')}
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function TransformationsSection() {
       {/* ── Section Outro ── */}
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-16 pb-24 lg:pb-32 text-center">
         <div className="scroll-reveal-init">
-          <p className="text-white/40 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/60 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-10 max-w-2xl mx-auto leading-relaxed">
             {t('outro')}
           </p>
           <MotionLink

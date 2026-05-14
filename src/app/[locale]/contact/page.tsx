@@ -12,9 +12,27 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
   return {
     title: t('contactTitle') || `Contact | Belk Body Lab`,
     description: t('contactDesc') || 'Get in touch with Kyle Belk for elite coaching applications and business inquiries.',
+    keywords: [
+      'contact personal trainer South Carolina',
+      'hire personal trainer SC',
+      'fitness coach consultation South Carolina',
+      'apply for coaching SC',
+      'personal trainer free consultation',
+      'contact Kyle Belk',
+      'Belk Body Lab contact',
+      'personal trainer inquiry Charleston SC',
+      'fitness coaching application South Carolina',
+      'book personal trainer SC',
+    ],
     alternates: {
       canonical: locale === 'en' ? `${siteUrl}/contact` : `${siteUrl}/${locale}/contact`,
       languages: { en: `${siteUrl}/contact`, es: `${siteUrl}/es/contact` },
+    },
+    openGraph: {
+      title: t('contactTitle'),
+      description: t('contactDesc'),
+      url: locale === 'en' ? `${siteUrl}/contact` : `${siteUrl}/${locale}/contact`,
+      type: 'website',
     },
   };
 }

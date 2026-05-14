@@ -51,7 +51,7 @@ export default function ContactSection() {
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
       ), 
-      label: t('locLabel'), value: t('locValue'), href: '#' 
+      label: t('locLabel'), value: t('locValue'), href: 'https://www.google.com/maps/search/?api=1&query=Charleston+SC' 
     },
     { 
       icon: (
@@ -63,6 +63,22 @@ export default function ContactSection() {
     },
     { 
       icon: (
+        <svg width="20" height="20" viewBox="0 0 976.98 1082" fill="currentColor">
+          <path d="M770.35,500.35c-1.35-156.85-86.39-251.37-230.02-251.37-95.87,0-176.5,43.36-218.85,112.47l92.82,64.71c24.05-37.94,57.25-69.45,118.23-69.45,68.77,0,104.34,38.28,114.5,109.42-33.2-5.08-66.4-7.79-100.61-7.79-185.65,0-273.05,84.02-273.05,195.13s87.4,179.55,216.14,179.55c141.27,0,225.62-95.19,260.18-213.09,35.91,16.26,60.64,54.2,60.64,111.12,0,152.45-175.82,235.45-324.88,235.45-219.86,0-363.5-144.32-363.5-379.08,0-287.62,190.05-471.91,445.48-471.91,171.42,0,256.11,75.21,313.7,176.16l94.86-66.4C913.31,94.5,773.4,1,563.36,1,228.65,1,1,238.48,1,583.01c0,315.06,222.91,497.99,488.51,497.99,219.52,0,441.42-128.05,441.42-347.24,0-114.5-65.72-190.39-160.58-233.41h0ZM485.44,718.85c-48.44,0-91.13-23.04-91.13-65.38,0-66.74,81.98-87.06,162.27-87.06,30.49,0,60.3,2.03,86.72,7.79-18.97,86.72-75.21,144.66-157.87,144.66h0Z" />
+        </svg>
+      ), 
+      label: t('thLabel'), value: t('thValue'), href: 'https://www.threads.net/@kylebelk' 
+    },
+    { 
+      icon: (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.43a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.14 7.53 6.34 6.34 0 0 0 10.73 2.19V8.79a9.6 9.6 0 0 0 5.7 1.83V7.17a4.83 4.83 0 0 1-1.01-.48z"/>
+        </svg>
+      ), 
+      label: t('ttLabel'), value: t('ttValue'), href: 'https://www.tiktok.com/@kyle.belk/' 
+    },
+    { 
+      icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
         </svg>
@@ -71,19 +87,11 @@ export default function ContactSection() {
     },
     { 
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .57.04.84.11V9.43a6.33 6.33 0 0 0-1.01-.08 6.34 6.34 0 0 0-6.14 7.53 6.34 6.34 0 0 0 10.73 2.19V8.79a9.6 9.6 0 0 0 5.7 1.83V7.17a4.83 4.83 0 0 1-1.01-.48z"/>
-        </svg>
-      ), 
-      label: t('ttLabel'), value: t('ttValue'), href: '#' 
-    },
-    { 
-      icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
       ), 
-      label: t('ytLabel'), value: t('ytValue'), href: '#' 
+      label: t('phoneLabel'), value: t('phoneValue'), href: `tel:${t('phoneValue').replace(/\D/g, '')}` 
     },
   ];
 
@@ -145,7 +153,7 @@ export default function ContactSection() {
                     </div>
                     <div className="pt-1">
                       <h5 className="text-white font-bold text-lg uppercase mb-2 tracking-wide">{step.title}</h5>
-                      <p className="text-white/40 text-sm leading-relaxed">{step.desc}</p>
+                      <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -158,12 +166,13 @@ export default function ContactSection() {
                   key={i} 
                   href={link.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer me"
+                  aria-label={`${link.label}: ${link.value}`}
                   className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors group"
                 >
                   <div className="text-accent-green group-hover:scale-110 transition-transform">{link.icon}</div>
                   <div>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-white/30">{link.label}</p>
+                    <p className="text-[9px] font-black uppercase tracking-widest text-white/60">{link.label}</p>
                     <p className="text-xs font-bold text-white/80">{link.value}</p>
                   </div>
                 </a>
@@ -209,12 +218,12 @@ export default function ContactSection() {
                       <h3 className="text-white text-3xl font-black uppercase tracking-tight mb-2">
                         {t('formTitle')} <span className="text-accent-green">{t('formTitleBold')}</span>
                       </h3>
-                      <p className="text-white/40 text-sm font-medium">{t('formSubtitle')}</p>
+                      <p className="text-white/60 text-sm font-medium">{t('formSubtitle')}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                       <div className="relative space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">{t('fullName')}</label>
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('fullName')}</label>
                         <input 
                           type="text" name="name" required
                           className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-accent-green transition-colors text-lg font-light"
@@ -222,7 +231,7 @@ export default function ContactSection() {
                         />
                       </div>
                       <div className="relative space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">{t('email')}</label>
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('email')}</label>
                         <input 
                           type="email" name="email" required
                           className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-accent-green transition-colors text-lg font-light"
@@ -232,7 +241,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="relative space-y-2">
-                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">{t('phone')}</label>
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('phone')}</label>
                       <input 
                         type="tel" name="phone"
                         className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-accent-green transition-colors text-lg font-light"
@@ -241,7 +250,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="relative space-y-2">
-                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">{t('goal')}</label>
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('goal')}</label>
                       <select 
                         name="goal" required
                         className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-accent-green transition-colors text-lg font-light appearance-none"
@@ -252,7 +261,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="relative space-y-2">
-                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">{t('context')}</label>
+                      <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">{t('context')}</label>
                       <textarea 
                         name="message" rows={3}
                         className="w-full bg-transparent border-b border-white/10 py-3 text-white focus:outline-none focus:border-accent-green transition-colors text-lg font-light resize-none"

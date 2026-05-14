@@ -32,6 +32,7 @@ export default function LocaleSwitcher() {
           onClick={() => handleSwitch(l)}
           disabled={isPending}
           aria-pressed={l === locale}
+          aria-label={`Switch to ${l === 'en' ? 'English' : 'Spanish'}`}
           className="relative px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-widest transition-colors duration-500 outline-none"
         >
           {/* Animated Background Pill */}
@@ -51,7 +52,7 @@ export default function LocaleSwitcher() {
           {/* Text color animation */}
           <motion.span
             animate={{ 
-              color: l === locale ? '#000000' : 'rgba(255, 255, 255, 0.5)',
+              color: l === locale ? '#000000' : 'rgba(255, 255, 255, 0.7)',
               scale: l === locale ? 1.05 : 1
             }}
             transition={{ duration: 0.3 }}

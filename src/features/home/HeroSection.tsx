@@ -86,7 +86,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="max-w-[550px] text-white/40 text-[10px] md:text-[12px] font-bold uppercase tracking-[0.25em] leading-relaxed mx-auto mt-6"
+            className="max-w-[550px] text-white/60 text-[10px] md:text-[12px] font-bold uppercase tracking-[0.25em] leading-relaxed mx-auto mt-6"
           >
             {t('subtitle')}
           </motion.p>
@@ -114,6 +114,7 @@ export default function HeroSection() {
               fill
               className="object-contain object-bottom brightness-[1.1] contrast-[1.1]"
               priority
+              fetchPriority="high"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1400px"
               quality={90}
             />
@@ -146,7 +147,7 @@ export default function HeroSection() {
           <MotionLink
             href="/services"
             whileHover="hover"
-            className="group text-white/50 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-4"
+            className="group text-white/70 text-[11px] font-black uppercase tracking-[0.3em] hover:text-white transition-colors flex items-center gap-4"
           >
             {t('ctaSecondary')}
             <PremiumIcon name="arrow" size={14} />
@@ -204,7 +205,7 @@ export default function HeroSection() {
           ))}
         </div>
         <div className="h-4 w-px bg-white/10" />
-        <p className="text-[10px] font-black uppercase tracking-widest text-white/40">
+        <p className="text-[10px] font-black uppercase tracking-widest text-white/60">
            Trusted by <span className="text-white">500+ Elite</span>
         </p>
       </motion.div>
@@ -234,7 +235,7 @@ function FloatingCard({ icon, title, subtitle, className, delay }: FloatingCardP
       </div>
       <div>
         <p className="text-white font-black text-[11px] md:text-sm uppercase tracking-tight">{title}</p>
-        <p className="text-white/40 text-[8px] md:text-[10px] font-bold uppercase tracking-widest">{subtitle}</p>
+        <p className="text-white/60 text-[8px] md:text-[10px] font-bold uppercase tracking-widest">{subtitle}</p>
       </div>
     </motion.div>
   );

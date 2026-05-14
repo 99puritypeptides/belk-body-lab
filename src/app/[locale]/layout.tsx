@@ -2,6 +2,7 @@ import React from 'react';
 import type { Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
+import localFont from 'next/font/local';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/config';
@@ -16,6 +17,35 @@ import '../../styles/tailwind.css';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
+});
+
+const jumpshot = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/jumpshot/Jumpshot-gw44R.otf',
+      weight: 'normal',
+      style: 'normal',
+    },
+    {
+      path: '../../../public/fonts/jumpshot/Jumpshot-ovYY0.ttf',
+      weight: 'normal',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-jumpshot',
+  display: 'swap',
+});
+
+const clashDisplay = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/clash/ClashDisplay.woff2',
+      weight: '400 700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-clash',
   display: 'swap',
 });
 
@@ -40,6 +70,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | Belk Body Lab`,
     },
     description: t('homeDesc'),
+    keywords: [
+      'personal trainer South Carolina',
+      'personal trainer SC',
+      'fitness coach South Carolina',
+      'personal trainer Charleston SC',
+      'online fitness coach South Carolina',
+      'body transformation South Carolina',
+      'weight loss coach South Carolina',
+      'fat loss coaching SC',
+      'muscle building South Carolina',
+      'personal training Mount Pleasant SC',
+      'personal trainer Summerville SC',
+      'personal trainer West Ashley SC',
+      'personal trainer North Charleston SC',
+      'nutrition coaching South Carolina',
+      'online personal trainer SC',
+      'NASM certified trainer South Carolina',
+      'Kyle Belk',
+      'Belk Body Lab',
+      'best personal trainer South Carolina',
+      'fitness transformation SC',
+    ],
     manifest: '/manifest.json',
     icons: {
       icon: [
@@ -72,7 +124,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
           url: '/og-home.png',
           width: 1200,
           height: 630,
-          alt: 'Belk Body Lab - Elite Fitness Coaching Charleston SC',
+          alt: 'Belk Body Lab - #1 Personal Trainer in South Carolina',
         },
       ],
     },
@@ -99,7 +151,12 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable}`} suppressHydrationWarning>
+    <html lang={locale} className={`${inter.variable} ${jumpshot.variable} ${clashDisplay.variable}`} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://cdn.lordicon.com" />
+        <link rel="preconnect" href="https://static.rocket.new" />
+      </head>
       <body className="font-sans" suppressHydrationWarning>
         <Script
           id="structured-data"
@@ -122,12 +179,12 @@ export default async function LocaleLayout({
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "Belk Body Lab",
-                "description": "Belk Body Lab is the premier personal trainer in Charleston SC, specializing in elite body transformations, online fitness coaching, weight loss, and strength training in Mount Pleasant, West Ashley, and globally.",
+                "description": "Belk Body Lab is the #1 personal trainer in South Carolina, specializing in body transformations, fat loss coaching, muscle building, online fitness coaching, and nutrition planning. Serving Charleston, Mount Pleasant, West Ashley, North Charleston, Summerville, Daniel Island, James Island, Goose Creek, Hanahan, and online clients statewide across SC and nationwide.",
                 "image": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
                 "logo": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
                 "@id": "https://www.belkbodylab.com/#organization",
                 "url": "https://www.belkbodylab.com",
-                "telephone": "+18430000000",
+                "telephone": "+18437439007",
                 "priceRange": "$$$",
                 "foundingDate": "2019-01-01",
                 "contactPoint": {
@@ -135,7 +192,7 @@ export default async function LocaleLayout({
                   "email": "trainwithbelk@gmail.com",
                   "contactType": "customer support"
                 },
-                "areaServed": ["Charleston, SC", "Mount Pleasant, SC", "West Ashley, SC", "Daniel Island, SC", "Summerville, SC", "Global"],
+                "areaServed": ["South Carolina", "Charleston, SC", "Mount Pleasant, SC", "West Ashley, SC", "North Charleston, SC", "Daniel Island, SC", "Summerville, SC", "James Island, SC", "Goose Creek, SC", "Hanahan, SC", "Johns Island, SC", "Isle of Palms, SC", "Columbia, SC", "Greenville, SC", "Myrtle Beach, SC", "Online - US"],
                 "address": {
                   "@type": "PostalAddress",
                   "addressLocality": "Charleston",
@@ -155,7 +212,8 @@ export default async function LocaleLayout({
                 },
                 "sameAs": [
                   "https://www.instagram.com/kylebelk/",
-                  "https://www.tiktok.com/@belkbodylab"
+                  "https://www.tiktok.com/@kyle.belk/",
+                  "https://www.threads.net/@kylebelk"
                 ]
               },
               {
@@ -191,7 +249,7 @@ export default async function LocaleLayout({
             ])
           }}
         />
-        <Script src="https://cdn.lordicon.com/lordicon.js" strategy="afterInteractive" />
+        <Script src="https://cdn.lordicon.com/lordicon.js" strategy="lazyOnload" />
         <NextIntlClientProvider messages={messages}>
           <TransitionWrapper>
             <Header />

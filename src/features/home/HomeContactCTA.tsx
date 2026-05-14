@@ -28,17 +28,17 @@ export default function HomeContactCTA() {
           <div className="flex flex-col items-center gap-6">
             <div className="w-16 h-[1px] bg-accent-green" />
             <span className="text-[11px] font-black uppercase tracking-[0.5em] text-accent-green">
-              Limited Coaching Availability
+              Limited Personal Training Spots in SC
             </span>
           </div>
 
           <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(2rem, 10vw, 9.5rem)' }}>
-            Elevate Your <br />
-            <span className="text-accent-green">Potential.</span>
+            Transform Your <br />
+            <span className="text-accent-green">Body Today.</span>
           </h2>
 
           <p className="text-white/40 text-lg md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
-            Ready to engineer your physique with the elite? Start your consultation and unlock a personalized protocol designed for world-class results.
+            Ready to work with South Carolina's top-rated personal trainer? Start your free consultation and get a custom training and nutrition blueprint designed for world-class body transformation results.
           </p>
 
           <div className="pt-10">

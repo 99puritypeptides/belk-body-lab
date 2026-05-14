@@ -16,8 +16,8 @@
     "language": "Idioma"
   },
   "hero": {
-    "title": "Entrenador Personal Charleston SC para",
-    "titleHighlight": "Transformaciones Corporales",
+    "title": "Entrenador Personal Charleston SC",
+    "titleHighlight": "Transformaciones de Élite",
     "subtitle": "Coaching profesional para resultados reales. Como especialista en transformación corporal en Charleston, ofrecemos coaching de fitness personalizado online y presencial diseñado para ayudarte a perder grasa, construir músculo y mantener la constancia - sin adivinanzas. Sirviendo al área metropolitana de Charleston, incluyendo Mount Pleasant, West Ashley y más allá con planes de alto rendimiento.",
     "ctaPrimary": "Aplica al Coaching",
     "ctaSecondary": "Inicia Tu Transformación",
@@ -143,13 +143,17 @@
     "locLabel": "Ubicación",
     "locValue": "Charleston, SC y Online",
     "igLabel": "Instagram",
-    "igValue": "@belkbodylab",
+    "igValue": "@kylebelk",
+    "thLabel": "Threads",
+    "thValue": "@kylebelk",
     "ttLabel": "TikTok",
-    "ttValue": "@belkbodylab",
+    "ttValue": "@kyle.belk",
     "ytLabel": "YouTube",
     "ytValue": "BelkBodyLab",
     "emailLabel": "Correo Electrónico",
     "emailValue": "trainwithbelk@gmail.com",
+    "phoneLabel": "Teléfono",
+    "phoneValue": "(843) 743-9007",
     "formTitle": "Solicitud",
     "formTitleBold": "de Ingreso",
     "formSubtitle": "Asegura tu lugar para una experiencia de coaching transformadora.",
@@ -297,18 +301,18 @@
     "tagline": "Belk Body Lab - Coaching de fitness personalizado que da resultados. Sirviendo a Charleston SC y más allá."
   },
   "metadata": {
-    "homeTitle": "El Mejor Entrenador Personal Charleston SC | Coach Fitness Online",
-    "homeDesc": "Arquitectura corporal a medida y coaching de rendimiento de élite. Ingeniería de transformaciones radicales para individuos de alto rendimiento en Charleston, SC y en todo el mundo a través de protocolos científicos de pérdida de grasa e hipertrofia muscular.",
-    "packagesTitle": "Protocolos de Transformación de Élite | Belk Body Lab",
-    "packagesDesc": "Protocolos de transformación corporal de élite e ingeniería de rendimiento. Sistemas personalizados de entrenamiento y nutrición diseñados para resultados radicales.",
-    "portfolioTitle": "Resultados de Transformación Corporal Charleston SC | Antes y Después",
-    "portfolioDesc": "Archivo de excelencia física. Documentando transformaciones corporales radicales mediante coaching basado en datos. Explore los resultados de antes y después de nuestros protocolos de élite en Charleston y online.",
-    "aboutTitle": "Sobre Kyle Belk - Coach Fitness de Élite y Arquitecto Corporal",
-    "aboutDesc": "El arquitecto detrás de los resultados. Descubra cómo Kyle Belk cierra la brecha entre la teoría biológica y el rendimiento físico para diseñar transformaciones corporales totales.",
-    "blogTitle": "Guías y Consejos de Fitness | Blog de Belk Body Lab",
-    "blogDesc": "Guías expertas de pérdida de grasa, sistemas de construcción muscular y ciencia de la nutrición por Kyle Belk. Ingeniería de transformaciones con datos.",
-    "contactTitle": "Contacto Kyle Belk | Entrenador Personal Charleston SC",
-    "contactDesc": "Aplica para coaching de fitness personalizado con Kyle Belk. Sirviendo a Charleston SC, Mount Pleasant y clientes online en todo el mundo. Inicia tu transformación corporal hoy."
+    "homeTitle": "Belk Body Lab | #1 Entrenador Personal en South Carolina",
+    "homeDesc": "El entrenador personal mejor calificado de South Carolina para pérdida de grasa, construcción muscular y transformaciones corporales. Sirviendo a Charleston, Mount Pleasant, Summerville, West Ashley y clientes online en todo SC.",
+    "packagesTitle": "Servicios de Entrenamiento Personal South Carolina | Belk Body Lab",
+    "packagesDesc": "Entrenamiento personal personalizado y coaching de fitness online en South Carolina. Programas de pérdida de grasa, construcción muscular, coaching nutricional y transformación corporal.",
+    "portfolioTitle": "Resultados de Transformación Corporal South Carolina | Antes y Después",
+    "portfolioDesc": "Resultados reales de antes y después de clientes de entrenamiento personal en South Carolina. Pérdida de grasa, ganancia muscular y recomposición corporal.",
+    "aboutTitle": "Sobre Kyle Belk | Mejor Entrenador Personal en South Carolina",
+    "aboutDesc": "Conoce a Kyle Belk — entrenador personal certificado NASM y especialista en transformación corporal en Charleston, South Carolina. 7+ años, 500+ transformaciones.",
+    "blogTitle": "Consejos de Fitness y Guías | Blog de Entrenador Personal South Carolina",
+    "blogDesc": "Guías expertas de pérdida de grasa, programas de construcción muscular y ciencia nutricional del entrenador personal de South Carolina Kyle Belk.",
+    "contactTitle": "Contacto Kyle Belk | Entrenador Personal South Carolina",
+    "contactDesc": "Aplica para coaching de fitness personalizado con Kyle Belk, el mejor entrenador personal de South Carolina. Consulta gratuita."
   },
   "servicesPage": {
     "hero": {
@@ -591,8 +595,8 @@
       "titleHighlight": "Aplicación",
       "q1": "¿Cuánto dura el proceso de incorporación?",
       "a1": "Una vez que envías tu solicitud, Kyle la revisa personalmente en 24 horas. Si eres un buen candidato, programaremos una llamada estratégica en 2-3 días hábiles.",
-      "q2": "¿Necesito estar en Atlanta para trabajar con Kyle?",
-      "a2": "No. Aunque Kyle tiene su base en Charleston, más del 80% de nuestros clientes son remotos. Utilizamos herramientas de seguimiento avanzadas y videollamadas para asegurar resultados de élite a nivel global.",
+      "q2": "¿Necesito estar en Charleston para trabajar con Kyle?",
+      "a2": "No. Aunque Kyle tiene su base en Charleston, South Carolina, más del 80% de nuestros clientes entrenan de forma remota a través de nuestro programa de coaching online. Utilizamos herramientas de seguimiento avanzadas y videollamadas para asegurar resultados de élite para clientes en cualquier lugar de South Carolina y en todo EE.UU.",
       "q3": "¿Qué pasa si nunca he entrenado antes?",
       "a3": "El Laboratorio funciona con todos los niveles. Nos especializamos en diseñar sistemas para principiantes absolutos tanto como para atletas de competición. El único requisito es la disciplina."
     }

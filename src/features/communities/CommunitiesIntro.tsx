@@ -28,7 +28,7 @@ export default function CommunitiesIntro() {
                 </p>
                 <div className="h-px w-24 bg-accent-green/50" />
                 <p className="text-white/40 text-sm italic">
-                  Serving the entire Lowcountry with elite-level fitness engineering.
+                  Serving all of South Carolina with elite-level personal training and body transformation coaching.
                 </p>
               </div>
             </motion.div>

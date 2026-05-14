@@ -198,7 +198,7 @@ export default function TestimonialsSection() {
                               exit={{ opacity: 0, x: -10 }}
                               className="hidden lg:block whitespace-nowrap"
                             >
-                              <h4 className="text-white font-black text-xl uppercase leading-none mb-1">{item.name}</h4>
+                              <h3 className="text-white font-black text-xl uppercase leading-none mb-1">{item.name}</h3>
                               <div className="flex items-center gap-2">
                                 <StarIcon className="w-3 h-3 text-accent-green" />
                                 <span className="text-white/40 text-[9px] font-bold uppercase tracking-widest">
@@ -244,7 +244,7 @@ export default function TestimonialsSection() {
                   
                   {/* Name Display for Mobile/Tablet */}
                   <div className="lg:hidden mb-8">
-                    <h4 className="text-white font-black text-xl uppercase tracking-tighter mb-1">{activeTestimonial.name}</h4>
+                    <h3 className="text-white font-black text-xl uppercase tracking-tighter mb-1">{activeTestimonial.name}</h3>
                     <div className="flex items-center justify-center gap-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
@@ -268,7 +268,7 @@ export default function TestimonialsSection() {
                       ))}
                     </div>
                     <div className="h-4 w-px bg-white/10" />
-                    <span className="text-white/30 text-[10px] font-bold uppercase tracking-[0.3em]">
+                    <span className="text-white/60 text-[10px] font-bold uppercase tracking-[0.3em]">
                       Verified Client Result
                     </span>
                   </div>
@@ -284,6 +284,7 @@ export default function TestimonialsSection() {
                       setActiveIndex(index);
                       setIsAutoPlaying(false);
                     }}
+                    aria-label={`Go to testimonial ${index + 1}`}
                     className={`h-1.5 transition-all duration-500 rounded-full ${index === activeIndex ? 'w-10 md:w-16 bg-accent-green' : 'w-4 md:w-6 bg-white/10'}`}
                   />
                 ))}

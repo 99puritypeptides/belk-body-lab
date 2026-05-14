@@ -59,6 +59,7 @@ export default function Header() {
                 height={40}
                 className="h-5 md:h-6 w-auto object-contain brightness-0"
                 priority
+                fetchPriority="high"
               />
             </Link>
 
@@ -194,9 +195,21 @@ export default function Header() {
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-4">{t('followUs') || 'Social Connect'}</p>
               <div className="flex gap-5">
-                {['Instagram', 'TikTok', 'YouTube']?.map((s) => (
-                  <a key={s} href="#" className="text-[11px] font-black uppercase tracking-widest text-white hover:text-white/60 transition-colors">
-                    {s.substring(0, 2)}
+                {[
+                  { label: 'Instagram', href: 'https://www.instagram.com/kylebelk/' },
+                  { label: 'TikTok', href: 'https://www.tiktok.com/@kyle.belk/' },
+                  { label: 'Threads', href: 'https://www.threads.net/@kylebelk' },
+                  { label: 'YouTube', href: '#' }
+                ]?.map((s) => (
+                  <a 
+                    key={s.label} 
+                    href={s.href} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow us on ${s.label}`}
+                    className="text-[11px] font-black uppercase tracking-widest text-white hover:text-white/60 transition-colors"
+                  >
+                    {s.label.substring(0, 2)}
                   </a>
                 ))}
               </div>
@@ -208,7 +221,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
@@ -223,6 +236,17 @@ export default function Header() {
             >
               {t('contact')}
             </Link>
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="https://www.belkdigital.com/en" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/20 hover:text-accent-green transition-colors"
+            >
+              Designed & Developed by Belk Digital
+            </a>
           </div>
         </div>
       </div>

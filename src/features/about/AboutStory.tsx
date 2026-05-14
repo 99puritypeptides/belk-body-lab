@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import PremiumIcon from '@/components/ui/PremiumIcon';
@@ -40,10 +41,12 @@ export default function AboutStory() {
               viewport={{ once: true }}
               className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-white/5"
             >
-              <img 
+              <Image 
                 src="/BBL Media/lifestyle-1.jpg" 
                 alt="Kyle Belk - Founder of Belk Body Lab and Elite Fitness Coach"
-                className="w-full h-full object-cover grayscale brightness-90 transition-transform [transition-duration:] hover:scale-110"
+                fill
+                className="object-cover grayscale brightness-90 transition-transform duration-700 hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-10 left-10">

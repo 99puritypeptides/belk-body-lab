@@ -66,12 +66,11 @@ module.exports = {
             fontFamily: {
                 // Body — Inter loaded via next/font
                 sans:     ['var(--font-inter)', 'system-ui', 'sans-serif'],
-                // Heading — Clash Display (self-hosted).  ALL aliases point here
-                // so font-display, font-heading and font-jumpshot all resolve to
-                // the same font with zero component changes.
-                display:  ['ClashDisplay', 'Impact', 'sans-serif'],
-                heading:  ['ClashDisplay', 'Impact', 'sans-serif'],
-                jumpshot: ['ClashDisplay', 'Impact', 'sans-serif'],
+                // Heading — Clash Display (self-hosted).
+                display:  ['var(--font-clash)', 'Impact', 'sans-serif'],
+                heading:  ['var(--font-clash)', 'Impact', 'sans-serif'],
+                // Jumpshot (self-hosted)
+                jumpshot: ['var(--font-clash)', 'Impact', 'sans-serif'],
             },
 
             // ─── Type Scale ───────────────────────────────────────────────

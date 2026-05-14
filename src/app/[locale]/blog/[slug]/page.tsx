@@ -30,6 +30,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: content.metaTitle,
     description: content.metaDescription,
+    keywords: [
+      `${post.category.toLowerCase()} South Carolina`,
+      `${post.category.toLowerCase()} tips personal trainer SC`,
+      'personal trainer South Carolina blog',
+      'fitness advice South Carolina',
+      'Kyle Belk fitness tips',
+      'Belk Body Lab blog',
+      `${post.category.toLowerCase()} guide SC`,
+      'South Carolina fitness coaching',
+    ],
     alternates: {
       canonical: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
       languages: {

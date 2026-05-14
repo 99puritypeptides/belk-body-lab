@@ -40,7 +40,7 @@ export default function Footer() {
         {/* TECHNICAL RULER */}
         <div className="mb-12">
           <div className="footer-ruler mb-4" />
-          <div className="flex justify-between px-1 text-[9px] font-black tracking-widest text-white/20 uppercase">
+          <div className="flex justify-between px-1 text-[9px] font-black tracking-widest text-white/50 uppercase">
             <span>240LBS</span>
             <span>220LBS</span>
             <span>200LBS</span>
@@ -71,14 +71,11 @@ export default function Footer() {
         {/* BOTTOM BAR */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pt-10 border-t border-white/5 relative z-10">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-[11px] font-bold uppercase tracking-widest text-text-muted">
-            <span className="text-white/40">{t('copyright') || '© 2026 Belk Digital. All rights reserved.'}</span>
+            <span className="text-white/60">{t('copyright') || '© 2026 Belk Body Lab. All rights reserved.'}</span>
             <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-accent-green" />
-            <a href="mailto:trainwithbelk@gmail.com" className="text-white hover:text-accent-green transition-colors flex items-center gap-3">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              trainwithbelk@gmail.com
+            <a href="https://www.belkdigital.com/en" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-accent-green transition-colors flex items-center gap-2 group">
+              Designed & Developed by 
+              <span className="text-white group-hover:text-accent-green underline decoration-white/10 underline-offset-4 transition-colors">Belk Digital</span>
             </a>
           </div>
 
@@ -89,8 +86,10 @@ export default function Footer() {
               <div className="flex items-center gap-6">
                 {[
                   {
-                    label: 'X', href: '#', icon: (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                    label: 'TH', href: 'https://www.threads.net/@kylebelk', icon: (
+                      <svg width="14" height="14" viewBox="0 0 976.98 1082" fill="currentColor">
+                        <path d="M770.35,500.35c-1.35-156.85-86.39-251.37-230.02-251.37-95.87,0-176.5,43.36-218.85,112.47l92.82,64.71c24.05-37.94,57.25-69.45,118.23-69.45,68.77,0,104.34,38.28,114.5,109.42-33.2-5.08-66.4-7.79-100.61-7.79-185.65,0-273.05,84.02-273.05,195.13s87.4,179.55,216.14,179.55c141.27,0,225.62-95.19,260.18-213.09,35.91,16.26,60.64,54.2,60.64,111.12,0,152.45-175.82,235.45-324.88,235.45-219.86,0-363.5-144.32-363.5-379.08,0-287.62,190.05-471.91,445.48-471.91,171.42,0,256.11,75.21,313.7,176.16l94.86-66.4C913.31,94.5,773.4,1,563.36,1,228.65,1,1,238.48,1,583.01c0,315.06,222.91,497.99,488.51,497.99,219.52,0,441.42-128.05,441.42-347.24,0-114.5-65.72-190.39-160.58-233.41h0ZM485.44,718.85c-48.44,0-91.13-23.04-91.13-65.38,0-66.74,81.98-87.06,162.27-87.06,30.49,0,60.3,2.03,86.72,7.79-18.97,86.72-75.21,144.66-157.87,144.66h0Z" />
+                      </svg>
                     )
                   },
                   {
@@ -99,8 +98,8 @@ export default function Footer() {
                     )
                   },
                   {
-                    label: 'LI', href: '#', icon: (
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+                    label: 'TT', href: 'https://www.tiktok.com/@kyle.belk/', icon: (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" /></svg>
                     )
                   },
                   {
@@ -116,8 +115,9 @@ export default function Footer() {
                     key={s.label} 
                     href={s.href} 
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/40 hover:text-white transition-colors"
+                    rel="noopener noreferrer me"
+                    aria-label={`Follow Kyle Belk on ${s.label}`}
+                    className="text-white/60 hover:text-white transition-colors"
                   >
                     {s.icon}
                   </a>

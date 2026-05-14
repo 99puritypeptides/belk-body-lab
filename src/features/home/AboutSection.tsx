@@ -5,10 +5,12 @@ import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ShieldCheckIcon, FireIcon, DevicePhoneMobileIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 import CTAButton from '@/components/ui/CTAButton';
 import PremiumIcon from '@/components/ui/PremiumIcon';
 
 const MotionLink = motion(Link);
+const MotionImage = motion(Image);
 
 export default function AboutSection() {
   const t = useTranslations('about');
@@ -53,12 +55,18 @@ export default function AboutSection() {
       <div className="relative w-full z-10">
         {/* Pinned Background with parallax */}
         <div className="sticky top-0 w-full h-screen overflow-hidden z-0 bg-[#000]">
-          <motion.img
-            style={{ y: yParallax }}
-            src="/images/about/kyle-ocean-rock.png"
-            alt="Coach Kyle Belk - Standing on Rocks near Ocean - Elite Fitness Authority"
-            className="w-full h-[120vh] object-cover object-center opacity-70"
-          />
+          <div className="relative w-full h-[120vh]">
+            <MotionImage
+              style={{ y: yParallax }}
+              src="/images/about/kyle-ocean-rock.png"
+              alt="Coach Kyle Belk - Standing on Rocks near Ocean - Elite Fitness Authority"
+              fill
+              className="object-cover object-center opacity-70"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              priority
+              fetchPriority="high"
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/40" />
 
           {/* Scroll Indicator */}
@@ -121,20 +129,30 @@ export default function AboutSection() {
                 <video
                   ref={videoRef}
                   src="/images/videos/kyle-intro.webm"
-                  poster="/images/brand/thumbnail.jpg"
+                  preload="none"
                   title="Kyle Belk - Personal Training Philosophy and Introduction Video"
                   className="absolute inset-0 w-full h-[100%] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-premium"
                   playsInline
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                 {!isPlaying && (
-                  <div className="absolute inset-0 flex items-center justify-center p-6 z-20 transition-opacity duration-500 bg-black/5 group-hover:bg-black/10">
+                  <Image
+                    src="/images/brand/thumbnail.jpg"
+                    alt="Kyle Belk Video Poster"
+                    fill
+                    className="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500"
+                    sizes="(max-width: 1024px) 100vw, 500px"
+                    priority
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500 z-20" />
+                {!isPlaying && (
+                  <div className="absolute inset-0 flex items-center justify-center p-6 z-30 transition-opacity duration-500 bg-black/5 group-hover:bg-black/10">
                     <div className="w-24 h-24 rounded-full bg-accent-green flex items-center justify-center text-black shadow-[0_0_60px_rgba(170,255,0,0.3)] transition-all duration-700 ease-out group-hover:scale-110 group-hover:shadow-[0_0_80px_rgba(170,255,0,0.5)]">
                       <svg className="w-10 h-10 ml-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                     </div>
                   </div>
                 )}
-                <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl z-30 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl z-40 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-white text-xs sm:text-sm font-medium leading-relaxed tracking-wide">
                     &ldquo;{t('quote')}&rdquo;
                   </p>
@@ -147,17 +165,17 @@ export default function AboutSection() {
               {/* Right: Content */}
               <div className="lg:col-span-7 flex flex-col justify-center lg:py-10">
                 <div className="mb-14">
-                  <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#111] opacity-50 mb-6">
+                  <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#111] opacity-70 mb-6">
                     {t('location')}
                   </div>
                   <h3 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#111] leading-[1.1] mb-8 tracking-tight">
                     {t('heading')} <br />
-                    <span className="text-gray-400">{t('headingItalic')}</span>
+                    <span className="text-gray-500">{t('headingItalic')}</span>
                   </h3>
                   <p className="text-gray-600 text-lg sm:text-xl leading-relaxed font-light mb-6">
                     {t('bio1')}
                   </p>
-                  <p className="text-gray-400 text-base sm:text-lg leading-relaxed font-light">
+                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-light">
                     {t('bio2')}
                   </p>
                 </div>
@@ -169,7 +187,7 @@ export default function AboutSection() {
                       <div className="w-12 h-12 rounded-full bg-gray-100 text-[#111] flex items-center justify-center group-hover:bg-[#111] group-hover:text-white transition-colors duration-500 shadow-sm">
                         <span className="group-hover:scale-110 transition-transform duration-500">{point.icon}</span>
                       </div>
-                      <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.15em] text-gray-600 group-hover:text-[#111] uppercase transition-colors duration-500 leading-snug">
+                      <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.15em] text-gray-700 group-hover:text-[#111] uppercase transition-colors duration-500 leading-snug">
                         {point.label}
                       </span>
                     </div>
@@ -181,7 +199,7 @@ export default function AboutSection() {
                   {skills?.map((skill) => (
                     <div key={skill?.label} className="group cursor-default">
                       <div className="flex justify-between mb-3">
-                        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400 group-hover:text-gray-900 transition-colors duration-300">{skill?.label}</span>
+                        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-gray-600 group-hover:text-gray-900 transition-colors duration-300">{skill?.label}</span>
                         <span className="text-[11px] font-bold text-gray-900">{skill?.value}%</span>
                       </div>
                       <div className="h-[2px] w-full bg-gray-200 overflow-hidden rounded-full">
@@ -205,7 +223,7 @@ export default function AboutSection() {
                   <MotionLink
                     href="/about"
                     whileHover="hover"
-                    className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-accent-green transition-colors flex items-center gap-3 group"
+                    className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 hover:text-accent-green transition-colors flex items-center gap-3 group"
                   >
                     Read Full Bio
                     <PremiumIcon name="arrow" size={10} />

@@ -75,7 +75,7 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
                 {t('title') || 'Questions &'} <br />
                 <span className="text-accent-green">{t('titleHighlight') || 'Answers'}</span>
               </h2>
-              <p className="text-white/40 text-base sm:text-lg font-medium leading-relaxed mb-10 max-w-sm">
+              <p className="text-white/60 text-base sm:text-lg font-medium leading-relaxed mb-10 max-w-sm">
                 If your question isn&apos;t answered here, reach out directly — Kyle responds personally.
               </p>
 
@@ -111,7 +111,7 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
                   className="w-full flex items-start justify-between px-6 py-6 text-left gap-4 cursor-pointer focus:outline-none group"
                 >
                   <div className="flex items-start gap-4">
-                    <span className="text-accent-green font-black text-xs pt-1 shrink-0 opacity-40 group-hover:opacity-100 transition-opacity">
+                    <span className="text-accent-green font-black text-xs pt-1 shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <span className={`text-white font-bold text-base lg:text-lg uppercase tracking-wide leading-tight transition-colors duration-300 ${openIndex === i ? 'text-white' : 'text-white/60 group-hover:text-white/80'}`}>
@@ -128,7 +128,7 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
                     <span className="text-transparent text-xs select-none shrink-0" aria-hidden="true">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <p className="text-white/40 text-sm md:text-base leading-relaxed font-medium">
+                    <p className="text-white/60 text-sm md:text-base leading-relaxed font-medium">
                       {faq.a}
                     </p>
                   </div>

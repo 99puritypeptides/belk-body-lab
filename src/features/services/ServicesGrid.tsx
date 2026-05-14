@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -180,10 +181,12 @@ export default function ServicesGrid() {
               <div className={`lg:col-span-5 ${i % 2 !== 0 ? 'lg:col-start-1 lg:row-start-1' : 'lg:col-start-8'} relative`}>
                  <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl group">
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
-                    <img 
+                    <Image 
                       src={svc.image} 
                       alt={`${svc.title} - Belk Body Lab Fitness Coaching`}
-                      className="w-full h-full object-cover grayscale brightness-75 transition-transform [transition-duration:] group-hover:scale-110"
+                      fill
+                      className="object-cover grayscale brightness-75 transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 40vw"
                     />
                     {/* Technical Overlay */}
                     <div className="absolute bottom-10 left-10 z-20">
