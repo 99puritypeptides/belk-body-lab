@@ -11,7 +11,7 @@ interface BlogFeaturedProps {
 
 export default function BlogFeatured({ posts }: BlogFeaturedProps) {
   const t = useTranslations('blog');
-  const featuredPosts = posts.filter(p => p.featured).slice(0, 1);
+  const featuredPosts = posts.slice(0, 1);
 
   if (featuredPosts.length === 0) return null;
 

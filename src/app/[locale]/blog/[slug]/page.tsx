@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { blogPosts } from '@/data/blog/posts';
 import BlogPostContent from '@/features/blog/BlogPostContent';
 import BlogCTA from '@/features/blog/BlogCTA';
+import BlogFAQ from '@/features/blog/BlogFAQ';
 import { Link } from '@/i18n/navigation';
 import Script from 'next/script';
 import FAQSchema from '@/components/seo/FAQSchema';
@@ -102,58 +103,72 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       {content.faqs && <FAQSchema id={`blog-faq-${slug}`} items={content.faqs} />}
-      <main className="min-h-screen bg-[#050505] pt-32">
+      {content.customSchemas && content.customSchemas.map((schemaStr, idx) => (
+        <Script
+          key={`custom-schema-${slug}-${idx}`}
+          id={`custom-schema-${slug}-${idx}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schemaStr }}
+        />
+      ))}
+      <main className="min-h-screen bg-[#050505]">
       <article>
         {/* Post Header */}
-        <header className="container-custom px-6 lg:px-10 mb-16 lg:mb-24">
-          <Link 
-            href="/blog"
-            className="inline-flex items-center gap-2 text-accent-green text-xs font-black uppercase tracking-[0.2em] mb-12 hover:gap-4 transition-all"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Back to Articles
-          </Link>
-
-          {/* Breadcrumb UI */}
-          <nav className="flex items-center gap-2 mb-12 text-[10px] font-bold uppercase tracking-widest text-white/20" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-accent-green transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/blog" className="hover:text-accent-green transition-colors">Blog</Link>
-            <span>/</span>
-            <span className="text-white/40 truncate max-w-[200px]">{content.title}</span>
-          </nav>
-
-          <div className="max-w-[1000px]">
-            <div className="flex items-center gap-4 text-text-muted text-xs font-bold uppercase tracking-widest mb-6">
-              <span className="text-accent-green">{post.category}</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
-              <span>{post.date}</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
-              <span>{post.readTime}</span>
-            </div>
-
-            <h1 className="font-heading font-black text-white text-5xl md:text-7xl lg:text-8xl xl:text-9xl uppercase leading-[0.85] mb-12 tracking-tighter">
-              {content.title}
-            </h1>
-          </div>
-
-          <div className="relative w-full h-[300px] md:h-[500px] lg:h-[700px] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden border border-white/5 shadow-2xl">
+        <header className="relative w-full min-h-[65vh] lg:min-h-[80vh] mb-16 lg:mb-24 flex flex-col justify-end pb-12 lg:pb-24 pt-40 border-b border-white/5">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0 overflow-hidden bg-[#050505]">
             <Image
               src={post.image}
               alt={content.title}
               fill
-              className="object-cover"
+              className="object-cover opacity-90"
               priority
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050505] to-transparent opacity-60" />
+            {/* Bottom gradient strictly for text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-transparent" />
+          </div>
+
+          {/* Content Overlay */}
+          <div className="container-custom px-6 lg:px-10 relative z-10 w-full">
+            <Link 
+              href="/blog"
+              className="inline-flex items-center gap-2 text-accent-green text-xs font-black uppercase tracking-[0.2em] mb-8 lg:mb-10 hover:gap-4 transition-all opacity-90 hover:opacity-100"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Back to Articles
+            </Link>
+
+            {/* Breadcrumb UI */}
+            <nav className="flex flex-wrap items-center gap-2 mb-8 text-[10px] font-bold uppercase tracking-widest text-white/40" aria-label="Breadcrumb">
+              <Link href="/" className="hover:text-accent-green transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/blog" className="hover:text-accent-green transition-colors">Blog</Link>
+              <span>/</span>
+              <span className="text-white/70 truncate max-w-[200px] lg:max-w-none">{content.title}</span>
+            </nav>
+
+            <div className="flex flex-wrap items-center gap-4 text-white/80 text-xs font-bold uppercase tracking-widest mb-6 lg:mb-8">
+              <span className="text-accent-green px-4 py-1.5 bg-accent-green/10 rounded-full border border-accent-green/20 backdrop-blur-md">
+                {post.category}
+              </span>
+              <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
+              <span>{post.date}</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
+              <span>{post.readTime}</span>
+            </div>
+
+            <h1 className="font-heading font-black text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize leading-[1.1] tracking-tight lg:tracking-normal max-w-[1200px] text-balance drop-shadow-2xl">
+              {content.title.toLowerCase()}
+            </h1>
           </div>
         </header>
 
         {/* Post Content */}
-        <section className="container-custom px-6 lg:px-10 pb-20 lg:pb-32">
+        <section className="container-custom px-6 lg:px-10 pb-12">
           <BlogPostContent content={content} />
+          {content.faqs && <BlogFAQ faqs={content.faqs} />}
         </section>
       </article>
 

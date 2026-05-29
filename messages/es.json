@@ -605,7 +605,21 @@
     "hero": {
       "title": "Inteligencia",
       "titleHighlight": "De Élite",
-      "subtitle": "Deja de adivinar. Empieza a entender la ciencia detrás de tu físico. Guías expertas sobre hipertrofia, pérdida de grasa y salud metabólica."
+      "subtitle": "Deja de adivinar. Empieza a entender la ciencia detrás de tu físico. Guías expertas sobre hipertrofia, pérdida de grasa y salud metabólica.",
+      "label": "Consejos de Fitness y Guías de Entrenamiento",
+      "cta": "Explorar Artículos"
+    },
+    "cta": {
+      "label": "Entrena Con El Mejor de South Carolina",
+      "title": "Deja de Adivinar.",
+      "titleHighlight": "Obtén Coaching Experto.",
+      "description": "Leer sobre fitness es genial, pero nada reemplaza un plan personalizado de un entrenador personal certificado. Ya sea que estés en Charleston, Summerville o en cualquier lugar de South Carolina, Kyle diseñará un plan de entrenamiento y nutrición a medida para ofrecer resultados reales y medibles.",
+      "ctaPrimary": "Aplica al Coaching",
+      "ctaSecondary": "Ver Casos de Éxito en SC"
+    },
+    "grid": {
+      "readMore": "Leer Protocolo",
+      "featured": "Análisis Destacado"
     }
   },
   "faq": {

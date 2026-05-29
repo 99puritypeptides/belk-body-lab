@@ -57,6 +57,10 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
+  const sortedPosts = [...blogPosts].reverse();
+  const featuredPosts = sortedPosts.slice(0, 1);
+  const gridPosts = sortedPosts.slice(1);
+
   return (
     <main className="min-h-screen bg-[#050505]">
       {/* Breadcrumb Schema */}
@@ -108,8 +112,8 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
         }}
       />
       <BlogHero />
-      <BlogFeatured posts={blogPosts} />
-      <BlogGrid posts={blogPosts} />
+      <BlogFeatured posts={featuredPosts} />
+      <BlogGrid posts={gridPosts} />
 
       {/* SEO Content Section */}
       <section className="py-20 md:py-32 bg-[#050505]">

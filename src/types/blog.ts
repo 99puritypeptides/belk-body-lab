@@ -7,6 +7,7 @@ export interface BlogPostContent {
   metaTitle: string;
   metaDescription: string;
   faqs?: { q: string; a: string }[];
+  customSchemas?: string[];
 }
 
 export interface BlogPost {

@@ -16,6 +16,9 @@ const TestimonialsSection = dynamic(() => import('@/features/home/TestimonialsSe
 const FAQSection = dynamic(() => import('@/features/home/FAQSection'), {
   loading: () => <div className="min-h-[400px] bg-[#080808]" />,
 });
+const BlogLatest = dynamic(() => import('@/features/home/BlogLatest'), {
+  loading: () => <div className="min-h-[400px] bg-[#080808]" />,
+});
 const HomeContactCTA = dynamic(() => import('@/features/home/HomeContactCTA'), {
   loading: () => <div className="min-h-[300px] bg-[#080808]" />,
 });
@@ -66,6 +69,7 @@ export default function HomePage() {
       <BMICalculator />
       <TransformationsSection />
       <TestimonialsSection />
+      <BlogLatest />
       <FAQSection />
       <HomeContactCTA />
     </main>
