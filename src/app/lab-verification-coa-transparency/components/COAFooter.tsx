@@ -26,9 +26,8 @@ export default function COAFooter() {
 
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em]">
-            <a href="/privacy-policy" className="text-white/50 hover:text-accent-green transition-colors">Privacy Policy</a>
-            <a href="/terms-and-conditions" className="text-white/50 hover:text-accent-green transition-colors">Terms & Conditions</a>
-            <a href="/disclaimer" className="text-white/50 hover:text-accent-green transition-colors">Disclaimer</a>
+            <a href="https://99puritypeptides.com/privacy-policy" target="_blank" rel="noopener noreferrer nofollow" className="text-white/50 hover:text-accent-green transition-colors">Privacy Policy</a>
+            <a href="https://99puritypeptides.com/terms-and-conditions" target="_blank" rel="noopener noreferrer nofollow" className="text-white/50 hover:text-accent-green transition-colors">Terms & Conditions</a>
           </div>
 
           {/* Footer CTA */}
@@ -48,13 +47,7 @@ export default function COAFooter() {
           </div>
         </div>
 
-        {/* Disclaimer section */}
-        <div className="max-w-5xl mx-auto text-center mb-12 border border-white/5 bg-white/[0.02] p-8">
-          <p className="text-xs sm:text-sm leading-relaxed text-white/40 text-left sm:text-center font-sans">
-            <strong className="text-white/60 font-bold uppercase tracking-widest text-[10px] block mb-3">Disclaimer</strong> 
-            The analytical data, chromatograms, and Certificates of Analysis discussed on this page are provided for informational and transparency purposes only. This page relies strictly on documented analytical methods to demonstrate batch characteristics and makes no performance or outcome claims. Analytical results, including purity and identity confirmations, may vary by material and by lot; all Certificates of Analysis are strictly batch-specific. Always review the documentation applicable to the specific batch you are evaluating.
-          </p>
-        </div>
+
 
         {/* Copyright */}
         <div className="text-center text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">
