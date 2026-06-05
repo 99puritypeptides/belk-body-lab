@@ -18,11 +18,11 @@ export default function NotFound() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4 pt-32 pb-12">
       <div className="text-center max-w-md">
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <h1 className="text-9xl font-bold text-primary opacity-20">404</h1>
+            <h1 className="text-7xl md:text-9xl font-bold text-primary opacity-20">404</h1>
           </div>
         </div>
 

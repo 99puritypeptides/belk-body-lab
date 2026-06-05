@@ -7,14 +7,14 @@ export default async function NotFound() {
   const t = await getTranslations('metadata');
 
   return (
-    <main className="relative min-h-[90vh] bg-[#050505] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+    <main className="relative min-h-screen bg-[#050505] flex flex-col items-center justify-center text-center px-6 pt-32 pb-12 overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-green/10 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="relative z-10 space-y-12 max-w-2xl">
         <div className="space-y-4">
           <span className="text-accent-green font-mono text-sm tracking-[0.5em] uppercase">Status: 404 — Path Not Found</span>
-          <h1 className="text-white font-display font-black text-6xl md:text-8xl lg:text-9xl uppercase tracking-tighter leading-none">
+          <h1 className="text-white font-display font-black text-5xl md:text-8xl lg:text-9xl uppercase tracking-tighter leading-none">
             Lost in the <br />
             <span className="text-white/20">Void</span>
           </h1>

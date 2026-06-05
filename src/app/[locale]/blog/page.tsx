@@ -57,9 +57,9 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
-  const sortedPosts = [...blogPosts].reverse();
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const featuredPosts = sortedPosts.slice(0, 1);
-  const gridPosts = sortedPosts.slice(1);
+  const gridPosts = sortedPosts;
 
   return (
     <main className="min-h-screen bg-[#050505]">

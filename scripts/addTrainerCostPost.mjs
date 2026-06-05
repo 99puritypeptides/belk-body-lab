@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const postsFilePath = path.join(process.cwd(), 'src', 'data', 'blog', 'posts.ts');
-const mdFilePath = path.join(process.cwd(), 'how-to-lose-belly-fat-south-carolina.md');
+const mdFilePath = path.join(process.cwd(), 'how-much-does-a-personal-trainer-cost-south-carolina.md');
 
 const mdContent = fs.readFileSync(mdFilePath, 'utf8');
 
@@ -94,12 +94,12 @@ if (schemas.length > 1) {
 
 // 5. Construct the post object
 const postObj = {
-  id: "12",
+  id: "14",
   slug: fm.slug,
   category: fm.category,
   date: "June 06, 2026",
   readTime: "12 min read",
-  image: "/images/blog/belly-fat/belly-fat-guide-hero.webp",
+  image: "/images/blog/trainer-cost/personal-trainer-cost-charleston-hero.webp",
   en: {
     title: fm.title,
     excerpt: fm.description,
@@ -131,31 +131,20 @@ keysToUnquote.forEach(key => {
 
 let postsContent = fs.readFileSync(postsFilePath, 'utf8');
 
-// Find the start of id: "12"
-const id12Start = postsContent.indexOf('  id: "12",');
-if (id12Start !== -1) {
-  // Find the { before id12Start
-  const braceStart = postsContent.lastIndexOf('{', id12Start);
-  // Find the start of id: "13"
-  const id13Start = postsContent.indexOf('id: "13",');
-  let braceEnd;
-  
-  if (id13Start !== -1) {
-      // Find the } before id: "13"
-      braceEnd = postsContent.lastIndexOf('}', id13Start);
-      // Actually we need the } that closes post 12, which is before the , before { id: "13"
-      const commaBefore13 = postsContent.lastIndexOf(',', postsContent.lastIndexOf('{', id13Start));
-      braceEnd = postsContent.lastIndexOf('}', commaBefore13) + 1;
+// Find the end of the array
+const arrayEndIndex = postsContent.lastIndexOf(']');
+if (arrayEndIndex !== -1) {
+  let before = postsContent.substring(0, arrayEndIndex).trimEnd();
+  // Ensure we append with a comma
+  if (!before.endsWith(',')) {
+      before += '\n  ,';
   } else {
-      braceEnd = postsContent.lastIndexOf(']');
+      before += '\n';
   }
-
-  const before = postsContent.substring(0, braceStart);
-  let after = postsContent.substring(braceEnd);
   
-  const newPostsContent = before + postStr + after;
+  const newPostsContent = before + '\n' + postStr + '\n]\n';
   fs.writeFileSync(postsFilePath, newPostsContent);
-  console.log("Successfully replaced blog post ID 12 in posts.ts");
+  console.log("Successfully appended blog post ID 14 to posts.ts");
 } else {
-  console.log("Could not find blog post ID 12.");
+  console.log("Could not find the end of the blogPosts array.");
 }

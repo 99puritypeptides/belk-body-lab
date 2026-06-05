@@ -1,4 +1,4 @@
-export type BlogCategory = 'Fat Loss' | 'Muscle Gain' | 'Nutrition' | 'Mindset' | 'Lifestyle' | 'Training' | 'Recovery';
+export type BlogCategory = 'Fat Loss' | 'Muscle Gain' | 'Nutrition' | 'Mindset' | 'Lifestyle' | 'Training' | 'Recovery' | 'Coaching';
 
 export interface BlogPostContent {
   title: string;
