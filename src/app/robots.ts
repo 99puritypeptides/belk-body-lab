@@ -12,7 +12,8 @@ export default function robots(): MetadataRoute.Robots {
           '/api/', 
           '/_next/', 
           '/admin/',
-          '/*.mp4'
+          '/*.mp4',
+          '/lab-verification-coa-transparency/'
         ],
       },
     ],
