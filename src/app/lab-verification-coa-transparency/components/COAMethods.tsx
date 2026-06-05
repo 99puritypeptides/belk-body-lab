@@ -66,6 +66,35 @@ export default function COAMethods() {
                   How pure is this batch?
                 </p>
               </div>
+
+              {/* Brutalist Data Visual: HPLC Chromatogram */}
+              <div className="w-full h-24 mb-8 border-b border-white/10 relative flex items-end">
+                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-10 mix-blend-overlay"></div>
+                <svg viewBox="0 0 400 100" className="w-full h-full text-accent-green drop-shadow-[0_0_8px_rgba(170,255,0,0.5)]" preserveAspectRatio="none">
+                  {/* Grid lines */}
+                  <path d="M 0 25 L 400 25 M 0 50 L 400 50 M 0 75 L 400 75" stroke="rgba(255,255,255,0.05)" strokeWidth="1" fill="none" />
+                  {/* Chromatogram trace */}
+                  <motion.path 
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    d="M 0 95 L 40 95 L 50 85 L 60 95 L 120 95 L 160 20 L 190 95 L 250 95 L 260 80 L 270 95 L 400 95" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinejoin="round" 
+                  />
+                  {/* Main peak highlight line */}
+                  <motion.line 
+                    initial={{ opacity: 0, y1: 95 }}
+                    whileInView={{ opacity: 1, y1: 20 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 1.5 }}
+                    x1="160" y1="20" x2="160" y2="95" stroke="rgba(170,255,0,0.3)" strokeWidth="1" strokeDasharray="4 2" 
+                  />
+                </svg>
+              </div>
               
               <p className="text-white/60 text-base leading-relaxed font-sans">
                 Reversed-phase high-performance liquid chromatography (RP-HPLC) separates the components of a sample as they pass through a column at different rates. The result is a chromatogram — a trace in which each peak represents a component. The relative size of the main peak against the total profile yields the purity percentage. A clean chromatogram with a dominant primary peak and minimal secondary peaks indicates high purity.
@@ -95,6 +124,42 @@ export default function COAMethods() {
                 <p className="text-sm font-bold text-white uppercase tracking-widest">
                   Is this the correct molecule?
                 </p>
+              </div>
+
+              {/* Brutalist Data Visual: LC-MS Mass Spectrum */}
+              <div className="w-full h-24 mb-8 border-b border-white/10 relative flex items-end">
+                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-10 mix-blend-overlay"></div>
+                <svg viewBox="0 0 400 100" className="w-full h-full text-accent-green" preserveAspectRatio="none">
+                  {/* Grid lines */}
+                  <path d="M 0 25 L 400 25 M 0 50 L 400 50 M 0 75 L 400 75" stroke="rgba(255,255,255,0.05)" strokeWidth="1" fill="none" />
+                  
+                  {/* Mass Spectrum Bars */}
+                  <motion.line initial={{ y1: 95 }} whileInView={{ y1: 80 }} viewport={{ once: true }} transition={{ duration: 0.3 }} x1="80" y1="95" x2="80" y2="80" stroke="currentColor" strokeWidth="2" />
+                  <motion.line initial={{ y1: 95 }} whileInView={{ y1: 50 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: 0.1 }} x1="130" y1="95" x2="130" y2="50" stroke="currentColor" strokeWidth="2" />
+                  <motion.line initial={{ y1: 95 }} whileInView={{ y1: 70 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: 0.2 }} x1="150" y1="95" x2="150" y2="70" stroke="currentColor" strokeWidth="2" />
+                  
+                  {/* Main mass peak */}
+                  <motion.line 
+                    initial={{ y1: 95 }}
+                    whileInView={{ y1: 15 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.5, type: "spring", bounce: 0.4 }}
+                    x1="220" y1="95" x2="220" y2="15" stroke="currentColor" strokeWidth="4" 
+                    className="drop-shadow-[0_0_8px_rgba(170,255,0,0.8)]"
+                  />
+                  <motion.text 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    x="220" y="10" fill="currentColor" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle" className="uppercase tracking-widest"
+                  >
+                    Target M/Z
+                  </motion.text>
+                  
+                  <motion.line initial={{ y1: 95 }} whileInView={{ y1: 60 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: 0.3 }} x1="280" y1="95" x2="280" y2="60" stroke="currentColor" strokeWidth="2" />
+                  <motion.line initial={{ y1: 95 }} whileInView={{ y1: 85 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: 0.4 }} x1="330" y1="95" x2="330" y2="85" stroke="currentColor" strokeWidth="2" />
+                </svg>
               </div>
               
               <p className="text-white/60 text-base leading-relaxed font-sans">

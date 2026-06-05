@@ -54,22 +54,45 @@ export default function COAWhatIs() {
     <section className="w-full bg-[#050505] py-20 lg:py-32 relative border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mb-16 lg:mb-24"
-        >
-          <span className="block text-accent-green text-[11px] font-black uppercase tracking-[0.3em] mb-4">/ 01. Documentation</span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight uppercase leading-[1.05]">
-            What a Certificate of Analysis Actually Documents
-          </h2>
-          
-          <p className="text-lg md:text-xl text-white/60 leading-relaxed font-sans max-w-3xl">
-            A Certificate of Analysis (COA) is a formal analytical record. It documents the testing performed on a specific batch of material and reports the results against defined specifications. Rather than a marketing statement, a COA is a traceable document: it states which analytical methods were used, what those methods measured, and the values recorded for that lot.
-          </p>
-        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 lg:mb-24">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl"
+          >
+            <span className="block text-accent-green text-[11px] font-black uppercase tracking-[0.3em] mb-4">/ 01. Documentation</span>
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight uppercase leading-[1.05]">
+              What a Certificate of Analysis Actually Documents
+            </h2>
+            
+            <p className="text-lg md:text-xl text-white/60 leading-relaxed font-sans">
+              A Certificate of Analysis (COA) is a formal analytical record. It documents the testing performed on a specific batch of material and reports the results against defined specifications. Rather than a marketing statement, a COA is a traceable document: it states which analytical methods were used, what those methods measured, and the values recorded for that lot.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative w-full aspect-[4/3] lg:aspect-square bg-black border border-white/10 overflow-hidden group"
+          >
+            <div className="absolute inset-0 bg-accent-green/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700 z-10"></div>
+            <img 
+              src="/images/coa/lab-vials.png" 
+              alt="Analytical verification testing equipment" 
+              className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700 opacity-80"
+              loading="lazy"
+            />
+            <div className="absolute bottom-4 left-4 z-20">
+              <span className="bg-black/80 backdrop-blur border border-white/10 text-[8px] font-bold uppercase tracking-widest text-white/50 px-2 py-1">
+                Analytical Standards Lab
+              </span>
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div 
           variants={containerVariants}

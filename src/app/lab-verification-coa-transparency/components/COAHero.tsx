@@ -32,6 +32,26 @@ export default function COAHero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-accent-green rounded-full blur-[150px] opacity-[0.03]"></div>
       </div>
 
+      {/* Rotating Brutalist Compliance Badge */}
+      <motion.div 
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute right-[-40px] top-[15%] md:right-[5%] md:top-[20%] w-32 h-32 md:w-48 md:h-48 z-20 pointer-events-none opacity-40 md:opacity-60 mix-blend-screen"
+      >
+        <svg viewBox="0 0 200 200" className="w-full h-full text-accent-green fill-current">
+          <path id="textPath" d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" fill="none" />
+          <text className="font-heading font-black text-[15px] uppercase tracking-widest">
+            <textPath href="#textPath" startOffset="0%">
+              • ANALYTICAL VERIFICATION • BATCH TRACEABILITY 
+            </textPath>
+          </text>
+          {/* Inner geometry */}
+          <circle cx="100" cy="100" r="45" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+          <path d="M 100 40 L 100 160 M 40 100 L 160 100" stroke="currentColor" strokeWidth="1" opacity="0.5" />
+          <path d="M 70 70 L 130 130 M 70 130 L 130 70" stroke="currentColor" strokeWidth="1" opacity="0.3" />
+        </svg>
+      </motion.div>
+
       <div className="w-full max-w-[1400px] mx-auto px-6 relative z-10 text-center flex flex-col items-center">
         <motion.div 
           variants={containerVariants}

@@ -92,27 +92,40 @@ export default function COAHowToRead() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="lg:col-span-5 sticky top-24"
           >
-            <div className="bg-bg-card p-10 lg:p-12 border border-white/5 relative">
-              <svg className="w-8 h-8 text-accent-green mb-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+            <div className="bg-bg-card border border-white/5 relative overflow-hidden flex flex-col group">
+              {/* Added Image Block */}
+              <div className="relative w-full h-48 sm:h-64 border-b border-white/10 overflow-hidden bg-black">
+                <div className="absolute inset-0 bg-accent-green/20 mix-blend-color z-10 group-hover:opacity-0 transition-opacity duration-700"></div>
+                <img 
+                  src="/images/coa/data-document.png" 
+                  alt="Verified Certificate of Analysis Document" 
+                  className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
 
-              <p className="text-white/80 leading-relaxed font-sans text-lg mb-12">
-                Strong documentation is specific, method-anchored, and batch-tied. It states what was measured, how it was measured, and which lot the measurement describes. When all three are present, the certificate functions as verifiable evidence rather than a general assurance.
-              </p>
-
-              <a
-                href="https://99puritypeptides.com/certificates"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="cta-coa group inline-flex items-center gap-3 text-[11px] font-black text-accent-green uppercase tracking-[0.25em] hover:text-white transition-colors"
-                data-cta="howto-view-coa"
-              >
-                <span>Open a COA and follow along</span>
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <div className="p-8 lg:p-12">
+                <svg className="w-8 h-8 text-accent-green mb-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-              </a>
+
+                <p className="text-white/80 leading-relaxed font-sans text-lg mb-12">
+                  Strong documentation is specific, method-anchored, and batch-tied. It states what was measured, how it was measured, and which lot the measurement describes. When all three are present, the certificate functions as verifiable evidence rather than a general assurance.
+                </p>
+
+                <a
+                  href="https://99puritypeptides.com/certificates"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="cta-coa group inline-flex items-center gap-3 text-[11px] font-black text-accent-green uppercase tracking-[0.25em] hover:text-white transition-colors"
+                  data-cta="howto-view-coa"
+                >
+                  <span>Open a COA and follow along</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
