@@ -33,6 +33,17 @@ export default function COALayout({
 }) {
   return (
     <div className="coa-landing-page bg-white min-h-screen text-slate-900 antialiased">
+      {/* Google tag (gtag.js) */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YN87T1MTWT" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-YN87T1MTWT');
+        `}
+      </Script>
       <Script
         id="coa-schema"
         type="application/ld+json"
