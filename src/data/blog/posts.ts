@@ -686,7 +686,7 @@ export const blogPosts: BlogPost[] = [
 </div>
       `,
       faqs: [
-        { q: 'How much should a personal trainer cost in South Carolina?', a: 'Per-session trainers in SC typically charge $50-$150/hour. Monthly coaching programs range from $149-$399/month and include far more value — custom programs, nutrition planning, and ongoing support.' },
+        { q: 'How much should a personal trainer cost in South Carolina?', a: 'Per-session trainers in SC typically charge $50-$150/hour. Monthly coaching programs range from $75-$349/month and include far more value — custom programs, nutrition planning, and ongoing support.' },
         { q: 'Do I need an in-person trainer or is online coaching effective?', a: 'Online coaching is equally effective for most goals — especially fat loss and muscle building. Over 80% of our best transformations at Belk Body Lab come from online clients across South Carolina.' },
         { q: 'What questions should I ask a personal trainer before hiring them?', a: 'Ask about their certification, years of experience, client results, coaching methodology, and what\'s included in their program. A great trainer will welcome these questions.' }
       ]
@@ -881,7 +881,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>How Much Does Online Personal Training Cost in South Carolina?</h2>
 <p>Traditional per-session personal training in South Carolina ranges from $50-$150 per hour. If you train 3 times per week, that is $600-$1,800 per month — and most of that cost only covers exercise guidance during the session. You typically get no nutrition plan, no between-session support, and no systematic progress tracking.</p>
-<p>Online coaching at Belk Body Lab starts at $149/month and includes everything: custom training programs, personalized nutrition planning, weekly check-ins, direct messaging access, and ongoing program adjustments. The value difference is enormous.</p>
+<p>Online coaching at Belk Body Lab starts at $75/month and includes everything: custom training programs, personalized nutrition planning, weekly check-ins, direct messaging access, and ongoing program adjustments. The value difference is enormous.</p>
 
 <h2>Who Gets the Best Results from Online Coaching?</h2>
 <p>Based on 7+ years of coaching clients across South Carolina, these are the profiles that thrive with online personal training:</p>

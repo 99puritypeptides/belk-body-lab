@@ -89,9 +89,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
       {/* Page sections */}
       <ServicesHero />
+      <ServicesPricing />
       <ServicesGrid />
       <WhoItsFor />
-      <ServicesPricing />
       <ServicesProcess />
       <FAQSchema id="services-faq" items={SERVICES_FAQS} />
       <ServicesFAQ />

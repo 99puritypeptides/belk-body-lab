@@ -296,7 +296,7 @@
       "guaranteeDesc": "Follow the plan - see results, or we make it right.",
       "starter": {
         "name": "Starter",
-        "price": "149",
+        "price": "75",
         "description": "Best for building consistency and getting started.",
         "features": [
           "Custom 8-week training plan",
@@ -308,7 +308,7 @@
       },
       "transform": {
         "name": "Transform",
-        "price": "249",
+        "price": "199",
         "description": "Best for serious fat loss or muscle-building results.",
         "highlight": "Top choice for South Carolina clients seeking a comprehensive body transformation program",
         "features": [
@@ -323,7 +323,7 @@
       },
       "elite": {
         "name": "Elite",
-        "price": "399",
+        "price": "349",
         "description": "Maximum results with full coaching support.",
         "highlight": "The ultimate elite-tier coaching package for those demanding the fastest, most optimized results.",
         "features": [

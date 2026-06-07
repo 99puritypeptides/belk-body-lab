@@ -167,7 +167,7 @@ export default async function CommunitiesPage({ params }: { params: Promise<{ lo
                 },
                 {
                   q: 'How much does personal training cost in South Carolina?',
-                  a: 'Traditional per-session personal training in South Carolina typically costs $50-$150 per hour. Belk Body Lab offers monthly coaching packages starting at $149/month that include far more value — custom training programs, personalized nutrition planning, weekly check-ins, and ongoing support — delivering better long-term results for a fraction of the per-session cost.'
+                  a: 'Traditional per-session personal training in South Carolina typically costs $50-$150 per hour. Belk Body Lab offers monthly coaching packages starting at $75/month that include far more value — custom training programs, personalized nutrition planning, weekly check-ins, and ongoing support — delivering better long-term results for a fraction of the per-session cost.'
                 },
                 {
                   q: 'What South Carolina communities do you serve?',
@@ -246,7 +246,7 @@ export default async function CommunitiesPage({ params }: { params: Promise<{ lo
                 "name": "How much does personal training cost in South Carolina?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Traditional per-session personal training in South Carolina typically costs $50-$150 per hour. Belk Body Lab offers monthly coaching packages starting at $149/month that include custom training programs, personalized nutrition planning, weekly check-ins, and ongoing support."
+                  "text": "Traditional per-session personal training in South Carolina typically costs $50-$150 per hour. Belk Body Lab offers monthly coaching packages starting at $75/month that include custom training programs, personalized nutrition planning, weekly check-ins, and ongoing support."
                 }
               },
               {

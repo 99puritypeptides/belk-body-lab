@@ -416,7 +416,7 @@
       "guaranteeDesc": "Sigue el plan: obtén resultados o lo corregimos.",
       "starter": {
         "name": "Starter",
-        "price": "149",
+        "price": "75",
         "description": "Ideal para generar constancia y comenzar.",
         "features": [
           "Plan de entrenamiento personalizado de 8 semanas",
@@ -428,7 +428,7 @@
       },
       "transform": {
         "name": "Transform",
-        "price": "249",
+        "price": "199",
         "description": "Ideal para resultados serios de pérdida de grasa o construcción muscular.",
         "highlight": "El más popular para clientes que buscan un programa de transformación corporal en Charleston SC",
         "features": [
@@ -443,7 +443,7 @@
       },
       "elite": {
         "name": "Elite",
-        "price": "399",
+        "price": "349",
         "description": "Máximos resultados con soporte completo de coaching.",
         "highlight": "Diseñado para clientes que desean el más alto nivel de coaching y resultados más rápidos.",
         "features": [
