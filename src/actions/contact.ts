@@ -15,7 +15,7 @@ export async function sendContactForm(formData: FormData) {
     const { data, error } = await resend.emails.send({
       from: 'Belk Body Lab Contact <notifications@belkbodylab.com>', // Uses verified domain
       to: ['trainwithbelk@gmail.com'], // Sent to Kyle's email found in the repo
-      reply_to: email, // Allows Kyle to click 'Reply' and email the lead directly
+      replyTo: email, // Allows Kyle to click 'Reply' and email the lead directly
       subject: `New Lead: ${goal || 'General Inquiry'} - ${fullName}`,
       html: `
         <h2>New Contact Submission</h2>
