@@ -158,6 +158,8 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://cdn.lordicon.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://static.rocket.new" crossOrigin="anonymous" />
         <link rel="preload" as="image" href="/images/hero/model-image.png" fetchPriority="high" />
+        {/* llms.txt — tells AI search engines (ChatGPT, Perplexity, Gemini) about site content */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt — AI content index for Belk Body Lab" />
       </head>
       <body className="font-sans" suppressHydrationWarning>
         <Script
@@ -169,8 +171,9 @@ export default async function LocaleLayout({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "Belk Body Lab",
-                "alternateName": ["BBL", "BelkBodyLab", "Belk Body Lab Charleston"],
+                "alternateName": ["Belk Body Labs", "BBL", "BelkBodyLab", "Belk Body Lab Charleston SC"],
                 "url": "https://www.belkbodylab.com",
+                "description": "Belk Body Lab is a personal training and fitness coaching company founded by Kyle Belk in Charleston, South Carolina. It is not affiliated with Belk department stores or any retail brand.",
                 "potentialAction": {
                   "@type": "SearchAction",
                   "target": "https://www.belkbodylab.com/search?q={search_term_string}",
@@ -179,20 +182,42 @@ export default async function LocaleLayout({
               },
               {
                 "@context": "https://schema.org",
-                "@type": "LocalBusiness",
+                "@type": ["LocalBusiness", "SportsActivityLocation", "HealthClub"],
                 "name": "Belk Body Lab",
+                "legalName": "Belk Body Lab",
+                "disambiguatingDescription": "Belk Body Lab is a personal training and online fitness coaching company in Charleston, South Carolina, founded by NASM-certified trainer Kyle Belk. It is a fitness coaching business — not a retail store, department store, or beauty product brand. Belk Body Lab specializes in body transformations, fat loss coaching, muscle building, and nutrition coaching for clients across South Carolina.",
                 "description": "Belk Body Lab is the #1 personal trainer in South Carolina, specializing in body transformations, fat loss coaching, muscle building, online fitness coaching, and nutrition planning. Serving Charleston, Mount Pleasant, West Ashley, North Charleston, Summerville, Daniel Island, James Island, Goose Creek, Hanahan, and online clients statewide across SC and nationwide.",
+                "slogan": "South Carolina's #1 Personal Trainer and Body Transformation Coach",
                 "image": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
-                "logo": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.belkbodylab.com/images/brand/belk-body-lab-logo.png",
+                  "caption": "Belk Body Lab logo - personal training company in Charleston SC"
+                },
                 "@id": "https://www.belkbodylab.com/#organization",
                 "url": "https://www.belkbodylab.com",
                 "telephone": "+18437439007",
+                "email": "trainwithbelk@gmail.com",
                 "priceRange": "$$$",
                 "foundingDate": "2019-01-01",
+                "founder": {
+                  "@type": "Person",
+                  "name": "Kyle Belk",
+                  "jobTitle": "NASM-Certified Personal Trainer and Founder",
+                  "url": "https://www.belkbodylab.com/about",
+                  "sameAs": [
+                    "https://www.instagram.com/kylebelk/",
+                    "https://www.tiktok.com/@kyle.belk/",
+                    "https://www.threads.net/@kylebelk"
+                  ]
+                },
                 "contactPoint": {
                   "@type": "ContactPoint",
+                  "telephone": "+18437439007",
                   "email": "trainwithbelk@gmail.com",
-                  "contactType": "customer support"
+                  "contactType": "customer support",
+                  "areaServed": "US",
+                  "availableLanguage": ["English", "Spanish"]
                 },
                 "areaServed": ["South Carolina", "Charleston, SC", "Mount Pleasant, SC", "West Ashley, SC", "North Charleston, SC", "Daniel Island, SC", "Summerville, SC", "James Island, SC", "Goose Creek, SC", "Hanahan, SC", "Johns Island, SC", "Isle of Palms, SC", "Columbia, SC", "Greenville, SC", "Myrtle Beach, SC", "Online - US"],
                 "address": {
@@ -212,40 +237,59 @@ export default async function LocaleLayout({
                   "opens": "06:00",
                   "closes": "21:00"
                 },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Personal Training and Coaching Services",
+                  "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Online Personal Training" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "In-Person Personal Training" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nutrition Coaching" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Body Transformation Coaching" } },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home-Based Fitness Coaching" } }
+                  ]
+                },
                 "sameAs": [
                   "https://www.instagram.com/kylebelk/",
                   "https://www.tiktok.com/@kyle.belk/",
-                  "https://www.threads.net/@kylebelk"
+                  "https://www.threads.net/@kylebelk",
+                  "https://www.youtube.com/@BelkBodyLab"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Kyle Belk",
+                "givenName": "Kyle",
+                "familyName": "Belk",
+                "jobTitle": "NASM-Certified Personal Trainer",
+                "description": "Kyle Belk is a NASM-certified personal trainer and body transformation coach based in Charleston, South Carolina. He is the founder of Belk Body Lab, a personal training and online fitness coaching company serving clients across South Carolina.",
+                "url": "https://www.belkbodylab.com/about",
+                "image": "https://www.belkbodylab.com/images/about/kyle-ocean-rock.png",
+                "worksFor": {
+                  "@type": "Organization",
+                  "@id": "https://www.belkbodylab.com/#organization",
+                  "name": "Belk Body Lab"
+                },
+                "hasCredential": [
+                  { "@type": "EducationalOccupationalCredential", "name": "NASM Certified Personal Trainer (CPT)" },
+                  { "@type": "EducationalOccupationalCredential", "name": "Precision Nutrition Level 1 Coach" }
+                ],
+                "knowsAbout": ["Personal Training", "Fat Loss", "Muscle Building", "Nutrition Coaching", "Body Transformation", "Online Fitness Coaching", "Strength Training"],
+                "sameAs": [
+                  "https://www.instagram.com/kylebelk/",
+                  "https://www.tiktok.com/@kyle.belk/",
+                  "https://www.threads.net/@kylebelk",
+                  "https://www.youtube.com/@BelkBodyLab"
                 ]
               },
               {
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.belkbodylab.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "About",
-                    "item": "https://www.belkbodylab.com/about"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Services",
-                    "item": "https://www.belkbodylab.com/services"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 4,
-                    "name": "Portfolio",
-                    "item": "https://www.belkbodylab.com/portfolio"
-                  }
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.belkbodylab.com" },
+                  { "@type": "ListItem", "position": 2, "name": "About Kyle Belk", "item": "https://www.belkbodylab.com/about" },
+                  { "@type": "ListItem", "position": 3, "name": "Personal Training Services", "item": "https://www.belkbodylab.com/services" },
+                  { "@type": "ListItem", "position": 4, "name": "Client Transformations", "item": "https://www.belkbodylab.com/portfolio" }
                 ]
               }
             ])

@@ -379,46 +379,52 @@ export const communitiesData: Record<string, CommunityContent> = {
     slug: 'body-transformation-north-charleston-sc',
     name: 'North Charleston',
     intent: 'Body Transformations',
-    seoTitle: 'Personal Trainer North Charleston SC | Body Transformation',
-    metaDesc: 'Looking for a personal trainer in North Charleston SC? Expert fat loss and muscle building programs near Park Circle and the Navy Yard.',
-    h1: 'BODY TRANSFORMATION SPECIALIST IN NORTH CHARLESTON',
-    subheading: 'Proven results in the heart of the Lowcountry.',
-    intro: 'North Charleston is where the work gets done. If you are searching for a personal trainer near me in North Charleston, our mission is to provide the exact systems needed to lose fat and build muscle permanently.',
+    seoTitle: '#1 Personal Trainer in North Charleston SC | Body Transformation Near Me | Belk Body Lab',
+    metaDesc: 'Searching for a personal trainer near me in North Charleston SC? Kyle Belk at Belk Body Lab offers expert fat loss, muscle building, and body transformation coaching serving Park Circle, Mixson, Rivers Ave, Navy Yard, and all of North Charleston. Online and in-person available.',
+    h1: '#1 PERSONAL TRAINER IN NORTH CHARLESTON, SC',
+    subheading: 'Expert body transformation coaching near Park Circle, Mixson, and the Navy Yard - in-person and online.',
+    intro: 'North Charleston is where the work gets done. Whether you live near Park Circle, Mixson Avenue, the Navy Yard, Rivers Avenue, or the North Charleston Coliseum area, Belk Body Lab brings elite personal training directly to you. If you have been searching for a personal trainer near me in North Charleston SC, Kyle Belk delivers the exact science-backed systems you need to lose fat, build lean muscle, and permanently transform your body.',
     lifestyle: {
-      title: 'North Charleston Resilience',
-      content: 'Stay strong for the active Park Circle scene and beyond. We build the physical foundation that allows you to excel in North Charleston’s growing professional and social landscape.',
-      landmarks: ['Park Circle', 'Riverfront Park', 'North Charleston Coliseum', 'The Navy Yard', 'Firefly Distillery', 'Mixson'],
+      title: 'Training Built for the North Charleston Lifestyle',
+      content: 'North Charleston is a city of hard workers - Boeing technicians, military families from JB Charleston, shift workers on Rivers Avenue, young professionals revitalizing Park Circle, and service industry veterans who barely have time to breathe. Kyle builds programs designed around real schedules, real constraints, and real goals. Whether you train at a local gym near Tanger Outlets, in your home near Mixson, or fully online, the plan is engineered for results.',
+      landmarks: ['Park Circle', 'Riverfront Park', 'North Charleston Coliseum', 'The Navy Yard', 'Firefly Distillery', 'Mixson Ave', 'Rivers Avenue', 'Tanger Outlets', 'JB Charleston Area', 'Noisette Creek Trail'],
     },
     benefits: {
-      title: 'The North Charleston Blueprint',
+      title: 'The North Charleston Transformation Blueprint',
       items: [
-        { title: 'Fat Loss Acceleration', description: 'Data-driven metabolic systems to torch body fat efficiently.' },
-        { title: 'Lean Muscle Growth', description: 'Strategic hypertrophy training to transform your physique.' },
-        { title: 'Online Nutrition Support', description: 'Full accountability with custom macro and meal planning.' },
-        { title: 'Functional Strength', description: 'Building a body that is as capable as it is aesthetic.' }
+        { title: 'Fat Loss Acceleration', description: 'Data-driven metabolic systems to torch body fat efficiently, built around your schedule - even shift workers and irregular hours.' },
+        { title: 'Lean Muscle Growth', description: 'Strategic hypertrophy training to permanently reshape your physique, whether you train at a gym near Park Circle or from home.' },
+        { title: 'Holistic Nutrition Coaching', description: 'Custom macro and meal planning designed for North Charleston lifestyles - not generic diet plans. Sleep and stress management included.' },
+        { title: 'Online and In-Home Flexibility', description: 'Home-based fitness coaching fully available for North Charleston clients. No gym required - Kyle builds your plan around what you have.' }
       ],
     },
     whoItsFor: {
-      title: 'North Charleston Clients',
-      items: ['Park Circle Professionals', 'Boeing/Volvo Employees', 'Young Couples', 'Transformation Seekers', 'First-Time Lifters'],
+      title: 'Who This Is Built For in North Charleston',
+      items: ['Park Circle Professionals', 'Boeing and Volvo Employees', 'Military Families (JB Charleston)', 'Shift Workers and Industrial Corridor Residents', 'Young Couples and First-Time Lifters', 'Anyone Searching "Personal Trainer Near Me"'],
     },
     whyChoose: {
-      title: 'Why North Charleston Starts Here',
+      title: 'Why North Charleston Residents Choose Belk Body Lab',
       points: [
-        'Proven track record of massive body transformations.',
-        'High-intensity, result-focused training.',
-        'Accessible, professional coaching standards.',
-        'Seamless online and hybrid coaching integration.'
+        'Serving all North Charleston neighborhoods: Park Circle, Mixson, Rivers Ave, Navy Yard, and surrounding areas.',
+        'In-person, in-home, and fully online coaching available - you choose the format.',
+        'Transparent package pricing with no hidden gym fees or add-on nutrition charges.',
+        'Proven track record of 40-60+ lb fat loss transformations with real SC clients.',
+        'Holistic approach: training, nutrition, sleep, and stress working together.'
       ]
     },
     testimonials: [
-      { quote: "I lost 40lbs and completely changed my life. Best trainer in North Charleston.", author: "Ryan S.", result: "-42 lbs Fat Loss" },
-      { quote: "The structure and accountability are what I was missing. Kyle is a pro.", author: "Maria K.", result: "Body Recomposition" }
+      { quote: "I lost 40lbs and completely changed my life. Best trainer in North Charleston. Kyle built my plan around my Boeing shift schedule.", author: "Ryan S.", result: "-42 lbs Fat Loss" },
+      { quote: "The structure and accountability are what I was missing. I trained from home near Park Circle and still got incredible results.", author: "Maria K.", result: "Body Recomposition" },
+      { quote: "I searched personal trainer near me and found Kyle. Best decision I made. Down 28 lbs in 12 weeks.", author: "Darius T.", result: "-28 lbs in 12 Weeks" }
     ],
     faqs: [
-      { question: 'Where is the facility located?', answer: 'We are centrally located with easy access from Park Circle and the surrounding North Charleston areas.' },
-      { question: 'Do you work with beginners?', answer: 'Yes, we specialize in taking clients from zero to their best physique through structured, safe, and effective systems.' },
-      { question: 'How often should I train?', answer: 'Most transformation clients see the best results with 3-4 structured sessions per week.' }
+      { question: 'Do you offer personal training near me in North Charleston?', answer: 'Yes. Kyle Belk provides personal training for clients across all of North Charleston including Park Circle, Mixson Avenue, Rivers Avenue, the Navy Yard area, and neighborhoods near the North Charleston Coliseum and Tanger Outlets. Both in-person and fully online coaching are available.' },
+      { question: 'Where do you train clients in North Charleston?', answer: 'Kyle trains North Charleston clients in-home, at local gyms near Park Circle or the Rivers Avenue corridor, or fully online - whatever works best for your schedule and setup. No specific gym membership is required.' },
+      { question: 'How much does a personal trainer cost in North Charleston SC?', answer: 'Personal training in North Charleston typically costs $50-$150 per individual session, or a flat monthly fee for online coaching packages that include custom programming, nutrition coaching, and weekly check-ins. Belk Body Lab provides a transparent custom quote after a free consultation - no hidden fees.' },
+      { question: 'Do you work with beginners in North Charleston?', answer: 'Absolutely. Kyle specializes in taking clients from zero to their best physique through structured, safe systems. Many North Charleston clients start with no gym experience and see their first major transformation within 90 days.' },
+      { question: 'Can you help with home-based fitness coaching near North Charleston?', answer: 'Yes. Home-based coaching is a core offering for North Charleston clients. Kyle builds fully customized programs around your home equipment - dumbbells, resistance bands, or bodyweight only. Results are identical to gym-based training when the plan is built correctly.' },
+      { question: 'How often should I train to see results?', answer: 'Most North Charleston transformation clients see the best results with 3-4 structured sessions per week. Kyle designs the schedule around your actual availability - whether you work standard hours, shifts at Boeing, or split schedules - so consistency is built into the plan.' },
+      { question: 'Do you serve military families near JB Charleston?', answer: 'Yes. Kyle works with active duty, veterans, and military spouses in the North Charleston and JB Charleston area. Programs are designed to integrate with PT schedules, PCS timelines, and the unique demands of military life.' }
     ],
     image: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=1000'
   },

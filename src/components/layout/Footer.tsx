@@ -16,6 +16,7 @@ export default function Footer() {
     { label: t('portfolio'), href: '/portfolio' as const },
     { label: t('blog'),      href: '/blog'      as const },
     { label: t('communities'), href: '/communities' as const },
+    { label: t('faq'),       href: '/faq'        as const },
     { label: t('contact'),   href: '/contact'   as const },
   ];
 

@@ -1,5 +1,22 @@
 export const SERVICES_FAQS = [
   {
+    q: 'How much does personal training cost in South Carolina?',
+    a: 'Personal training in South Carolina typically ranges from $50–$150 per individual session, or $600–$1,800 per month for weekly in-person sessions. Online coaching packages are usually priced as a flat monthly fee and often deliver more value because they include custom programming, nutrition coaching, and ongoing accountability — not just supervised gym time. Belk Body Lab provides a custom quote after a free consultation so you know exactly what is included.',
+  },
+  {
+    q: 'What is the average personal trainer cost near me?',
+    a: 'Across the Charleston, North Charleston, and Mount Pleasant area, personal trainer costs average $75–$120 per session for one-on-one coaching. Online coaching programs tend to be significantly more affordable while delivering the same results because the trainer\'s time is structured around weekly check-ins and programming rather than hourly supervision. Ask about package pricing — it almost always lowers the per-session cost.',
+  },
+  {
+    q: 'What do personal training packages include at Belk Body Lab?',
+    a: 'Every coaching package at Belk Body Lab includes a fully customized training program built for your equipment and schedule, a personalized nutrition and macro plan, weekly progress check-ins, direct messaging support, and plan adjustments as you progress. Unlike pay-per-session trainers, there are no hidden add-on fees for nutrition or programming.',
+  },
+  {
+    q: 'Is online personal training cheaper than in-person?',
+    a: 'Yes — online coaching is typically priced as a flat monthly package that costs less than several weekly in-person sessions. It is also more convenient and, for motivated clients, just as effective. Over 80% of Belk Body Lab\'s most dramatic transformations have come from fully online clients across South Carolina.',
+  },
+
+  {
     q: 'Do I need gym access to work with Kyle?',
     a: 'No — Kyle builds programs for home, gym, or hybrid setups. During the consultation call, he\'ll ask about your equipment and design your plan around what you actually have access to.',
   },

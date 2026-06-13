@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Script from 'next/script';
 import HeroSection from '@/features/home/HeroSection';
 import AboutSection from '@/features/home/AboutSection';
 import { getTranslations } from 'next-intl/server';
@@ -56,8 +57,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function HomePage() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
   return (
     <main className="relative bg-bg-primary min-h-screen" suppressHydrationWarning>
+      <Script
+        id="speakable-home"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Belk Body Lab | #1 Personal Trainer in South Carolina | Kyle Belk",
+            "url": siteUrl,
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", "h2", ".speakable-intro", ".hero-desc", ".about-intro"]
+            }
+          })
+        }}
+      />
       <div className="noise-overlay" aria-hidden="true" />
       <div className="bg-grid hidden lg:grid" aria-hidden="true">
         {Array.from({ length: 8 })?.map((_, i) => (

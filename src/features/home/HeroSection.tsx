@@ -90,7 +90,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="max-w-[550px] text-white/60 text-[10px] md:text-[12px] font-bold uppercase tracking-[0.25em] leading-relaxed mx-auto mt-6"
+            className="speakable-intro max-w-[550px] text-white/60 text-[10px] md:text-[12px] font-bold uppercase tracking-[0.25em] leading-relaxed mx-auto mt-6"
           >
             {t('subtitle')}
           </motion.p>

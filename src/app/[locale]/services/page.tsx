@@ -21,8 +21,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: t('packagesDesc'),
     keywords: [
       'personal training services South Carolina',
+      'personal trainer cost South Carolina',
+      'personal training prices SC',
+      'personal trainer fees South Carolina',
+      'fitness coach price South Carolina',
+      'personal training packages prices',
+      'how much does a personal trainer cost',
+      'average cost personal trainer SC',
       'online fitness coach South Carolina',
       'personal trainer Charleston SC',
+      'personal trainer North Charleston SC',
       'fitness coaching packages SC',
       '90-day body transformation South Carolina',
       'custom workout plan South Carolina',
@@ -96,6 +104,63 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <FAQSchema id="services-faq" items={SERVICES_FAQS} />
       <ServicesFAQ />
       <ServicesCTA />
+
+      {/* HowTo Schema — captures "how to get a personal trainer" AI Overview slots */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Start Personal Training with Kyle Belk at Belk Body Lab",
+            "description": "Follow these steps to begin your body transformation with South Carolina's top-rated personal trainer.",
+            "totalTime": "PT15M",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Apply for a Free Consultation",
+                "text": "Fill out the short application form at belkbodylab.com/contact. Tell Kyle your goals, current fitness level, and schedule. There is no obligation."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Complete Your Onboarding Call",
+                "text": "Kyle reviews your application and schedules a 20-minute video or phone call to discuss your goals, lifestyle, and which coaching format (online or in-person) fits you best."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Receive Your Custom Program",
+                "text": "Within 48 hours of joining, you receive a fully personalized training program and nutrition plan built around your schedule, goals, and current fitness level."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Start Training and Check In Weekly",
+                "text": "Begin your program, log your workouts, and attend weekly check-ins with Kyle to review progress, adjust training, and fine-tune your nutrition."
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Speakable Schema — tells Google AI Overview which content to extract */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Personal Training Services & Pricing South Carolina | Belk Body Lab",
+            "url": locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`,
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", "h2", ".speakable-intro", ".pricing-summary", ".services-desc"]
+            }
+          })
+        }}
+      />
 
       {/* Breadcrumb Schema */}
       <script

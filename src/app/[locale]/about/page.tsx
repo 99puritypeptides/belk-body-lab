@@ -1,4 +1,5 @@
 import React from 'react';
+import Script from 'next/script';
 import AboutPage from '@/features/about/AboutPage';
 import { getTranslations } from 'next-intl/server';
 
@@ -45,8 +46,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function About() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
   return (
     <main className="relative bg-bg-primary min-h-screen">
+      <Script
+        id="speakable-about"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "About Kyle Belk | NASM-Certified Personal Trainer South Carolina | Belk Body Lab",
+            "url": `${siteUrl}/about`,
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", "h2", ".speakable-intro", ".about-bio", ".trainer-credentials"]
+            }
+          })
+        }}
+      />
       <div className="noise-overlay" aria-hidden="true" />
       <div className="bg-grid hidden lg:grid" aria-hidden="true">
         {Array.from({ length: 8 })?.map((_, i) => (

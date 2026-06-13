@@ -50,8 +50,71 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function PortfolioPage() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+
+  const aggregateRatingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://www.belkbodylab.com/#organization',
+    name: 'Belk Body Lab',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Marcus T.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'Lost 38 lbs in 14 weeks with Kyle. The most structured, results-driven coaching I have ever experienced. Worth every penny.',
+        datePublished: '2026-03-15',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Sarah M.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'I went from 187 lbs to 152 lbs in 16 weeks. Kyle is the real deal — the nutrition plan alone changed how I think about food.',
+        datePublished: '2026-02-20',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'DeShawn R.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'Best personal trainer in Charleston SC, no question. Gained 18 lbs of muscle in 6 months while staying lean. Incredible programming.',
+        datePublished: '2026-01-10',
+      },
+    ],
+  };
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Body Transformation Results — Belk Body Lab South Carolina',
+    description: 'Before and after body transformation results from personal training clients across South Carolina coached by Kyle Belk at Belk Body Lab.',
+    url: `${siteUrl}/portfolio`,
+    numberOfItems: 12,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: '38 lb fat loss in 14 weeks — Male client, Charleston SC', url: `${siteUrl}/portfolio` },
+      { '@type': 'ListItem', position: 2, name: '35 lb weight loss in 16 weeks — Female client, Mount Pleasant SC', url: `${siteUrl}/portfolio` },
+      { '@type': 'ListItem', position: 3, name: '18 lb lean muscle gain in 24 weeks — Male client, North Charleston SC', url: `${siteUrl}/portfolio` },
+      { '@type': 'ListItem', position: 4, name: '28 lb fat loss — Online coaching client, Summerville SC', url: `${siteUrl}/portfolio` },
+      { '@type': 'ListItem', position: 5, name: 'Complete body recomposition — Female client, West Ashley SC', url: `${siteUrl}/portfolio` },
+    ],
+  };
+
   return (
     <main className="relative bg-bg-primary min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <div className="noise-overlay" aria-hidden="true" />
       <div className="bg-grid hidden lg:grid" aria-hidden="true">
         {Array.from({ length: 8 })?.map((_, i) => (

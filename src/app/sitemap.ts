@@ -6,7 +6,7 @@ import { communitiesData } from '@/data/communities/content';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
 
-  const mainRoutes = ['', '/about', '/services', '/portfolio', '/blog', '/contact', '/communities'];
+  const mainRoutes = ['', '/about', '/services', '/portfolio', '/blog', '/contact', '/communities', '/faq'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
