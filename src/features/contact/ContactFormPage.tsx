@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useTransition } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -20,6 +20,7 @@ import {
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 import PremiumIcon from '@/components/ui/PremiumIcon';
+import { sendContactForm } from '@/actions/contact';
 
 interface GoalCardProps {
   id: string;
@@ -54,7 +55,7 @@ function GoalCard({ label, icon, isActive, onClick }: GoalCardProps) {
 export default function ContactFormPage() {
   const t = useTranslations('contact');
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [selectedGoal, setSelectedGoal] = useState<string | null>(null);
 
   const goals = [
@@ -66,12 +67,16 @@ export default function ContactFormPage() {
     { id: 'other', label: t('goal6'), icon: <QuestionMarkCircleIcon className="w-6 h-6" /> },
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setSubmitted(true);
-    setIsSubmitting(false);
+  const handleAction = (formData: FormData) => {
+    startTransition(async () => {
+      const result = await sendContactForm(formData);
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        // Optionally handle errors here
+        console.error("Failed to send contact form", result.error);
+      }
+    });
   };
 
   return (
@@ -140,7 +145,7 @@ export default function ContactFormPage() {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-10">
+              <form action={handleAction} className="space-y-10">
                 
                 {/* SECTION 1: Personal Intelligence */}
                 <div className="bg-[#0c0c0c] border border-white/5 rounded-[3rem] p-8 lg:p-16 space-y-12">
@@ -157,7 +162,7 @@ export default function ContactFormPage() {
                       <div className="relative">
                         <UserIcon className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/10 group-focus-within:text-accent-green transition-colors" />
                         <input 
-                          type="text" required placeholder="Marcus Thompson"
+                          type="text" required placeholder="Marcus Thompson" name="fullName"
                           className="w-full bg-white/[0.01] border border-white/5 rounded-2xl pl-16 pr-6 py-5 text-white focus:outline-none focus:border-accent-green/30 focus:bg-white/[0.03] transition-all text-lg font-light"
                         />
                       </div>
@@ -167,7 +172,17 @@ export default function ContactFormPage() {
                       <div className="relative">
                         <EnvelopeIcon className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/10 group-focus-within:text-accent-green transition-colors" />
                         <input 
-                          type="email" required placeholder="marcus@email.com"
+                          type="email" required placeholder="marcus@email.com" name="email"
+                          className="w-full bg-white/[0.01] border border-white/5 rounded-2xl pl-16 pr-6 py-5 text-white focus:outline-none focus:border-accent-green/30 focus:bg-white/[0.03] transition-all text-lg font-light"
+                        />
+                      </div>
+                    </div>
+                    <div className="space-y-4 group md:col-span-2">
+                      <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30 group-focus-within:text-accent-green transition-colors">{t('phone')}</label>
+                      <div className="relative">
+                        <PhoneIcon className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-white/10 group-focus-within:text-accent-green transition-colors" />
+                        <input 
+                          type="tel" required placeholder="(555) 555-5555" name="phone"
                           className="w-full bg-white/[0.01] border border-white/5 rounded-2xl pl-16 pr-6 py-5 text-white focus:outline-none focus:border-accent-green/30 focus:bg-white/[0.03] transition-all text-lg font-light"
                         />
                       </div>
@@ -194,7 +209,7 @@ export default function ContactFormPage() {
                       />
                     ))}
                   </div>
-                  <input type="hidden" required value={selectedGoal || ''} />
+                  <input type="hidden" name="goal" required value={selectedGoal || ''} />
                 </div>
 
                 {/* SECTION 3: Detailed Context */}
@@ -210,6 +225,7 @@ export default function ContactFormPage() {
                     <label className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30 group-focus-within:text-accent-green transition-colors">Project Notes & Challenges</label>
                     <textarea 
                       rows={5}
+                      name="notes"
                       className="w-full bg-white/[0.01] border border-white/5 rounded-[2rem] px-8 py-8 text-white focus:outline-none focus:border-accent-green/30 focus:bg-white/[0.03] transition-all text-lg font-light resize-none"
                       placeholder={t('contextPlaceholder')}
                     />
@@ -218,7 +234,7 @@ export default function ContactFormPage() {
                   <div className="pt-10">
                     <motion.button 
                       type="submit" 
-                      disabled={isSubmitting}
+                      disabled={isPending}
                       whileHover="hover"
                       whileTap={{ scale: 0.98 }}
                       className="group relative w-full h-24 rounded-3xl overflow-hidden bg-black border border-white/10 transition-all duration-500"
@@ -230,15 +246,15 @@ export default function ContactFormPage() {
                       <div className="relative z-10 h-full flex items-center justify-between px-10 md:px-16">
                         <div className="flex flex-col items-start text-left">
                           <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent-green mb-1">
-                            {isSubmitting ? 'Protocol Transmission' : 'Final Step'}
+                            {isPending ? 'Transmitting' : 'Final Step'}
                           </span>
                           <span className="text-white text-xl md:text-2xl font-black uppercase tracking-tight">
-                            {isSubmitting ? 'Processing...' : 'Activate My Protocol'}
+                            {isPending ? 'Submitting...' : 'Submit Application'}
                           </span>
                         </div>
  
                         <div className="w-16 h-16 rounded-2xl bg-accent-green flex items-center justify-center text-black transition-all duration-500 shadow-[0_0_30px_rgba(170,255,0,0.3)]">
-                          {isSubmitting ? (
+                          {isPending ? (
                             <motion.div 
                               animate={{ rotate: 360 }}
                               transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
