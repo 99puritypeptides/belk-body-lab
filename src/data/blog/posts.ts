@@ -1493,7 +1493,7 @@ export const blogPosts: BlogPost[] = [
     category: "Coaching",
     date: "June 13, 2026",
     readTime: "12 min read",
-    image: "/images/blog/north-charleston/personal-trainer-north-charleston-sc-hero.webp",
+    image: "/images/blog/north-charleston/personal-trainer-north-charleston-sc-hero.png",
     featured: false,
     en: {
       title: "Personal Trainer in North Charleston SC: How to Find the Right Coach (2026 Guide)",
@@ -1541,6 +1541,8 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Personal Training Options in North Charleston: In-Person, In-Home, and Online</h2>
 <p>There is no single "right" format for personal training in North Charleston. The right format is the one that gives you the most consistency, accountability, and structure for your specific situation.</p>
+
+<figure class="my-12"><img src="/images/blog/north-charleston/north_charleston_home_workout.png" alt="A personal trainer doing an in-home fitness coaching session with a client, focusing on dumbbells and bodyweight exercises in North Charleston SC" class="w-full rounded-[2rem] border border-white/10" loading="lazy" decoding="async" /><figcaption class="text-center text-white/50 text-sm mt-4 italic">Home-based personal training session using dumbbells and bodyweight exercises in North Charleston</figcaption></figure>
 
 <h3>In-Person Training Near Park Circle and the Rivers Avenue Corridor</h3>
 <p>For North Charleston residents who prefer gym-based training, Kyle works with clients at local commercial gyms accessible from Park Circle, the Mixson Avenue area, and the broader Rivers Avenue corridor. Sessions are private and structured entirely around your custom program. This is not a class where 12 people run the same circuit. It is one-on-one coaching with progressive overload tracking, form correction, and weekly adjustments based on your actual data.</p>
@@ -1611,6 +1613,8 @@ export const blogPosts: BlogPost[] = [
 <h2>Nutrition and Fat Loss: The Part Most North Charleston Trainers Skip</h2>
 <p>Most personal trainers in North Charleston -- and across South Carolina -- do not include real nutrition coaching in their programs. They might hand you a generic meal plan PDF. They might tell you to eat more protein. But they do not give you specific macro targets built for your body weight and goals, and they do not adjust those targets weekly based on how your body is actually responding.</p>
 
+<figure class="my-12"><img src="/images/blog/north-charleston/nutrition_macro_tablet.png" alt="A person tracking macros and nutrition on a tablet, with a healthy meal of lean protein and vegetables" class="w-full rounded-[2rem] border border-white/10" loading="lazy" decoding="async" /><figcaption class="text-center text-white/50 text-sm mt-4 italic">Tracking customized nutrition and macro targets for fat loss</figcaption></figure>
+
 <p>This is the single biggest gap between programs that produce dramatic results and programs that produce modest ones. Fat loss specifically requires a sustained caloric deficit with enough protein to protect your muscle tissue. The exact deficit, the exact protein target, and the right adjustments over time are not guesswork -- they are calculated from your data. Read <a href="/blog/fat-loss-guide-science-based" class="text-accent-green hover:underline">How to Lose Fat Without Starving: The Science-Based Guide</a> to understand the exact physiological mechanisms involved.</p>
 
 <p>At Belk Body Lab, nutrition is a core part of every program -- not an add-on. Every client receives personalized macro targets, meal structure guidance, and weekly nutritional adjustments based on progress data. This is why the fat loss results in our program consistently outperform what clients achieved on their own or with trainers who treated nutrition as an afterthought.</p>
@@ -1630,6 +1634,8 @@ export const blogPosts: BlogPost[] = [
 
 <h2>The Best Exercises for Fat Loss in North Charleston</h2>
 <p>One of the most common questions from new North Charleston clients is what they should actually be doing in the gym. The answer is simpler than most people think: compound movements that recruit the most muscle at once, performed with progressive overload, three to four times per week.</p>
+
+<figure class="my-12"><img src="/images/blog/north-charleston/heavy_compound_lift.png" alt="A male client doing a heavy barbell deadlift with a personal trainer coaching him in a private gym" class="w-full rounded-[2rem] border border-white/10" loading="lazy" decoding="async" /><figcaption class="text-center text-white/50 text-sm mt-4 italic">A personal trainer coaching a client through a heavy barbell deadlift</figcaption></figure>
 
 <p>The compound movements that drive fat loss most efficiently are squats, Romanian deadlifts, bench press, dumbbell rows, overhead press, and pull-ups or lat pulldowns. These movements build lean muscle tissue that raises your resting metabolism, burn more calories per set than isolation exercises, and produce the structural changes that make the body look different in the mirror -- not just lighter on the scale. For the complete breakdown of the most effective exercises, read <a href="/blog/best-exercises-fat-loss-south-carolina" class="text-accent-green hover:underline">The 10 Best Exercises for Fat Loss According to a South Carolina Personal Trainer</a>.</p>
 
@@ -1704,7 +1710,7 @@ export const blogPosts: BlogPost[] = [
   "@type": "Article",
   "headline": "Personal Trainer in North Charleston SC: How to Find the Right Coach (2026 Guide)",
   "description": "A NASM-certified personal trainer's complete guide to finding the right personal trainer near you in North Charleston SC -- covering credentials, pricing, in-person vs online options, and realistic results for Park Circle, JB Charleston, Boeing workers, and all of North Charleston.",
-  "image": ["https://www.belkbodylab.com/images/blog/north-charleston/personal-trainer-north-charleston-sc-hero.webp"],
+  "image": ["https://www.belkbodylab.com/images/blog/north-charleston/personal-trainer-north-charleston-sc-hero.png"],
   "datePublished": "2026-06-13T09:00:00-04:00",
   "dateModified": "2026-06-13T09:00:00-04:00",
   "author": {
@@ -1760,7 +1766,7 @@ export const blogPosts: BlogPost[] = [
   "url": "https://www.belkbodylab.com/body-transformation-north-charleston-sc",
   "telephone": "+18437439007",
   "email": "trainwithbelk@gmail.com",
-  "image": "https://www.belkbodylab.com/images/blog/north-charleston/personal-trainer-north-charleston-sc-hero.webp",
+  "image": "https://www.belkbodylab.com/images/blog/north-charleston/personal-trainer-north-charleston-sc-hero.png",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
@@ -1836,6 +1842,9 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>Opciones de Entrenamiento Personal en North Charleston</h2>
+
+<figure class="my-12"><img src="/images/blog/north-charleston/north_charleston_home_workout.png" alt="Un entrenador personal haciendo una sesión de entrenamiento en casa con un cliente, enfocándose en mancuernas y ejercicios de peso corporal en North Charleston SC" class="w-full rounded-[2rem] border border-white/10" loading="lazy" decoding="async" /><figcaption class="text-center text-white/50 text-sm mt-4 italic">Sesión de entrenamiento personal en casa utilizando mancuernas y ejercicios de peso corporal en North Charleston</figcaption></figure>
+
 <h3>Entrenamiento en el Hogar</h3>
 <p>El coaching a domicilio es uno de los formatos más demandados para los clientes de North Charleston. Kyle construye programas completamente personalizados alrededor del equipo que tienes -- desde un set completo de mancuernas hasta solo peso corporal. Los resultados son idénticos al entrenamiento en gimnasio cuando el programa está correctamente estructurado. Lee más sobre el <a href="/blog/online-personal-training-south-carolina-guide" class="text-accent-green hover:underline">entrenamiento personal online en Carolina del Sur</a>.</p>
 
@@ -1848,8 +1857,12 @@ export const blogPosts: BlogPost[] = [
 <h2>El Sistema de 90 Días: Cómo se Ve el Coaching en la Práctica</h2>
 <p>Cuando un nuevo cliente de North Charleston comienza conmigo, la primera semana incluye una evaluación completa de tu historial de entrenamiento, historial de lesiones, estilo de vida actual, metas y equipo disponible. A partir de esa evaluación construyo un programa de entrenamiento personalizado y un plan de nutrición con tus objetivos de macros específicos. Cada semana incluye una revisión de progreso donde ajustamos el programa basándonos en datos reales. Lee <a href="/blog/ultimate-90-day-body-transformation-guide" class="text-accent-green hover:underline">La Guía Definitiva de Transformación Corporal de 90 Días</a> para entender cómo funciona la línea de tiempo completa.</p>
 
+<figure class="my-12"><img src="/images/blog/north-charleston/heavy_compound_lift.png" alt="Un cliente masculino haciendo un peso muerto pesado con un entrenador personal en un gimnasio privado" class="w-full rounded-[2rem] border border-white/10" loading="lazy" decoding="async" /><figcaption class="text-center text-white/50 text-sm mt-4 italic">Un entrenador personal instruyendo a un cliente a través de un levantamiento de peso muerto pesado</figcaption></figure>
+
 <h2>Nutrición y Pérdida de Grasa: La Parte que la Mayoría de Entrenadores Omiten</h2>
 <p>La mayoría de los entrenadores personales en North Charleston no incluyen coaching nutricional real. Sin objetivos de macros específicos y ajustes semanales, los resultados serán limitados. Lee <a href="/blog/fat-loss-guide-science-based" class="text-accent-green hover:underline">Cómo Perder Grasa Sin Pasar Hambre</a> para entender los mecanismos fisiológicos involucrados.</p>
+
+<figure class="my-12"><img src="/images/blog/north-charleston/nutrition_macro_tablet.png" alt="Una persona rastreando macros y nutrición en una tableta, con una comida saludable de proteína magra y verduras" class="w-full rounded-[2rem] border border-white/10" loading="lazy" decoding="async" /><figcaption class="text-center text-white/50 text-sm mt-4 italic">Rastreo de objetivos personalizados de nutrición y macros para la pérdida de grasa</figcaption></figure>
 
 <div class="mt-12 p-8 bg-accent-green/10 rounded-3xl border border-accent-green/20">
   <h4 class="text-white font-bold mb-4">¿LISTO PARA COMENZAR EN NORTH CHARLESTON?</h4>
