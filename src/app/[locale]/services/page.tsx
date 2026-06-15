@@ -105,6 +105,95 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <ServicesFAQ />
       <ServicesCTA />
 
+      {/* AggregateOffer Schema — captures pricing/cost queries in AI Overview & rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Personal Training & Online Coaching — Belk Body Lab",
+            "description": "NASM-certified personal training and online fitness coaching for fat loss, muscle gain, and body transformation. Serving Charleston, Mount Pleasant, Summerville, North Charleston SC and nationwide online.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "@id": `${siteUrl}/#organization`,
+              "name": "Belk Body Lab",
+              "url": siteUrl,
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Charleston", "containedInPlace": { "@type": "State", "name": "South Carolina" } },
+              { "@type": "City", "name": "Mount Pleasant", "containedInPlace": { "@type": "State", "name": "South Carolina" } },
+              { "@type": "City", "name": "Summerville", "containedInPlace": { "@type": "State", "name": "South Carolina" } },
+              { "@type": "City", "name": "North Charleston", "containedInPlace": { "@type": "State", "name": "South Carolina" } },
+              { "@type": "Country", "name": "United States" },
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Coaching Packages",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Starter Coaching Package",
+                  "description": "Best for building consistency and getting started. Custom training program, personalized nutrition plan, weekly check-ins, and direct coach messaging.",
+                  "price": "75",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "75",
+                    "priceCurrency": "USD",
+                    "unitText": "per month",
+                  },
+                  "availability": "https://schema.org/InStock",
+                  "url": locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`,
+                  "eligibleRegion": { "@type": "Country", "name": "United States" },
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Transform Coaching Package",
+                  "description": "Best for serious fat loss or muscle-building results. Includes everything in Starter plus priority support and advanced progress tracking.",
+                  "price": "199",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "199",
+                    "priceCurrency": "USD",
+                    "unitText": "per month",
+                  },
+                  "availability": "https://schema.org/InStock",
+                  "url": locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`,
+                  "eligibleRegion": { "@type": "Country", "name": "United States" },
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Elite Coaching Package",
+                  "description": "Maximum results with full coaching support. Concierge-level access, in-person and online sessions, and the highest level of accountability.",
+                  "price": "349",
+                  "priceCurrency": "USD",
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "349",
+                    "priceCurrency": "USD",
+                    "unitText": "per month",
+                  },
+                  "availability": "https://schema.org/InStock",
+                  "url": locale === 'en' ? `${siteUrl}/services` : `${siteUrl}/${locale}/services`,
+                  "eligibleRegion": { "@type": "Country", "name": "United States" },
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Free Fitness Consultation",
+                  "description": "A complimentary 15–30 minute call to discuss your goals and find the right coaching package for you.",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "url": `${siteUrl}/contact`,
+                },
+              ],
+            },
+          })
+        }}
+      />
+
       {/* HowTo Schema — captures "how to get a personal trainer" AI Overview slots */}
       <script
         type="application/ld+json"

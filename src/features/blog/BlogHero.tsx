@@ -105,7 +105,7 @@ export default function BlogHero() {
 
             <div className="lg:col-span-4 lg:col-start-9 hidden lg:block">
               <div className="flex flex-col items-end text-right space-y-4 opacity-20">
-                <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white">SYSTEMS ANALYSIS v2.0</p>
+                <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white">FITNESS KNOWLEDGE BASE</p>
                 <div className="w-px h-24 bg-gradient-to-b from-white to-transparent mr-4" />
               </div>
             </div>

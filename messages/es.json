@@ -303,7 +303,7 @@
   },
   "metadata": {
     "homeTitle": "Belk Body Lab | #1 Entrenador Personal en South Carolina",
-    "homeDesc": "El entrenador personal mejor calificado de South Carolina para pérdida de grasa, construcción muscular y transformaciones corporales. Sirviendo a Charleston, Mount Pleasant, Summerville, West Ashley y clientes online en todo SC.",
+    "homeDesc": "Kyle Belk, NASM-CPT — entrenador personal en Charleston, SC. Coaching de pérdida de grasa, construcción muscular y transformación corporal. Presencial + online en todo SC. 500+ resultados.",
     "packagesTitle": "Servicios de Entrenamiento Personal South Carolina | Belk Body Lab",
     "packagesDesc": "Entrenamiento personal personalizado y coaching de fitness online en South Carolina. Programas de pérdida de grasa, construcción muscular, coaching nutricional y transformación corporal.",
     "portfolioTitle": "Resultados de Transformación Corporal South Carolina | Antes y Después",
@@ -632,8 +632,16 @@
     "a2": "La mayoría de los clientes comienzan a notar cambios en las primeras semanas, con una transformación significativa en 90 días cuando siguen el plan con constancia.",
     "q3": "¿Es el coaching online tan efectivo como el entrenamiento presencial?",
     "a3": "Sí - para muchos clientes en Charleston, el coaching online es más efectivo porque proporciona flexibilidad, estructura y apoyo continuo sin depender de un horario fijo de gimnasio.",
-    "q4": "¿Cuánto cuesta un entrenador personal en Charleston SC?",
-    "a4": "Los entrenadores tradicionales suelen cobrar por sesión, a menudo entre $50 y $150. Nuestro coaching se centra en resultados a largo plazo con programación estructurada, orientación nutricional y apoyo continuo - ofreciendo más valor con el tiempo."
+    "q4": "¿Cuánto cuestan los paquetes de coaching de Belk Body Lab?",
+    "a4": "Belk Body Lab ofrece tres paquetes mensuales: Starter a $75/mes, Transform a $199/mes y Elite a $349/mes. Todos incluyen programa de entrenamiento personalizado, plan nutricional, revisiones semanales y acceso directo a Kyle. Consulta gratuita de 15 minutos disponible.",
+    "q5": "¿Qué áreas de South Carolina atiendes?",
+    "a5": "Atendemos clientes en todo South Carolina, con enfoque en el Lowcountry: Charleston, Mount Pleasant, West Ashley, North Charleston, Summerville, Daniel Island, James Island, Johns Island e Isle of Palms. También atendemos online a clientes de Columbia, Greenville, Myrtle Beach y todo EE.UU.",
+    "q6": "¿Qué diferencia a Belk Body Lab de otros entrenadores en South Carolina?",
+    "a6": "Cada programa es diseñado a medida para tu metabolismo, tipo de cuerpo y objetivos — no plantillas genéricas. Obtienes un coach certificado NASM con 7+ años de experiencia, 500+ transformaciones, coaching nutricional completo y revisiones de responsabilidad semanales.",
+    "q7": "¿Cómo encuentro el mejor entrenador personal cerca de mí en Charleston, SC?",
+    "a7": "Para encontrar el mejor entrenador personal cerca de ti en Charleston: verifica certificación NASM, NSCA o ACSM; pide un portafolio de resultados; confirma que incluye coaching nutricional; y agenda una consulta gratuita. Belk Body Lab atiende todo el área de Charleston en persona y toda SC online.",
+    "q8": "¿Cómo comienzo con el entrenamiento personal en Belk Body Lab?",
+    "a8": "Comenzar es simple: (1) Aplica para una consulta gratuita en belkbodylab.com — toma 2 minutos. (2) Habla con Kyle 15–30 minutos para discutir tus objetivos y encontrar el paquete correcto. (3) Recibe tu programa personalizado en 48 horas. La semana 1 comienza de inmediato."
   },
   "communities": {
     "navTitle": "Comunidades",

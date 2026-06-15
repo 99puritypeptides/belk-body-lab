@@ -21,7 +21,7 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
   
   const faqs = React.useMemo(() => {
     const items = [];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 8; i++) {
       const qKey = `q${i}`;
       const aKey = `a${i}`;
       

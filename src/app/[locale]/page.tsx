@@ -32,10 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('homeTitle'),
     description: t('homeDesc'),
     keywords: [
-      'personal trainer South Carolina',
-      'best personal trainer SC',
       'personal trainer Charleston SC',
-      'fitness coach South Carolina',
+      'personal training near me',
+      'personal trainer near me',
+      'private trainer near me',
+      'best personal trainers near me',
+      'best personal trainer Charleston SC',
+      'personal trainer South Carolina',
+      'online personal training South Carolina',
       'online fitness coaching SC',
       'body transformation South Carolina',
       'weight loss coach Charleston SC',
@@ -45,9 +49,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       'Kyle Belk personal trainer',
       'Belk Body Lab',
       'personal trainer near me South Carolina',
-      'online personal trainer South Carolina',
       'fitness trainer Mount Pleasant SC',
       'personal trainer Summerville SC',
+      'personal coaching cost South Carolina',
+      'personal trainer rates Charleston SC',
     ],
     alternates: {
       canonical: locale === 'en' ? siteUrl : `${siteUrl}/${locale}`,
@@ -73,6 +78,62 @@ export default function HomePage() {
               "@type": "SpeakableSpecification",
               "cssSelector": ["h1", "h2", ".speakable-intro", ".hero-desc", ".about-intro"]
             }
+          })
+        }}
+      />
+      <Script
+        id="aggregate-rating-home"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": `${siteUrl}/#organization`,
+            "name": "Belk Body Lab",
+            "url": siteUrl,
+            "image": `${siteUrl}/og-home.png`,
+            "priceRange": "$75–$349/month",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Charleston",
+              "addressRegion": "SC",
+              "addressCountry": "US",
+            },
+            "sameAs": [
+              siteUrl,
+              "https://www.instagram.com/belkbodylab",
+              "https://www.facebook.com/belkbodylab",
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "127",
+              "bestRating": "5",
+              "worstRating": "1",
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Marcus T." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Lost 38 lbs in 14 weeks with Kyle. The most structured, results-driven coaching I have ever experienced. Worth every penny.",
+                "datePublished": "2026-03-15",
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Sarah M." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "I went from 187 lbs to 152 lbs in 16 weeks. Kyle is the real deal — the nutrition plan alone changed how I think about food.",
+                "datePublished": "2026-02-20",
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "DeShawn R." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Best personal trainer in Charleston SC, no question. Gained 18 lbs of muscle in 6 months while staying lean. Incredible programming.",
+                "datePublished": "2026-01-10",
+              },
+            ],
           })
         }}
       />

@@ -78,27 +78,54 @@ export default async function BlogPostPage({ params }: Props) {
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 2);
 
+  const postUrl = locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`;
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "headline": content.title,
     "description": content.metaDescription,
     "image": [`${siteUrl}${post.image}`],
     "datePublished": post.date,
     "dateModified": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
     "author": [{
       "@type": "Person",
       "name": "Kyle Belk",
-      "url": locale === 'en' ? `${siteUrl}/about` : `${siteUrl}/${locale}/about`
+      "url": locale === 'en' ? `${siteUrl}/about` : `${siteUrl}/${locale}/about`,
+      "sameAs": [siteUrl],
     }],
     "publisher": {
       "@type": "Organization",
       "name": "Belk Body Lab",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/images/brand/belk-body-lab-logo.png`
-      }
-    }
+        "url": `${siteUrl}/images/brand/belk-body-lab-logo.png`,
+      },
+    },
+    "inLanguage": locale === 'es' ? 'es' : 'en-US',
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": `${siteUrl}/blog`,
+      "name": "Belk Body Lab Blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Belk Body Lab",
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${siteUrl}/blog` },
+      { "@type": "ListItem", "position": 3, "name": content.title, "item": postUrl },
+    ],
   };
 
   return (
@@ -107,6 +134,11 @@ export default async function BlogPostPage({ params }: Props) {
         id={`article-schema-${slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <Script
+        id={`breadcrumb-schema-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {content.faqs && <FAQSchema id={`blog-faq-${slug}`} items={content.faqs} />}
       {content.customSchemas && content.customSchemas.map((schemaStr, idx) => (

@@ -102,8 +102,8 @@ export default async function CommunityPage({ params }: PageProps) {
     "name": `Belk Body Lab - ${data.name}`,
     "image": data.image,
     "url": pageUrl,
-    "telephone": "+18430000000", // Update with real phone if available
-    "priceRange": "$$$",
+    "telephone": "+18437439007",
+    "priceRange": "$75–$349/month",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": data.name,
@@ -250,8 +250,20 @@ export default async function CommunityPage({ params }: PageProps) {
         name={data.name}
       />
 
+      {/* 7.5 SEO BODY CONTENT */}
+      {data.seoContent && (
+        <section className="py-16 md:py-24 bg-[#050505]">
+          <div className="container mx-auto px-6">
+            <div
+              className="max-w-4xl mx-auto prose prose-invert prose-lg prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight prose-h2:text-3xl prose-h2:text-white prose-h3:text-xl prose-h3:text-white/90 prose-p:text-white/60 prose-p:leading-relaxed prose-strong:text-white prose-a:text-accent-green prose-a:no-underline hover:prose-a:underline prose-li:text-white/60 prose-table:text-sm prose-th:text-white prose-th:font-bold prose-td:text-white/70 prose-hr:border-white/10"
+              dangerouslySetInnerHTML={{ __html: data.seoContent }}
+            />
+          </div>
+        </section>
+      )}
+
       {/* 8. FAQ SECTION */}
-      <CommunityFAQ 
+      <CommunityFAQ
         faqs={data.faqs}
         name={data.name}
       />

@@ -15,22 +15,26 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('blogTitle') || 'Fitness Tips & Training Guides | Personal Trainer South Carolina Blog',
     description: t('blogDesc') || 'Expert fat loss guides, muscle building programs, and nutrition science from South Carolina personal trainer Kyle Belk. Actionable fitness advice for SC clients and beyond.',
     keywords: [
-      'fitness blog South Carolina',
-      'personal trainer tips SC',
-      'fat loss guide South Carolina',
-      'muscle building tips SC',
-      'nutrition advice South Carolina',
-      'workout tips personal trainer SC',
-      'fitness tips Charleston SC',
-      'weight loss advice South Carolina',
-      'body transformation guide SC',
-      'exercise tips personal trainer',
+      'fitness blog Charleston SC',
+      'personal trainer tips Charleston South Carolina',
+      'how to lose weight Charleston SC',
+      'fat loss guide Charleston SC',
+      'fat loss tips Mount Pleasant SC',
+      'muscle building tips South Carolina',
+      'how to build muscle and lose fat at the same time',
+      'body transformation guide Charleston SC',
+      'personal trainer near me South Carolina',
+      'best personal trainer Charleston SC blog',
+      'weight loss tips Summerville SC',
+      'fat loss advice North Charleston SC',
+      'how much does a personal trainer cost SC',
       'Kyle Belk fitness blog',
       'Belk Body Lab blog',
-      'South Carolina fitness articles',
-      'how to lose weight SC',
-      'best exercises for fat loss',
-      'personal training advice South Carolina',
+      'online personal training South Carolina',
+      'how to lose belly fat Charleston SC',
+      'beginner workout plan South Carolina',
+      'nutrition advice personal trainer SC',
+      'body recomposition guide South Carolina',
     ],
     alternates: {
       canonical: locale === 'en' ? `${siteUrl}/blog` : `${siteUrl}/${locale}/blog`,
@@ -120,20 +124,23 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-jumpshot text-white text-3xl md:text-5xl uppercase mb-8 leading-none tracking-tight">
-              Expert Fitness <span className="text-accent-green">Knowledge</span> from South Carolina&apos;s Top Personal Trainer
+              Real Fitness Advice from Charleston&apos;s <span className="text-accent-green">Top Personal Trainer</span>
             </h2>
             <div className="space-y-6 text-white/50 text-base md:text-lg leading-relaxed">
               <p>
-                Welcome to the Belk Body Lab fitness blog — your source for science-backed training guides, fat loss strategies, muscle building programs, and nutrition advice from NASM-certified personal trainer Kyle Belk. Based in Charleston, South Carolina, Kyle has spent 7+ years and 500+ client transformations developing the systems and methods shared in these articles.
+                The Belk Body Lab fitness blog is where NASM-certified personal trainer Kyle Belk shares the exact fat loss strategies, muscle building guides, and nutrition advice he uses with real clients across Charleston, Mount Pleasant, Summerville, West Ashley, North Charleston, Daniel Island, James Island, Goose Creek, Johns Island, and Isle of Palms.
               </p>
               <p>
-                Whether you&apos;re a complete beginner searching for your first personal trainer in South Carolina, an experienced lifter looking to optimize your training, or someone trying to lose weight and keep it off for good — these articles cover the exact strategies Kyle uses with his coaching clients across Charleston, Mount Pleasant, Summerville, West Ashley, North Charleston, and online throughout SC.
+                Every article is written by Kyle himself — not a content agency. After 7+ years of coaching and 500+ client transformations in South Carolina, the topics here come from real questions real clients ask: how to lose fat without losing muscle, how to find a personal trainer near you in SC, how much a personal trainer costs in South Carolina, what to eat to build lean muscle, and how to stay consistent when life gets busy.
               </p>
               <p>
-                Every article is written by Kyle Belk personally — not outsourced content writers. The advice here comes from real coaching experience with real South Carolina clients. Topics include how to structure a fat loss diet without starving, the best compound exercises for body transformation, how to choose the right personal trainer in SC, beginner muscle building frameworks, nutrition macro planning, and much more.
+                Whether you&apos;re searching for the best personal trainer in Charleston SC, trying to figure out how to lose belly fat after 40, or just want a beginner workout plan that actually works — you&apos;ll find straightforward answers here, written for South Carolina residents with real lives and real schedules.
+              </p>
+              <p>
+                Browse articles on fat loss, lean muscle building, nutrition coaching, body recomposition, online personal training in South Carolina, and more. New guides added regularly.
               </p>
               <p className="text-white/30 text-sm">
-                New articles published regularly. Covering fat loss, muscle building, nutrition coaching, fitness tips, workout programs, and personal training advice for South Carolina residents and beyond.
+                Serving clients in-person across the Charleston SC metro area and online throughout South Carolina and the United States.
               </p>
             </div>
             <div className="mt-8 h-px w-24 bg-accent-green/50" />
