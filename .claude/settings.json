@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npm run build *)",
+      "Bash(npm run dev *)",
+      "Bash(npm run lint *)",
+      "Bash(npm run start *)",
+      "Edit",
+      "Write",
+      "Read",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch",
+      "Agent"
+    ]
+  }
+}
