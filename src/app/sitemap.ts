@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     blogPosts.forEach((post) => {
       sitemapEntries.push({
         url: `${baseUrl}${prefix}/blog/${post.slug}`,
-        lastModified: post.isoDate ? new Date(post.isoDate) : new Date(post.date),
+        lastModified: new Date(post.date),
         changeFrequency: 'monthly',
         priority: 0.8,
       });
