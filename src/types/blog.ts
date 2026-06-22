@@ -15,8 +15,10 @@ export interface BlogPost {
   slug: string;
   category: BlogCategory;
   date: string;
+  isoDate?: string;
   readTime: string;
   image: string;
+  ogImage?: string;
   featured?: boolean;
   en: BlogPostContent;
   es: BlogPostContent;

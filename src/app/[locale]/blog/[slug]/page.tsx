@@ -20,6 +20,11 @@ export async function generateStaticParams() {
   }));
 }
 
+function toISODate(dateStr: string): string {
+  const parsed = new Date(dateStr);
+  return isNaN(parsed.getTime()) ? dateStr : parsed.toISOString().split('T')[0];
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, locale } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
@@ -27,20 +32,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const content = post[locale as 'en' | 'es'] || post.en;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
+  const isoDate = toISODate(post.date);
 
   return {
     title: content.metaTitle,
     description: content.metaDescription,
     keywords: [
-      `${post.category.toLowerCase()} South Carolina`,
-      `${post.category.toLowerCase()} tips personal trainer SC`,
-      'personal trainer South Carolina blog',
-      'fitness advice South Carolina',
-      'Kyle Belk fitness tips',
-      'Belk Body Lab blog',
-      `${post.category.toLowerCase()} guide SC`,
-      'South Carolina fitness coaching',
+      content.metaTitle,
+      `${post.category.toLowerCase()} guide`,
+      `${post.category.toLowerCase()} tips`,
+      `${post.category.toLowerCase()} for beginners`,
+      `how to ${post.category.toLowerCase()}`,
+      `${post.category.toLowerCase()} personal trainer`,
+      `${post.category.toLowerCase()} coach`,
+      `${post.category.toLowerCase()} plan`,
+      'Kyle Belk',
+      'Belk Body Lab',
     ],
+    authors: [{ name: 'Kyle Belk', url: `${siteUrl}/about` }],
     alternates: {
       canonical: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
       languages: {
@@ -52,15 +61,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: content.metaTitle,
       description: content.metaDescription,
       url: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
-      images: [post.image],
+      images: [post.ogImage || post.image],
       type: 'article',
-      publishedTime: post.date,
+      publishedTime: isoDate,
+      modifiedTime: isoDate,
+      authors: [`${siteUrl}/about`],
     },
     twitter: {
       card: 'summary_large_image',
       title: content.metaTitle,
       description: content.metaDescription,
-      images: [post.image],
+      images: [post.ogImage || post.image],
     },
   };
 }
@@ -79,6 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
     .slice(0, 2);
 
   const postUrl = locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`;
+  const isoDate = toISODate(post.date);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -86,8 +98,8 @@ export default async function BlogPostPage({ params }: Props) {
     "headline": content.title,
     "description": content.metaDescription,
     "image": [`${siteUrl}${post.image}`],
-    "datePublished": post.date,
-    "dateModified": post.date,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": postUrl,
@@ -95,8 +107,13 @@ export default async function BlogPostPage({ params }: Props) {
     "author": [{
       "@type": "Person",
       "name": "Kyle Belk",
-      "url": locale === 'en' ? `${siteUrl}/about` : `${siteUrl}/${locale}/about`,
-      "sameAs": [siteUrl],
+      "jobTitle": "NASM-Certified Personal Trainer",
+      "url": `${siteUrl}/about`,
+      "sameAs": [
+        "https://www.instagram.com/kylebelk/",
+        "https://www.tiktok.com/@kyle.belk/",
+        "https://www.threads.net/@kylebelk"
+      ],
     }],
     "publisher": {
       "@type": "Organization",

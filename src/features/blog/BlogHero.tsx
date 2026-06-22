@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import PremiumIcon from '@/components/ui/PremiumIcon';
+import Script from 'next/script';
 
 export default function BlogHero() {
   const t = useTranslations('blog.hero');
@@ -11,8 +12,24 @@ export default function BlogHero() {
   const y = useTransform(scrollY, [0, 1000], [0, 200]);
   const scale = useTransform(scrollY, [0, 1000], [1, 1.1]);
 
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "High Intensity Leg Day Training - Belk Body Lab",
+    "description": "Cinematic fitness footage of high intensity leg day training at Belk Body Lab.",
+    "thumbnailUrl": "https://www.belkbodylab.com/images/brand/logo-512.png",
+    "uploadDate": "2026-01-01T08:00:00+00:00",
+    "contentUrl": "https://www.belkbodylab.com/BBL%20Media/leg-day.mp4"
+  };
+
   return (
-    <section className="relative min-h-[85vh] flex flex-col pt-48 pb-24 lg:pt-64 lg:pb-40 overflow-hidden bg-black">
+    <>
+      <Script
+        id="blog-hero-video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
+      <section className="relative min-h-[85vh] flex flex-col pt-48 pb-24 lg:pt-64 lg:pb-40 overflow-hidden bg-black">
       {/* Background Media with Cinematic Parallax */}
       <motion.div
         style={{ y, scale }}
@@ -120,5 +137,6 @@ export default function BlogHero() {
         </span>
       </div>
     </section>
+    </>
   );
 }
