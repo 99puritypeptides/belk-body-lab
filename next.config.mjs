@@ -24,6 +24,15 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/blog/how-much-does-a-personal-trainer-cost-south-carolina',
+        destination: '/blog/how-much-does-a-personal-trainer-cost',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
