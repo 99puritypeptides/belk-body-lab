@@ -69,7 +69,7 @@ export default function Header() {
                 <React.Fragment key={link?.href}>
                   <Link
                     href={link?.href}
-                    className={`font-semibold text-[13px] tracking-wide transition-colors hover:text-white ${pathname === link?.href || (pathname === '/' && link.href === '/') ? 'text-white' : 'text-white/60'
+                    className={`font-display font-black text-[11px] uppercase tracking-[0.2em] transition-colors hover:text-accent-green ${pathname === link?.href || (pathname === '/' && link.href === '/') ? 'text-white' : 'text-white/60'
                       }`}
                   >
                     {link?.label}
@@ -98,14 +98,14 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 text-[13px] font-semibold tracking-wide rounded-full hover:bg-white hover:text-black transition-all shadow-lg"
+                className="px-8 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 font-display font-black text-[11px] uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all shadow-lg"
               >
                 {t('contact')}
               </Link>
 
               <Link
                 href="/contact"
-                className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black text-[14px] font-bold hover:bg-gray-100 transition-all group shadow-lg"
+                className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black font-display font-black text-[11px] uppercase tracking-[0.2em] hover:bg-gray-100 transition-all group shadow-lg"
               >
                 {t('getStarted')}
                 <div className="w-9 h-9 rounded-full bg-[#111111] group-hover:bg-accent-green flex items-center justify-center text-white group-hover:text-black group-hover:rotate-45 transition-all duration-300">

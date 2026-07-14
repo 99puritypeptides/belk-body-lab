@@ -31,7 +31,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
     >
       {/* Dossier Header - visible on hover or mobile */}
       <div className="absolute top-6 right-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-accent-green/60">PRTCL.SYS</span>
+        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-accent-green/60">Read Article</span>
       </div>
 
       {/* Image Container */}

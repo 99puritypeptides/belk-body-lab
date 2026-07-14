@@ -10,6 +10,19 @@ import { Link } from '@/i18n/navigation';
 import Script from 'next/script';
 import FAQSchema from '@/components/seo/FAQSchema';
 
+// Natural-language keyword phrases per category — avoids nonsensical
+// auto-generated combinations like "how to coaching" or "lifestyle for beginners".
+const CATEGORY_KEYWORDS: Record<string, string[]> = {
+  'Fat Loss': ['fat loss guide', 'how to lose fat', 'fat loss tips', 'fat loss personal trainer'],
+  'Muscle Gain': ['muscle building guide', 'how to build muscle', 'muscle gain tips', 'muscle building coach'],
+  'Nutrition': ['nutrition coaching guide', 'nutrition tips', 'macro coaching', 'nutrition coach'],
+  'Mindset': ['fitness mindset guide', 'workout consistency tips', 'fitness motivation coach'],
+  'Lifestyle': ['healthy lifestyle guide', 'lifestyle coaching tips', 'sustainable fitness coach'],
+  'Training': ['training guide', 'strength training tips', 'workout plan', 'personal trainer'],
+  'Recovery': ['recovery guide', 'injury prevention tips', 'recovery coach'],
+  'Coaching': ['personal training guide', 'coaching tips', 'personal trainer near me'],
+};
+
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
 }
@@ -39,13 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: content.metaDescription,
     keywords: [
       content.metaTitle,
-      `${post.category.toLowerCase()} guide`,
-      `${post.category.toLowerCase()} tips`,
-      `${post.category.toLowerCase()} for beginners`,
-      `how to ${post.category.toLowerCase()}`,
-      `${post.category.toLowerCase()} personal trainer`,
-      `${post.category.toLowerCase()} coach`,
-      `${post.category.toLowerCase()} plan`,
+      ...(CATEGORY_KEYWORDS[post.category] || []),
       'Kyle Belk',
       'Belk Body Lab',
     ],
@@ -55,6 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         en: `${siteUrl}/blog/${slug}`,
         es: `${siteUrl}/es/blog/${slug}`,
+        'x-default': `${siteUrl}/blog/${slug}`,
       },
     },
     openGraph: {

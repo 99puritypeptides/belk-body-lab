@@ -157,7 +157,6 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://cdn.lordicon.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://static.rocket.new" crossOrigin="anonymous" />
-        <link rel="preload" as="image" href="/images/hero/model-image.png" fetchPriority="high" />
         {/* llms.txt — tells AI search engines (ChatGPT, Perplexity, Gemini) about site content */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt — AI content index for Belk Body Lab" />
       </head>
@@ -280,16 +279,6 @@ export default async function LocaleLayout({
                   "https://www.tiktok.com/@kyle.belk/",
                   "https://www.threads.net/@kylebelk",
                   "https://www.youtube.com/@BelkBodyLab"
-                ]
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.belkbodylab.com" },
-                  { "@type": "ListItem", "position": 2, "name": "About Kyle Belk", "item": "https://www.belkbodylab.com/about" },
-                  { "@type": "ListItem", "position": 3, "name": "Personal Training Services", "item": "https://www.belkbodylab.com/services" },
-                  { "@type": "ListItem", "position": 4, "name": "Client Transformations", "item": "https://www.belkbodylab.com/portfolio" }
                 ]
               }
             ])

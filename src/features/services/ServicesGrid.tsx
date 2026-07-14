@@ -8,6 +8,13 @@ import { Link } from '@/i18n/navigation';
 import PremiumIcon from '@/components/ui/PremiumIcon';
 import ScrollRevealText from '@/components/ui/ScrollRevealText';
 
+const FORMAT_LABEL: Record<string, string> = {
+  online: 'Online Coaching',
+  oneOnOne: 'In-Person Training',
+  customPlan: 'Custom Programming',
+  nutrition: 'Nutrition Coaching',
+};
+
 export default function ServicesGrid() {
   const t = useTranslations('servicesPage.grid');
 
@@ -108,7 +115,7 @@ export default function ServicesGrid() {
           </div>
           <div className="lg:col-span-3 lg:col-start-10 hidden lg:block text-right">
              <p className="text-white/20 text-xs font-mono uppercase tracking-widest">
-               Service Matrix // v3.0
+               Coaching Programs
              </p>
           </div>
         </div>
@@ -188,10 +195,10 @@ export default function ServicesGrid() {
                       className="object-cover grayscale brightness-75 transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
-                    {/* Technical Overlay */}
+                    {/* Format Overlay */}
                     <div className="absolute bottom-10 left-10 z-20">
-                      <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40 block mb-2">Technical Specification</span>
-                      <p className="text-white font-display text-2xl font-black italic">PRTCL_ID_{svc.id.toUpperCase()}</p>
+                      <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/40 block mb-2">Coaching Format</span>
+                      <p className="text-white font-display text-2xl font-black italic">{FORMAT_LABEL[svc.id] || svc.title}</p>
                     </div>
                  </div>
                  

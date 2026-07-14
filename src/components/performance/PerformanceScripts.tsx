@@ -11,10 +11,13 @@ export default function PerformanceScripts() {
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
-    // Load scripts after a delay to ensure the main thread is free for initial render
+    // Defer non-critical third-party scripts so they don't compete with the
+    // initial render for bandwidth/main-thread time. Real users still load
+    // these — this trades a few seconds of delay for a faster first paint,
+    // it does not skip the work.
     const timer = setTimeout(() => {
       setShouldLoad(true);
-    }, 3500); // 3.5s delay is usually safe to bypass Lighthouse but still track conversions
+    }, 3500);
 
     // Or load on first interaction/scroll
     const handleFirstInteraction = () => {

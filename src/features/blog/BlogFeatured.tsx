@@ -37,7 +37,7 @@ export default function BlogFeatured({ posts }: BlogFeaturedProps) {
           
           <div className="hidden lg:block">
             <p className="text-white/20 text-[10px] font-black uppercase tracking-[1em] vertical-text">
-              PROTOCOL.v2
+              Featured Article
             </p>
           </div>
         </div>
