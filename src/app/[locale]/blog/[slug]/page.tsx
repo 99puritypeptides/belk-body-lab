@@ -69,7 +69,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: content.metaTitle,
       description: content.metaDescription,
       url: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
-      images: [post.ogImage || post.image],
       type: 'article',
       publishedTime: isoDate,
       modifiedTime: isoDate,
@@ -79,7 +78,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: content.metaTitle,
       description: content.metaDescription,
-      images: [post.ogImage || post.image],
     },
   };
 }
@@ -222,7 +220,7 @@ export default async function BlogPostPage({ params }: Props) {
               <span>{post.readTime}</span>
             </div>
 
-            <h1 className="font-heading font-black text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize leading-[1.1] tracking-tight lg:tracking-normal max-w-[1200px] text-balance drop-shadow-2xl">
+            <h1 className="font-sans font-bold text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl capitalize leading-[1.25] tracking-tight max-w-[1200px] text-balance drop-shadow-2xl">
               {content.title.toLowerCase()}
             </h1>
           </div>
@@ -239,7 +237,7 @@ export default async function BlogPostPage({ params }: Props) {
       {relatedPosts.length > 0 && (
         <section className="container-custom px-6 lg:px-10 pb-24 lg:pb-40">
           <div className="w-full h-px bg-white/5 mb-24" />
-          <h2 className="font-heading font-black text-white text-3xl md:text-5xl uppercase tracking-tighter mb-16">
+          <h2 className="font-sans font-bold text-white text-2xl md:text-4xl uppercase tracking-tight mb-16">
             Continue <span className="text-accent-green">Reading</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

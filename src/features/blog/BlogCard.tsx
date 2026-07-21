@@ -62,7 +62,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/30">{post.date}</span>
           </div>
 
-          <h3 className={`font-display font-black uppercase text-white leading-[0.9] tracking-tighter mb-6 transition-colors group-hover:text-accent-green ${featured ? 'text-4xl lg:text-6xl' : 'text-2xl lg:text-3xl'}`}>
+          <h3 className={`font-sans font-bold uppercase text-white leading-[1.2] tracking-tight mb-6 transition-colors group-hover:text-accent-green ${featured ? 'text-2xl lg:text-4xl' : 'text-lg lg:text-xl'}`}>
             {content.title}
           </h3>
 

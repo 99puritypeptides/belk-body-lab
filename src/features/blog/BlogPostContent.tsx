@@ -16,11 +16,11 @@ export default function BlogPostContent({ content }: BlogPostContentProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="prose prose-invert prose-lg md:prose-xl max-w-none 
-          prose-headings:font-heading prose-headings:font-bold prose-headings:tracking-tight
-          prose-h1:text-5xl lg:prose-h1:text-7xl prose-h1:mb-12 prose-h1:leading-tight
-          prose-h2:text-4xl lg:prose-h2:text-5xl prose-h2:mt-24 prose-h2:mb-8 prose-h2:leading-tight prose-h2:tracking-wider
-          prose-h3:text-2xl lg:prose-h3:text-3xl prose-h3:mt-16 prose-h3:mb-6 prose-h3:leading-snug
+        className="prose prose-invert prose-lg md:prose-xl max-w-none
+          prose-headings:font-sans prose-headings:font-bold prose-headings:tracking-tight
+          prose-h1:text-3xl lg:prose-h1:text-5xl prose-h1:mb-12 prose-h1:leading-snug
+          prose-h2:text-2xl lg:prose-h2:text-3xl prose-h2:mt-24 prose-h2:mb-8 prose-h2:leading-snug
+          prose-h3:text-xl lg:prose-h3:text-2xl prose-h3:mt-16 prose-h3:mb-6 prose-h3:leading-snug
           prose-p:text-white/80 prose-p:leading-loose prose-p:mb-8 prose-p:font-light
           prose-li:text-white/80 prose-li:leading-loose prose-li:mb-3
           prose-strong:text-white prose-strong:font-bold

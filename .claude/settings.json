@@ -13,7 +13,9 @@
       "Grep",
       "WebSearch",
       "WebFetch",
-      "Agent"
+      "Agent",
+      "Bash(grep -o '@type[\\\\\\\\]*\"[:=]*[^,]*' src/data/blog/posts.ts)",
+      "mcp__claude_ai_Semrush__keyword_research"
     ]
   }
 }
