@@ -28,32 +28,26 @@ async function getImageDataUri(publicPath: string): Promise<string | null> {
   }
 }
 
-const fontCache = new Map<string, Promise<ArrayBuffer | null>>();
+let interBoldPromise: Promise<ArrayBuffer | null> | null = null;
 
-async function loadInterBold(text: string): Promise<ArrayBuffer | null> {
-  if (fontCache.has(text)) return fontCache.get(text)!;
+// Loaded from a local, vendored file (public/fonts/inter/Inter-Bold.woff) rather than
+// fetched from Google Fonts at request/build time — build sandboxes (e.g. Vercel) can't
+// always reach external hosts during static generation, and @vercel/og hard-requires at
+// least one loaded font or it throws "No fonts are loaded."
+function loadInterBold(): Promise<ArrayBuffer | null> {
+  if (interBoldPromise) return interBoldPromise;
 
-  const promise = (async () => {
+  interBoldPromise = (async () => {
     try {
-      const cssUrl = `https://fonts.googleapis.com/css2?family=Inter:wght@700&text=${encodeURIComponent(text)}`;
-      const cssRes = await fetch(cssUrl, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36',
-        },
-      });
-      const css = await cssRes.text();
-      const match = css.match(/src: url\(([^)]+)\)/);
-      if (!match) return null;
-      const fontRes = await fetch(match[1]);
-      if (!fontRes.ok) return null;
-      return await fontRes.arrayBuffer();
+      const filePath = path.join(process.cwd(), 'public', 'fonts', 'inter', 'Inter-Bold.woff');
+      const buffer = await readFile(filePath);
+      return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength) as ArrayBuffer;
     } catch {
       return null;
     }
   })();
 
-  fontCache.set(text, promise);
-  return promise;
+  return interBoldPromise;
 }
 
 function titleFontSize(title: string): number {
@@ -76,7 +70,7 @@ export default async function Image({ params }: Props) {
 
   const [imageDataUri, fontData] = await Promise.all([
     post ? getImageDataUri(post.image) : Promise.resolve(null),
-    loadInterBold(`${title} ${category} BELK BODY LAB`),
+    loadInterBold(),
   ]);
 
   return new ImageResponse(
