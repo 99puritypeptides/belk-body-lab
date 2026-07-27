@@ -1,0 +1,723 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "features": "Features",
+    "service": "Service",
+    "exercise": "Exercise",
+    "packages": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "communities": "Communities",
+    "contact": "Contact Us",
+    "getStarted": "Get started",
+    "menuTitle": "Navigation",
+    "followUs": "Social Connect",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Personal Trainer Charleston SC",
+    "titleHighlight": "Elite Body Transformations",
+    "subtitle": "South Carolina's most trusted personal trainer for fat loss, muscle building, and complete body transformations. Belk Body Lab delivers science-backed fitness coaching to clients across Charleston, Mount Pleasant, Summerville, West Ashley, North Charleston, and the entire Lowcountry. Whether you train in-person at our Charleston facility or online from anywhere in SC, every program is custom-built for your body, your schedule, and your goals — no cookie-cutter plans, no guesswork, just proven results from a NASM-certified coach with 7+ years and 500+ transformations.",
+    "ctaPrimary": "Apply for Coaching",
+    "ctaSecondary": "Start Your Transformation",
+    "happySpirits": "Happy Spirits",
+    "hours": "Hours",
+    "poses": "Poses",
+    "kcal": "Kcal",
+    "sets": "Sets"
+  },
+  "about": {
+    "label": "South Carolina's Top Personal Trainer",
+    "location": "Serving All of South Carolina & Online Clients Nationwide",
+    "name": "Kyle Belk",
+    "heading": "Transforming bodies,",
+    "headingItalic": "rewriting limits across SC.",
+    "bio1": "I'm Kyle Belk — a NASM-certified personal trainer and body transformation specialist based in Charleston, South Carolina, with over 7 years of hands-on experience helping more than 500 clients across the Lowcountry and beyond lose stubborn fat, build lean muscle, and completely transform how they look and feel. From busy professionals in Mount Pleasant to first-time lifters in Summerville, I've coached people at every fitness level to achieve results they never thought possible.",
+    "bio2": "I don't believe in cookie-cutter plans or one-size-fits-all templates. Every training and nutrition program I design is built around YOUR metabolism, YOUR schedule, and YOUR specific goals — whether you're training at a gym in North Charleston, at home in West Ashley, or joining my online coaching program from anywhere in South Carolina. As one of the highest-rated personal trainers in SC, I specialize in weight loss coaching, strength training, body recomposition, competition prep, and personalized online fitness programs that deliver real, measurable, sustainable results.",
+    "quote": "Your body is capable of more than your mind believes.",
+    "quoteAuthor": "- Kyle Belk, Personal Trainer South Carolina",
+    "cred1": "NASM Certified Personal Trainer",
+    "cred2": "Precision Nutrition Level 1",
+    "cred3": "Online & In-Person Coaching Across SC",
+    "cred4": "NPC Physique Competitor",
+    "skill1": "Fat Loss Programming",
+    "skill2": "Muscle Building & Hypertrophy",
+    "skill3": "Nutrition Strategy & Meal Planning",
+    "skill4": "Mindset & Accountability Coaching",
+    "ctaWork": "Work With Kyle",
+    "ctaServices": "View Services"
+  },
+  "bmi": {
+    "label": "Free Fitness Assessment Tool",
+    "title": "Check Your Starting Point for",
+    "titleHighlight": "Fat Loss or Muscle Gain in SC",
+    "description": "Knowing where you stand is the first step toward real progress. Whether you're in Charleston, Summerville, Mount Pleasant, or anywhere in South Carolina, use this free BMI calculator to understand your current body metrics and build a smarter plan moving forward. Hundreds of South Carolina clients start right here before enrolling in a fully customized body transformation program with Kyle Belk.",
+    "cat1": "Underweight",
+    "cat2": "Normal Weight",
+    "cat3": "Overweight",
+    "cat4": "Obese",
+    "catDesc1": "Focus on muscle hypertrophy.",
+    "catDesc2": "Optimize body composition.",
+    "catDesc3": "Structured fat loss blueprint.",
+    "catDesc4": "Sustainable body transformation.",
+    "range1": "< 18.5",
+    "range2": "18.5 – 24.9",
+    "range3": "25.0 – 29.9",
+    "range4": "≥ 30.0",
+    "descUnderweight": "Your BMI indicates you are underweight. Focus on a muscle-building program and a structured caloric surplus. Kyle can engineer a mass gain plan tailored specifically for your metabolism.",
+    "descNormal": "Great foundational metrics. At a normal weight, it is time to optimize body composition by strategically increasing lean muscle mass while torching stubborn fat.",
+    "descOverweight": "Your BMI falls into the overweight category. A structured fat loss program focusing on macros and strength training will get you back to optimal levels efficiently.",
+    "descObese": "Sustainable fat loss starts with a definitive, scalable plan. Kyle specializes in profound body transformations, providing the exact blueprint needed for your success.",
+    "calculatorTitle": "Calculator",
+    "calculatorBold": "Metrics",
+    "imperial": "LBS / IN",
+    "metric": "KG / CM",
+    "heightFt": "Height (Feet)",
+    "heightIn": "Height (Inches)",
+    "weightLbs": "Weight (Lbs)",
+    "heightCm": "Height (CM)",
+    "weightKg": "Weight (KG)",
+    "compute": "Compute Metrics",
+    "score": "Calculated Score",
+    "diagnosticLabel": "Diagnostic Context",
+    "requestPlan": "Request Custom Meal Plan",
+    "rangeUnder": "Under",
+    "rangeNormal": "Normal",
+    "rangeOver": "Over",
+    "rangeObese": "Obese",
+    "weightToLose": "Weight to lose for Normal BMI",
+    "weightToGain": "Weight to gain for Normal BMI",
+    "idealRange": "Ideal Weight Range",
+    "maintainWeight": "Maintain your current weight!",
+    "targetMetrics": "Target Metrics"
+  },
+  "transformations": {
+    "label": "Real Client Transformations Across South Carolina",
+    "title": "Real people.",
+    "titleItalic": "Real SC results.",
+    "description": "These body transformations are from real South Carolina clients — not stock photos or generic testimonials. Men and women from Charleston, Mount Pleasant, Summerville, West Ashley, North Charleston, and across the Lowcountry have used our personalized fitness coaching to lose fat, build muscle, and completely change their bodies. No shortcuts. No fad diets. Just science-backed training systems, custom nutrition, unwavering consistency, and the right coaching guidance from a certified personal trainer who knows how to get results.",
+    "viewAll": "View All SC Transformations",
+    "before": "Before",
+    "after": "After",
+    "drag": "Drag the slider to compare",
+    "fatLoss": "Fat Loss",
+    "muscleGain": "Muscle Gain",
+    "total": "Total Transformation",
+    "outro": "Helping clients across South Carolina — from the Charleston Peninsula to Summerville, Daniel Island, and beyond — achieve sustainable fat loss, strength, and confidence through structured personal training and nutrition coaching."
+  },
+  "testimonials": {
+    "label": "South Carolina Client Results",
+    "title": "What SC Clients Say About",
+    "titleItalic": "Their Fitness Transformation",
+    "subtitle": "From Charleston executives to Summerville parents — people don't just train with us, they transform. From fat loss to muscle gain, our South Carolina clients see real, lasting changes because every single plan is custom-built for their body, their life, and their goals.",
+    "program": "program",
+    "t1": "Kyle completely changed how I think about fitness. I'd tried everything before — keto, fasting, random YouTube programs. None of it stuck. In 16 weeks with Kyle, I lost 42 pounds and actually understand WHY it worked. Hands down the best personal trainer in South Carolina.",
+    "t2": "As a mom of two in Mount Pleasant with zero time, I needed something that actually fit my life. Kyle built around my schedule, my stress levels, even my meal preferences. Down 28 lbs and I feel stronger than I did in my 20s. I recommend him to every woman in SC looking for a real coach.",
+    "t3": "I came to Kyle as a skinny guy in Summerville who'd been lifting for 2 years with no results. He identified the exact issues with my training and nutrition. 20 weeks later — 18 pounds of lean muscle and a completely different physique. Worth every penny.",
+    "t4": "The weekly check-ins, the plan adjustments, the accountability — Kyle is always there. I never felt like just another client on a spreadsheet. He genuinely cares about your progress. Best investment I've ever made in my health here in Charleston.",
+    "t5": "Kyle prepped me for my first NPC show here in South Carolina. The man knows competition prep better than anyone I've worked with. Walked on stage at 4.8% body fat and placed first in my class. Unreal coaching.",
+    "r1": "-42 lbs",
+    "r2": "-28 lbs",
+    "r3": "+18 lbs muscle",
+    "r4": "-35 lbs",
+    "r5": "Competed + won",
+    "d1": "16 weeks",
+    "d2": "20 weeks",
+    "d3": "20 weeks",
+    "d4": "18 weeks",
+    "d5": "24 weeks"
+  },
+  "contact": {
+    "label": "Begin Your Transformation in South Carolina",
+    "title": "Ready to stop guessing and start",
+    "titleHighlight": "seeing real progress?",
+    "description": "Apply for personalized fitness coaching designed to help you lose fat, build muscle, and stay consistent long-term. Whether you're in Charleston, Mount Pleasant, Summerville, or anywhere in South Carolina, Kyle is now accepting new coaching clients both in-person and online.",
+    "processTitle": "Onboarding Process",
+    "step1Title": "Comprehensive Review",
+    "step1Desc": "Kyle personally analyzes your intake form within 24 hours to understand your body, lifestyle, and goals.",
+    "step2Title": "Strategy Call",
+    "step2Desc": "A free 20-minute consultation directly with Kyle to discuss your situation and map out a personalized approach.",
+    "step3Title": "Plan Blueprint",
+    "step3Desc": "Receive a custom training and nutrition blueprint built specifically for your body and your South Carolina lifestyle.",
+    "locLabel": "Location",
+    "locValue": "South Carolina & Online",
+    "igLabel": "Instagram",
+    "igValue": "@kylebelk",
+    "thLabel": "Threads",
+    "thValue": "@kylebelk",
+    "ttLabel": "TikTok",
+    "ttValue": "@kyle.belk",
+    "ytLabel": "YouTube",
+    "ytValue": "BelkBodyLab",
+    "emailLabel": "Email",
+    "emailValue": "trainwithbelk@gmail.com",
+    "phoneLabel": "Phone",
+    "phoneValue": "(843) 743-9007",
+    "formTitle": "Intake",
+    "formTitleBold": "Application",
+    "formSubtitle": "Secure your spot with South Carolina's top-rated personal trainer.",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "goal": "Primary Goal",
+    "goalPlaceholder": "Select your main objective...",
+    "context": "Diagnostic Context (Optional)",
+    "contextPlaceholder": "Share your current situation, any challenges, and what you've tried previously...",
+    "submit": "Submit Application",
+    "submitting": "Transmitting...",
+    "disclaimer": "Free Consultation · No Obligation",
+    "successTitle": "Application",
+    "successHighlight": "Received",
+    "successDesc": "Kyle will review your application and reach out within 24 hours. Your transformation blueprint is initiating.",
+    "submitAnother": "Submit Another Application",
+    "goal1": "Fat Loss & Shredding",
+    "goal2": "Muscle Hypertrophy",
+    "goal3": "Body Recomposition",
+    "goal4": "Competition Prep",
+    "goal5": "General Fitness",
+    "goal6": "Other"
+  },
+  "faq": {
+    "title": "Questions &",
+    "titleHighlight": "Answers",
+    "q1": "Do I need gym access to work with a personal trainer in South Carolina?",
+    "a1": "No. As a personal trainer serving all of South Carolina, Kyle builds programs for home gyms, commercial gyms, hotel gyms, and hybrid setups. Whether you're in Charleston with a full gym or training from your garage in Summerville, your program is customized to what you have access to.",
+    "q2": "How fast will I see results from personal training?",
+    "a2": "Most South Carolina clients begin seeing noticeable changes within the first 2-3 weeks, including better energy, improved strength, and visible body composition shifts. Significant, head-turning transformations typically happen over 90 days when following the customized training and nutrition plan consistently.",
+    "q3": "Is online coaching as effective as in-person personal training in SC?",
+    "a3": "Absolutely. For many clients across South Carolina, online coaching is actually more effective because it provides daily structure, flexible scheduling, and ongoing support without relying on a fixed gym schedule. Over 80% of our most dramatic transformations have come from online clients.",
+    "q4": "How much do Belk Body Lab coaching packages cost?",
+    "a4": "Belk Body Lab offers three monthly coaching packages: Starter at $75/month, Transform at $199/month, and Elite at $349/month. All packages include a custom training program, personalized nutrition plan, weekly check-ins, and direct access to Kyle — not just session supervision. A free 15-minute consultation is available to find the right fit.",
+    "q5": "What areas of South Carolina do you serve?",
+    "a5": "We serve clients across the entire state of South Carolina, with a strong focus on the Lowcountry region including Charleston, Mount Pleasant, West Ashley, North Charleston, Summerville, Daniel Island, James Island, Johns Island, Isle of Palms, Goose Creek, and Hanahan. We also serve online clients from Columbia, Greenville, Myrtle Beach, and across the US.",
+    "q6": "What makes Belk Body Lab different from other personal trainers in South Carolina?",
+    "a6": "Unlike most SC trainers who rely on generic templates, every Belk Body Lab program is custom-engineered based on your metabolism, body type, lifestyle, and goals. You get a NASM-certified coach with 7+ years of experience, 500+ successful transformations, full nutrition coaching, weekly accountability check-ins, and real-time plan adjustments — not just someone counting your reps.",
+    "q7": "How do I find the best personal trainer near me in Charleston, SC?",
+    "a7": "To find the best personal trainer near you in Charleston, SC: verify NASM, NSCA, or ACSM certification; ask for a client results portfolio; confirm nutrition coaching is included (not just workouts); and book a free consultation before committing. Belk Body Lab serves all of greater Charleston in-person and all of South Carolina online — apply at belkbodylab.com.",
+    "q8": "How do I get started with personal training at Belk Body Lab?",
+    "a8": "Getting started takes three steps: (1) Apply for a free consultation at belkbodylab.com — takes 2 minutes. (2) Join a 15–30 minute call with Kyle to discuss your goals and find the right package. (3) Receive your fully custom training and nutrition program within 48 hours. Week 1 starts immediately."
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Personal Training & Online Fitness Coaching in South Carolina",
+      "subtitle": "South Carolina's Premier Fitness Coach",
+      "description": "Whether you need a personal trainer in South Carolina for in-person sessions or prefer the flexibility of online coaching, Belk Body Lab builds custom fat loss, muscle-building, and body transformation programs designed specifically for your body, your schedule, and your life. Every plan is science-backed and personally engineered by Kyle Belk — a NASM-certified coach with 500+ successful transformations across Charleston, Mount Pleasant, Summerville, and the entire SC Lowcountry.",
+      "ctaPrimary": "Apply for Coaching",
+      "ctaSecondary": "See How It Works",
+      "stat1": "500+ SC Clients Transformed",
+      "stat2": "98% Client Satisfaction",
+      "stat3": "90-Day Results Guarantee"
+    },
+    "grid": {
+      "title": "Personal Training Services in South Carolina",
+      "subtitle": "Every program is structured, personalized, and built to deliver real results for South Carolina clients — not cookie-cutter templates or generic workout sheets.",
+      "online": {
+        "title": "Online Coaching",
+        "popular": "Most Popular",
+        "subtitle": "Work 1-on-1 with South Carolina's top-rated virtual personal trainer from anywhere in SC or beyond.",
+        "description": "This is fully customized online coaching designed for real life — whether you train at a gym in Charleston, at home in Summerville, or from a hotel room while traveling. You get the same elite-level guidance as in-person clients, with the flexibility to train on your schedule.",
+        "features": [
+          "Custom training program (12+ weeks)",
+          "Full nutrition & macro plan",
+          "Weekly video check-ins with Kyle",
+          "Direct messaging support between sessions",
+          "Real-time plan adjustments based on your data",
+          "Progress tracking & body composition analytics"
+        ],
+        "footer": "Perfect for South Carolina clients who want world-class personal training with the flexibility to train anywhere — no gym commute required.",
+        "cta": "Apply for Online Coaching"
+      },
+      "oneOnOne": {
+        "title": "1-on-1 Personal Training",
+        "location": "Charleston, SC",
+        "subtitle": "Train directly with Kyle in Charleston, South Carolina with structured, hands-on personal training.",
+        "description": "The ultimate personal training experience for South Carolina residents who want face-to-face coaching. Ideal for clients who want real-time form correction, in-person accountability, and expert programming that pushes you beyond what you'd do on your own.",
+        "features": [
+          "3–5 sessions per week in Charleston",
+          "Real-time form correction & technique coaching",
+          "Progressive strength & hypertrophy systems",
+          "Weekly body composition tracking & measurements",
+          "Post-session nutrition guidance & meal adjustments"
+        ],
+        "footer": "Also supported with online tracking for consistent progress outside sessions. Available for Charleston, Mount Pleasant, and nearby SC residents.",
+        "cta": "Apply for 1-on-1 Training"
+      },
+      "customPlan": {
+        "title": "Custom Workout Plan",
+        "subtitle": "A fully personalized training program built for your goals — without ongoing coaching commitments.",
+        "description": "Perfect if you want a custom workout plan from a certified South Carolina personal trainer but prefer to train independently. Great for self-motivated clients across SC who just need the right roadmap.",
+        "features": [
+          "8–12 week periodized program",
+          "Exercise video demonstrations for every movement",
+          "Sets, reps, tempo, and progression plan",
+          "Built-in deload week for recovery",
+          "Delivered within 48 hours"
+        ],
+        "cta": "Apply for Custom Plan"
+      },
+      "nutrition": {
+        "title": "Nutrition Coaching",
+        "subtitle": "Training is only half the equation. Your body transformation results depend on how you fuel your body.",
+        "description": "This standalone nutrition coaching service is ideal for South Carolina clients who want expert macro guidance, custom meal planning, and metabolic optimization — whether paired with training or on its own.",
+        "features": [
+          "Full metabolic rate assessment",
+          "Custom macros & daily calorie targets",
+          "Flexible meal structure that fits your SC lifestyle",
+          "Monthly adjustments based on progress data",
+          "Grocery lists & meal prep guidance"
+        ],
+        "footer": "Designed for sustainable fat loss and long-term body composition results for South Carolina clients.",
+        "cta": "Apply for Nutrition Coaching"
+      }
+    },
+    "whoItsFor": {
+      "title": "Personal Training for Every Starting Point in SC",
+      "subtitle": "Whether you're a complete beginner in Summerville or an experienced lifter in Charleston, coaching is built around your specific starting point, body type, and goals.",
+      "items": [
+        {
+          "title": "Starting From Zero in SC",
+          "description": "If you're new to fitness and unsure where to begin, you get a clear structure, proper form guidance, and a step-by-step plan that builds your confidence and results from day one. Many first-time clients across South Carolina start exactly here."
+        },
+        {
+          "title": "Fat Loss & Weight Loss",
+          "description": "Lose fat without extreme dieting or unsustainable restrictions. Our structured weight loss programs are designed for real, lasting fat loss — not quick fixes that bounce back. Ideal for South Carolina clients who've tried everything else."
+        },
+        {
+          "title": "Build Muscle & Strength",
+          "description": "Progressive, science-backed training focused on real strength gains and measurable muscle growth. Whether you're in a Charleston gym or training at home, every rep has a purpose."
+        },
+        {
+          "title": "Busy SC Professionals & Parents",
+          "description": "Short on time between work, family, and the Lowcountry lifestyle? Programs are built to fit your schedule — 45-60 minute sessions, flexible timing, and nutrition that doesn't require hours of meal prep."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Investment in Your Results",
+      "subtitle": "Every package includes a fully customized coaching system - built for your body and your goals.",
+      "guarantee": "90-Day Results Guarantee",
+      "guaranteeDesc": "Follow the plan - see results, or we make it right.",
+      "starter": {
+        "name": "Starter",
+        "price": "75",
+        "description": "Best for building consistency and getting started.",
+        "features": [
+          "Custom 8-week training plan",
+          "Basic nutrition guidelines",
+          "Weekly check-ins",
+          "Exercise video library",
+          "Monthly plan updates"
+        ]
+      },
+      "transform": {
+        "name": "Transform",
+        "price": "199",
+        "description": "Best for serious fat loss or muscle-building results.",
+        "highlight": "Top choice for South Carolina clients seeking a comprehensive body transformation program",
+        "features": [
+          "Custom 12-week training program",
+          "Full macro + meal planning",
+          "Weekly video check-ins",
+          "Exercise video library",
+          "Bi-weekly plan adjustments",
+          "2 coaching calls per month",
+          "Priority response (12hr)"
+        ]
+      },
+      "elite": {
+        "name": "Elite",
+        "price": "349",
+        "description": "Maximum results with full coaching support.",
+        "highlight": "The ultimate elite-tier coaching package for those demanding the fastest, most optimized results.",
+        "features": [
+          "Custom 16-week training program",
+          "Full macro + meal planning",
+          "Daily check-ins",
+          "Unlimited coaching calls",
+          "Weekly plan adjustments",
+          "Full lifestyle customization",
+          "Competition prep support",
+          "Priority response (4hr)"
+        ]
+      }
+    },
+    "process": {
+      "title": "From Application to Transformation",
+      "steps": [
+        {
+          "title": "Apply",
+          "description": "Submit your application so we understand your goals and starting point."
+        },
+        {
+          "title": "Strategy Call",
+          "description": "We map out your personalized approach based on your lifestyle and challenges."
+        },
+        {
+          "title": "Custom Plan",
+          "description": "You receive a structured training and nutrition system built specifically for your body."
+        },
+        {
+          "title": "Coaching & Adjustments",
+          "description": "Weekly check-ins and real-time adjustments keep you progressing consistently."
+        },
+        {
+          "title": "Results",
+          "description": "You build strength, lose fat, and develop a system you can sustain long-term."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Personal Training Questions & Answers",
+      "items": [
+        {
+          "q": "How much does a personal trainer cost in South Carolina?",
+          "a": "In South Carolina, traditional personal trainers typically charge $50–$150 per session, adding up to $600-$1,800+ per month for just exercise guidance. Our comprehensive coaching packages include custom training programs, full nutrition & macro planning, weekly accountability check-ins, and real-time plan adjustments — delivering significantly more value and better long-term results."
+        },
+        {
+          "q": "Is online fitness coaching worth it for South Carolina clients?",
+          "a": "Absolutely. Over 80% of our most dramatic transformations come from online clients across South Carolina. Online coaching offers greater flexibility, daily structure, and consistent support without requiring you to commute to a gym at a fixed time. Whether you're in Mount Pleasant, Summerville, or Columbia, you get the same elite-level guidance."
+        },
+        {
+          "q": "What does a personal training package include?",
+          "a": "Every package includes a fully personalized training program designed for your body, custom nutrition guidance with macro targets, ongoing progress tracking, body composition analytics, and direct coaching support from Kyle. No generic PDFs or template workouts."
+        },
+        {
+          "q": "Can beginners in South Carolina join these programs?",
+          "a": "Yes — many of our best transformations started from complete beginners with no gym experience. Programs are designed around your exact starting point, with detailed exercise instructions, form videos, and progressive scaling to ensure safety and results."
+        },
+        {
+          "q": "Is nutrition coaching included with personal training?",
+          "a": "Yes, depending on your package tier. Our Transform and Elite packages include comprehensive nutrition coaching with custom macros, meal frameworks, and grocery guidance. You can also add nutrition coaching as a standalone service."
+        },
+        {
+          "q": "Do you offer personal training near me in South Carolina?",
+          "a": "We offer in-person personal training in the Charleston, SC area and comprehensive online coaching for clients anywhere in South Carolina — including Mount Pleasant, West Ashley, North Charleston, Summerville, Daniel Island, James Island, Goose Creek, Columbia, Greenville, and Myrtle Beach."
+        },
+        {
+          "q": "How long does it take to see results from personal training?",
+          "a": "Most clients notice improved energy and strength within weeks 1-2. Visible body composition changes typically appear by weeks 4-6, with significant transformations happening over 90 days of consistent training and nutrition adherence."
+        },
+        {
+          "q": "What makes Belk Body Lab different from gym personal trainers in SC?",
+          "a": "Unlike traditional gym trainers who count reps for an hour, Kyle provides a complete transformation system — including periodized training, metabolic nutrition planning, weekly video check-ins, real-time plan adjustments, and direct coaching access. It's full-service body transformation, not just workouts."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Stop Guessing.",
+      "titleHighlight": "Start Seeing Results.",
+      "description": "Every week you wait is another week without a plan. If you're serious about fat loss, muscle building, or a complete body transformation in South Carolina, now is the time to take action and start working with a coach who gets real results.",
+      "location": "Now accepting personal training clients across South Carolina and online nationwide.",
+      "limited": "Limited coaching spots available — serious clients only.",
+      "cta": "Apply for Coaching",
+      "consult": "Book Free Consultation"
+    }
+  },
+  "portfolioHero": {
+    "label": "Real SC Results",
+    "title": "South Carolina Client",
+    "titleHighlight": "Transformations",
+    "description": "Real people. Real results. These are verified body transformation results from personal training clients across South Carolina — including Charleston, Mount Pleasant, Summerville, West Ashley, North Charleston, and our online coaching programs. Every result was built through structured training, custom nutrition planning, and consistent accountability with Kyle Belk. No shortcuts. No quick fixes. No Photoshop. Just proven systems, expert coaching, and clients who put in the work."
+  },
+  "portfolioStats": {
+    "stat1Label": "SC Client Transformations",
+    "stat2Label": "Average Fat Loss",
+    "stat3Label": "Client Satisfaction Rate",
+    "stat4Label": "Years Coaching in SC",
+    "stat2Suffix": " lbs (12 Weeks)",
+    "stat4Suffix": "+ Years"
+  },
+  "portfolioGallery": {
+    "filterAll": "All Results",
+    "filterFatLoss": "Fat Loss",
+    "filterMuscleGain": "Muscle Gain",
+    "filterTotal": "Total Transformation",
+    "before": "Before",
+    "after": "After",
+    "clickToView": "Click to view full story",
+    "yearsOld": "years old",
+    "program": "program",
+    "introTitle": "Proven Body Transformation Results in South Carolina",
+    "introText": "These before-and-after fitness transformations demonstrate what happens when science-based personal training meets real consistency. From dramatic fat loss to lean muscle gain and complete body recomposition, these results represent clients from across South Carolina — Charleston, Mount Pleasant, North Charleston, Summerville, West Ashley, James Island, Daniel Island, Goose Creek, Hanahan, and online coaching clients from Columbia, Greenville, and across the US. Every transformation was achieved through Kyle Belk's personalized coaching systems.",
+    "ctaTitle": "Ready to Be the",
+    "ctaTitleHighlight": "Next SC Transformation?",
+    "ctaDescription": "Every result you see here started exactly where you are now. The difference? They committed to a structured plan with a certified personal trainer who held them accountable. If you're in South Carolina and ready to lose fat, build muscle, and achieve real, lasting results, now is your time to start.",
+    "ctaBtn": "Start My Transformation",
+    "ctaLocation": "Now accepting personal training clients across South Carolina and online.",
+    "ctaLimited": "Limited coaching spots available — apply today.",
+    "modalCta": "Get My Transformation",
+    "emptyState": "No transformations in this category yet.",
+    "catFatLoss": "Fat Loss",
+    "catMuscleGain": "Muscle Gain",
+    "catTotal": "Total Transformation",
+    "items": [
+      {
+        "name": "Fat Loss Transformation",
+        "age": "34",
+        "location": "Charleston SC",
+        "result": "-42 lbs",
+        "duration": "90 Days",
+        "caption": "Charleston SC client - 90-day fat loss transformation (-42 lbs) through personalized online fitness coaching.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Muscle Gain Blueprint",
+        "age": "27",
+        "location": "Mount Pleasant",
+        "result": "+12 lbs",
+        "duration": "12 Weeks",
+        "caption": "12-week muscle gain transformation - +12 lbs lean muscle using structured training and nutrition coaching.",
+        "category": "muscle-gain"
+      },
+      {
+        "name": "Body Recomposition",
+        "age": "31",
+        "location": "North Charleston",
+        "result": "Shredded",
+        "duration": "16 Weeks",
+        "caption": "Body recomposition before and after - lost fat and built muscle in 16 weeks with online coaching.",
+        "category": "total"
+      },
+      {
+        "name": "Beginner Progress",
+        "age": "24",
+        "location": "Summerville",
+        "result": "-25 lbs",
+        "duration": "12 Weeks",
+        "caption": "Beginner client from North Charleston - sustainable weight loss and strength progress over 12 weeks.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Busy Professional",
+        "age": "42",
+        "location": "Online Client",
+        "result": "-28 lbs",
+        "duration": "14 Weeks",
+        "caption": "Busy professional - fat loss transformation (-28 lbs) with a flexible online coaching plan.",
+        "category": "fat-loss"
+      },
+      {
+        "name": "Female Transformation",
+        "age": "29",
+        "location": "Online Client",
+        "result": "Toned",
+        "duration": "12 Weeks",
+        "caption": "Female body transformation - 12-week fat loss and toning through custom nutrition and training.",
+        "category": "total"
+      }
+    ]
+  },
+  "portfolioFaq": {
+    "title": "Transformation",
+    "titleHighlight": "Questions",
+    "q1": "Do body transformation programs really work in South Carolina?",
+    "a1": "Yes — when built correctly by a certified personal trainer. Every result you see on this page comes from structured, periodized training, personalized nutrition coaching, and consistent weekly accountability with Kyle Belk. These aren't random workouts — they're engineered transformation systems.",
+    "q2": "What results can I expect in 90 days of personal training?",
+    "a2": "Most South Carolina clients see significant fat loss (15-40+ lbs), measurable strength gains, and dramatically improved body composition within 90 days when following their customized program consistently. Results vary based on starting point, adherence, and individual factors.",
+    "q3": "Are online fitness coaching results as good as in-person training?",
+    "a3": "Absolutely. In fact, many of our most dramatic transformations came from online coaching clients across South Carolina. Online coaching provides daily structure, flexible scheduling, and ongoing support — allowing clients from Charleston to Columbia to Myrtle Beach to get elite-level results.",
+    "q4": "How long does a full body transformation take?",
+    "a4": "It depends on your starting point and goals, but most clients begin seeing measurable, visible results within the first 8–12 weeks. A complete, dramatic transformation typically takes 12-24 weeks of consistent coaching.",
+    "q5": "Can beginners achieve transformation results like this?",
+    "a5": "Yes — many of our best success stories started as complete beginners with zero gym experience. Beginners often see faster initial results because their bodies respond strongly to structured training stimulus. Every program is designed around your exact starting point."
+  },
+  "footer": {
+    "brand": "BelkBodyLab",
+    "home": "Home",
+    "about": "About",
+    "packages": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "blog": "Blog",
+    "communities": "Communities",
+    "faq": "FAQ",
+    "copyright": "© 2026 BelkBodyLab. All Rights Reserved.",
+    "tagline": "Belk Body Lab — South Carolina's #1 personal trainer. Expert fitness coaching in Charleston, Mount Pleasant, Summerville, West Ashley, North Charleston, and online across the US."
+  },
+  "metadata": {
+    "homeTitle": "Belk Body Lab | #1 Personal Trainer in Charleston, SC",
+    "homeDesc": "Kyle Belk, NASM-CPT — top personal trainer in Charleston, SC. Custom fat loss, muscle building & body transformation coaching, in-person and online.",
+    "packagesTitle": "Personal Training Pricing in South Carolina | Belk Body Lab",
+    "packagesDesc": "Personal training packages and pricing in South Carolina. Compare coaching options for fat loss, muscle building, and transformation with Kyle Belk.",
+    "portfolioTitle": "Body Transformation Results | Before & After | SC",
+    "portfolioDesc": "Real before-and-after transformation results from personal training clients across South Carolina — fat loss, muscle gain, and recomposition.",
+    "aboutTitle": "About Kyle Belk | Personal Trainer in South Carolina",
+    "aboutDesc": "Meet Kyle Belk — NASM-certified personal trainer and body transformation specialist in Charleston, SC. 7+ years experience, 500+ client transformations.",
+    "blogTitle": "Fitness Tips & Training Guides | Belk Body Lab Blog",
+    "blogDesc": "Fat loss guides, muscle building programs, and nutrition science from South Carolina personal trainer Kyle Belk. Actionable fitness advice for SC and beyond.",
+    "contactTitle": "Contact Kyle Belk | Personal Trainer in South Carolina",
+    "contactDesc": "Apply for personalized fitness coaching with Kyle Belk, South Carolina's top personal trainer. Serving Charleston, Mount Pleasant, Summerville, and online."
+  },
+  "blog": {
+    "hero": {
+      "label": "Fitness Tips & Training Guides",
+      "title": "SC Fitness",
+      "titleHighlight": "Intelligence",
+      "subtitle": "Expert fat loss guides, muscle building programs, nutrition science, and training tips from South Carolina personal trainer Kyle Belk. Actionable fitness content backed by science and 7+ years of real-world coaching experience.",
+      "cta": "Explore Articles"
+    },
+    "cta": {
+      "label": "Train With South Carolina's Best",
+      "title": "Stop Guessing.",
+      "titleHighlight": "Get Expert Coaching.",
+      "description": "Reading about fitness is great — but nothing replaces a personalized plan from a certified personal trainer. Whether you're in Charleston, Summerville, or anywhere in South Carolina, Kyle will build a custom training and nutrition blueprint designed to deliver real, measurable results.",
+      "ctaPrimary": "Apply for Coaching",
+      "ctaSecondary": "Browse SC Success Stories"
+    },
+    "grid": {
+      "readMore": "Read Protocol",
+      "featured": "Featured Analysis"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "label": "South Carolina's Top Personal Trainer",
+      "title": "THE MASTERPLAN FOR TOTAL",
+      "titleHighlight": "BODY TRANSFORMATION.",
+      "subtitle": "Most personal trainers in South Carolina give you a generic template and call it a day. I give you a science-based blueprint engineered for YOUR specific physiology, YOUR metabolism, and YOUR life. No fluff. No fads. Just proven systems that have transformed 500+ clients across SC.",
+      "cta": "Apply for Coaching",
+      "ctaLabel": "Start Your SC Transformation",
+      "trust": "500+ South Carolina Clients Transformed",
+      "meta": "ESTABLISHED IN TWO THOUSAND NINETEEN - CHARLESTON SOUTH CAROLINA"
+    },
+    "story": {
+      "label": "My Story",
+      "title": "Results aren't born. They're engineered.",
+      "content1": "I didn't start as South Carolina's top personal trainer. I started as someone frustrated by the lack of real guidance in the fitness industry. I spent years navigating fad diets, cookie-cutter programs, and trainers who couldn't explain the 'why' behind anything. I had to break the system to build one that actually delivers consistent, measurable results — and that's exactly what Belk Body Lab became.",
+      "content2": "Belk Body Lab was born in Charleston, South Carolina from a simple but powerful idea: your body is a biological system. If you give it the right inputs — science-based training, metabolic nutrition, and unwavering accountability — the output is guaranteed. Since 2019, I've applied this principle to over 500 clients across South Carolina and beyond, helping them lose fat, build muscle, and completely transform their bodies and their confidence.",
+      "mission": "My mission as South Carolina's premier personal trainer is simple: stop the guesswork and start the transformation."
+    },
+    "philosophy": {
+      "label": "Our Training Philosophy",
+      "title": "The Belk Body Lab Approach",
+      "subtitle": "What makes us different from every other personal trainer in South Carolina? Every program is a proprietary blend of exercise science, metabolic nutrition, and relentless accountability.",
+      "p1Title": "Scientific Training Systems",
+      "p1Desc": "No random workouts or 'feeling the burn' just for the sake of it. Every rep, set, and rest period is calculated to trigger maximum muscle hypertrophy or metabolic fat loss based on your body's specific response patterns.",
+      "p2Title": "Data-Driven Nutrition Planning",
+      "p2Desc": "Flexible dieting isn't an excuse to eat junk. It's a proven method to ensure long-term sustainability while hitting the exact macros and calories your body needs to transform. Every meal plan is built for your SC lifestyle.",
+      "p3Title": "Unwavering Accountability",
+      "p3Desc": "You aren't a number on a spreadsheet. I provide weekly video check-ins, real-time plan adjustments, direct messaging access, and honest feedback. When you work with me, you have a personal trainer who genuinely cares about your results.",
+      "tag1": "Hypertrophy Coach",
+      "tag2": "Fat Loss Specialist",
+      "tag3": "SC Body Architect"
+    },
+    "credentials": {
+      "label": "Credentials & Authority",
+      "title": "Certified Expertise.",
+      "titleItalic": "Proven SC Results.",
+      "c1": "NASM Certified Personal Trainer",
+      "c2": "Precision Nutrition Level 1",
+      "c3": "NPC Physique Competitor",
+      "c4": "7+ Years Coaching in South Carolina",
+      "stat1": "500+",
+      "stat1Label": "SC Clients Coached",
+      "stat2": "10k+",
+      "stat2Label": "Lbs Lost by SC Clients",
+      "stat3": "100%",
+      "stat3Label": "Custom Programs",
+      "footer": "I don't just teach the science — I live it. Every program I build is backed by nationally recognized certifications, 7+ years of professional coaching experience, and 500+ successful client transformations right here in South Carolina."
+    },
+    "lifestyle": {
+      "label": "Inside the Lab",
+      "title": "More Than Just Lifting Weights.",
+      "content": "Progress happens when discipline becomes routine. When I'm not coaching South Carolina clients, I'm researching the latest in muscle physiology, nutrition science, and performance optimization — or helping the next generation of athletes reach their potential. My commitment to continuous learning is what separates Belk Body Lab from every other personal trainer in SC.",
+      "value1": "Discipline",
+      "value2": "Precision",
+      "value3": "Resilience"
+    },
+    "finalCta": {
+      "title": "READY TO STOP THE",
+      "titleHighlight": "GUESSWORK?",
+      "description": "I only accept a limited number of serious clients who are committed to their transformation. If you're in South Carolina and ready to put in the work, I'll give you the exact plan to get there — backed by science, built for your body, and supported every step of the way.",
+      "limited": "Limited Spots Available in SC",
+      "cta": "Apply for Elite Coaching",
+      "location": "South Carolina & Online Nationwide"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "START YOUR SC",
+      "titleHighlight": "TRANSFORMATION.",
+      "subtitle": "Ready to work with South Carolina's top personal trainer? Whether you're looking for in-person training in Charleston or online coaching from anywhere in SC, your transformation starts with a single application. Contact Kyle for coaching inquiries, free consultations, or general questions."
+    },
+    "faq": {
+      "label": "Common Questions",
+      "title": "Application",
+      "titleHighlight": "Questions",
+      "q1": "How long is the onboarding process?",
+      "a1": "Once you submit your application, Kyle personally reviews it within 24 hours. If you're a good fit, we'll schedule a free strategy call within 2-3 business days to discuss your goals and map out your personalized approach.",
+      "q2": "Do I need to be in Charleston to work with Kyle?",
+      "a2": "No. While Kyle is based in Charleston, South Carolina, over 80% of our clients train remotely through our online coaching program. We use advanced tracking tools, video check-ins, and direct messaging to ensure elite results for clients anywhere in South Carolina and across the US.",
+      "q3": "What if I've never trained before?",
+      "a3": "Belk Body Lab works with all fitness levels — from complete beginners who've never stepped foot in a gym to competitive NPC athletes. Many of our most impressive South Carolina transformations started from absolute zero. The only requirement is commitment."
+    }
+  },
+  "communities": {
+    "navTitle": "SC Communities",
+    "viewAll": "View All South Carolina Communities →",
+    "hero": {
+      "title": "South Carolina Personal Training Communities",
+      "subtitle": "Elite Fitness Coaching Across the Entire Lowcountry & Beyond",
+      "description": "Belk Body Lab serves personal training clients across the entire state of South Carolina — not just Charleston. From the historic streets of downtown Charleston to the growing suburbs of Summerville and Goose Creek, from the coastal communities of Mount Pleasant and Daniel Island to online clients in Columbia, Greenville, and Myrtle Beach, our mission remains the same: deliver science-based, personalized fitness coaching that produces real, lasting body transformations."
+    },
+    "intro": {
+      "title": "Where We Train Across South Carolina",
+      "content": "Belk Body Lab isn't just a gym — it's a high-performance coaching system that meets you where you are. While our home base is in Charleston, South Carolina, we serve dedicated personal training clients throughout all surrounding communities and statewide through our online coaching platform. Whether you're a corporate professional in Mount Pleasant, a busy parent in Summerville, a military service member in Goose Creek, or an athlete on Johns Island, you get the same elite-level training systems, custom nutrition planning, and unwavering accountability that has produced 500+ body transformations across SC."
+    },
+    "grid": {
+      "charleston": {
+        "name": "Charleston",
+        "intent": "Elite Personal Training",
+        "slug": "/personal-trainer-charleston-sc"
+      },
+      "mountPleasant": {
+        "name": "Mount Pleasant",
+        "intent": "Busy Professional Fitness",
+        "slug": "/personal-training-mount-pleasant-sc"
+      },
+      "danielIsland": {
+        "name": "Daniel Island",
+        "intent": "High-End Private Coaching",
+        "slug": "/fitness-coach-daniel-island-sc"
+      },
+      "westAshley": {
+        "name": "West Ashley",
+        "intent": "Strength Training for Beginners",
+        "slug": "/strength-training-west-ashley-sc"
+      },
+      "summerville": {
+        "name": "Summerville",
+        "intent": "Sustainable Weight Loss",
+        "slug": "/weight-loss-coaching-summerville-sc"
+      },
+      "johnsIsland": {
+        "name": "Johns Island",
+        "intent": "Active Coastal Living",
+        "slug": "/private-fitness-coach-johns-island-sc"
+      },
+      "isleOfPalms": {
+        "name": "Isle of Palms",
+        "intent": "Athletic Excellence",
+        "slug": "/athletic-performance-training-isle-of-palms-sc"
+      },
+      "northCharleston": {
+        "name": "North Charleston",
+        "intent": "Body Transformations",
+        "slug": "/body-transformation-north-charleston-sc"
+      },
+      "jamesIsland": {
+        "name": "James Island",
+        "intent": "Localized Lifestyle Coaching",
+        "slug": "/fitness-trainer-james-island-sc"
+      },
+      "gooseCreek": {
+        "name": "Goose Creek",
+        "intent": "Foundation & Consistency",
+        "slug": "/personal-coaching-goose-creek-sc"
+      }
+    }
+  }
+}
