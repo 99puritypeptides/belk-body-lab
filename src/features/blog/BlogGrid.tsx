@@ -10,7 +10,7 @@ interface BlogGridProps {
   posts: BlogPost[];
 }
 
-const categories: (BlogCategory | 'All')[] = ['All', 'Fat Loss', 'Muscle Gain', 'Nutrition', 'Mindset', 'Lifestyle', 'Coaching', 'Reconstitution'];
+const categories: (BlogCategory | 'All')[] = ['All', 'Fat Loss', 'Muscle Gain', 'Nutrition', 'Mindset', 'Lifestyle', 'Coaching', 'Reconstitution', 'Peptide Science'];
 
 export default function BlogGrid({ posts }: BlogGridProps) {
   const t = useTranslations('blog');
