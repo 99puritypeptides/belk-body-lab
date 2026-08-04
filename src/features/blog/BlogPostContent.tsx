@@ -10,7 +10,7 @@ interface BlogPostContentProps {
 
 export default function BlogPostContent({ content }: BlogPostContentProps) {
   return (
-    <div className="max-w-[800px] mx-auto">
+    <div className="max-w-[800px] mx-auto" suppressHydrationWarning>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -28,6 +28,7 @@ export default function BlogPostContent({ content }: BlogPostContentProps) {
           prose-blockquote:border-l-accent-green prose-blockquote:bg-white/5 prose-blockquote:p-8 prose-blockquote:rounded-2xl prose-blockquote:italic
           prose-img:rounded-[2rem] prose-img:border prose-img:border-white/10 prose-img:shadow-2xl prose-img:my-16"
         dangerouslySetInnerHTML={{ __html: content.content }}
+        suppressHydrationWarning
       />
     </div>
   );
