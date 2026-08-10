@@ -1,4 +1,4 @@
-export type BlogCategory = 'Fat Loss' | 'Muscle Gain' | 'Nutrition' | 'Mindset' | 'Lifestyle' | 'Training' | 'Recovery' | 'Coaching';
+export type BlogCategory = 'Fat Loss' | 'Muscle Gain' | 'Nutrition' | 'Mindset' | 'Lifestyle' | 'Training' | 'Recovery' | 'Coaching' | 'Reconstitution' | 'Peptide Science';
 
 export interface BlogPostContent {
   title: string;
@@ -6,6 +6,8 @@ export interface BlogPostContent {
   content: string; // HTML or MDX string
   metaTitle: string;
   metaDescription: string;
+  keywords?: string[];
+  canonicalOverride?: string;
   faqs?: { q: string; a: string }[];
   customSchemas?: string[];
 }

@@ -47,10 +47,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
   const isoDate = toISODate(post.date);
 
+  const postUrl = locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`;
+  const canonicalUrl = content.canonicalOverride || postUrl;
+
   return {
     title: content.metaTitle,
     description: content.metaDescription,
-    keywords: [
+    keywords: content.keywords && content.keywords.length > 0 ? content.keywords : [
       content.metaTitle,
       ...(CATEGORY_KEYWORDS[post.category] || []),
       'Kyle Belk',
@@ -58,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ],
     authors: [{ name: 'Kyle Belk', url: `${siteUrl}/about` }],
     alternates: {
-      canonical: locale === 'en' ? `${siteUrl}/blog/${slug}` : `${siteUrl}/${locale}/blog/${slug}`,
+      canonical: canonicalUrl,
       languages: {
         en: `${siteUrl}/blog/${slug}`,
         es: `${siteUrl}/es/blog/${slug}`,
