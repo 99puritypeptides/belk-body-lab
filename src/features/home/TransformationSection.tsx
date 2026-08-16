@@ -45,9 +45,9 @@ export default function TransformationsSection() {
   }, []);
 
   return (
-    <section id="transformations" className="relative z-10 bg-[#080808]">
+    <section id="transformations" className="relative z-10 bg-[#080808] w-full max-w-full overflow-hidden">
       {/* ── Section Intro ── */}
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-24 lg:pt-32 pb-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 pt-24 lg:pt-32 pb-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="scroll-reveal-init">
             <div className="flex items-center gap-4 mb-6">
@@ -56,7 +56,7 @@ export default function TransformationsSection() {
                 {t('label')}
               </span>
             </div>
-            <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(2rem, 8vw, 4.5rem)' }}>
+            <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase break-words" style={{ fontSize: 'clamp(1.75rem, 8vw, 4.5rem)' }}>
               {t('title')}{' '}
               <span className="text-white">
                 {t('titleItalic')}
@@ -70,12 +70,12 @@ export default function TransformationsSection() {
       </div>
 
       {/* ── Immersive Parallax Effect ── */}
-      <div className="w-full">
+      <div className="w-full max-w-full overflow-hidden">
         <ParallaxScroll images={TRANSFORMATION_IMAGES} />
       </div>
 
       {/* ── Section Outro ── */}
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 pt-16 pb-24 lg:pb-32 text-center">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 pt-16 pb-24 lg:pb-32 text-center">
         <div className="scroll-reveal-init">
           <p className="text-white/60 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-10 max-w-2xl mx-auto leading-relaxed">
             {t('outro')}

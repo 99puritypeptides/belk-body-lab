@@ -48,11 +48,11 @@ export default function FAQSection({ namespace = 'faq' }: FAQSectionProps) {
       <FAQSchema id={namespace} items={faqs} />
       <section
         id="faq"
-        className="relative z-10 py-24 lg:py-40 bg-[#050505] overflow-hidden"
+        className="relative z-10 py-24 lg:py-40 bg-[#050505] overflow-hidden w-full max-w-full"
         aria-label="Frequently asked questions"
       >
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-        <div className="relative w-full bg-[#0a0a0a] rounded-[2.5rem] lg:rounded-[3rem] px-6 py-12 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12 lg:gap-24 border border-white/[0.03] shadow-2xl overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="relative w-full bg-[#0a0a0a] rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] px-4 py-8 sm:p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-24 border border-white/[0.03] shadow-2xl overflow-hidden">
 
           {/* Ghost FAQ text */}
           <div aria-hidden="true" className="absolute bottom-0 left-0 lg:left-8 select-none z-0 pointer-events-none translate-y-[20%]">

@@ -54,7 +54,7 @@ export default function HeroSection() {
       ref={containerRef}
       onMouseMove={handleInteraction}
       onTouchStart={handleInteraction}
-      className="relative h-[100svh] w-full bg-[#050505] flex items-center justify-center overflow-hidden"
+      className="relative h-[100svh] w-full max-w-full bg-[#050505] flex items-center justify-center overflow-hidden"
     >
       {/* 1. Background Layer: Typography behind the image (Constrained to top half, below header) */}
       <div className="absolute inset-x-0 top-0 h-1/2 z-0 flex flex-col items-center justify-start pt-[15vh] md:pt-[18vh] pointer-events-none select-none">
@@ -156,14 +156,14 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Floating Stat Cards - Strategically Positioned */}
+      {/* Floating Stat Cards - Strategically Positioned (Desktop/Tablet) */}
       <motion.div
         style={{
           opacity: useTransform(peekValue, [0, 1], [0, 1]),
           x: useTransform(peekValue, [0, 1], [-10, 0]),
           willChange: "transform, opacity"
         }}
-        className="absolute inset-0 pointer-events-none z-40"
+        className="absolute inset-0 pointer-events-none z-40 hidden sm:block"
       >
         <FloatingCard
           icon={<ShieldCheckIcon className="w-5 h-5 text-accent-green" />}

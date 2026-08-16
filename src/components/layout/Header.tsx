@@ -45,19 +45,19 @@ export default function Header() {
           ? 'py-4 !bg-transparent' : 'py-6 !bg-transparent'
           }`}
       >
-        <div className="w-full max-w-[1600px] px-4 md:px-8 lg:px-12 flex items-center justify-between">
+        <div className="w-full max-w-[1600px] px-3 sm:px-6 md:px-8 lg:px-12 flex items-center justify-between">
 
           {/* LEFT SIDE: Logo & Nav */}
-          <div className="flex items-center gap-3 md:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
 
             {/* Logo Pill */}
-            <Link href="/" className="flex items-center justify-center bg-white rounded-full px-5 py-2.5 md:px-7 md:py-3 hover:opacity-90 transition-all shadow-lg shadow-white/10">
+            <Link href="/" className="flex items-center justify-center bg-white rounded-full px-3.5 py-2 sm:px-5 sm:py-2.5 md:px-7 md:py-3 hover:opacity-90 transition-all shadow-lg shadow-white/10 shrink-0">
               <Image
                 src="/images/brand/belk-body-lab-logo.png"
                 alt="Belk Body Lab Logo - Elite Fitness Coaching Charleston SC"
                 width={140}
                 height={40}
-                className="h-5 md:h-6 w-auto object-contain brightness-0"
+                className="h-4 sm:h-5 md:h-6 w-auto object-contain brightness-0"
                 priority
                 fetchPriority="high"
               />
@@ -89,7 +89,7 @@ export default function Header() {
           </div>
 
           {/* RIGHT SIDE: LocaleSwitcher + CTAs + Mobile Menu */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
 
             {/* Language Switcher */}
             <LocaleSwitcher />
@@ -118,13 +118,13 @@ export default function Header() {
             </div>
 
             <button
-              className="lg:hidden flex flex-col gap-1.5 px-4 py-4 md:px-5 md:py-4 bg-white rounded-full shadow-lg ml-auto transition-all"
+              className="lg:hidden flex flex-col gap-1 sm:gap-1.5 p-2.5 sm:px-4 sm:py-4 md:px-5 md:py-4 bg-white rounded-full shadow-lg transition-all shrink-0"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
-              <span className={`block w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`block w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-              <span className={`block w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span className={`block w-4 sm:w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5 sm:translate-y-2' : ''}`} />
+              <span className={`block w-4 sm:w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-4 sm:w-5 h-0.5 bg-black transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5 sm:-translate-y-2' : ''}`} />
             </button>
           </div>
 

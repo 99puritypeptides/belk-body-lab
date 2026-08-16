@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Image from 'next/image';
 import { blogPosts } from '@/data/blog/posts';
 import BlogPostContent from '@/features/blog/BlogPostContent';
@@ -51,7 +51,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = content.canonicalOverride || postUrl;
 
   return {
-    title: content.metaTitle,
+    // `absolute` bypasses the root layout's `%s | Belk Body Lab` title
+    // template — blog post titles are already fully composed (and sized for
+    // SEO) on their own; appending the brand suffix here both pushes many
+    // over Google's ~60-char display limit and double-brands the handful of
+    // posts whose own metaTitle already ends in "| Belk Body Lab".
+    title: { absolute: content.metaTitle },
     description: content.metaDescription,
     keywords: content.keywords && content.keywords.length > 0 ? content.keywords : [
       content.metaTitle,
@@ -62,11 +67,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     authors: [{ name: 'Kyle Belk', url: `${siteUrl}/about` }],
     alternates: {
       canonical: canonicalUrl,
-      languages: {
-        en: `${siteUrl}/blog/${slug}`,
-        es: `${siteUrl}/es/blog/${slug}`,
-        'x-default': `${siteUrl}/blog/${slug}`,
-      },
+      languages: post.es
+        ? {
+            en: `${siteUrl}/blog/${slug}`,
+            es: `${siteUrl}/es/blog/${slug}`,
+            'x-default': `${siteUrl}/blog/${slug}`,
+          }
+        : {
+            en: `${siteUrl}/blog/${slug}`,
+            'x-default': `${siteUrl}/blog/${slug}`,
+          },
     },
     openGraph: {
       title: content.metaTitle,
@@ -89,6 +99,14 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug, locale } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
+
+  // English-only posts have no `es` content — redirect the Spanish URL to the
+  // English canonical instead of silently serving duplicate English content
+  // under /es/ (see src/types/blog.ts for the reasoning).
+  // Belt-and-suspenders: middleware.ts already issues a real HTTP 308 for
+  // these before this component ever runs. This stays as a client-side
+  // meta-refresh fallback in case a request somehow bypasses middleware.
+  if (locale === 'es' && !post.es) permanentRedirect(`/blog/${slug}`);
 
   const content = post[locale as 'en' | 'es'] || post.en;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
@@ -154,18 +172,33 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   };
 
+  // A handful of posts ship a fully hand-authored @graph in customSchemas
+  // (their own Article/BlogPosting and/or BreadcrumbList). Rendering the
+  // generic ones below *as well* puts two conflicting schemas of the same
+  // type on one page — which is exactly the kind of duplicate structured
+  // data that makes Google discard or inconsistently pick between them
+  // (this is what was suppressing the Breadcrumbs rich-result count).
+  // Skip the generic version wherever a custom one already covers it.
+  const customSchemaText = (content.customSchemas || []).join('\n');
+  const hasCustomArticle = /"@type":\s*"(Article|BlogPosting)"/.test(customSchemaText);
+  const hasCustomBreadcrumb = /"@type":\s*"BreadcrumbList"/.test(customSchemaText);
+
   return (
     <>
-      <Script
-        id={`article-schema-${slug}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <Script
-        id={`breadcrumb-schema-${slug}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      {!hasCustomArticle && (
+        <Script
+          id={`article-schema-${slug}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      {!hasCustomBreadcrumb && (
+        <Script
+          id={`breadcrumb-schema-${slug}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       {content.faqs && <FAQSchema id={`blog-faq-${slug}`} items={content.faqs} />}
       {content.customSchemas && content.customSchemas.map((schemaStr, idx) => (
         <Script

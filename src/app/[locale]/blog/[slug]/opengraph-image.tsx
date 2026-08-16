@@ -11,7 +11,9 @@ export const contentType = 'image/png';
 
 export async function generateStaticParams() {
   return locales.flatMap((locale) =>
-    blogPosts.map((post) => ({ locale, slug: post.slug }))
+    blogPosts
+      .filter((post) => locale === 'en' || post.es)
+      .map((post) => ({ locale, slug: post.slug }))
   );
 }
 

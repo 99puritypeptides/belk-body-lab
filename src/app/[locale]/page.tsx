@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default function HomePage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
   return (
-    <main className="relative bg-bg-primary min-h-screen" suppressHydrationWarning>
+    <main className="relative bg-bg-primary min-h-screen w-full max-w-full overflow-x-hidden" suppressHydrationWarning>
       <Script
         id="speakable-home"
         type="application/ld+json"

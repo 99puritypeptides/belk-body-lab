@@ -160,7 +160,7 @@ export default async function LocaleLayout({
         {/* llms.txt — tells AI search engines (ChatGPT, Perplexity, Gemini) about site content */}
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt — AI content index for Belk Body Lab" />
       </head>
-      <body className="font-sans" suppressHydrationWarning>
+      <body className="font-sans w-full max-w-full overflow-x-hidden relative" suppressHydrationWarning>
         <Script
           id="structured-data"
           type="application/ld+json"

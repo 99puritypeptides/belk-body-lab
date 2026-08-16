@@ -18,10 +18,14 @@ const MotionLink = motion(Link);
 export default function BlogCard({ post, featured = false }: BlogCardProps) {
   const locale = useLocale();
   const content = post[locale as 'en' | 'es'] || post.en;
+  // English-only posts have no /es/ page (it redirects) — link straight to
+  // the English URL from the ES blog grid to skip that extra hop.
+  const isEnglishOnly = locale === 'es' && !post.es;
 
   return (
     <MotionLink
       href={`/blog/${post.slug}`}
+      {...(isEnglishOnly ? { locale: 'en' } : {})}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover="hover"

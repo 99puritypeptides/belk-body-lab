@@ -23,5 +23,8 @@ export interface BlogPost {
   ogImage?: string;
   featured?: boolean;
   en: BlogPostContent;
-  es: BlogPostContent;
+  // Optional: posts without a Spanish translation omit this entirely. The
+  // /es/blog/[slug] route then permanently redirects to the English URL
+  // instead of silently rendering duplicate English content under /es/.
+  es?: BlogPostContent;
 }

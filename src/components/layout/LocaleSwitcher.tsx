@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div
-      className={`relative flex items-center gap-0.5 bg-[#2A2A2A] rounded-full p-1 border border-white/5 transition-all duration-500 ${
+      className={`relative flex items-center gap-0.5 bg-[#2A2A2A] rounded-full p-0.5 sm:p-1 border border-white/5 transition-all duration-500 ${
         isPending ? 'opacity-60 cursor-wait shadow-[0_0_20px_rgba(170,255,0,0.1)]' : 'opacity-100 shadow-lg'
       }`}
       aria-label="Language switcher"
@@ -33,7 +33,7 @@ export default function LocaleSwitcher() {
           disabled={isPending}
           aria-pressed={l === locale}
           aria-label={`Switch to ${l === 'en' ? 'English' : 'Spanish'}`}
-          className="relative px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-widest transition-colors duration-500 outline-none"
+          className="relative px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-xs font-black uppercase tracking-widest transition-colors duration-500 outline-none"
         >
           {/* Animated Background Pill */}
           {l === locale && (

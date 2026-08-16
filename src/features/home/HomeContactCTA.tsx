@@ -10,14 +10,14 @@ export default function HomeContactCTA() {
   const t = useTranslations('nav'); // Reusing some nav keys or general keys
 
   return (
-    <section className="relative py-32 lg:py-48 overflow-hidden bg-[#050505]">
+    <section className="relative py-32 lg:py-48 overflow-hidden bg-[#050505] w-full max-w-full">
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[1400px] pointer-events-none">
         <div className="absolute top-0 right-[-10%] w-[60%] h-[70%] rounded-full bg-accent-green/[0.04] blur-[150px]" />
         <div className="absolute bottom-0 left-[-10%] w-[60%] h-[70%] rounded-full bg-blue-500/[0.03] blur-[150px]" />
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10 text-center">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,24 +27,24 @@ export default function HomeContactCTA() {
         >
           <div className="flex flex-col items-center gap-6">
             <div className="w-16 h-[1px] bg-accent-green" />
-            <span className="text-[11px] font-black uppercase tracking-[0.5em] text-accent-green">
+            <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.3em] sm:tracking-[0.5em] text-accent-green">
               Limited Personal Training Spots in SC
             </span>
           </div>
 
-          <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(2rem, 10vw, 9.5rem)' }}>
+          <h2 className="text-white font-display font-black leading-[0.85] tracking-tighter uppercase break-words" style={{ fontSize: 'clamp(1.85rem, 8vw, 9.5rem)' }}>
             Transform Your <br />
             <span className="text-accent-green">Body Today.</span>
           </h2>
 
-          <p className="text-white/40 text-lg md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/40 text-base sm:text-lg md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
             Ready to work with South Carolina's top-rated personal trainer? Start your free consultation and get a custom training and nutrition blueprint designed for world-class body transformation results.
           </p>
 
           <div className="pt-10">
             <Link 
               href="/contact"
-              className="group relative inline-flex items-center gap-6 px-12 py-7 bg-white text-black rounded-full overflow-hidden transition-all hover:scale-[1.05] active:scale-[0.98] shadow-[0_20px_50px_rgba(255,255,255,0.1)]"
+              className="group relative inline-flex items-center gap-4 sm:gap-6 px-8 sm:px-12 py-5 sm:py-7 bg-white text-black rounded-full overflow-hidden transition-all hover:scale-[1.05] active:scale-[0.98] shadow-[0_20px_50px_rgba(255,255,255,0.1)] max-w-full"
             >
               <span className="relative z-10 text-[13px] font-black uppercase tracking-[0.3em]">
                 {t('getStarted')}

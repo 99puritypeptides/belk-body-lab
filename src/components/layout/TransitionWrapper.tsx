@@ -13,6 +13,7 @@ export default function TransitionWrapper({ children }: { children: ReactNode })
       initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
+      className="w-full max-w-full overflow-x-hidden min-h-screen flex flex-col"
       suppressHydrationWarning
     >
       {children}

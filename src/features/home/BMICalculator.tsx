@@ -305,7 +305,7 @@ export default function BMICalculator() {
       </motion.div>
 
       {/* ══ CONTENT ═════════════════════════════════════════════ */}
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
 
         {/* Section header */}
         <motion.div
@@ -322,7 +322,7 @@ export default function BMICalculator() {
             </span>
           </div>
           <h2 className="text-white font-black uppercase tracking-tight leading-[0.9] mb-8 break-words"
-              style={{ fontSize: 'clamp(2.5rem, 9vw, 6rem)' }}>
+              style={{ fontSize: 'clamp(1.75rem, 8vw, 6rem)' }}>
             {t('title')}{' '}
             <span className="not-italic text-accent-green">{t('titleHighlight')}</span>
           </h2>
@@ -339,7 +339,7 @@ export default function BMICalculator() {
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col gap-10"
           >
-            <p className="text-white/40 text-lg font-light leading-relaxed max-w-lg">
+            <p className="text-white/40 text-base sm:text-lg font-light leading-relaxed max-w-lg">
               {t('description')}
             </p>
 
@@ -354,7 +354,7 @@ export default function BMICalculator() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                  className="group flex items-center gap-5 px-5 py-4 rounded-2xl border border-white/[0.04]
+                  className="group flex items-center gap-4 sm:gap-5 px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl border border-white/[0.04]
                              bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10
                              transition-colors duration-300 cursor-default"
                 >
@@ -363,23 +363,23 @@ export default function BMICalculator() {
                     style={{ background: cat.color }}
                   />
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-4 mb-0.5">
-                      <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white/50">{cat.label}</span>
+                    <div className="flex items-center justify-between gap-2 sm:gap-4 mb-0.5">
+                      <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white/50 truncate">{cat.label}</span>
                       <span
-                        className="text-[10px] font-bold px-2.5 py-1 rounded-full border shrink-0"
+                        className="text-[9px] sm:text-[10px] font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border shrink-0"
                         style={{ color: cat.color, borderColor: `${cat.color}30`, background: `${cat.color}10` }}
                       >
                         {cat.range}
                       </span>
                     </div>
-                    <p className="text-xs text-white/25 font-medium">{cat.tip}</p>
+                    <p className="text-[11px] sm:text-xs text-white/25 font-medium">{cat.tip}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-4 border-t border-white/5">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-4 border-t border-white/5">
               {[
                 { num: '500+', label: 'Clients Transformed' },
                 { num: '98%',  label: 'Success Rate' },
@@ -395,11 +395,11 @@ export default function BMICalculator() {
                 >
                   <span
                     className="font-display font-black text-white leading-none"
-                    style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}
+                    style={{ fontSize: 'clamp(1.2rem, 3vw, 2rem)' }}
                   >
                     {stat.num}
                   </span>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/25">{stat.label}</span>
+                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.1em] sm:tracking-[0.15em] text-white/25">{stat.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -420,7 +420,7 @@ export default function BMICalculator() {
                 border border-white/[0.06]
                 bg-[#0f0f0f] backdrop-blur-sm
                 shadow-[0_40px_100px_rgba(0,0,0,0.55)]
-                p-7 sm:p-10
+                p-5 sm:p-7 md:p-10
               "
             >
               {/* Top accent */}

@@ -35,7 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
 
     // Blog post routes — real per-post date, using the reliable ISO field.
+    // English-only posts (no `post.es`) are skipped for the /es/ locale: that
+    // URL just 308-redirects to the English canonical, so it shouldn't be
+    // listed as an indexable sitemap entry in its own right.
     blogPosts.forEach((post) => {
+      if (locale === 'es' && !post.es) return;
       sitemapEntries.push({
         url: `${baseUrl}${prefix}/blog/${post.slug}`,
         lastModified: new Date(post.isoDate || post.date),

@@ -8,20 +8,20 @@ export default function BlogLatest() {
   if (!latestPost) return null;
 
   return (
-    <section className="py-20 md:py-32 bg-[#050505] border-t border-white/5 relative overflow-hidden">
-      <div className="container-custom px-6 lg:px-10 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+    <section className="py-20 md:py-32 bg-[#050505] border-t border-white/5 relative overflow-hidden w-full max-w-full">
+      <div className="container-custom px-4 sm:px-6 lg:px-10 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
-            <h2 className="font-heading font-black text-white text-4xl md:text-5xl uppercase tracking-tighter mb-4">
+            <h2 className="font-heading font-black text-white text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter mb-4 break-words">
               Latest from the <span className="text-accent-green">Blog</span>
             </h2>
-            <p className="text-white/50 max-w-xl">
+            <p className="text-white/50 max-w-xl text-sm sm:text-base">
               Science-backed protocols, training guides, and nutrition advice from South Carolina's top personal trainer.
             </p>
           </div>
           <Link 
             href="/blog"
-            className="inline-flex items-center justify-center h-14 px-8 border border-white/10 rounded-full text-white font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all"
+            className="inline-flex items-center justify-center h-14 px-8 border border-white/10 rounded-full text-white font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all shrink-0"
           >
             View All Articles
           </Link>
@@ -31,7 +31,7 @@ export default function BlogLatest() {
           href={`/blog/${latestPost.slug}`}
           className="group block relative w-full rounded-[2rem] lg:rounded-[3rem] overflow-hidden bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all duration-500"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12 p-6 lg:p-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12 p-4 sm:p-6 lg:p-12 items-center">
             <div className="relative aspect-video lg:aspect-square w-full rounded-3xl overflow-hidden mb-8 lg:mb-0">
               <Image 
                 src={latestPost.image} 

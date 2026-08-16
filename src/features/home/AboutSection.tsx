@@ -51,7 +51,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section ref={sectionRef} id="about" className="relative z-10 bg-[#111] overflow-x-clip">
+    <section ref={sectionRef} id="about" className="relative z-10 bg-[#111] w-full max-w-full overflow-hidden">
       <div className="relative w-full z-10">
         {/* Pinned Background with parallax */}
         <div className="sticky top-0 w-full h-screen overflow-hidden z-0 bg-[#000]">
@@ -84,8 +84,8 @@ export default function AboutSection() {
         </div>
 
         {/* Initial Buffer & Marquee */}
-        <div className="h-[20vh] sm:h-[30vh] w-full flex flex-col justify-end overflow-hidden pb-4 sm:pb-8">
-          <div className="relative z-10 w-full overflow-hidden flex items-center pointer-events-none">
+        <div className="h-[20vh] sm:h-[30vh] w-full max-w-full flex flex-col justify-end overflow-hidden pb-4 sm:pb-8">
+          <div className="relative z-10 w-full max-w-full overflow-hidden flex items-center pointer-events-none">
             <motion.div
               className="flex whitespace-nowrap"
               animate={{ x: ["0%", "-50%"] }}
@@ -94,7 +94,7 @@ export default function AboutSection() {
               {[...Array(2)].map((_, idx) => (
                 <div key={idx} className="flex items-center">
                   {[...Array(3)].map((_, i) => (
-                    <span key={i} className="text-[clamp(3rem,6vw,5rem)] font-heading font-black uppercase tracking-tighter px-4 text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>
+                    <span key={i} className="text-[clamp(2.5rem,6vw,5rem)] font-heading font-black uppercase tracking-tighter px-4 text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>
                       ELEVATE YOUR PHYSIQUE <span className="text-accent-green mx-4" style={{ WebkitTextStroke: '0px' }}>•</span> NO GUESSWORK <span className="text-accent-green mx-4" style={{ WebkitTextStroke: '0px' }}>•</span> REAL RESULTS <span className="text-accent-green mx-4" style={{ WebkitTextStroke: '0px' }}>•</span>
                     </span>
                   ))}
@@ -105,12 +105,12 @@ export default function AboutSection() {
         </div>
 
         {/* Header Plaque */}
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="bg-[#FAF9F6] w-full rounded-3xl sm:rounded-[4rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] px-8 sm:px-16 py-12 sm:py-20 flex flex-col sm:flex-row justify-between items-start sm:items-end mx-auto transition-transform duration-700 pointer-events-none">
-            <h2 className="font-heading font-black leading-none tracking-tight text-[#111]" style={{ fontSize: 'clamp(2.5rem, 10vw, 7rem)' }}>
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="bg-[#FAF9F6] w-full rounded-2xl sm:rounded-3xl md:rounded-[4rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] px-5 py-8 sm:px-12 sm:py-16 md:px-16 md:py-20 flex flex-col sm:flex-row justify-between items-start sm:items-end mx-auto transition-transform duration-700 pointer-events-none">
+            <h2 className="font-heading font-black leading-none tracking-tight text-[#111] break-words max-w-full" style={{ fontSize: 'clamp(1.75rem, 8vw, 7rem)' }}>
               {t('label')}
             </h2>
-            <span className="font-heading text-sm md:text-lg lg:text-3xl font-bold uppercase tracking-[0.25em] text-[#111] pb-2 sm:pb-3 mt-4 sm:mt-0 opacity-80">
+            <span className="font-heading text-xs sm:text-sm md:text-lg lg:text-3xl font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#111] pb-1 sm:pb-3 mt-3 sm:mt-0 opacity-80 shrink-0">
               {t('name')}
             </span>
           </div>
@@ -121,7 +121,7 @@ export default function AboutSection() {
 
         {/* 2-Column Content Layout */}
         <div className="relative z-10 bg-[#FAF9F6] w-full min-h-screen sm:rounded-t-[5rem] rounded-t-[3rem] shadow-[0_-30px_80px_rgba(0,0,0,0.4)] pt-20 lg:pt-36 pb-24 lg:pb-40 border-t border-white/50">
-          <div className="max-w-[1600px] mx-auto px-6 lg:px-10">
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-stretch">
 
               {/* Left: Video */}
@@ -152,7 +152,7 @@ export default function AboutSection() {
                     </div>
                   </div>
                 )}
-                <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl z-40 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 lg:bottom-10 lg:left-10 lg:right-10 p-4 sm:p-6 lg:p-8 rounded-2xl lg:rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl z-40 translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-white text-xs sm:text-sm font-medium leading-relaxed tracking-wide">
                     &ldquo;{t('quote')}&rdquo;
                   </p>
@@ -168,14 +168,14 @@ export default function AboutSection() {
                   <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-[#111] opacity-90 mb-6">
                     {t('location')}
                   </div>
-                  <h3 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#111] leading-[1.1] mb-8 tracking-tight">
+                  <h3 className="text-3xl sm:text-5xl lg:text-6xl font-light text-[#111] leading-[1.1] mb-8 tracking-tight break-words">
                     {t('heading')} <br />
                     <span className="text-gray-600">{t('headingItalic')}</span>
                   </h3>
-                  <p className="text-gray-700 text-lg sm:text-xl leading-relaxed font-light mb-6">
+                  <p className="text-gray-700 text-base sm:text-xl leading-relaxed font-light mb-6">
                     {t('bio1')}
                   </p>
-                  <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-light">
+                  <p className="text-gray-700 text-sm sm:text-lg leading-relaxed font-light">
                     {t('bio2')}
                   </p>
                 </div>
@@ -184,7 +184,7 @@ export default function AboutSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-16 border-y border-gray-200 py-10">
                   {credibilityPoints?.map((point) => (
                     <div key={point.label} className="flex items-center gap-5 group cursor-default">
-                      <div className="w-12 h-12 rounded-full bg-gray-100 text-[#111] flex items-center justify-center group-hover:bg-[#111] group-hover:text-white transition-colors duration-500 shadow-sm">
+                      <div className="w-12 h-12 rounded-full bg-gray-100 text-[#111] flex items-center justify-center group-hover:bg-[#111] group-hover:text-white transition-colors duration-500 shadow-sm shrink-0">
                         <span className="group-hover:scale-110 transition-transform duration-500">{point.icon}</span>
                       </div>
                       <span className="text-[11px] sm:text-[12px] font-bold tracking-[0.15em] text-gray-800 group-hover:text-[#111] uppercase transition-colors duration-500 leading-snug">
@@ -210,20 +210,20 @@ export default function AboutSection() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap items-center gap-6">
+                <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
                   <CTAButton href="/contact">
                     {t('ctaWork')}
                   </CTAButton>
                   <Link
                     href="/services"
-                    className="inline-flex items-center justify-center min-w-[200px] h-14 bg-transparent border border-gray-300 text-[#111] font-bold text-[11px] uppercase tracking-widest rounded-full hover:border-[#111] hover:bg-gray-50 transition-all duration-300"
+                    className="inline-flex items-center justify-center min-w-0 sm:min-w-[200px] h-14 bg-transparent border border-gray-300 text-[#111] font-bold text-[11px] uppercase tracking-widest rounded-full hover:border-[#111] hover:bg-gray-50 transition-all duration-300 px-6 text-center"
                   >
                     {t('ctaServices')}
                   </Link>
                   <MotionLink
                     href="/about"
                     whileHover="hover"
-                    className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 hover:text-accent-green transition-colors flex items-center gap-3 group"
+                    className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 hover:text-accent-green transition-colors flex items-center justify-center sm:justify-start gap-3 group py-2"
                   >
                     Read Full Bio
                     <PremiumIcon name="arrow" size={10} />

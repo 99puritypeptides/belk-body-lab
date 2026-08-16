@@ -21,8 +21,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative z-10 bg-bg-primary pt-24 pb-12 overflow-hidden border-t border-white/5">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-10 relative z-10">
+    <footer className="relative z-10 bg-bg-primary pt-24 pb-12 overflow-hidden border-t border-white/5 w-full max-w-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
 
         {/* BRAND HEADER */}
         <div className="flex items-center gap-3 mb-10">

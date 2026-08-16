@@ -114,11 +114,11 @@ export default function TestimonialsSection() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsSchema) }}
       />
-      <section id="testimonials" className="relative py-20 lg:py-32 bg-[#050505] overflow-hidden">
+      <section id="testimonials" className="relative py-20 lg:py-32 bg-[#050505] w-full max-w-full overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-accent-green/5 rounded-full blur-[100px] lg:blur-[120px] pointer-events-none" />
 
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="mb-16 lg:mb-28 text-center lg:text-left">
