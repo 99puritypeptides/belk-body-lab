@@ -12,4 +12,9 @@ export const ENGLISH_ONLY_SLUGS = new Set<string>([
   'longevity-training-over-40',
   'small-group-vs-one-on-one-personal-training-charleston',
   'whoop-recovery-score-oura-readiness-training-guide',
+  'september-fitness-reset-charleston-sc',
+  'personal-trainer-cost-aiken-sc',
+  'personal-trainer-cost-johnston-sc',
+  'training-for-stress-and-sleep-charleston',
+  'personal-trainer-cost-summerville-vs-north-charleston',
 ]);

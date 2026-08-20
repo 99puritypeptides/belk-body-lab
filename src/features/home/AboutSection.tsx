@@ -51,7 +51,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section ref={sectionRef} id="about" className="relative z-10 bg-[#111] w-full max-w-full overflow-hidden">
+    <section ref={sectionRef} id="about" className="relative z-10 bg-[#111] w-full max-w-full">
       <div className="relative w-full z-10">
         {/* Pinned Background with parallax */}
         <div className="sticky top-0 w-full h-screen overflow-hidden z-0 bg-[#000]">

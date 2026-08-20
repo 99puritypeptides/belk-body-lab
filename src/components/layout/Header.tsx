@@ -45,7 +45,7 @@ export default function Header() {
           ? 'py-4 !bg-transparent' : 'py-6 !bg-transparent'
           }`}
       >
-        <div className="w-full max-w-[1600px] px-3 sm:px-6 md:px-8 lg:px-12 flex items-center justify-between">
+        <div className="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-16 flex items-center justify-between">
 
           {/* LEFT SIDE: Logo & Nav */}
           <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
@@ -64,12 +64,12 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav Pill */}
-            <div className="hidden lg:flex items-center gap-5 xl:gap-8 bg-[#2A2A2A] px-8 py-3.5 rounded-full border border-white/5 shadow-lg">
+            <div className="hidden xl:flex items-center gap-3 2xl:gap-5 bg-[#2A2A2A] px-4 2xl:px-6 py-3.5 rounded-full border border-white/5 shadow-lg">
               {navLinks?.filter(link => link.href !== '/communities').map((link, index) => (
                 <React.Fragment key={link?.href}>
                   <Link
                     href={link?.href}
-                    className={`font-display font-black text-[11px] uppercase tracking-[0.2em] transition-colors hover:text-accent-green ${pathname === link?.href || (pathname === '/' && link.href === '/') ? 'text-white' : 'text-white/60'
+                    className={`font-display font-black text-[9px] 2xl:text-[10px] uppercase tracking-[0.1em] transition-colors hover:text-accent-green whitespace-nowrap ${pathname === link?.href || (pathname === '/' && link.href === '/') ? 'text-white' : 'text-white/60'
                       }`}
                   >
                     {link?.label}
@@ -95,20 +95,20 @@ export default function Header() {
             <LocaleSwitcher />
 
             {/* Desktop CTAs */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden xl:flex items-center gap-2">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 font-display font-black text-[11px] uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all shadow-lg"
+                className="px-5 2xl:px-6 py-3.5 bg-[#2A2A2A] border border-white/5 text-white/90 font-display font-black text-[9px] 2xl:text-[10px] uppercase tracking-[0.1em] rounded-full hover:bg-white hover:text-black transition-all shadow-lg whitespace-nowrap"
               >
                 {t('contact')}
               </Link>
 
               <Link
                 href="/contact"
-                className="flex items-center gap-4 bg-white pl-7 pr-2 py-1.5 rounded-full text-black font-display font-black text-[11px] uppercase tracking-[0.2em] hover:bg-gray-100 transition-all group shadow-lg"
+                className="flex items-center gap-3 bg-white pl-4 2xl:pl-5 pr-1.5 2xl:pr-2 py-1.5 rounded-full text-black font-display font-black text-[9px] 2xl:text-[10px] uppercase tracking-[0.1em] hover:bg-gray-100 transition-all group shadow-lg whitespace-nowrap"
               >
                 {t('getStarted')}
-                <div className="w-9 h-9 rounded-full bg-[#111111] group-hover:bg-accent-green flex items-center justify-center text-white group-hover:text-black group-hover:rotate-45 transition-all duration-300">
+                <div className="w-7 h-7 2xl:w-8 2xl:h-8 shrink-0 rounded-full bg-[#111111] group-hover:bg-accent-green flex items-center justify-center text-white group-hover:text-black group-hover:rotate-45 transition-all duration-300">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M7 17L17 7" />
                     <path d="M7 7h10v10" />
@@ -118,7 +118,7 @@ export default function Header() {
             </div>
 
             <button
-              className="lg:hidden flex flex-col gap-1 sm:gap-1.5 p-2.5 sm:px-4 sm:py-4 md:px-5 md:py-4 bg-white rounded-full shadow-lg transition-all shrink-0"
+              className="xl:hidden flex flex-col gap-1 sm:gap-1.5 p-2.5 sm:px-4 sm:py-4 md:px-5 md:py-4 bg-white rounded-full shadow-lg transition-all shrink-0"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
