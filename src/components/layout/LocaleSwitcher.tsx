@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { locales } from '@/i18n/config';
+import { ENGLISH_ONLY_SLUGS } from '@/data/blog/english-only-slugs';
 import { useTransition } from 'react';
 import { motion } from 'framer-motion';
 
@@ -14,8 +15,20 @@ export default function LocaleSwitcher() {
 
   const handleSwitch = (newLocale: string) => {
     if (newLocale === locale) return;
+
+    // Blog posts with no Spanish translation have no /es/ page. Switching to
+    // 'es' on one would otherwise round-trip through middleware's redirect
+    // (or the page's own fallback) instead of landing directly — send the
+    // user to the Spanish blog index instead of a slug that doesn't exist
+    // in that locale.
+    const blogSlugMatch = pathname.match(/^\/blog\/([^/]+)\/?$/);
+    const targetPathname =
+      newLocale === 'es' && blogSlugMatch && ENGLISH_ONLY_SLUGS.has(blogSlugMatch[1])
+        ? '/blog'
+        : pathname;
+
     startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
+      router.replace(targetPathname, { locale: newLocale });
     });
   };
 

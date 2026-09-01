@@ -1,12 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { notFound, permanentRedirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { blogPosts } from '@/data/blog/posts';
 import BlogPostContent from '@/features/blog/BlogPostContent';
 import BlogCTA from '@/features/blog/BlogCTA';
 import BlogFAQ from '@/features/blog/BlogFAQ';
-import { Link } from '@/i18n/navigation';
+import { Link, permanentRedirect } from '@/i18n/navigation';
 import Script from 'next/script';
 import FAQSchema from '@/components/seo/FAQSchema';
 
@@ -104,9 +104,14 @@ export default async function BlogPostPage({ params }: Props) {
   // English canonical instead of silently serving duplicate English content
   // under /es/ (see src/types/blog.ts for the reasoning).
   // Belt-and-suspenders: middleware.ts already issues a real HTTP 308 for
-  // these before this component ever runs. This stays as a client-side
-  // meta-refresh fallback in case a request somehow bypasses middleware.
-  if (locale === 'es' && !post.es) permanentRedirect(`/blog/${slug}`);
+  // these before this component ever runs (as long as ENGLISH_ONLY_SLUGS is
+  // kept in sync — see check-english-only-slugs.js). This stays as a fallback
+  // in case a request somehow bypasses middleware. Uses the locale-aware
+  // permanentRedirect from @/i18n/navigation (same source as Link/useRouter
+  // elsewhere in this file) with an explicit locale: 'en', rather than the
+  // locale-agnostic one from next/navigation, so this always lands on the
+  // English URL regardless of which locale segment the request came in on.
+  if (locale === 'es' && !post.es) permanentRedirect({ href: `/blog/${slug}`, locale: 'en' });
 
   const content = post[locale as 'en' | 'es'] || post.en;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.belkbodylab.com';
